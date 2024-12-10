@@ -1,0 +1,11 @@
+ai_pop_control_factor = {
+	base = 1
+	mult = owner.ai_population_count_control_var
+	mult = trigger:num_pops
+}
+
+desired_science_ships = {
+    modifier = { set = 1 is_default_or_fallen = yes }
+    modifier = { add = 2 years_passed < 80 }
+    modifier = { add = 2 years_passed < 30 }
+}

@@ -1,0 +1,30 @@
+# Performance Events
+
+event = {
+    id = performance.consolidate_unemployed_pops
+    title = "Consolidate Unemployed Pops"
+    desc = "Consolidate unemployed pops into resources to improve efficiency."
+    trigger = {
+        has_population = yes
+        is_unemployed = yes
+    }
+    immediate = {
+        # Logic to consolidate unemployed pops
+        set_variable = { name = unemployed_pops_count value = 0 }
+        count_unemployed_pops = {
+            set_variable = { name = unemployed_pops_count value = { count_unemployed_pops } }
+        }
+        add_resources = { energy = unemployed_pops_count }
+        country_event = {
+            id = performance.consolidate_message
+            days = 0
+        }
+    }
+}
+
+event = {
+    id = performance.consolidate_message
+    title = "Pops Consolidated"
+    desc = "Unemployed pops have been consolidated into resources."
+    picture = "GFX_evt_construction"
+}

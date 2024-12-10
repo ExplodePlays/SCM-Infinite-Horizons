@@ -1,0 +1,699 @@
+namespace = fix_menu_events
+
+country_event = {
+	id = fix_menu_events.2
+	title = "fix_menu_events.2.name"
+	desc = "fix_menu_events.2.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = fix_menu_events.3
+	title = "fix_menu_events.3.name"
+	desc = "fix_menu_events.3.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "fix_menu_events.3.b"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_gateway_construction_var
+						value = 1000
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_gateway_construction_var
+				value = 1000
+			}
+			country_event = {
+				id = fix_menu_events.3
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.3.c"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_gateway_construction_var
+						value = 50
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_gateway_construction_var
+				value = 50
+			}
+			country_event = {
+				id = fix_menu_events.3
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.3.d"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_gateway_construction_var
+						value = 100
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_gateway_construction_var
+				value = 100
+			}
+			country_event = {
+				id = fix_menu_events.3
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.3.e"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_gateway_construction_var
+						value = 150
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_gateway_construction_var
+				value = 150
+			}
+			country_event = {
+				id = fix_menu_events.3
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = fix_menu_events.4
+	title = "fix_menu_events.4.name"
+	desc = "fix_menu_events.4.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "fix_menu_events.4.b"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_habitat_construction_var
+						value = 0
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_habitat_construction_var
+				value = 0
+			}
+			country_event = {
+				id = fix_menu_events.4
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.4.c"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_habitat_construction_var
+						value = 3
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_habitat_construction_var
+				value = 3
+			}
+			country_event = {
+				id = fix_menu_events.4
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.4.d"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_habitat_construction_var
+						value = 7
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_habitat_construction_var
+				value = 7
+			}
+			country_event = {
+				id = fix_menu_events.4
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.4.e"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_habitat_construction_var
+						value = 11
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_habitat_construction_var
+				value = 11
+			}
+			country_event = {
+				id = fix_menu_events.4
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = fix_menu_events.5
+	title = "fix_menu_events.5.name"
+	desc = "fix_menu_events.5.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "fix_menu_events.5.b"
+		allow = {
+			hidden_trigger = {
+				has_global_flag = ai_omnicodex_to_player_flag
+			}
+		}
+		hidden_effect = {
+			remove_global_flag = ai_omnicodex_to_player_flag
+			country_event = {
+				id = fix_menu_events.5
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.5.c"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					has_global_flag = ai_omnicodex_to_player_flag
+				}
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ai_omnicodex_to_player_flag
+			country_event = {
+				id = fix_menu_events.5
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = fix_menu_events.6
+	title = "fix_menu_events.6.name"
+	desc = "fix_menu_events.6.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = fix_menu_events.7
+	title = "fix_menu_events.7.name"
+	desc = "fix_menu_events.7.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = fix_menu_events.8
+	title = "fix_menu_events.8.name"
+	desc = "fix_menu_events.8.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "fix_menu_events.8.b"
+		allow = {
+			hidden_trigger = {
+				NAND = {
+					check_variable = {
+						which = ai_corvette_frigate_spam_var
+						value = 15
+					}
+					check_variable = {
+						which = ai_destroyer_spam_var
+						value = 8
+					}
+					check_variable = {
+						which = ai_cruiser_spam_var
+						value = 4
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_corvette_frigate_spam_var
+				value = 15
+			}
+			set_variable = {
+				which = ai_destroyer_spam_var
+				value = 8
+			}
+			set_variable = {
+				which = ai_cruiser_spam_var
+				value = 4
+			}
+			country_event = {
+				id = fix_menu_events.8
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.8.c"
+		allow = {
+			hidden_trigger = {
+				NAND = {
+					check_variable = {
+						which = ai_corvette_frigate_spam_var
+						value = 30
+					}
+					check_variable = {
+						which = ai_destroyer_spam_var
+						value = 15
+					}
+					check_variable = {
+						which = ai_cruiser_spam_var
+						value = 8
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_corvette_frigate_spam_var
+				value = 30
+			}
+			set_variable = {
+				which = ai_destroyer_spam_var
+				value = 15
+			}
+			set_variable = {
+				which = ai_cruiser_spam_var
+				value = 8
+			}
+			country_event = {
+				id = fix_menu_events.8
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.8.d"
+		allow = {
+			hidden_trigger = {
+				NAND = {
+					check_variable = {
+						which = ai_corvette_frigate_spam_var
+						value = 60
+					}
+					check_variable = {
+						which = ai_destroyer_spam_var
+						value = 30
+					}
+					check_variable = {
+						which = ai_cruiser_spam_var
+						value = 15
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_corvette_frigate_spam_var
+				value = 60
+			}
+			set_variable = {
+				which = ai_destroyer_spam_var
+				value = 30
+			}
+			set_variable = {
+				which = ai_cruiser_spam_var
+				value = 15
+			}
+			country_event = {
+				id = fix_menu_events.8
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.8.e"
+		allow = {
+			hidden_trigger = {
+				NAND = {
+					check_variable = {
+						which = ai_corvette_frigate_spam_var
+						value = 120
+					}
+					check_variable = {
+						which = ai_destroyer_spam_var
+						value = 60
+					}
+					check_variable = {
+						which = ai_cruiser_spam_var
+						value = 30
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_corvette_frigate_spam_var
+				value = 120
+			}
+			set_variable = {
+				which = ai_destroyer_spam_var
+				value = 60
+			}
+			set_variable = {
+				which = ai_cruiser_spam_var
+				value = 30
+			}
+			country_event = {
+				id = fix_menu_events.8
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = fix_menu_events.9
+	title = "fix_menu_events.9.name"
+	desc = "fix_menu_events.9.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "fix_menu_events.9.b"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_ringworld_construction_var
+						value = 0
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_ringworld_construction_var
+				value = 0
+			}
+			country_event = {
+				id = fix_menu_events.9
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.9.c"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_ringworld_construction_var
+						value = 1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_ringworld_construction_var
+				value = 1
+			}
+			country_event = {
+				id = fix_menu_events.9
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.9.d"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_ringworld_construction_var
+						value = 3
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_ringworld_construction_var
+				value = 3
+			}
+			country_event = {
+				id = fix_menu_events.9
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.9.e"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_ringworld_construction_var
+						value = 5
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_ringworld_construction_var
+				value = 5
+			}
+			country_event = {
+				id = fix_menu_events.9
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = fix_menu_events.10
+	title = "fix_menu_events.10.name"
+	desc = "fix_menu_events.10.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = fix_menu_events.11
+	title = "fix_menu_events.11.name"
+	desc = "fix_menu_events.11.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+
+	option = { 
+		name = "EXIT"
+	}
+}
+
+country_event = {
+	id = fix_menu_events.12
+	title = "fix_menu_events.12.name"
+	desc = "fix_menu_events.12.desc"
+	picture = GFX_evt_machine_sapience
+	show_sound = event_administrative_work
+	hide_window = no
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = "fix_menu_events.12.b"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_population_count_control_var
+						value = 0.5
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_population_count_control_var
+				value = 0.5
+			}
+			country_event = {
+				id = fix_menu_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.12.c"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_population_count_control_var
+						value = 1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_population_count_control_var
+				value = 1
+			}
+			country_event = {
+				id = fix_menu_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "fix_menu_events.12.d"
+		allow = {
+			hidden_trigger = {
+				NOT = {
+					check_variable = {
+						which = ai_population_count_control_var
+						value = 1.5
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			set_variable = {
+				which = ai_population_count_control_var
+				value = 1.5
+			}
+			country_event = {
+				id = fix_menu_events.12
+			}
+		}
+	}
+
+	option = { 
+		name = "EXIT"
+	}
+}

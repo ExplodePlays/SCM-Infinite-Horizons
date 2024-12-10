@@ -1,0 +1,691 @@
+fix_menu_button_centre_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NAND = {
+				has_global_flag = ai_gateway_construction_flag
+				has_global_flag = ai_hyper_relay_construction_flag
+				has_global_flag = ai_xeno_compatibility_flag
+				has_global_flag = ai_habitat_construction_flag
+				has_global_flag = ai_ringworld_construction_flag
+				has_global_flag = ai_unemployment_flag
+				has_global_flag = ai_corvette_destroyer_spam_flag
+				has_global_flag = ai_population_count_control_flag
+				# has_global_flag = modifier_optimisation_flag
+				has_global_flag = ai_and_player_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_gateway_construction_flag
+			set_global_flag = ai_hyper_relay_construction_flag
+			set_global_flag = ai_xeno_compatibility_flag
+			set_global_flag = ai_habitat_construction_flag
+			set_global_flag = ai_ringworld_construction_flag
+			set_global_flag = ai_unemployment_flag
+			set_global_flag = ai_corvette_destroyer_spam_flag
+			set_global_flag = ai_population_count_control_flag
+			# set_global_flag = modifier_optimisation_flag
+			set_global_flag = ai_and_player_flag
+
+			every_country = {
+				limit = {
+					is_ai = yes
+				}
+				set_timed_country_flag = {
+					flag = ai_gateway_construction_fix_flag years = 100
+				}
+			}
+		}
+	}
+}
+
+fix_menu_button_centre_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			OR = {
+				has_global_flag = ai_gateway_construction_flag
+				has_global_flag = ai_hyper_relay_construction_flag
+				has_global_flag = ai_xeno_compatibility_flag
+				has_global_flag = ai_habitat_construction_flag
+				has_global_flag = ai_ringworld_construction_flag
+				has_global_flag = ai_unemployment_flag
+				has_global_flag = ai_corvette_destroyer_spam_flag
+				has_global_flag = ai_population_count_control_flag
+				# has_global_flag = modifier_optimisation_flag
+				has_global_flag = ai_and_player_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_gateway_construction_flag
+			remove_global_flag = ai_hyper_relay_construction_flag
+			remove_global_flag = ai_xeno_compatibility_flag
+			remove_global_flag = ai_habitat_construction_flag
+			remove_global_flag = ai_ringworld_construction_flag
+			remove_global_flag = ai_unemployment_flag
+			remove_global_flag = ai_corvette_destroyer_spam_flag
+			remove_global_flag = ai_population_count_control_flag
+			# remove_global_flag = modifier_optimisation_flag
+			remove_global_flag = ai_and_player_flag
+
+			every_country = {
+				limit = {
+					is_ai = yes
+				}
+				remove_global_flag = ai_gateway_construction_fix_flag
+			}
+		}
+	}
+}
+
+fix_menu_button_upper_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = ai_xeno_compatibility_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_xeno_compatibility_flag
+		}
+	}
+}
+
+fix_menu_button_upper_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = modifier_optimisation_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = modifier_optimisation_flag
+		}
+	}
+}
+
+fix_menu_button_upper_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = ai_corvette_destroyer_spam_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_corvette_destroyer_spam_flag
+		}
+	}
+}
+
+fix_menu_button_upper_bottom_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = ai_omnicodex_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_omnicodex_flag
+		}
+	}
+}
+
+fix_menu_button_upper_bottom_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = ai_unemployment_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_unemployment_flag
+		}
+	}
+}
+
+fix_menu_button_lower_top_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = ai_hyper_relay_construction_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_hyper_relay_construction_flag
+		}
+	}
+}
+
+fix_menu_button_lower_middle_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = ai_habitat_construction_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_habitat_construction_flag
+		}
+	}
+}
+
+fix_menu_button_lower_bottom_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = ai_and_player_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_and_player_flag
+		}
+	}
+}
+
+fix_menu_button_lower_middle_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = ai_ringworld_construction_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_ringworld_construction_flag
+		}
+	}
+}
+
+fix_menu_button_lower_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = ai_gateway_construction_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_gateway_construction_flag
+
+			every_country = {
+				limit = {
+					is_ai = yes
+					NOT = {
+						has_country_flag = ai_gateway_construction_fix_flag
+					}
+				}
+				set_timed_country_flag = {
+					flag = ai_gateway_construction_fix_flag years = 100
+				}
+			}
+		}
+	}
+}
+
+fix_menu_button_lower_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = ai_population_count_control_flag
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_global_flag = ai_population_count_control_flag
+		}
+	}
+}
+
+fix_menu_settings_upper_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.7
+			}
+		}
+	}
+}
+
+fix_menu_settings_upper_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.11
+			}
+		}
+	}
+}
+
+fix_menu_settings_upper_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.8
+			}
+		}
+	}
+}
+
+fix_menu_settings_upper_bottom_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.5
+			}
+		}
+	}
+}
+
+fix_menu_settings_upper_bottom_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.6
+			}
+		}
+	}
+}
+
+fix_menu_settings_lower_top_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.2
+			}
+		}
+	}
+}
+
+fix_menu_settings_lower_bottom_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.10
+			}
+		}
+	}
+}
+
+fix_menu_settings_lower_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.3
+			}
+		}
+	}
+}
+
+fix_menu_settings_lower_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.12
+			}
+		}
+	}
+}
+
+fix_menu_settings_lower_middle_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.4
+			}
+		}
+	}
+}
+
+fix_menu_settings_lower_middle_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_menu_events.9
+			}
+		}
+	}
+}
+
+fix_menu_disable_upper_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = ai_xeno_compatibility_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_xeno_compatibility_flag
+		}
+	}
+}
+
+fix_menu_disable_upper_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = modifier_optimisation_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = modifier_optimisation_flag
+		}
+	}
+}
+
+fix_menu_disable_upper_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = ai_corvette_destroyer_spam_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_corvette_destroyer_spam_flag
+		}
+	}
+}
+
+fix_menu_disable_upper_bottom_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = ai_omnicodex_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_omnicodex_flag
+		}
+	}
+}
+
+fix_menu_disable_upper_bottom_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = ai_unemployment_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_unemployment_flag
+		}
+	}
+}
+
+fix_menu_disable_lower_top_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = ai_hyper_relay_construction_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_hyper_relay_construction_flag
+		}
+	}
+}
+
+fix_menu_disable_lower_bottom_middle_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = ai_and_player_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_and_player_flag
+		}
+	}
+}
+
+fix_menu_disable_lower_top_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = ai_gateway_construction_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_gateway_construction_flag
+
+			every_country = {
+				limit = {
+					is_ai = yes
+				}
+				remove_country_flag = ai_gateway_construction_fix_flag
+			}
+		}
+	}
+}
+
+fix_menu_disable_lower_top_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = ai_population_count_control_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_population_count_control_flag
+		}
+	}
+}
+
+fix_menu_disable_lower_middle_left_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = ai_habitat_construction_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_habitat_construction_flag
+		}
+	}
+}
+
+fix_menu_disable_lower_middle_right_effect = {
+	potential = {
+		
+	}
+	allow = {
+		hidden_trigger = {
+			has_global_flag = ai_ringworld_construction_flag
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_global_flag = ai_ringworld_construction_flag
+		}
+	}
+}

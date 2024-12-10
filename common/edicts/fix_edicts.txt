@@ -1,0 +1,22 @@
+edict_mod_options = {
+	length = 1
+	icon = GFX_resource_time
+	resources = {
+		category = edicts
+		#cost = {
+		#	energy = 1000
+		#}
+	}
+	
+	potential = {
+		is_ai = no
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = fix_ai_actions.2
+			}
+		}
+	}
+}

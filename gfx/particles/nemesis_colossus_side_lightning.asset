@@ -1,0 +1,135 @@
+particle={
+	name="nemesis_colossus_side_lightning_file"
+	subsystem={
+		name="light"
+		max_amount=1
+		slave_particles=0
+		emitter_type="box"
+		box_emitter_x={ 0 0.2 }
+		box_emitter_y={ 0 0.2 }
+		box_emitter_z={ 0 0.2 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/thin_muzzle_flash_blurred_2.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x={ 220 10 }
+			y={ 220 5 }
+			z={ 220 15 }
+			alpha={ 100,glow_fade 20 }
+		}
+		position={
+			x=0
+			y=1
+			z=4
+		}
+		duration=-1
+		velocity=1
+		life={ 0.3 0.1 }
+		emission={ 10 4 }
+		size={ 35,lightning_size 1 }
+		particle_yaw={ 90 0 }
+		particle_pitch={ 90 0 }
+		rotation=-90
+	}
+	subsystem={
+		name="lightning_1"
+		max_amount=1
+		slave_particles=0
+		emitter_type="box"
+		box_emitter_x=0
+		box_emitter_y=0
+		box_emitter_z=0
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/lightning_spark.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x={ 255 30 }
+			y={ 210 30 }
+			z={ 210 30 }
+			alpha={ 255,fade_alpha 20 }
+		}
+		position={
+			x={ 0 0 }
+			y=1
+			z=5
+		}
+		duration=-1
+		emitter_yaw=0
+		emitter_pitch=0
+		life={ 0.4 0.1 }
+		emission={ 30 12 }
+		size={ 16,lightning_size 2 }
+		particle_yaw={ 0 0 }
+		particle_pitch={ 0 180 }
+		rotation={ -120 10 }
+	}
+	animation={
+		name="fade_alpha"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.47059 1 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="lightning_size"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.182 0.898 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="glow_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.25 0.98438 1 0.03906 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}

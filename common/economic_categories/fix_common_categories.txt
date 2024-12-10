@@ -1,0 +1,45 @@
+# megastructures_habitat = {
+# 	use_for_ai_budget = yes
+# 	parent = megastructures
+# 	generate_mult_modifiers = {
+# 		cost
+# 		upkeep
+# 	}
+# 	modifier_category = megastructure
+# }
+
+# megastructures_gateways = {
+# 	use_for_ai_budget = yes
+# 	parent = megastructures
+# 	generate_mult_modifiers = {
+# 		cost
+# 	}
+# 	modifier_category = megastructure
+# }
+
+megastructures_hyper_relay = {
+	parent = megastructures
+	use_for_ai_budget = yes
+	ai_use_parent_for_resources_upkeep = {
+		energy
+		consumer_goods
+	}
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	generate_mult_modifiers = {
+		cost
+	}
+	modifier_category = megastructure
+}
+
+megastructures_ring_world = {
+	hidden = yes
+	use_for_ai_budget = yes
+	parent = megastructures
+	generate_mult_modifiers = {
+		cost
+	}
+	modifier_category = megastructure
+}

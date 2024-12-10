@@ -1,0 +1,271 @@
+particle={
+	name="shroudwalker_storm_effect_file"
+	subsystem={
+		name="glow_flat"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/glow.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=100
+			y=60
+			z=255
+			alpha=100,smoke_fade
+		}
+		position={
+			y=-2
+		}
+		duration=-1
+		velocity_pitch=90
+		velocity_yaw=0
+		velocity=5
+		life=2
+		emission=2
+		size=20,grow
+		particle_pitch=90
+		rotation_speed={ 20 0 }
+		force=drag
+	}
+	subsystem={
+		name="flare_filler"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/glow.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=100
+			y=60
+			z=255
+			alpha=255,smoke_fade
+		}
+		position={
+			y=-2
+		}
+		duration=-1
+		velocity_pitch=90
+		velocity_yaw=0
+		velocity=5
+		life=2
+		emission=3
+		size=10,grow
+		particle_pitch=90
+		rotation_speed={ 20 0 }
+		force=drag
+	}
+	subsystem={
+		name="center_wave"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/bubble.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x={ 100 10 }
+			y={ 60 10 }
+			z=255
+			alpha=255,smoke_fade
+		}
+		position={
+			y=-2
+		}
+		duration=-1
+		velocity_pitch=90
+		velocity_yaw=0
+		life=1.5
+		emission=2
+		size=10,halo_grow
+		particle_pitch=90
+	}
+	subsystem={
+		name="edge_spikes"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=yes
+		texture={
+			file="gfx/particles/blast.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x={ 120 20 }
+			y={ 70 20 }
+			z={ 255 20 }
+			alpha=100,smoke_fade
+		}
+		position={
+			y=-2
+		}
+		duration=-1
+		velocity_pitch=90
+		velocity_yaw=0
+		life=1
+		emission=8
+		size=40,lines_grow
+		particle_yaw={ 0 20 }
+		particle_pitch={ 90 20 }
+		rotation={ 0 180 }
+	}
+	subsystem={
+		name="swirl"
+		max_amount=1
+		slave_particles=0
+		emitter_type="box"
+		box_emitter_y={ 3 2 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/sun_flairs.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x={ 90 30 }
+			y={ 90 20 }
+			z={ 255 10 }
+			alpha=255,swirl_fade
+		}
+		position={
+			y=-3
+		}
+		duration=-1
+		velocity_pitch=90
+		velocity_yaw=0
+		life=7
+		emission=1
+		size=70,swirl_shrink
+		particle_yaw={ 0 20 }
+		particle_pitch={ 90 20 }
+		rotation_speed={ 35 5 }
+	}
+	animation={
+		name="smoke_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.17941 0.90625 0.49412 0.91406 0.65588 0.5625 0.79118 0.1875 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="grow"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.875 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="halo_grow"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.539 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="lines_grow"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.359 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="swirl_shrink"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 1 0.21176 0.91406 0.65 0.35938 1 0.086 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="swirl_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.19118 0.27344 0.37647 0.86719 0.61471 0.70313 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="friction"
+		name="drag"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 0 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}

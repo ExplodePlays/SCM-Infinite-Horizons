@@ -1,0 +1,742 @@
+namespace = fix_ai_actions
+
+country_event = {
+	id = fix_ai_actions.0
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		set_country_flag = host_country_flag
+		country_event = {
+			id = fix_ai_actions.12
+		}
+		country_event = {
+			id = fix_ai_actions.2
+		}
+	}
+}
+
+event = {
+	id = fix_ai_actions.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = ai_gateway_construction_flag
+		set_global_flag = ai_hyper_relay_construction_flag
+		set_global_flag = ai_xeno_compatibility_flag
+		set_global_flag = ai_habitat_construction_flag
+		set_global_flag = ai_ringworld_construction_flag
+		set_global_flag = ai_unemployment_flag
+		set_global_flag = ai_corvette_destroyer_spam_flag
+		set_global_flag = ai_population_count_control_flag
+		set_global_flag = ai_omnicodex_flag
+		set_global_flag = modifier_optimisation_flag
+		remove_global_flag = ai_and_player_flag
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.2
+	title = "fix_ai_actions.1.name"
+	desc = "fix_ai_actions.1.desc"
+	diplomatic = yes
+	custom_gui = "fix_main_window"
+	is_triggered_only = yes
+	force_open = yes
+	auto_opens = yes
+	show_sound = event_mystic_reveal
+	hide_window = no
+
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					is_variable_set = ai_gateway_construction_var
+					is_variable_set = ai_habitat_construction_var
+					is_variable_set = ai_corvette_frigate_spam_var
+					is_variable_set = ai_destroyer_spam_var
+					is_variable_set = ai_ringworld_construction_var
+					is_variable_set = ai_population_count_control_var
+				}
+			}
+			set_variable = {
+				which = ai_gateway_construction_var
+				value = 100
+			}
+			set_variable = {
+				which = ai_habitat_construction_var
+				value = 7
+			}
+			set_variable = {
+				which = ai_corvette_frigate_spam_var
+				value = 60
+			}
+			set_variable = {
+				which = ai_destroyer_spam_var
+				value = 30
+			}
+			set_variable = {
+				which = ai_cruiser_spam_var
+				value = 15
+			}
+			set_variable = {
+				which = ai_ringworld_construction_var
+				value = 3
+			}
+			set_variable = {
+				which = ai_population_count_control_var
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = giga_game_started
+			}
+			set_variable = {
+				which = giga_vanilla_ringworld_cap_copy
+				value = giga_vanilla_ringworld_cap
+			}
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	after = {
+		every_country = {
+			limit = {
+				is_default_or_fallen = yes
+			}
+			set_country_flag = ai_fix_setup_complete_flag
+			set_variable = {
+				which = ai_gateway_construction_var
+				value = root.ai_gateway_construction_var
+			}
+			set_variable = {
+				which = ai_habitat_construction_var
+				value = root.ai_habitat_construction_var
+			}
+			set_variable = {
+				which = ai_corvette_frigate_spam_var
+				value = root.ai_corvette_frigate_spam_var
+			}
+			set_variable = {
+				which = ai_destroyer_spam_var
+				value = root.ai_destroyer_spam_var
+			}
+			set_variable = {
+				which = ai_ringworld_construction_var
+				value = root.ai_ringworld_construction_var
+			}
+			set_variable = {
+				which = ai_population_count_control_var
+				value = root.ai_population_count_control_var
+			}
+			
+			if = {
+				limit = {
+					has_global_flag = ai_gateway_construction_flag
+					is_ai = yes
+					NOT = {
+						has_country_flag = ai_gateway_construction_fix_flag
+					}
+				}
+				set_timed_country_flag = {
+					flag = ai_gateway_construction_fix_flag years = ai_gateway_construction_var
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_default_or_fallen = yes
+		OR = {
+			is_ai = yes
+			has_global_flag = ai_and_player_flag
+		}
+		has_global_flag = ai_unemployment_flag
+	}
+
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				colony_age > 60
+				num_assigned_jobs = {
+					job = unemployed
+					value >= 1
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					NOT = {
+						has_pop_flag = recently_resettled_pop_flag
+					}
+					is_unemployed = yes
+					NOT = {
+						has_job = bio_trophy
+					}
+				}
+				set_timed_pop_flag = {
+					flag = recently_resettled_pop_flag
+					years = 1
+				}
+				prevprev = {
+					random_owned_planet = {
+						limit = {
+							is_colony = yes
+							free_jobs >= 1
+						}
+						resettle_pop = {
+							pop = prevprev
+							planet = this
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		# OR = {
+		# 	is_ai = yes
+		# 	has_global_flag = ai_and_player_flag
+		# }
+		is_default_or_fallen = yes
+		is_ai = yes
+		has_global_flag = ai_corvette_destroyer_spam_flag
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_technology = tech_corvettes
+				has_technology = tech_torpedoes_1
+			}
+			every_owned_fleet = {
+				limit = {
+					count_owned_ship = {
+						limit = {
+							is_ship_size = corvette
+						}
+						count > root.ai_corvette_frigate_spam_var
+					}
+				}
+				random_owned_ship = {
+					limit = {
+						is_ship_size = corvette
+					}
+					delete_ship = this
+				}
+				create_ship = {
+					name = random
+					random_existing_design = frigate
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_technology = tech_destroyers
+			}
+			every_owned_fleet = {
+				limit = {
+					count_owned_ship = {
+						limit = {
+							is_ship_size = frigate
+						}
+						count > root.ai_corvette_frigate_spam_var
+					}
+				}
+				random_owned_ship = {
+					limit = {
+						is_ship_size = frigate
+					}
+					delete_ship = this
+				}
+				random_owned_ship = {
+					limit = {
+						is_ship_size = frigate
+					}
+					delete_ship = this
+				}
+				create_ship = {
+					name = random
+					random_existing_design = destroyer
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_technology = tech_cruisers
+			}
+			every_owned_fleet = {
+				limit = {
+					count_owned_ship = {
+						limit = {
+							is_ship_size = destroyer
+						}
+						count > root.ai_destroyer_spam_var
+					}
+				}
+				random_owned_ship = {
+					limit = {
+						is_ship_size = destroyer
+					}
+					delete_ship = this
+				}
+				random_owned_ship = {
+					limit = {
+						is_ship_size = destroyer
+					}
+					delete_ship = this
+				}
+				create_ship = {
+					name = random
+					random_existing_design = cruiser
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_technology = tech_battleships
+			}
+			every_owned_fleet = {
+				limit = {
+					count_owned_ship = {
+						limit = {
+							is_ship_size = cruiser
+						}
+						count > root.ai_cruiser_spam_var
+					}
+				}
+				random_owned_ship = {
+					limit = {
+						is_ship_size = cruiser
+					}
+					delete_ship = this
+				}
+				random_owned_ship = {
+					limit = {
+						is_ship_size = cruiser
+					}
+					delete_ship = this
+				}
+				create_ship = {
+					name = random
+					random_existing_design = battleship
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = fix_ai_actions.5
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		is_default_or_fallen = yes
+		is_ai = yes
+	}
+
+	immediate = {
+		add_modifier = {
+			modifier = micro_marketing
+		}
+	}
+}
+country_event = {
+	id = fix_ai_actions.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_default_or_fallen = yes
+		OR = {
+			is_ai = yes
+			has_global_flag = ai_and_player_flag
+		}
+		has_global_flag = ai_population_count_control_flag
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				num_pops > 9
+			}
+			remove_modifier = planet_pop_conversion_count
+			add_modifier = {
+				modifier = planet_pop_conversion_count days = 60
+				mult = value:ai_pop_control_factor
+			}
+		}
+		remove_modifier = country_pop_conversion_count
+		add_modifier = {
+			modifier = country_pop_conversion_count days = 60
+			mult = value:ai_pop_control_factor
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_default_or_fallen = yes
+		is_ai = yes
+		has_global_flag = ai_habitat_construction_flag
+		NOR = {
+			has_origin = origin_void_dwellers
+			has_origin = origin_toxic_knights
+			count_planet_within_border = {
+				limit = {
+					is_planet_class = "pc_habitat"
+				}
+				count < ai_habitat_construction_var
+			}
+		}
+	}
+
+	immediate = {
+		remove_modifier = ai_habitat_restriction
+		add_modifier = {
+			modifier = ai_habitat_restriction days = 60
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_default_or_fallen = yes
+		is_ai = yes
+		has_global_flag = ai_hyper_relay_construction_flag
+	}
+
+	immediate = {
+		remove_modifier = ai_hyper_relay_restriction
+		add_modifier = {
+			modifier = ai_hyper_relay_restriction days = 60
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_default_or_fallen = yes
+		is_ai = yes
+		has_country_flag = ai_gateway_construction_fix_flag
+	}
+
+	immediate = {
+		remove_modifier = ai_gateway_restriction
+		add_modifier = {
+			modifier = ai_gateway_restriction days = 60
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_default_or_fallen = yes
+		is_ai = yes
+		has_global_flag = ai_ringworld_construction_flag
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					count_owned_megastructure = {
+						limit = {
+							OR = {
+								is_megastructure_type = ring_world_1
+								is_megastructure_type = ring_world_2
+								is_megastructure_type = ring_world_2_intermediate
+								is_megastructure_type = ring_world_3_intermediate
+								is_megastructure_type = ring_world_restored
+								is_megastructure_type = ring_world_ruined
+							}
+						}
+						count < ai_ringworld_construction_var
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = giga_game_started
+				}
+				set_variable = {
+					which = giga_vanilla_ringworld_cap
+					value = 0
+				}
+			}
+			else = {
+				remove_modifier = ai_ring_world_restriction
+				add_modifier = {
+					modifier = ai_ring_world_restriction days = 60
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					has_global_flag = giga_game_started
+				}
+				set_variable = {
+					which = giga_vanilla_ringworld_cap
+					value = giga_vanilla_ringworld_cap_copy
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_default_or_fallen = yes
+		is_ai = yes
+		has_global_flag = ai_omnicodex_flag
+		has_relic = r_omnicodex
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = ai_omnicodex_to_player_flag
+			}
+			random_country = {
+				limit = {
+					is_ai = no
+				}
+				steal_relic = {
+					target = root
+					relic = r_omnicodex
+				}
+			}
+		}
+		else = {
+			remove_relic = r_omnicodex
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = modifier_optimisation_flag
+	}
+
+	immediate = {
+		set_update_modifiers_batch = begin
+		country_event = {
+			id = fix_ai_actions.13
+			days = 9
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_update_modifiers_batch = end
+		country_event = {
+			id = fix_ai_actions.12
+			days = 3
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.14
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_default_or_fallen = yes
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_country_flag = host_country_flag
+			}
+			if = {
+				limit = {
+					NOR = {
+						is_variable_set = ai_gateway_construction_var
+						is_variable_set = ai_habitat_construction_var
+						is_variable_set = ai_corvette_frigate_spam_var
+						is_variable_set = ai_destroyer_spam_var
+						is_variable_set = ai_ringworld_construction_var
+						is_variable_set = ai_population_count_control_var
+					}
+				}
+				set_variable = {
+					which = ai_gateway_construction_var
+					value = 100
+				}
+				set_variable = {
+					which = ai_habitat_construction_var
+					value = 7
+				}
+				set_variable = {
+					which = ai_corvette_frigate_spam_var
+					value = 60
+				}
+				set_variable = {
+					which = ai_destroyer_spam_var
+					value = 30
+				}
+				set_variable = {
+					which = ai_cruiser_spam_var
+					value = 15
+				}
+				set_variable = {
+					which = ai_ringworld_construction_var
+					value = 3
+				}
+				set_variable = {
+					which = ai_population_count_control_var
+					value = 1
+				}
+			}
+			every_country = {
+				limit = {
+					is_default_or_fallen = yes
+					NOT = {
+						has_country_flag = ai_fix_setup_complete_flag
+					}
+				}
+				set_country_flag = ai_fix_setup_complete_flag
+				set_variable = {
+					which = ai_gateway_construction_var
+					value = prev.ai_gateway_construction_var
+				}
+				set_variable = {
+					which = ai_habitat_construction_var
+					value = prev.ai_habitat_construction_var
+				}
+				set_variable = {
+					which = ai_corvette_frigate_spam_var
+					value = prev.ai_corvette_frigate_spam_var
+				}
+				set_variable = {
+					which = ai_destroyer_spam_var
+					value = prev.ai_destroyer_spam_var
+				}
+				set_variable = {
+					which = ai_ringworld_construction_var
+					value = prev.ai_ringworld_construction_var
+				}
+				set_variable = {
+					which = ai_population_count_control_var
+					value = prev.ai_population_count_control_var
+				}
+				
+				if = {
+					limit = {
+						has_global_flag = ai_gateway_construction_flag
+						is_ai = yes
+						NOT = {
+							has_country_flag = ai_gateway_construction_fix_flag
+						}
+					}
+					set_timed_country_flag = {
+						flag = ai_gateway_construction_fix_flag years = ai_gateway_construction_var
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fix_ai_actions.15
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_default_or_fallen = yes
+		is_ai = yes
+		from = {
+			is_megastructure_type = gateway_0
+		}
+	}
+
+	immediate = {
+		switch = {
+			trigger = num_active_gateways
+
+			2 = {
+				set_timed_country_flag = {
+					flag = ai_gateway_construction_fix_flag years = ai_gateway_construction_var
+				}
+			}
+			4 = {
+				set_timed_country_flag = {
+					flag = ai_gateway_construction_fix_flag years = ai_gateway_construction_var
+				}
+			}
+			6 = {
+				set_timed_country_flag = {
+					flag = ai_gateway_construction_fix_flag years = ai_gateway_construction_var
+				}
+			}
+			8 = {
+				set_timed_country_flag = {
+					flag = ai_gateway_construction_fix_flag years = ai_gateway_construction_var
+				}
+			}
+			default = {
+				
+			}
+		}
+	}
+}

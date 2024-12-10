@@ -1,0 +1,238 @@
+particle={
+	name="star_eater_exhaust_idle_file"
+	subsystem={
+		name="fire_backblast"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 6.7 0 }
+		sphere_emitter_yaw={ 90 0 }
+		sphere_emitter_pitch={ 0 180 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/polar_swirl_2.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255,R
+			y=255,G
+			z=200,B
+			alpha=255,backblast_alpha
+		}
+		position={
+			x=1
+			y=0
+			z=0
+		}
+		start=0
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ 0 0 }
+		velocity_yaw={ 0 0 }
+		life={ 6 0 }
+		emission=60
+		size={ 5,backblast_size 0.25 }
+		rotation={ 0 180 }
+		rotation_speed={ 50 0 }
+	}
+	subsystem={
+		name="fire_disks"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="sphere"
+		sphere_emitter_radius={ 6.5 0.05 }
+		sphere_emitter_yaw={ 90 0 }
+		sphere_emitter_pitch={ 0 180 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/fire04.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255
+			y=180
+			z=100
+			alpha=255,alpha_fade
+		}
+		position={
+			x=0.1
+			y=0
+			z=0
+		}
+		start=0
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ 0 0 }
+		velocity_yaw={ 0 0 }
+		velocity={ -1 0.2 }
+		life={ 3 0 }
+		emission=25
+		size={ 4,backblast_size 1 }
+		particle_yaw={ 0 20 }
+		particle_pitch={ 0 10 }
+		rotation={ 0 180 }
+		rotation_speed={ 10 2 }
+	}
+	subsystem={
+		name="fire_blue"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=yes
+		texture={
+			file="gfx/particles/halo.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=150
+			y=200
+			z=255
+			alpha=100,alpha_fade
+		}
+		position={
+			x=1.5
+			y=0
+			z=0
+		}
+		start=0
+		duration=-1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_pitch={ 0 0 }
+		velocity_yaw={ 0 0 }
+		velocity={ -1 0 }
+		life=1
+		emission=5
+		size=17
+		rotation={ 0 180 }
+		rotation_speed={ 50 0 }
+	}
+	animation={
+		name="alpha_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.2 1 0.671 0.516 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="shrink"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 1 1 0.2 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="R"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.18 0.291 0.313 0.594 0.797 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="G"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.289 0.135 0.75 0.324 0.852 0.638 0.57 1 0.172 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="B"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=2
+		curve={
+			0 0.836 0.224 0.781 0.456 0.727 0.694 0.289 1 0.063 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="backblast_alpha"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 1 0.059 0.977 0.462 0.867 0.824 0.648 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="backblast_size"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 1 0.218 0.68 1 0.367 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}

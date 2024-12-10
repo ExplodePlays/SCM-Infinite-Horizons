@@ -1,0 +1,140 @@
+particle={
+	name="reanimated_aquatic_dragon_eye_smoke_file"
+	subsystem={
+		name="smoke_l"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=yes
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/explosion_03_smoke_6_6.dds"
+			x=6
+			y=6
+			shader="ParticleAdditive"
+		}
+		color={
+			x=150,color_boost
+			y=230,color_boost
+			z=240,color_boost
+			alpha=200,smoke_alpha
+		}
+		position={
+			x=8
+			y=10
+			z=-15
+		}
+		duration=-1
+		emitter_yaw=50
+		velocity_yaw=-160
+		velocity=5
+		life={ 5 0.5 }
+		emission=5
+		size={ 10,size 1 }
+		particle_yaw={ 0 30 }
+		particle_pitch={ 0 30 }
+		rotation={ 0 180 }
+		mass={ 1 0.2 }
+		force=turb
+	}
+	subsystem={
+		name="smoke_r"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=yes
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/explosion_03_smoke_6_6.dds"
+			x=6
+			y=6
+			shader="ParticleAdditive"
+		}
+		color={
+			x=150,color_boost
+			y=230,color_boost
+			z=240,color_boost
+			alpha=200,smoke_alpha
+		}
+		position={
+			x=-8
+			y=10
+			z=-15
+		}
+		duration=-1
+		emitter_yaw=130
+		velocity_yaw=160
+		velocity=5
+		life={ 5 0.5 }
+		emission=5
+		size={ 10,size 1 }
+		particle_yaw={ 0 30 }
+		particle_pitch={ 0 30 }
+		rotation={ 0 180 }
+		mass={ 1 0.2 }
+		force=turb
+	}
+	animation={
+		name="smoke_alpha"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.28235 0.72656 0.55 0.53906 0.76765 0.25 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="color_boost"
+		start=0
+		duration=1
+		repeat=no
+		minValue=1
+		maxValue=2
+		curve={
+			0 0 0.30294 0.23438 0.54118 0.32031 0.76765 0.21094 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="size"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.39844 0.42353 0.71094 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="turbulence"
+		name="turb"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=1
+	}
+}

@@ -1,0 +1,309 @@
+particle={
+	name="toxoid_god_planet_muzzle_file"
+	subsystem={
+		name="magma"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/fire05.dds"
+			x=2
+			y=2
+			shader="ParticleAdditive"
+		}
+		color={
+			x=190
+			y=220
+			z=30
+			alpha=100,alpha_fade
+		}
+		position={
+			x=-2
+		}
+		duration=-1
+		velocity_pitch={ -90 0 }
+		velocity_yaw={ 0 0 }
+		velocity=4
+		life=2
+		emission=5
+		size={ 30,flare_size 5 }
+		particle_yaw={ 90 10 }
+		particle_pitch={ 0 180 }
+		rotation={ 0 180 }
+	}
+	subsystem={
+		name="surface_fire_filler"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=yes
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/explosion_03_smoke_6_6.dds"
+			x=6
+			y=6
+			shader="ParticleAdditive"
+		}
+		color={
+			x=200
+			y=220
+			z=30
+			alpha=100,alpha_fade
+		}
+		position={
+			x=-2
+		}
+		duration=-1
+		velocity_pitch={ -90 0 }
+		velocity_yaw={ 0 0 }
+		velocity=20
+		life={ 3 1 }
+		emission=3
+		size={ 70,flare_size 5 }
+		rotation={ 0 180 }
+	}
+	subsystem={
+		name="shockwaves"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=yes
+		texture={
+			file="gfx/particles/halo.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255
+			y=180
+			z=150
+			alpha=50,alpha_fade
+		}
+		position={
+			x=-2
+		}
+		duration=-1
+		velocity_pitch=180
+		velocity_yaw=0
+		velocity=2
+		life=1.6
+		emission=4
+		size={ 50,flare_size 5 }
+		particle_pitch=0
+		rotation={ 0 180 }
+	}
+	subsystem={
+		name="surface_sparks"
+		max_amount=1
+		slave_particles=0
+		emitter_type="sphere"
+		sphere_emitter_radius={ 2 4 }
+		sphere_emitter_yaw={ 0 0 }
+		sphere_emitter_pitch={ 0 180 }
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/glow.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=200
+			y=220
+			z=30
+			alpha=255,alpha_fade
+		}
+		position={
+		}
+		duration=-1
+		emitter_yaw=90
+		velocity_pitch={ 90 180 }
+		velocity_yaw={ 0 180 }
+		velocity=10
+		life=1.5
+		emission=10
+		size=2,flare_size
+		rotation={ 0 180 }
+	}
+	subsystem={
+		name="surface_fire"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/fire04.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=200
+			y=220
+			z=30
+			alpha=100,alpha_fade
+		}
+		position={
+			x=-2
+		}
+		duration=-1
+		velocity_pitch={ 0 180 }
+		velocity_yaw={ 180 180 }
+		velocity=0.5
+		life=0.8
+		emission=10
+		size={ 30,flare_size 5 }
+		rotation={ 0 180 }
+	}
+	subsystem={
+		name="beam_end"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=no
+		hide=yes
+		texture={
+			file="gfx/particles/muzzle_flash.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255
+			y=160
+			z=150
+			alpha=50,alpha_fade
+		}
+		position={
+			x=-12
+			y=0
+		}
+		duration=-1
+		velocity_pitch=0
+		velocity_yaw=0
+		velocity=15
+		life=1.6
+		emission=4
+		size={ 100,flare_size 0 }
+		particle_yaw=-90
+		particle_pitch={ 0 180 }
+		rotation=0
+	}
+	subsystem={
+		name="surface_fire_inside"
+		max_amount=1
+		slave_particles=0
+		emitter_type="sphere"
+		sphere_emitter_radius={ 2 4 }
+		sphere_emitter_yaw={ 0 180 }
+		sphere_emitter_pitch={ 0 4 }
+		invert=no
+		trail=no
+		spritesheet_animation=yes
+		spritesheet_animation_loop=1.000000
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/explosion_03_smoke_6_6.dds"
+			x=6
+			y=6
+			shader="ParticleAdditive"
+		}
+		color={
+			x=200
+			y=220
+			z=30
+			alpha=100,alpha_fade
+		}
+		position={
+			x=0
+		}
+		duration=-1
+		emitter_yaw=0
+		emitter_pitch=0
+		velocity_pitch={ 0 180 }
+		velocity_yaw={ 180 180 }
+		velocity=0.5
+		life=0.8
+		emission=10
+		size={ 40,flare_size 5 }
+		rotation={ 0 180 }
+	}
+	animation={
+		name="alpha_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.224 0.914 0.644 0.742 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="flare_size"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.258 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}

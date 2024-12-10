@@ -1,0 +1,16 @@
+version="0.0.1"
+tags={
+	"Balance"
+	"Gameplay"
+	"Diplomacy"
+	"Economy"
+	"Fixes"
+	"Graphics"
+	"Utilities"
+	"Overhaul"
+	"Loading Screen"
+	"Events"
+}
+name="SCM Infinite Horizons"
+picture="thumbnail.png"
+supported_version="v3.14.1592"

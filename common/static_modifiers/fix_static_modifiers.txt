@@ -1,0 +1,31 @@
+micro_marketing = {
+	country_resource_max_add = 1000000
+}
+planet_pop_conversion_count = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_pop_conversion_count.dds"
+
+	planet_jobs_produces_mult = 0.015
+	pop_job_trade_mult = 0.015
+	pop_job_amenities_mult = 0.015
+	pop_amenities_usage_mult = 0.015
+	pop_housing_usage_mult = 0.0075
+	planet_pops_upkeep_mult = 0.015
+	pop_growth_speed = -0.015
+	planet_pop_assembly_mult = -0.01
+	planet_pop_assembly_organic_mult = -0.01
+}
+country_pop_conversion_count = {
+	diplo_weight_pops_mult = 0.0015
+}
+ai_habitat_restriction = {
+	megastructures_habitat_cost_mult = 10000
+}
+ai_hyper_relay_restriction = {
+	megastructures_hyper_relay_cost_mult = 10000
+}
+ai_gateway_restriction = {
+	megastructures_gateways_cost_mult = 10000
+}
+ai_ring_world_restriction = {
+	megastructures_ring_world_cost_mult = 10000
+}

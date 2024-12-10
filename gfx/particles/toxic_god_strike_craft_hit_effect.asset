@@ -1,0 +1,124 @@
+particle={
+	name="toxic_god_strike_craft_hit_effect"
+	subsystem={
+		name="flare_wide_ray"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=no
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/flare_wide.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=220
+			y=230
+			z=150
+			alpha=255,alpha_fade
+		}
+		position={
+		}
+		duration=0.1
+		life={ 0.3 0.1 }
+		emission=50
+		size={ 15 1 }
+		rotation={ 0 0 }
+	}
+	subsystem={
+		name="explosion"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		spritesheet_animation=no
+		spritesheet_animation_loop=1.000000
+		local_space=no
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/cloud_4.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=200
+			y=255
+			z=150
+			alpha=255,splash_transparency
+		}
+		position={
+		}
+		duration=0.1
+		velocity_pitch={ 0 180 }
+		velocity_yaw={ 90 0 }
+		velocity={ 0 0 }
+		life=0.3
+		emission=400
+		size={ 20,grow 4 }
+		rotation={ 0 180 }
+		rotation_speed=0
+	}
+	animation={
+		name="alpha_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.303 0.266 0.535 1 0.741 0.266 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="splash_transparency"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 1 0.759 0.844 0.921 0.141 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="grow"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.031 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}

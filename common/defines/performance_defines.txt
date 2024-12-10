@@ -1,0 +1,20 @@
+# Performance Optimization Defines
+
+# Fleet Pathfinding Optimization
+NAVAL_PATHFINDING_MAX_PATH_LENGTH = 1000
+NAVAL_PATHFINDING_MAX_PATHFINDING_ATTEMPTS = 20
+
+# AI Updates Optimization
+AI_UPDATE_FREQUENCY = 5
+AI_PATHFINDING_UPDATE_FREQUENCY = 10
+
+# AI Empire Updates
+AI_EMPIRE_UPDATE_FREQUENCY = 10  # Cap updates for idle or low-priority empires
+
+# Fleet Movement Optimization
+FLEET_PATHFINDING_MAX_PATH_LENGTH = 1000
+FLEET_PATHFINDING_MAX_PATHFINDING_ATTEMPTS = 20
+
+# Pop Limits
+POP_LIMIT = 1000
+POP_GROWTH_LIMIT = 500

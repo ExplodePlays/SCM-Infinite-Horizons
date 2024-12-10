@@ -1,0 +1,85 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_background"
+		textureFile = "gfx/interface/main/fix_background.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_background_frame"
+		textureFile = "gfx/interface/main/fix_background_frame.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_background_hex"
+		textureFile = "gfx/interface/main/fix_background_hex.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_background_heading_frame"
+		textureFile = "gfx/interface/main/fix_background_heading_frame.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_option_all"
+		textureFile = "gfx/interface/main/fix_option_all.dds"
+		noOfFrames = 3
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_exit"
+		textureFile = "gfx/interface/main/fix_exit.dds"
+		noOfFrames = 3
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_option"
+		textureFile = "gfx/interface/main/fix_option.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_option_underliner"
+		textureFile = "gfx/interface/main/fix_option_underliner.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_option_underliner_l"
+		textureFile = "gfx/interface/main/fix_option_underliner_l.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_option_underliner_r"
+		textureFile = "gfx/interface/main/fix_option_underliner_r.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_option_settings"
+		textureFile = "gfx/interface/main/fix_option_settings.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_fix_option_disable"
+		textureFile = "gfx/interface/main/fix_option_disable.dds"
+	}
+}

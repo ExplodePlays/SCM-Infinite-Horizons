@@ -1,0 +1,304 @@
+
+
+# We basically reimplement the on_action here.
+ariphaos_patch_purge_pop = {
+	planet = {
+		fire_on_action = { on_action = on_pop_purged scopes = { from = controller fromfrom = prev } }
+	}
+	if = {
+		limit = { exists = pop }
+		kill_pop = yes
+	}
+}
+
+ariphaos_patch_primitive_world_conquered = {
+			# Add appropriate capital
+			if = {
+				limit = {
+					is_planet_class = pc_habitat
+					has_building = building_capital
+				}
+				remove_building = building_capital
+				add_building = building_hab_capital
+			}
+			# Add districts (Ringworlds & Habitats first)
+			if = {
+				limit = {
+					is_planet_class = pc_ringworld_habitable
+				}
+				add_district = district_rw_city
+				break = yes
+			}
+			if = {
+				limit = {
+					is_planet_class = pc_habitat
+				}
+				break = yes
+			}
+			# Add districts (planets)
+			if = {
+				limit = {
+					num_pops <= 5
+				}
+				add_district = district_city
+				add_district = district_farming
+				break = yes
+			}
+			if = {
+				limit = {
+					num_pops >= 5
+					num_pops <= 10
+				}
+				add_district = district_city
+				add_district = district_farming
+				break = yes
+			}
+			if = {
+				limit = {
+					num_pops >= 10
+					num_pops <= 15
+				}
+				add_district = district_city
+				add_district = district_city
+				add_district = district_farming
+				add_district = district_mining
+				break = yes
+			}
+			if = {
+				limit = {
+					num_pops >= 15
+					num_pops <= 20
+				}
+				add_district = district_city
+				add_district = district_city
+				add_district = district_farming
+				add_district = district_farming
+				add_district = district_mining
+				add_district = district_mining
+				break = yes
+			}
+			if = {
+				limit = {
+					num_pops >= 20
+					num_pops <= 25
+				}
+				add_district = district_city
+				add_district = district_city
+				add_district = district_city
+				add_district = district_farming
+				add_district = district_farming
+				add_district = district_mining
+				add_district = district_mining
+				break = yes
+			}
+			if = {
+				limit = {
+					num_pops >= 25
+					num_pops <= 30
+				}
+				add_district = district_city
+				add_district = district_city
+				add_district = district_city
+				add_district = district_city
+				add_district = district_farming
+				add_district = district_farming
+				add_district = district_mining
+				add_district = district_mining
+				add_district = district_generator
+				break = yes
+			}
+			if = {
+				limit = {
+					num_pops >= 30
+					#num_pops <= 35
+				}
+				add_district = district_city
+				add_district = district_city
+				add_district = district_city
+				add_district = district_city
+				add_district = district_city
+				add_district = district_farming
+				add_district = district_farming
+				add_district = district_mining
+				add_district = district_mining
+				add_district = district_generator
+				break = yes
+			}
+}
+
+ariphaos_patch_leader_change_traits = {
+	###########################################
+	# Erudite
+	###########################################
+	if = {
+		limit = {
+			species = { 
+				has_trait = trait_erudite 
+				NOR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			NOR = {
+				has_trait = leader_trait_erudite
+				has_leader_flag = renowned_leader
+				has_leader_flag = legendary_leader
+			}
+		}
+		add_trait_no_notify = leader_trait_erudite
+	}
+	
+	# Remove
+	if = {
+		limit = {
+			has_trait = leader_trait_erudite
+			species = {
+				OR = {
+					NOT = { has_trait = trait_erudite }
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			NOR = {
+				has_leader_flag = renowned_leader
+				has_leader_flag = legendary_leader
+			}
+		}
+		remove_trait = leader_trait_erudite
+	}
+
+	###########################################
+	# Cyborg
+	###########################################
+	
+	if = {
+		limit = {
+			species = { 
+				has_trait = trait_cybernetic 
+				NOR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			NOR = {
+				has_trait = leader_trait_cyborg
+				has_leader_flag = renowned_leader
+				has_leader_flag = legendary_leader
+			}
+		}
+		add_trait_no_notify = leader_trait_cyborg
+	}
+	
+	# Remove
+	if = {
+		limit = {
+			has_trait = leader_trait_cyborg
+			species = {
+				OR = {
+					NOT = { has_trait = trait_cybernetic }
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			NOR = {
+				has_leader_flag = renowned_leader
+				has_leader_flag = legendary_leader
+			}
+		}
+		remove_trait = leader_trait_cyborg
+	}
+	
+	###########################################
+	# Synthetic
+	###########################################
+	
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_tradition = tr_synthetics_finish
+					has_tradition = tr_modularity_finish
+				}
+			}
+			species = { 
+				OR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			NOR = {
+				has_trait = leader_trait_synthetic
+				has_leader_flag = renowned_leader
+				has_leader_flag = legendary_leader
+			}
+		}
+		add_trait_no_notify = leader_trait_synthetic
+	}
+	
+	# Remove
+	if = {
+		limit = {
+			has_trait = leader_trait_synthetic
+			NOR = {
+				has_leader_flag = renowned_leader
+				has_leader_flag = legendary_leader
+			}
+			OR = {
+				owner = {
+					NOR = {
+						has_tradition = tr_synthetics_finish
+						has_tradition = tr_modularity_finish
+					}
+				}
+				species = {
+					NOR = {
+						has_trait = trait_mechanical
+						has_trait = trait_machine_unit
+					}
+				}
+			}
+		}
+		remove_trait = leader_trait_synthetic
+	}
+	
+	###########################################
+	# Psionic
+	###########################################
+	
+	if = {
+		limit = {
+			species = { 
+				has_trait = trait_psionic
+				NOR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			has_psionic_leader_trait = no
+			NOR = {
+				has_leader_flag = renowned_leader
+				has_leader_flag = legendary_leader
+			}
+		}
+		add_trait_no_notify = leader_trait_psionic
+	}
+	
+	# Remove
+	if = {
+		limit = {
+			has_trait = leader_trait_psionic
+			species = {
+				OR = {
+					NOT = { has_trait = trait_psionic }
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			NOR = {
+				has_leader_flag = renowned_leader
+				has_leader_flag = legendary_leader
+			}
+		}
+		remove_trait = leader_trait_psionic
+	}
+}

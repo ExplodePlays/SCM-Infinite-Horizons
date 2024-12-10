@@ -1,0 +1,21 @@
+# Root = country
+# This = species
+can_modify_species = {
+	OR = {
+		root = {
+			exists = prev
+			is_ai = yes
+			count_exact_species = {
+				count < 3
+				limit = {
+					OR = {
+						is_same_species = prevprev
+						is_subspecies = prevprev
+					}
+				}
+			}
+		}
+		NOT = { has_trait = trait_self_modified }
+		is_same_species = root
+	}
+}

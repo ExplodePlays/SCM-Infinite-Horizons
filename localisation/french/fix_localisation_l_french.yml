@@ -1,0 +1,98 @@
+﻿l_french:
+
+  fix_ai_actions.1.name:0 "AI Game Performance\nOptimisation"
+  fix_ai_actions.1.desc:0 "Disable or leave enabled the AI's optimisations using this menu. Most optimisations are enabled by default (recommended), click 'X' to disable an optimisation for the AI. For max performance click: '§YEnable some AI opt on players§!' and '§RExit§!'.\nNote: '§YEnable some AI opt on players§!' optimisation is disabled by default. Settings can be changed later through an edict."
+
+  fix_menu_events.2.name:0 "Disable AI Hyper Relays"
+  fix_menu_events.2.desc:0 "Stops the AI from constructing Hyper Relays as they degrade performance especially with their required amount.\n\nThis will save on some performance if the button is greyed out."
+
+  fix_menu_events.3.name:0 "Restrict AI Gateways"
+  fix_menu_events.3.desc:0 "Stops the AI from constructing Gateways more than twice every 100 years to prevent the AI from building them too quickly, unnecessarily.\n\nThis will save on some performance if the button is greyed out. The optimisation can be configured using the options below:"
+
+  fix_menu_events.3.b:0 "§RDisable Gateways§!"
+  fix_menu_events.3.c:0 "Allow §Y2§! Gateways every §Y50§! years"
+  fix_menu_events.3.d:0 "Allow §Y2§! Gateways every §Y100§! years (§Gdefault§!)"
+  fix_menu_events.3.e:0 "Allow §Y2§! Gateways every §Y150§! years"
+
+  fix_menu_events.4.name:0 "Restrict AI Habitats"
+  fix_menu_events.4.desc:0 "Stops the AI from constructing habitats by introducing a limit of 7 habitats per AI.\n\nThis will save on some performance if the button is greyed out. The optimisation can be configured using the options below:"
+
+  fix_menu_events.4.b:0 "§RDisable Habitats§!"
+  fix_menu_events.4.c:0 "Allow §Y3§! Habitats"
+  fix_menu_events.4.d:0 "Allow §Y7§! Habitats (§Gdefault§!)"
+  fix_menu_events.4.e:0 "Allow §Y11§! Habitats"
+
+  fix_menu_events.5.name:0 "Disable AI Omnicodex Relic"
+  fix_menu_events.5.desc:0 "Stops the AI from getting the Omnicodex Relic to prevent unnecessary hybrid species.\n\nThis will save on some performance if the button is greyed out. The optimisation can be configured using the options below:"
+
+  fix_menu_events.5.b:0 "§RRemoves relic entirely§! (§Gdefault§!)"
+  fix_menu_events.5.c:0 "Gives relic to §Yplayer§! when found"
+
+  fix_menu_events.6.name:0 "Improve AI unemployment"
+  fix_menu_events.6.desc:0 "Fills AI job vacancies faster and reduces unemployment by resettling the unemployed pops to planets with open jobs to prevent increased checking.\n\nThis will save on some performance if the button is greyed out."
+
+  fix_menu_events.7.name:0 "Disable AI Xeno-Compatibility"
+  fix_menu_events.7.desc:0 "Stops the AI from getting Xeno-Compatibility ascension perk to prevent unnecessary hybrid species.\n\nThis will save on some performance if the button is greyed out."
+
+  fix_menu_events.8.name:0 "Restrict AI Corvettes/Frigates"
+  fix_menu_events.8.desc:0 "Stops the AI from building corvettes, frigates, destroyers, and cruisers by putting a cap on corvettes and frigates to 60, destroyers to 30, and cruisers to 15 per fleet (by default). Once the AI reaches the cap(s), a corvette is replaced with a frigate, and 2 frigates are replaced with a destroyer, 2 destroyers are replaced with a cruiser, and 2 cruisers are replaced with a battleship. This should make AI fleets less corvette/other heavy and stronger (the 2 for 1 trade-off works out economically). This only occurs when possible i.e., when the AI has destroyer technology and cruiser technology for balance reasons.\n\nThis will save on some performance if the button is greyed out. The optimisation can be configured using the options below:"
+
+  fix_menu_events.8.b:0 "Allow §Y15§! corvettes/frigates, §Y8§! destroyers, and §Y4§! cruisers"
+  fix_menu_events.8.c:0 "Allow §Y30§! corvettes/frigates, §Y15§! destroyers, and §Y8§! cruisers"
+  fix_menu_events.8.d:0 "Allow §Y60§! corvettes/frigates, §Y30§! destroyers, and §Y15§! cruisers (§Gdefault§!)"
+  fix_menu_events.8.e:0 "Allow §Y120§! corvettes/frigates, §Y60§! destroyers, and §Y30§! cruisers"
+
+  fix_menu_events.9.name:0 "Restrict AI Ringworlds"
+  fix_menu_events.9.desc:0 "Stops the AI from constructing ringworlds by introducing a limit of 3 ringworlds per AI.\n\nThis will save on some performance if the button is greyed out. The optimisation can be configured using the options below:"
+
+  fix_menu_events.9.b:0 "§RDisable Ringworlds§!"
+  fix_menu_events.9.c:0 "Allow §Y1§! Ringworlds"
+  fix_menu_events.9.d:0 "Allow §Y3§! Ringworlds (§Gdefault§!)"
+  fix_menu_events.9.e:0 "Allow §Y5§! Ringworlds"
+
+  fix_menu_events.10.name:0 "§YEnable some AI opt on players§!"
+  fix_menu_events.10.desc:0 "As a preference, you can enable some of the AI optimisations to be also applied on players for potential balance and further performance gains. These currently include (if not disabled); 'Disable AI Hyper Relays', 'Improve AI unemployment', and 'Restrict AI pop count'.\n\nThis will save on some performance if the button is greyed out."
+
+  fix_menu_events.11.name:0 "Modifier Updating Optimisation"
+  fix_menu_events.11.desc:0 "Reduces the burden of updating modifiers by decreasing their update frequency to 3 times per month.\n\nThis will save on some performance if the button is greyed out."
+
+  fix_menu_events.12.name:0 "Restrict AI pop count"
+  fix_menu_events.12.desc:0 "Reduces the AI's and/or player's pops by introducing a scaling modifier on each planet individually (based on pop number); giving negative pop growth speed and pop assembly speed (notably) which is compensated with positive pop resource production (among other things) and diplomatic weight from pops.\n\nThis will save on some performance if the button is greyed out. The optimisation can be configured using the options below:"
+
+  fix_menu_events.12.b:0 "Set this restriction to §Y50%§! effectiveness"
+  fix_menu_events.12.c:0 "Set this restriction to §Y100%§! effectiveness (§Gdefault§!)"
+  fix_menu_events.12.d:0 "Set this restriction to §Y150%§! effectiveness"
+
+  fix_ai_actions.1.a:0 "Enable All"
+  fix_ai_actions.1.b:0 "Disable AI Hyper Relays"
+  fix_ai_actions.1.c:0 "Restrict AI Gateways"
+  fix_ai_actions.1.d:0 "Restrict AI Habitats"
+  fix_ai_actions.1.e:0 "Disable AI Omnicodex Relic"
+  fix_ai_actions.1.f:0 "Improve AI unemployment"
+  fix_ai_actions.1.g:0 "Disable AI Xeno-Compatibility"
+  fix_ai_actions.1.h:0 "Restrict AI Corvettes/Frigates"
+  fix_ai_actions.1.i:0 "Restrict AI Ringworlds"
+  fix_ai_actions.1.j:0 "§YEnable some AI opt on players§!"
+  fix_ai_actions.1.k:0 "Modifier Updating Optimisation"
+  fix_ai_actions.1.l:0 "Restrict AI pop count"
+  fix_ai_actions.1.m:0 "Disable All"
+  fix_ai_actions.1.n:0 "Exit"
+
+  edict_edict_mod_options:0 "§BAI Game Performance Optimisation§!"
+  edict_edict_mod_options_desc:0 "Show the game start menu again where options can be disabled, enabled, and configured."
+
+  micro_marketing:0 "AI Micro Marketing Fix"
+  micro_marketing_desc:0 ""
+
+  planet_pop_conversion_count:0 "Pop Count Conversion"
+  planet_pop_conversion_count_desc:0 "A scaling pop control protocol that prevents a galactic wide time relativity disaster."
+
+  country_pop_conversion_count:0 "Pop Count Conversion"
+  country_pop_conversion_count_desc:0 "A scaling pop control protocol compensator that prevents empire wide political disaster."
+
+  ai_habitat_restriction:0 "AI Habitat Restriction"
+  ai_hyper_relay_restriction:0 "AI Hyper Relay Restriction"
+  ai_gateway_restriction:0 "AI Gateway Restriction"
+  ai_ring_world_restriction:0 "AI Ring World Restriction"
+
+  requires_some_ai_fixes_on_players_disabled:0 "The optimisation 'Enable some AI opt on players' must be disabled"

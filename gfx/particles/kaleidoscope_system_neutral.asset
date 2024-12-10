@@ -1,0 +1,77 @@
+particle={
+	name="kaleidoscope_system_neutral_file"
+	subsystem={
+		name="halo"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="box"
+		box_emitter_x={ 0 12 }
+		box_emitter_y={ 0 5 }
+		box_emitter_z={ 0 12 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/light_shaft_half.dds"
+			x=1
+			y=1
+			shader="ParticlePreAlphaBlend"
+		}
+		color={
+			x={ 200,halo_fade 15 }
+			y={ 180,halo_fade 20 }
+			z={ 110,halo_fade 15 }
+			alpha={ 120,halo_fade 5 }
+		}
+		position={
+			x=0
+			y=-50
+			z=50
+		}
+		duration=-1
+		emission_pulse_duration=0.5
+		emission_pulse_silence=0.1
+		emitter_yaw={ 0 0 }
+		emitter_pitch={ 0 0 }
+		velocity_yaw=-90
+		velocity={ 40 10 }
+		life={ 4 1 }
+		emission=5
+		size={ 6 2 }
+		particle_yaw={ 0 0 }
+		particle_pitch={ -90 90 }
+		rotation=0
+		rotation_speed=5
+		force=push
+	}
+	animation={
+		name="halo_fade"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.023 0.09412 0.99219 0.66176 0.85938 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="vortex"
+		name="push"
+		position={
+			450 -50 0 
+		}
+		direction={
+			1 0 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}

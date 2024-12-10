@@ -1,0 +1,278 @@
+particle={
+	name="ship_burn_2_effect"
+	subsystem={
+		name="fire_1_red"
+		max_amount=1
+		slave_particles=0
+		emitter_type="box"
+		box_emitter_y={ 0 0.5 }
+		box_emitter_z={ 0 1 }
+		invert=no
+		trail=no
+		local_space=no
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/fire_08.dds"
+			x=2
+			y=2
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255
+			y=255
+			z=255
+			alpha=255,fire_alpha
+		}
+		position={
+		}
+		duration=-1
+		velocity_pitch={ 90 30 }
+		velocity_yaw={ 0 20 }
+		velocity={ 4 4 }
+		life={ 0.25 0.1 }
+		emission=200
+		size={ 1.5,fire_grow 0.5 }
+		rotation={ 0 180 }
+		rotation_speed=50
+	}
+	subsystem={
+		name="fire_2_yellow"
+		max_amount=1
+		slave_particles=0
+		emitter_type="box"
+		box_emitter_y={ 0 0.5 }
+		box_emitter_z={ 0 1 }
+		invert=no
+		trail=no
+		local_space=no
+		billboard=yes
+		hide=yes
+		texture={
+			file="gfx/particles/fire03_des.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255
+			y=170
+			z=75
+			alpha=255,fire_alpha
+		}
+		position={
+		}
+		duration=-1
+		velocity_pitch={ 0 20 }
+		velocity_yaw={ 0 20 }
+		velocity={ 4 4 }
+		life={ 0.25 0.1 }
+		emission=50
+		size={ 1.5,fire_grow 0.5 }
+		rotation={ 0 180 }
+		rotation_speed=50
+	}
+	subsystem={
+		name="smoke"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=no
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/cloud.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=200,R
+			y=200,G
+			z=200,B
+			alpha=100,smoke_alpha
+		}
+		position={
+		}
+		duration=-1
+		velocity_pitch={ 90 30 }
+		velocity_yaw={ 0 10 }
+		velocity={ 3 1 }
+		life={ 2 1 }
+		emission=10
+		size={ 10,grow 2.5 }
+		rotation={ 0 180 }
+	}
+	subsystem={
+		name="sparks"
+		max_amount=1
+		slave_particles=0
+		emitter_type="box"
+		box_emitter_y={ 0 0.5 }
+		box_emitter_z={ 0 1 }
+		invert=no
+		trail=no
+		local_space=no
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/gradient_circle2.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255
+			y=180
+			z=25
+			alpha=255,fire_alpha
+		}
+		position={
+		}
+		duration=-1
+		velocity_pitch={ 90 30 }
+		velocity={ 3 3 }
+		life={ 3 1 }
+		emission=5
+		size={ 0.15 0.05 }
+		rotation={ 0 180 }
+	}
+	subsystem={
+		name="flare"
+		max_amount=1
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=no
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/flare.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=255
+			y=180
+			z=100
+			alpha=50,smoke_alpha
+		}
+		position={
+		}
+		duration=-1
+		velocity={ 0 0 }
+		life={ 0.5 0.25 }
+		emission=10
+		size={ 10 4 }
+		rotation={ 0 180 }
+	}
+	animation={
+		name="smoke_alpha"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.326 1 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="fire_alpha"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0 0.371 0.891 0.685 0.875 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="fire_grow"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.773 0.682 0.875 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="grow"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.211 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="R"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 1 0.503 0.391 1 0.375 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="G"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.68 0.541 0.289 1 0.281 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="B"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1
+		curve={
+			0 0.156 0.532 0.352 1 0.313 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}
