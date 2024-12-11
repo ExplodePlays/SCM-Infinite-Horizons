@@ -13,4 +13,7 @@ tags={
 }
 name="SCM Infinite Horizons"
 picture="thumbnail.png"
-supported_version="v3.14.1592"
+replace_path="interface"
+replace_path="gfx/interface"
+supported_version="v3.14.15926"
+remote_file_id="3382406371"

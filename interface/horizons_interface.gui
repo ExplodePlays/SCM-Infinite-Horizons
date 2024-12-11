@@ -1,7 +1,7 @@
 guiTypes = {
 
 	containerWindowType = {
-		name = "horizons_main_window"
+		name = "fix_main_window"
 		size = { width = 964 height = 700 }
 		orientation = center
 		origo = center
