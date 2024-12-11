@@ -15,7 +15,7 @@ edict_mod_options = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_ai_actions.2
+				id = horizons_ai.2
 			}
 		}
 	}

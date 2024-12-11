@@ -1,7 +1,7 @@
-namespace = fix_ai_actions
+namespace = horizons_ai
 
 country_event = {
-	id = fix_ai_actions.0
+	id = horizons_ai.0
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13,16 +13,16 @@ country_event = {
 	immediate = {
 		set_country_flag = host_country_flag
 		country_event = {
-			id = fix_ai_actions.12
+			id = horizons_ai.12
 		}
 		country_event = {
-			id = fix_ai_actions.2
+			id = horizons_ai.2
 		}
 	}
 }
 
 event = {
-	id = fix_ai_actions.1
+	id = horizons_ai.1
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -42,9 +42,9 @@ event = {
 }
 
 country_event = {
-	id = fix_ai_actions.2
-	title = "fix_ai_actions.1.name"
-	desc = "fix_ai_actions.1.desc"
+	id = horizons_ai.2
+	title = "horizons_ai.1.name"
+	desc = "horizons_ai.1.desc"
 	diplomatic = yes
 	custom_gui = "fix_main_window"
 	is_triggered_only = yes
@@ -161,7 +161,7 @@ country_event = {
 }
 
 country_event = {
-	id = fix_ai_actions.3
+	id = horizons_ai.3
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -215,7 +215,7 @@ country_event = {
 }
 
 country_event = {
-	id = fix_ai_actions.4
+	id = horizons_ai.4
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -352,7 +352,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = fix_ai_actions.5
+	id = horizons_ai.5
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -369,7 +369,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = fix_ai_actions.6
+	id = horizons_ai.6
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -402,7 +402,7 @@ country_event = {
 }
 
 country_event = {
-	id = fix_ai_actions.7
+	id = horizons_ai.7
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -431,7 +431,7 @@ country_event = {
 }
 
 country_event = {
-	id = fix_ai_actions.8
+	id = horizons_ai.8
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -450,7 +450,7 @@ country_event = {
 }
 
 country_event = {
-	id = fix_ai_actions.9
+	id = horizons_ai.9
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -469,7 +469,7 @@ country_event = {
 }
 
 country_event = {
-	id = fix_ai_actions.10
+	id = horizons_ai.10
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -529,7 +529,7 @@ country_event = {
 }
 
 country_event = {
-	id = fix_ai_actions.11
+	id = horizons_ai.11
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -562,7 +562,7 @@ country_event = {
 }
 
 country_event = {
-	id = fix_ai_actions.12
+	id = horizons_ai.12
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -573,28 +573,28 @@ country_event = {
 	immediate = {
 		set_update_modifiers_batch = begin
 		country_event = {
-			id = fix_ai_actions.13
+			id = horizons_ai.13
 			days = 9
 		}
 	}
 }
 
 country_event = {
-	id = fix_ai_actions.13
+	id = horizons_ai.13
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
 		set_update_modifiers_batch = end
 		country_event = {
-			id = fix_ai_actions.12
+			id = horizons_ai.12
 			days = 3
 		}
 	}
 }
 
 country_event = {
-	id = fix_ai_actions.14
+	id = horizons_ai.14
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -698,7 +698,7 @@ country_event = {
 }
 
 country_event = {
-	id = fix_ai_actions.15
+	id = horizons_ai.15
 	hide_window = yes
 	is_triggered_only = yes
 

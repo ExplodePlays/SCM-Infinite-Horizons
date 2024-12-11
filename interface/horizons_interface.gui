@@ -1,7 +1,7 @@
 guiTypes = {
 
 	containerWindowType = {
-		name = "fix_main_window"
+		name = "horizons_main_window"
 		size = { width = 964 height = 700 }
 		orientation = center
 		origo = center
@@ -9,57 +9,57 @@ guiTypes = {
 		clipping = no
 
 		iconType = {
-			name = "fix_upper_background"
-			spriteType = "GFX_fix_background"
+			name = "horizons_upper_background"
+			spriteType = "GFX_horizons_background"
 			position = { x = 6 y = 5 }
 			#alwaysTransparent = yes
 		}
 
 		iconType = {
-			name = "fix_lower_background"
-			spriteType = "GFX_fix_background"
+			name = "horizons_lower_background"
+			spriteType = "GFX_horizons_background"
 			position = { x = 6 y = 323 }
 			#alwaysTransparent = yes
 		}
 
 		iconType = {
-			name = "fix_lower_frame"
-			spriteType = "GFX_fix_background_frame"
+			name = "horizons_lower_frame"
+			spriteType = "GFX_horizons_background_frame"
 			position = { x = 0 y = 318 }
 			alwaysTransparent = yes
 		}
 
 		iconType = {
-			name = "fix_upper_frame"
-			spriteType = "GFX_fix_background_frame"
+			name = "horizons_upper_frame"
+			spriteType = "GFX_horizons_background_frame"
 			position = { x = 0 y = 0 }
 			alwaysTransparent = yes
 		}
 
 		iconType = {
-			name = "fix_left_hex_bg"
-			spriteType = "GFX_fix_background_hex"
+			name = "horizons_left_hex_bg"
+			spriteType = "GFX_horizons_background_hex"
 			position = { x = 0 y = -35 }
 			alwaysTransparent = yes
 		}
 
 		iconType = {
-			name = "fix_right_hex_bg"
-			spriteType = "GFX_fix_background_hex"
+			name = "horizons_right_hex_bg"
+			spriteType = "GFX_horizons_background_hex"
 			position = { x = 340 y = -35 }
 			alwaysTransparent = yes
 		}
 
 		iconType = {
-			name = "fix_heading_frame"
-			quadTextureSprite = "GFX_fix_background_heading_frame"
+			name = "horizons_heading_frame"
+			quadTextureSprite = "GFX_horizons_background_heading_frame"
 			position = { x = 230 y = -50 }
 			alwaysTransparent = yes
 		}
 
 		iconType = {
-			name = "fix_underliner"
-			spriteType = "GFX_fix_option_underliner"
+			name = "horizons_underliner"
+			spriteType = "GFX_horizons_option_underliner"
 			position = { x = -108 y = 110 }
 			orientation = center_up
 			#rotation = 3.1415926535897932384626433832795
@@ -69,133 +69,133 @@ guiTypes = {
 		### Auto Buttons ###
 
 		effectButtonType = {
-			name = "fix_menu_button_upper_middle"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_upper_middle"
+			spriteType = "GFX_horizons_option"
 			position = { x = -140 y = 187 }
 			orientation = center_up
-			buttonText = "fix_ai_actions.1.g"
+			buttonText = "horizons_ai_actions.1.g"
 			buttonFont = cg_16b
-			effect = fix_menu_button_upper_middle_effect
+			effect = horizons_menu_button_upper_middle_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_button_upper_top_left"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_upper_top_left"
+			spriteType = "GFX_horizons_option"
 			position = { x = -375 y = 137 }
 			orientation = center_up
-			buttonText = "fix_ai_actions.1.k"
+			buttonText = "horizons_ai_actions.1.k"
 			buttonFont = cg_16b
-			effect = fix_menu_button_upper_top_left_effect
+			effect = horizons_menu_button_upper_top_left_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_button_upper_top_right"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_upper_top_right"
+			spriteType = "GFX_horizons_option"
 			position = { x = 97 y = 137 }
 			orientation = center_up
-			buttonText = "fix_ai_actions.1.h"
+			buttonText = "horizons_ai_actions.1.h"
 			buttonFont = cg_16b
-			effect = fix_menu_button_upper_top_right_effect
+			effect = horizons_menu_button_upper_top_right_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_button_upper_bottom_left"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_upper_bottom_left"
+			spriteType = "GFX_horizons_option"
 			position = { x = -375 y = 237 }
 			orientation = center_up
-			buttonText = "fix_ai_actions.1.e"
+			buttonText = "horizons_ai_actions.1.e"
 			buttonFont = cg_16b
-			effect = fix_menu_button_upper_bottom_left_effect
+			effect = horizons_menu_button_upper_bottom_left_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_button_upper_bottom_right"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_upper_bottom_right"
+			spriteType = "GFX_horizons_option"
 			position = { x = 97 y = 237 }
 			orientation = center_up
-			buttonText = "fix_ai_actions.1.f"
+			buttonText = "horizons_ai_actions.1.f"
 			buttonFont = cg_16b
-			effect = fix_menu_button_upper_bottom_right_effect
+			effect = horizons_menu_button_upper_bottom_right_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_button_lower_top_middle"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_lower_top_middle"
+			spriteType = "GFX_horizons_option"
 			position = { x = -140 y = 90 }
 			orientation = center
-			buttonText = "fix_ai_actions.1.b"
+			buttonText = "horizons_ai_actions.1.b"
 			buttonFont = cg_16b
-			effect = fix_menu_button_lower_top_middle_effect
+			effect = horizons_menu_button_lower_top_middle_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_button_lower_middle_left"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_lower_middle_left"
+			spriteType = "GFX_horizons_option"
 			position = { x = -375 y = 140 }
 			orientation = center
-			buttonText = "fix_ai_actions.1.d"
+			buttonText = "horizons_ai_actions.1.d"
 			buttonFont = cg_16b
-			effect = fix_menu_button_lower_middle_left_effect
+			effect = horizons_menu_button_lower_middle_left_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_button_lower_bottom_middle"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_lower_bottom_middle"
+			spriteType = "GFX_horizons_option"
 			position = { x = -140 y = 224 }
 			orientation = center
-			buttonText = "fix_ai_actions.1.j"
+			buttonText = "horizons_ai_actions.1.j"
 			buttonFont = cg_16b
-			effect = fix_menu_button_lower_bottom_middle_effect
+			effect = horizons_menu_button_lower_bottom_middle_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_button_lower_middle_right"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_lower_middle_right"
+			spriteType = "GFX_horizons_option"
 			position = { x = 97 y = 140 }
 			orientation = center
-			buttonText = "fix_ai_actions.1.i"
+			buttonText = "horizons_ai_actions.1.i"
 			buttonFont = cg_16b
-			effect = fix_menu_button_lower_middle_right_effect
+			effect = horizons_menu_button_lower_middle_right_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_button_lower_top_left"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_lower_top_left"
+			spriteType = "GFX_horizons_option"
 			position = { x = -375 y = 40 }
 			orientation = center
-			buttonText = "fix_ai_actions.1.c"
+			buttonText = "horizons_ai_actions.1.c"
 			buttonFont = cg_16b
-			effect = fix_menu_button_lower_top_left_effect
+			effect = horizons_menu_button_lower_top_left_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_button_lower_top_right"
-			spriteType = "GFX_fix_option"
+			name = "horizons_menu_button_lower_top_right"
+			spriteType = "GFX_horizons_option"
 			position = { x = 97 y = 40 }
 			orientation = center
-			buttonText = "fix_ai_actions.1.l"
+			buttonText = "horizons_ai_actions.1.l"
 			buttonFont = cg_16b
-			effect = fix_menu_button_lower_top_right_effect
+			effect = horizons_menu_button_lower_top_right_effect
 			clicksound = interface
 			oversound = mouse_over
 		}
@@ -203,111 +203,111 @@ guiTypes = {
 		### Button Menus ###
 
 		effectButtonType = {
-			name = "fix_menu_settings_upper_middle"
+			name = "horizons_menu_settings_upper_middle"
 			position = { x = 98 y = 187 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center_up
-			effect = fix_menu_settings_upper_middle_effect
+			effect = horizons_menu_settings_upper_middle_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_settings_upper_top_left"
+			name = "horizons_menu_settings_upper_top_left"
 			position = { x = -137 y = 137 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center_up
-			effect = fix_menu_settings_upper_top_left_effect
+			effect = horizons_menu_settings_upper_top_left_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_settings_upper_top_right"
+			name = "horizons_menu_settings_upper_top_right"
 			position = { x = 335 y = 137 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center_up
-			effect = fix_menu_settings_upper_top_right_effect
+			effect = horizons_menu_settings_upper_top_right_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_settings_upper_bottom_left"
+			name = "horizons_menu_settings_upper_bottom_left"
 			position = { x = -137 y = 237 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center_up
-			effect = fix_menu_settings_upper_bottom_left_effect
+			effect = horizons_menu_settings_upper_bottom_left_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_settings_upper_bottom_right"
+			name = "horizons_menu_settings_upper_bottom_right"
 			position = { x = 335 y = 237 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center_up
-			effect = fix_menu_settings_upper_bottom_right_effect
+			effect = horizons_menu_settings_upper_bottom_right_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_settings_lower_top_middle"
+			name = "horizons_menu_settings_lower_top_middle"
 			position = { x = 98 y = 90 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center
-			effect = fix_menu_settings_lower_top_middle_effect
+			effect = horizons_menu_settings_lower_top_middle_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_settings_lower_bottom_middle"
+			name = "horizons_menu_settings_lower_bottom_middle"
 			position = { x = 98 y = 224 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center
-			effect = fix_menu_settings_lower_bottom_middle_effect
+			effect = horizons_menu_settings_lower_bottom_middle_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_settings_lower_top_left"
+			name = "horizons_menu_settings_lower_top_left"
 			position = { x = -137 y = 40 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center
-			effect = fix_menu_settings_lower_top_left_effect
+			effect = horizons_menu_settings_lower_top_left_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_settings_lower_top_right"
+			name = "horizons_menu_settings_lower_top_right"
 			position = { x = 335 y = 40 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center
-			effect = fix_menu_settings_lower_top_right_effect
+			effect = horizons_menu_settings_lower_top_right_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_settings_lower_middle_left"
+			name = "horizons_menu_settings_lower_middle_left"
 			position = { x = -137 y = 140 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center
-			effect = fix_menu_settings_lower_middle_left_effect
+			effect = horizons_menu_settings_lower_middle_left_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_settings_lower_middle_right"
+			name = "horizons_menu_settings_lower_middle_right"
 			position = { x = 335 y = 140 }
-			quadTextureSprite ="GFX_fix_option_settings"
+			quadTextureSprite ="GFX_horizons_option_settings"
 			Orientation = center
-			effect = fix_menu_settings_lower_middle_right_effect
+			effect = horizons_menu_settings_lower_middle_right_effect
 			clicksound = main_menu
 			oversound = mouse_over
 		}
@@ -315,111 +315,111 @@ guiTypes = {
 		### Button Disable ###
 
 		effectButtonType = {
-			name = "fix_menu_disable_upper_middle"
+			name = "horizons_menu_disable_upper_middle"
 			position = { x = -139 y = 187 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center_up
-			effect = fix_menu_disable_upper_middle_effect
+			effect = horizons_menu_disable_upper_middle_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_disable_upper_top_left"
+			name = "horizons_menu_disable_upper_top_left"
 			position = { x = -374 y = 137 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center_up
-			effect = fix_menu_disable_upper_top_left_effect
+			effect = horizons_menu_disable_upper_top_left_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_disable_upper_top_right"
+			name = "horizons_menu_disable_upper_top_right"
 			position = { x = 98 y = 137 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center_up
-			effect = fix_menu_disable_upper_top_right_effect
+			effect = horizons_menu_disable_upper_top_right_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_disable_upper_bottom_left"
+			name = "horizons_menu_disable_upper_bottom_left"
 			position = { x = -374 y = 237 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center_up
-			effect = fix_menu_disable_upper_bottom_left_effect
+			effect = horizons_menu_disable_upper_bottom_left_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_disable_upper_bottom_right"
+			name = "horizons_menu_disable_upper_bottom_right"
 			position = { x = 98 y = 237 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center_up
-			effect = fix_menu_disable_upper_bottom_right_effect
+			effect = horizons_menu_disable_upper_bottom_right_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_disable_lower_top_middle"
+			name = "horizons_menu_disable_lower_top_middle"
 			position = { x = -139 y = 90 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center
-			effect = fix_menu_disable_lower_top_middle_effect
+			effect = horizons_menu_disable_lower_top_middle_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_disable_lower_bottom_middle"
+			name = "horizons_menu_disable_lower_bottom_middle"
 			position = { x = -139 y = 224 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center
-			effect = fix_menu_disable_lower_bottom_middle_effect
+			effect = horizons_menu_disable_lower_bottom_middle_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_disable_lower_top_left"
+			name = "horizons_menu_disable_lower_top_left"
 			position = { x = -374 y = 40 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center
-			effect = fix_menu_disable_lower_top_left_effect
+			effect = horizons_menu_disable_lower_top_left_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_disable_lower_top_right"
+			name = "horizons_menu_disable_lower_top_right"
 			position = { x = 98 y = 40 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center
-			effect = fix_menu_disable_lower_top_right_effect
+			effect = horizons_menu_disable_lower_top_right_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_disable_lower_middle_left"
+			name = "horizons_menu_disable_lower_middle_left"
 			position = { x = -374 y = 140 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center
-			effect = fix_menu_disable_lower_middle_left_effect
+			effect = horizons_menu_disable_lower_middle_left_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
 
 		effectButtonType = {
-			name = "fix_menu_disable_lower_middle_right"
+			name = "horizons_menu_disable_lower_middle_right"
 			position = { x = 98 y = 140 }
-			quadTextureSprite ="GFX_fix_option_disable"
+			quadTextureSprite ="GFX_horizons_option_disable"
 			Orientation = center
-			effect = fix_menu_disable_lower_middle_right_effect
+			effect = horizons_menu_disable_lower_middle_right_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}
@@ -427,20 +427,20 @@ guiTypes = {
 		### Main Buttons ###
 
 		effectbuttonType = {
-			name = "fix_menu_button_centre_left"
-			quadTextureSprite = "GFX_fix_option_all"
+			name = "horizons_menu_button_centre_left"
+			quadTextureSprite = "GFX_horizons_option_all"
 			position = { x = 57 y = 315 }
-			buttonText = "fix_ai_actions.1.a"
+			buttonText = "horizons_ai_actions.1.a"
 			buttonFont = large_title_font_28
-			effect = fix_menu_button_centre_left_effect
+			effect = horizons_menu_button_centre_left_effect
 			clicksound = increment_click
 			oversound = mouse_over
 		}
 
 		buttonType = {
 			name = "close"
-			quadTextureSprite = "GFX_fix_exit"
-			buttonText = "fix_ai_actions.1.n"
+			quadTextureSprite = "GFX_horizons_exit"
+			buttonText = "horizons_ai_actions.1.n"
 			buttonFont = large_title_font_28
 			position = { x = 408 y = 315 }
 			shortcut = "ESCAPE"
@@ -448,12 +448,12 @@ guiTypes = {
 		}
 
 		effectbuttonType = {
-			name = "fix_menu_button_centre_right"
-			quadTextureSprite = "GFX_fix_option_all"
+			name = "horizons_menu_button_centre_right"
+			quadTextureSprite = "GFX_horizons_option_all"
 			position = { x = 761 y = 315 }
-			buttonText = "fix_ai_actions.1.m"
+			buttonText = "horizons_ai_actions.1.m"
 			buttonFont = large_title_font_28
-			effect = fix_menu_button_centre_right_effect
+			effect = horizons_menu_button_centre_right_effect
 			clicksound = decrement_click
 			oversound = mouse_over
 		}

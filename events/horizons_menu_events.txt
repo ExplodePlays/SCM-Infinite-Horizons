@@ -1,9 +1,9 @@
-namespace = fix_menu_events
+namespace = horizons_ai_menu
 
 country_event = {
-	id = fix_menu_events.2
-	title = "fix_menu_events.2.name"
-	desc = "fix_menu_events.2.desc"
+	id = horizons_ai_menu.2
+	title = "horizons_ai_menu.2.name"
+	desc = "horizons_ai_menu.2.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -16,9 +16,9 @@ country_event = {
 }
 
 country_event = {
-	id = fix_menu_events.3
-	title = "fix_menu_events.3.name"
-	desc = "fix_menu_events.3.desc"
+	id = horizons_ai_menu.3
+	title = "horizons_ai_menu.3.name"
+	desc = "horizons_ai_menu.3.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -26,7 +26,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = "fix_menu_events.3.b"
+		name = "horizons_ai_menu.3.b"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -43,13 +43,13 @@ country_event = {
 				value = 1000
 			}
 			country_event = {
-				id = fix_menu_events.3
+				id = horizons_ai_menu.3
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.3.c"
+		name = "horizons_ai_menu.3.c"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -66,13 +66,13 @@ country_event = {
 				value = 50
 			}
 			country_event = {
-				id = fix_menu_events.3
+				id = horizons_ai_menu.3
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.3.d"
+		name = "horizons_ai_menu.3.d"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -89,13 +89,13 @@ country_event = {
 				value = 100
 			}
 			country_event = {
-				id = fix_menu_events.3
+				id = horizons_ai_menu.3
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.3.e"
+		name = "horizons_ai_menu.3.e"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -112,7 +112,7 @@ country_event = {
 				value = 150
 			}
 			country_event = {
-				id = fix_menu_events.3
+				id = horizons_ai_menu.3
 			}
 		}
 	}
@@ -123,9 +123,9 @@ country_event = {
 }
 
 country_event = {
-	id = fix_menu_events.4
-	title = "fix_menu_events.4.name"
-	desc = "fix_menu_events.4.desc"
+	id = horizons_ai_menu.4
+	title = "horizons_ai_menu.4.name"
+	desc = "horizons_ai_menu.4.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -133,7 +133,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { 
-		name = "fix_menu_events.4.b"
+		name = "horizons_ai_menu.4.b"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -150,13 +150,13 @@ country_event = {
 				value = 0
 			}
 			country_event = {
-				id = fix_menu_events.4
+				id = horizons_ai_menu.4
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.4.c"
+		name = "horizons_ai_menu.4.c"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -173,13 +173,13 @@ country_event = {
 				value = 3
 			}
 			country_event = {
-				id = fix_menu_events.4
+				id = horizons_ai_menu.4
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.4.d"
+		name = "horizons_ai_menu.4.d"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -196,13 +196,13 @@ country_event = {
 				value = 7
 			}
 			country_event = {
-				id = fix_menu_events.4
+				id = horizons_ai_menu.4
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.4.e"
+		name = "horizons_ai_menu.4.e"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -219,7 +219,7 @@ country_event = {
 				value = 11
 			}
 			country_event = {
-				id = fix_menu_events.4
+				id = horizons_ai_menu.4
 			}
 		}
 	}
@@ -230,9 +230,9 @@ country_event = {
 }
 
 country_event = {
-	id = fix_menu_events.5
-	title = "fix_menu_events.5.name"
-	desc = "fix_menu_events.5.desc"
+	id = horizons_ai_menu.5
+	title = "horizons_ai_menu.5.name"
+	desc = "horizons_ai_menu.5.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -240,7 +240,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = "fix_menu_events.5.b"
+		name = "horizons_ai_menu.5.b"
 		allow = {
 			hidden_trigger = {
 				has_global_flag = ai_omnicodex_to_player_flag
@@ -249,13 +249,13 @@ country_event = {
 		hidden_effect = {
 			remove_global_flag = ai_omnicodex_to_player_flag
 			country_event = {
-				id = fix_menu_events.5
+				id = horizons_ai_menu.5
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.5.c"
+		name = "horizons_ai_menu.5.c"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -266,7 +266,7 @@ country_event = {
 		hidden_effect = {
 			set_global_flag = ai_omnicodex_to_player_flag
 			country_event = {
-				id = fix_menu_events.5
+				id = horizons_ai_menu.5
 			}
 		}
 	}
@@ -277,9 +277,9 @@ country_event = {
 }
 
 country_event = {
-	id = fix_menu_events.6
-	title = "fix_menu_events.6.name"
-	desc = "fix_menu_events.6.desc"
+	id = horizons_ai_menu.6
+	title = "horizons_ai_menu.6.name"
+	desc = "horizons_ai_menu.6.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -292,9 +292,9 @@ country_event = {
 }
 
 country_event = {
-	id = fix_menu_events.7
-	title = "fix_menu_events.7.name"
-	desc = "fix_menu_events.7.desc"
+	id = horizons_ai_menu.7
+	title = "horizons_ai_menu.7.name"
+	desc = "horizons_ai_menu.7.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -307,9 +307,9 @@ country_event = {
 }
 
 country_event = {
-	id = fix_menu_events.8
-	title = "fix_menu_events.8.name"
-	desc = "fix_menu_events.8.desc"
+	id = horizons_ai_menu.8
+	title = "horizons_ai_menu.8.name"
+	desc = "horizons_ai_menu.8.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -317,7 +317,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = "fix_menu_events.8.b"
+		name = "horizons_ai_menu.8.b"
 		allow = {
 			hidden_trigger = {
 				NAND = {
@@ -350,13 +350,13 @@ country_event = {
 				value = 4
 			}
 			country_event = {
-				id = fix_menu_events.8
+				id = horizons_ai_menu.8
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.8.c"
+		name = "horizons_ai_menu.8.c"
 		allow = {
 			hidden_trigger = {
 				NAND = {
@@ -389,13 +389,13 @@ country_event = {
 				value = 8
 			}
 			country_event = {
-				id = fix_menu_events.8
+				id = horizons_ai_menu.8
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.8.d"
+		name = "horizons_ai_menu.8.d"
 		allow = {
 			hidden_trigger = {
 				NAND = {
@@ -428,13 +428,13 @@ country_event = {
 				value = 15
 			}
 			country_event = {
-				id = fix_menu_events.8
+				id = horizons_ai_menu.8
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.8.e"
+		name = "horizons_ai_menu.8.e"
 		allow = {
 			hidden_trigger = {
 				NAND = {
@@ -467,7 +467,7 @@ country_event = {
 				value = 30
 			}
 			country_event = {
-				id = fix_menu_events.8
+				id = horizons_ai_menu.8
 			}
 		}
 	}
@@ -478,9 +478,9 @@ country_event = {
 }
 
 country_event = {
-	id = fix_menu_events.9
-	title = "fix_menu_events.9.name"
-	desc = "fix_menu_events.9.desc"
+	id = horizons_ai_menu.9
+	title = "horizons_ai_menu.9.name"
+	desc = "horizons_ai_menu.9.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -488,7 +488,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { 
-		name = "fix_menu_events.9.b"
+		name = "horizons_ai_menu.9.b"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -505,13 +505,13 @@ country_event = {
 				value = 0
 			}
 			country_event = {
-				id = fix_menu_events.9
+				id = horizons_ai_menu.9
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.9.c"
+		name = "horizons_ai_menu.9.c"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -528,13 +528,13 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = fix_menu_events.9
+				id = horizons_ai_menu.9
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.9.d"
+		name = "horizons_ai_menu.9.d"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -551,13 +551,13 @@ country_event = {
 				value = 3
 			}
 			country_event = {
-				id = fix_menu_events.9
+				id = horizons_ai_menu.9
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.9.e"
+		name = "horizons_ai_menu.9.e"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -574,7 +574,7 @@ country_event = {
 				value = 5
 			}
 			country_event = {
-				id = fix_menu_events.9
+				id = horizons_ai_menu.9
 			}
 		}
 	}
@@ -585,9 +585,9 @@ country_event = {
 }
 
 country_event = {
-	id = fix_menu_events.10
-	title = "fix_menu_events.10.name"
-	desc = "fix_menu_events.10.desc"
+	id = horizons_ai_menu.10
+	title = "horizons_ai_menu.10.name"
+	desc = "horizons_ai_menu.10.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -600,9 +600,9 @@ country_event = {
 }
 
 country_event = {
-	id = fix_menu_events.11
-	title = "fix_menu_events.11.name"
-	desc = "fix_menu_events.11.desc"
+	id = horizons_ai_menu.11
+	title = "horizons_ai_menu.11.name"
+	desc = "horizons_ai_menu.11.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -615,9 +615,9 @@ country_event = {
 }
 
 country_event = {
-	id = fix_menu_events.12
-	title = "fix_menu_events.12.name"
-	desc = "fix_menu_events.12.desc"
+	id = horizons_ai_menu.12
+	title = "horizons_ai_menu.12.name"
+	desc = "horizons_ai_menu.12.desc"
 	picture = GFX_evt_machine_sapience
 	show_sound = event_administrative_work
 	hide_window = no
@@ -625,7 +625,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { 
-		name = "fix_menu_events.12.b"
+		name = "horizons_ai_menu.12.b"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -642,13 +642,13 @@ country_event = {
 				value = 0.5
 			}
 			country_event = {
-				id = fix_menu_events.12
+				id = horizons_ai_menu.12
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.12.c"
+		name = "horizons_ai_menu.12.c"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -665,13 +665,13 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = fix_menu_events.12
+				id = horizons_ai_menu.12
 			}
 		}
 	}
 
 	option = { 
-		name = "fix_menu_events.12.d"
+		name = "horizons_ai_menu.12.d"
 		allow = {
 			hidden_trigger = {
 				NOT = {
@@ -688,7 +688,7 @@ country_event = {
 				value = 1.5
 			}
 			country_event = {
-				id = fix_menu_events.12
+				id = horizons_ai_menu.12
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-fix_menu_button_centre_left_effect = {
+horizons_menu_button_centre_left_effect = {
 	potential = {
 		
 	}
@@ -37,14 +37,14 @@ fix_menu_button_centre_left_effect = {
 					is_ai = yes
 				}
 				set_timed_country_flag = {
-					flag = ai_gateway_construction_fix_flag years = 100
+					flag = ai_gateway_construction_horizons_flag years = 100
 				}
 			}
 		}
 	}
 }
 
-fix_menu_button_centre_right_effect = {
+horizons_menu_button_centre_right_effect = {
 	potential = {
 		
 	}
@@ -82,13 +82,13 @@ fix_menu_button_centre_right_effect = {
 				limit = {
 					is_ai = yes
 				}
-				remove_global_flag = ai_gateway_construction_fix_flag
+				remove_global_flag = ai_gateway_construction_horizons_flag
 			}
 		}
 	}
 }
 
-fix_menu_button_upper_middle_effect = {
+horizons_menu_button_upper_middle_effect = {
 	potential = {
 		
 	}
@@ -107,7 +107,7 @@ fix_menu_button_upper_middle_effect = {
 	}
 }
 
-fix_menu_button_upper_top_left_effect = {
+horizons_menu_button_upper_top_left_effect = {
 	potential = {
 		
 	}
@@ -126,7 +126,7 @@ fix_menu_button_upper_top_left_effect = {
 	}
 }
 
-fix_menu_button_upper_top_right_effect = {
+horizons_menu_button_upper_top_right_effect = {
 	potential = {
 		
 	}
@@ -145,7 +145,7 @@ fix_menu_button_upper_top_right_effect = {
 	}
 }
 
-fix_menu_button_upper_bottom_left_effect = {
+horizons_menu_button_upper_bottom_left_effect = {
 	potential = {
 		
 	}
@@ -164,7 +164,7 @@ fix_menu_button_upper_bottom_left_effect = {
 	}
 }
 
-fix_menu_button_upper_bottom_right_effect = {
+horizons_menu_button_upper_bottom_right_effect = {
 	potential = {
 		
 	}
@@ -183,7 +183,7 @@ fix_menu_button_upper_bottom_right_effect = {
 	}
 }
 
-fix_menu_button_lower_top_middle_effect = {
+horizons_menu_button_lower_top_middle_effect = {
 	potential = {
 		
 	}
@@ -202,7 +202,7 @@ fix_menu_button_lower_top_middle_effect = {
 	}
 }
 
-fix_menu_button_lower_middle_left_effect = {
+horizons_menu_button_lower_middle_left_effect = {
 	potential = {
 		
 	}
@@ -221,7 +221,7 @@ fix_menu_button_lower_middle_left_effect = {
 	}
 }
 
-fix_menu_button_lower_bottom_middle_effect = {
+horizons_menu_button_lower_bottom_middle_effect = {
 	potential = {
 		
 	}
@@ -240,7 +240,7 @@ fix_menu_button_lower_bottom_middle_effect = {
 	}
 }
 
-fix_menu_button_lower_middle_right_effect = {
+horizons_menu_button_lower_middle_right_effect = {
 	potential = {
 		
 	}
@@ -259,7 +259,7 @@ fix_menu_button_lower_middle_right_effect = {
 	}
 }
 
-fix_menu_button_lower_top_left_effect = {
+horizons_menu_button_lower_top_left_effect = {
 	potential = {
 		
 	}
@@ -279,18 +279,18 @@ fix_menu_button_lower_top_left_effect = {
 				limit = {
 					is_ai = yes
 					NOT = {
-						has_country_flag = ai_gateway_construction_fix_flag
+						has_country_flag = ai_gateway_construction_horizons_flag
 					}
 				}
 				set_timed_country_flag = {
-					flag = ai_gateway_construction_fix_flag years = 100
+					flag = ai_gateway_construction_horizons_flag years = 100
 				}
 			}
 		}
 	}
 }
 
-fix_menu_button_lower_top_right_effect = {
+horizons_menu_button_lower_top_right_effect = {
 	potential = {
 		
 	}
@@ -309,7 +309,7 @@ fix_menu_button_lower_top_right_effect = {
 	}
 }
 
-fix_menu_settings_upper_middle_effect = {
+horizons_menu_settings_upper_middle_effect = {
 	potential = {
 		
 	}
@@ -320,13 +320,13 @@ fix_menu_settings_upper_middle_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.7
+				id = horizons_ai_menu.7
 			}
 		}
 	}
 }
 
-fix_menu_settings_upper_top_left_effect = {
+horizons_menu_settings_upper_top_left_effect = {
 	potential = {
 		
 	}
@@ -337,13 +337,13 @@ fix_menu_settings_upper_top_left_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.11
+				id = horizons_ai_menu.11
 			}
 		}
 	}
 }
 
-fix_menu_settings_upper_top_right_effect = {
+horizons_menu_settings_upper_top_right_effect = {
 	potential = {
 		
 	}
@@ -354,13 +354,13 @@ fix_menu_settings_upper_top_right_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.8
+				id = horizons_ai_menu.8
 			}
 		}
 	}
 }
 
-fix_menu_settings_upper_bottom_left_effect = {
+horizons_menu_settings_upper_bottom_left_effect = {
 	potential = {
 		
 	}
@@ -371,13 +371,13 @@ fix_menu_settings_upper_bottom_left_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.5
+				id = horizons_ai_menu.5
 			}
 		}
 	}
 }
 
-fix_menu_settings_upper_bottom_right_effect = {
+horizons_menu_settings_upper_bottom_right_effect = {
 	potential = {
 		
 	}
@@ -388,13 +388,13 @@ fix_menu_settings_upper_bottom_right_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.6
+				id = horizons_ai_menu.6
 			}
 		}
 	}
 }
 
-fix_menu_settings_lower_top_middle_effect = {
+horizons_menu_settings_lower_top_middle_effect = {
 	potential = {
 		
 	}
@@ -405,13 +405,13 @@ fix_menu_settings_lower_top_middle_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.2
+				id = horizons_ai_menu.2
 			}
 		}
 	}
 }
 
-fix_menu_settings_lower_bottom_middle_effect = {
+horizons_menu_settings_lower_bottom_middle_effect = {
 	potential = {
 		
 	}
@@ -422,13 +422,13 @@ fix_menu_settings_lower_bottom_middle_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.10
+				id = horizons_ai_menu.10
 			}
 		}
 	}
 }
 
-fix_menu_settings_lower_top_left_effect = {
+horizons_menu_settings_lower_top_left_effect = {
 	potential = {
 		
 	}
@@ -439,13 +439,13 @@ fix_menu_settings_lower_top_left_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.3
+				id = horizons_ai_menu.3
 			}
 		}
 	}
 }
 
-fix_menu_settings_lower_top_right_effect = {
+horizons_menu_settings_lower_top_right_effect = {
 	potential = {
 		
 	}
@@ -456,13 +456,13 @@ fix_menu_settings_lower_top_right_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.12
+				id = horizons_ai_menu.12
 			}
 		}
 	}
 }
 
-fix_menu_settings_lower_middle_left_effect = {
+horizons_menu_settings_lower_middle_left_effect = {
 	potential = {
 		
 	}
@@ -473,13 +473,13 @@ fix_menu_settings_lower_middle_left_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.4
+				id = horizons_ai_menu.4
 			}
 		}
 	}
 }
 
-fix_menu_settings_lower_middle_right_effect = {
+horizons_menu_settings_lower_middle_right_effect = {
 	potential = {
 		
 	}
@@ -490,13 +490,13 @@ fix_menu_settings_lower_middle_right_effect = {
 	effect = {
 		hidden_effect = {
 			country_event = {
-				id = fix_menu_events.9
+				id = horizons_ai_menu.9
 			}
 		}
 	}
 }
 
-fix_menu_disable_upper_middle_effect = {
+horizons_menu_disable_upper_middle_effect = {
 	potential = {
 		
 	}
@@ -513,7 +513,7 @@ fix_menu_disable_upper_middle_effect = {
 	}
 }
 
-fix_menu_disable_upper_top_left_effect = {
+horizons_menu_disable_upper_top_left_effect = {
 	potential = {
 		
 	}
@@ -530,7 +530,7 @@ fix_menu_disable_upper_top_left_effect = {
 	}
 }
 
-fix_menu_disable_upper_top_right_effect = {
+horizons_menu_disable_upper_top_right_effect = {
 	potential = {
 		
 	}
@@ -547,7 +547,7 @@ fix_menu_disable_upper_top_right_effect = {
 	}
 }
 
-fix_menu_disable_upper_bottom_left_effect = {
+horizons_menu_disable_upper_bottom_left_effect = {
 	potential = {
 		
 	}
@@ -564,7 +564,7 @@ fix_menu_disable_upper_bottom_left_effect = {
 	}
 }
 
-fix_menu_disable_upper_bottom_right_effect = {
+horizons_menu_disable_upper_bottom_right_effect = {
 	potential = {
 		
 	}
@@ -581,7 +581,7 @@ fix_menu_disable_upper_bottom_right_effect = {
 	}
 }
 
-fix_menu_disable_lower_top_middle_effect = {
+horizons_menu_disable_lower_top_middle_effect = {
 	potential = {
 		
 	}
@@ -598,7 +598,7 @@ fix_menu_disable_lower_top_middle_effect = {
 	}
 }
 
-fix_menu_disable_lower_bottom_middle_effect = {
+horizons_menu_disable_lower_bottom_middle_effect = {
 	potential = {
 		
 	}
@@ -615,7 +615,7 @@ fix_menu_disable_lower_bottom_middle_effect = {
 	}
 }
 
-fix_menu_disable_lower_top_left_effect = {
+horizons_menu_disable_lower_top_left_effect = {
 	potential = {
 		
 	}
@@ -633,13 +633,13 @@ fix_menu_disable_lower_top_left_effect = {
 				limit = {
 					is_ai = yes
 				}
-				remove_country_flag = ai_gateway_construction_fix_flag
+				remove_country_flag = ai_gateway_construction_horizons_flag
 			}
 		}
 	}
 }
 
-fix_menu_disable_lower_top_right_effect = {
+horizons_menu_disable_lower_top_right_effect = {
 	potential = {
 		
 	}
@@ -656,7 +656,7 @@ fix_menu_disable_lower_top_right_effect = {
 	}
 }
 
-fix_menu_disable_lower_middle_left_effect = {
+horizons_menu_disable_lower_middle_left_effect = {
 	potential = {
 		
 	}
@@ -673,7 +673,7 @@ fix_menu_disable_lower_middle_left_effect = {
 	}
 }
 
-fix_menu_disable_lower_middle_right_effect = {
+horizons_menu_disable_lower_middle_right_effect = {
 	potential = {
 		
 	}
