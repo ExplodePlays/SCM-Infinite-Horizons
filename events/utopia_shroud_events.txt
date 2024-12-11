@@ -3995,7 +3995,7 @@ country_event = {
 					has_trait = leader_trait_whisperers_chosen
 				}
 			}
-			save_event_target_as = leader_4 # Ariphaos TODO: Was this meant to be a fifth option?
+			save_event_target_as = leader_4 # infinite TODO: Was this meant to be a fifth option?
 			set_leader_flag = high_psi
 		}
 	}

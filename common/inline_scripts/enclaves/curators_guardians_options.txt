@@ -2,15 +2,15 @@
 
 option = { # Can we fight it? (No)
 	name = leviathans.506.f
-	trigger = { ariphaos_patch_fleet_modest = no }
+	trigger = { infinite_patch_fleet_modest = no }
 	is_dialog_only = yes
 	response_text = leviathans.5106.f1.reply
 }
 option = { # Can we fight it? (Probably not)
 	name = leviathans.506.f
 	trigger = {
-		ariphaos_patch_fleet_modest = yes
-		ariphaos_patch_fleet_large = no
+		infinite_patch_fleet_modest = yes
+		infinite_patch_fleet_large = no
 	}
 	is_dialog_only = yes
 	response_text = leviathans.5106.f2.reply
@@ -18,15 +18,15 @@ option = { # Can we fight it? (Probably not)
 option = { # Can we fight it? (Maybe)
 	name = leviathans.506.f
 	trigger = {
-		ariphaos_patch_fleet_large = yes
-		ariphaos_patch_fleet_huge = no
+		infinite_patch_fleet_large = yes
+		infinite_patch_fleet_huge = no
 	}
 	is_dialog_only = yes
 	response_text = leviathans.5106.f3.reply
 }
 option = { # Can we fight it? (Yes)
 	name = leviathans.506.f
-	trigger = { ariphaos_patch_fleet_huge = yes }
+	trigger = { infinite_patch_fleet_huge = yes }
 	is_dialog_only = yes
 	response_text = leviathans.5106.f4.reply
 }

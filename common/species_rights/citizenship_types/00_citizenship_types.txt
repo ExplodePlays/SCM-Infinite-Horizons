@@ -914,7 +914,7 @@ citizenship_purge = {
 		factor = 20
 		modifier = {
 			factor = 0
-			ariphaos_patch_slaves_expel = no
+			infinite_patch_slaves_expel = no
 		}
 		modifier = {
 			factor = 0
@@ -970,7 +970,7 @@ citizenship_purge = {
 		}
 		modifier = {
 			factor = 0
-			ariphaos_patch_slaves_rare_trait = yes
+			infinite_patch_slaves_rare_trait = yes
 			from = {
 				has_origin = origin_syncretic_evolution
 			}
@@ -999,7 +999,7 @@ citizenship_purge = {
 					is_authoritarian = yes
 				}
 			}
-			ariphaos_patch_slaves_expel = yes
+			infinite_patch_slaves_expel = yes
 		}
 	}
 }

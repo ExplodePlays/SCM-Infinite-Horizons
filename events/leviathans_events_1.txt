@@ -6139,15 +6139,15 @@ country_event = {
 	#Unfortunately, we cannot use the standard options, because the Toxic God is MUCH stronger than regular Leviathans
 	option = { # Can we fight it? (No)
 		name = leviathans.506.f
-		trigger = { ariphaos_patch_fleet_huge = no }
+		trigger = { infinite_patch_fleet_huge = no }
 		is_dialog_only = yes
 		response_text = leviathans.5106.f1.reply
 	}
 	option = { # Can we fight it? (Probably not)
 		name = leviathans.506.f
 		trigger = {
-			ariphaos_patch_fleet_huge = yes
-			ariphaos_patch_fleet_massive = no
+			infinite_patch_fleet_huge = yes
+			infinite_patch_fleet_massive = no
 		}
 		is_dialog_only = yes
 		response_text = leviathans.5106.f2.reply
@@ -6155,15 +6155,15 @@ country_event = {
 	option = { # Can we fight it? (Maybe)
 		name = leviathans.506.f
 		trigger = {
-			ariphaos_patch_fleet_massive = yes
-			ariphaos_patch_fleet_enormous = no
+			infinite_patch_fleet_massive = yes
+			infinite_patch_fleet_enormous = no
 		}
 		is_dialog_only = yes
 		response_text = leviathans.5106.f3.reply
 	}
 	option = { # Can we fight it? (Yes)
 		name = leviathans.506.f
-		trigger = { ariphaos_patch_fleet_enormous = yes }
+		trigger = { infinite_patch_fleet_enormous = yes }
 		is_dialog_only = yes
 		response_text = leviathans.5106.f4.reply
 	}

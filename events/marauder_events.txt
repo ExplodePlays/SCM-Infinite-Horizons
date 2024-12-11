@@ -8020,9 +8020,9 @@ country_event = {
 		}
 		# If at fleet cap, check again later
 		if = {
-			# Ariphaos TODO: Balance mod should adjust this further.
+			# infinite TODO: Balance mod should adjust this further.
 			limit = {
-				ariphaos_patch_fleet_titanic = yes
+				infinite_patch_fleet_titanic = yes
 			}
 			country_event = { id = marauder.520 days = 340 }
 			break = yes

@@ -9,7 +9,7 @@
 # These values are used by the Curators to tell you how powerful they think your fleet is, and some similar checks for
 # how confident the AI should be with its fleet.
 
-ariphaos_patch_fleet_titanic = {
+infinite_patch_fleet_titanic = {
 	OR = {
 		AND = {
 			fleet_power > 120000
@@ -38,7 +38,7 @@ ariphaos_patch_fleet_titanic = {
 	}
 }
 
-ariphaos_patch_fleet_enormous = {
+infinite_patch_fleet_enormous = {
 	OR = {
 		AND = {
 			fleet_power > 80000
@@ -67,7 +67,7 @@ ariphaos_patch_fleet_enormous = {
 	}
 }
 
-ariphaos_patch_fleet_massive = {
+infinite_patch_fleet_massive = {
 	OR = {
 		AND = {
 			fleet_power > 40000
@@ -96,7 +96,7 @@ ariphaos_patch_fleet_massive = {
 	}
 }
 
-ariphaos_patch_fleet_huge = {
+infinite_patch_fleet_huge = {
 	OR = {
 		AND = {
 			fleet_power > 20000
@@ -125,7 +125,7 @@ ariphaos_patch_fleet_huge = {
 	}
 }
 
-ariphaos_patch_fleet_large = {
+infinite_patch_fleet_large = {
 	OR = {
 		AND = {
 			fleet_power > 10000
@@ -154,7 +154,7 @@ ariphaos_patch_fleet_large = {
 	}
 }
 
-ariphaos_patch_fleet_modest = {
+infinite_patch_fleet_modest = {
 	OR = {
 		AND = {
 			fleet_power > 5000
@@ -183,7 +183,7 @@ ariphaos_patch_fleet_modest = {
 	}
 }
 
-ariphaos_patch_fleet_small = {
+infinite_patch_fleet_small = {
 	OR = {
 		AND = {
 			fleet_power > 2500
@@ -212,7 +212,7 @@ ariphaos_patch_fleet_small = {
 	}
 }
 
-ariphaos_patch_planet_class_prod = {
+infinite_patch_planet_class_prod = {
 	OR = {
 		is_planet_class = pc_gaia
 		is_planet_class = pc_hive
@@ -221,7 +221,7 @@ ariphaos_patch_planet_class_prod = {
 }
 
 # Check if the AI should consider winding down its science production.
-ariphaos_patch_finished_tech = {
+infinite_patch_finished_tech = {
 	AND = {
 		# Physics
 		has_technology = tech_jump_drive_1
@@ -238,7 +238,7 @@ ariphaos_patch_finished_tech = {
 }
 
 # Same for traditions. Somewhat more aggressive.
-ariphaos_patch_finished_traditions = {
+infinite_patch_finished_traditions = {
 	num_tradition_categories >= @TRADITION_CATEGORIES_MAX
 }
 

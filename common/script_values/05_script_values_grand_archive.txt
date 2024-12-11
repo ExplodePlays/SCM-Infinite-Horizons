@@ -110,7 +110,7 @@ voidworms_small_spawn_chance = {
 	add = 90000
 	modifier = {
 		factor = 0
-		check_variable = { which = event_target:global_event_country.ariphaos_patch_systems_hundreds value < 2 }
+		check_variable = { which = event_target:global_event_country.infinite_patch_systems_hundreds value < 2 }
 	}
 }
 
@@ -118,7 +118,7 @@ voidworms_medium_spawn_chance = {
 	add = 90000
 	modifier = {
 		factor = 0
-		check_variable = { which = event_target:global_event_country.ariphaos_patch_systems_hundreds value < 4 }
+		check_variable = { which = event_target:global_event_country.infinite_patch_systems_hundreds value < 4 }
 	}
 }
 
@@ -126,7 +126,7 @@ voidworms_large_spawn_chance = {
 	base = 0
 	modifier = {
 		add = 90000
-		check_variable = { which = event_target:global_event_country.ariphaos_patch_systems_hundreds value > 6 }
+		check_variable = { which = event_target:global_event_country.infinite_patch_systems_hundreds value > 6 }
 	}
 }
 
@@ -134,7 +134,7 @@ voidworms_huge_spawn_chance = {
 	base = 0
 	modifier = {
 		add = 90000
-		check_variable = { which = event_target:global_event_country.ariphaos_patch_systems_hundreds value > 8 }
+		check_variable = { which = event_target:global_event_country.infinite_patch_systems_hundreds value > 8 }
 	}
 }
 
@@ -210,7 +210,7 @@ voidworm_nest_owned = {
 voidworm_nest_spawn_minimum = {
 	base = 1
 	# The variable is floored, so it will always be 1 less than the proper setting.
-	add = event_target:global_event_country.ariphaos_patch_systems_hundreds
+	add = event_target:global_event_country.infinite_patch_systems_hundreds
 	mult = 8
 	mult = trigger:voidworms_scaling
 	round = yes

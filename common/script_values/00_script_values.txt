@@ -2253,7 +2253,7 @@ decades_since_game_start = {
 	floor = yes
 	min = $MINIMUM$
 	max = $MAXIMUM$
-	# Ariphaos TODO: Is this right?
+	# infinite TODO: Is this right?
 	# mult = 0.1
 }
 
@@ -2662,7 +2662,7 @@ ai_habitat_cap = {
 	base = 1
 
 	# The variable is floored, so it will always be 1 less than the proper setting.
-	add = event_target:global_event_country.ariphaos_patch_systems_hundreds
+	add = event_target:global_event_country.infinite_patch_systems_hundreds
 
 	# Civilian
 	modifier = {

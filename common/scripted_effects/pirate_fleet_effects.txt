@@ -890,7 +890,7 @@ create_privateer_fleet = {
 					limit = {
 						event_target:target_country = {
 							fleet_power >= 100000
-							# Ariphaos note: Moving this to balance patch.
+							# infinite note: Moving this to balance patch.
 							#fleet_power < 150000
 						}
 					}

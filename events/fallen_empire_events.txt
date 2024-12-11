@@ -111,7 +111,7 @@ situation_event = {
 				NOT = { has_country_flag = fe_demand_made@root.owner }
 			}
 
-			# Ariphaos TODO: This was never working properly and should probably need more thinking.
+			# infinite TODO: This was never working properly and should probably need more thinking.
 			set_country_flag = fe_demand_made@root.owner
 
 			# Demand - abandon holy worlds (spiritualist)

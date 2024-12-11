@@ -1,6 +1,6 @@
 
 
-ariphaos_patch_salvage_cruiser = {
+infinite_patch_salvage_cruiser = {
 	#graphical_culture = no
 	entity = reptilian_01_cruiser_entity
 	formation_priority = @cruiser_formation_priority
@@ -42,7 +42,7 @@ ariphaos_patch_salvage_cruiser = {
 	}
 }
 
-ariphaos_patch_shroud_cruiser = {
+infinite_patch_shroud_cruiser = {
 	#graphical_culture = no
 	entity = avian_01_cruiser_entity
 	formation_priority = @cruiser_formation_priority

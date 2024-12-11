@@ -197,7 +197,7 @@ resolution_declare_crisis = {
 		modifier = {
 			factor = 0
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 
 		# Never on yourself
@@ -543,7 +543,7 @@ resolution_declare_crisis_empire = {
 		modifier = {
 			factor = 0
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 
 		# More likely to declare on empire who hvae cracked a star
@@ -862,7 +862,7 @@ resolution_galacticreforms_nominate_custodian = {
 		modifier = {
 			factor = 10
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 
 		modifier = {
@@ -1040,7 +1040,7 @@ resolution_galacticreforms_unseat_custodian = {
 		modifier = {
 			factor = 0.2
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 
 		modifier = {
@@ -4482,7 +4482,7 @@ resolution_emperor_imperial_charter = {
 		modifier = {
 			factor = 2
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 	}
 }
@@ -5450,7 +5450,7 @@ resolution_emperor_permanent_seat = {
 		modifier = {
 			factor = 2
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 	}
 }
@@ -5506,7 +5506,7 @@ resolution_emperor_revoke_permanent_seat = {
 		modifier = {
 			factor = 0.5
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 	}
 }

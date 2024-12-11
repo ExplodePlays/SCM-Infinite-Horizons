@@ -1,5 +1,5 @@
 
-ariphaos_patch_juggernaut_shipyards = {
+infinite_patch_juggernaut_shipyards = {
 	potential = {
 		has_technology = tech_juggernaut
 		OR = {
@@ -10,9 +10,9 @@ ariphaos_patch_juggernaut_shipyards = {
 	}
 	
 	option = {
-		name = "ariphaos_patch_juggernaut_enabled"
+		name = "infinite_patch_juggernaut_enabled"
 		policy_flags = {
-			ariphaos_patch_juggernaut_enabled
+			infinite_patch_juggernaut_enabled
 		}
 
 		AI_weight = {
@@ -24,9 +24,9 @@ ariphaos_patch_juggernaut_shipyards = {
 	}
 	
 	option = {
-		name = "ariphaos_patch_juggernaut_disabled"
+		name = "infinite_patch_juggernaut_disabled"
 		policy_flags = {
-			ariphaos_patch_juggernaut_disabled
+			infinite_patch_juggernaut_disabled
 		}
 
 		AI_weight = {

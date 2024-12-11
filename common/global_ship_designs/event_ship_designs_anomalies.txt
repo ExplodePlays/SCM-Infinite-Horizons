@@ -189,10 +189,10 @@ ship_design = {
 # Salvaged Cruiser
 ship_design = {
 	name = "NAME_Derelict"
-	ship_size = ariphaos_patch_salvage_cruiser
+	ship_size = infinite_patch_salvage_cruiser
 	is_event_design = yes
 	section = {
-		template = "ARIPHAOS_PATCH_CRUISER_BOW_L1"
+		template = "infinite_PATCH_CRUISER_BOW_L1"
 		slot = "bow"
 
 		component = {
@@ -217,7 +217,7 @@ ship_design = {
 		}
 	}
 	section = {
-		template = "ARIPHAOS_PATCH_CRUISER_MID_L1M1"
+		template = "infinite_PATCH_CRUISER_MID_L1M1"
 		slot = "mid"
 
 		component = {
@@ -246,7 +246,7 @@ ship_design = {
 		}
 	}
 	section = {
-		template = "ARIPHAOS_PATCH_CRUISER_STERN_M1"
+		template = "infinite_PATCH_CRUISER_STERN_M1"
 		slot = "stern"
 
 		component = {

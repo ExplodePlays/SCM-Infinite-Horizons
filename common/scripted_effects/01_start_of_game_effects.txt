@@ -4305,8 +4305,8 @@ imperial_origin_start_effect = {
 			if = {
 				limit = {
 					NOR = {
-						has_global_flag = ariphaos_patch_galaxy_size_0
-						has_global_flag = ariphaos_patch_galaxy_size_2
+						has_global_flag = infinite_patch_galaxy_size_0
+						has_global_flag = infinite_patch_galaxy_size_2
 					}
 				}
 				event_target:imperial_homeland_2.solar_system = { origin_spawn_system_effect = { INITIALIZER = overlord_system_5_init } }
@@ -4314,9 +4314,9 @@ imperial_origin_start_effect = {
 			if = {
 				limit = {
 					NOR = {
-						has_global_flag = ariphaos_patch_galaxy_size_0
-						has_global_flag = ariphaos_patch_galaxy_size_2
-						has_global_flag = ariphaos_patch_galaxy_size_4
+						has_global_flag = infinite_patch_galaxy_size_0
+						has_global_flag = infinite_patch_galaxy_size_2
+						has_global_flag = infinite_patch_galaxy_size_4
 					}
 				}
 				event_target:imperial_homeland_3.solar_system = { origin_spawn_system_effect = { INITIALIZER = overlord_system_6_init } }
@@ -4324,10 +4324,10 @@ imperial_origin_start_effect = {
 			if = {
 				limit = {
 					NOR = {
-						has_global_flag = ariphaos_patch_galaxy_size_0
-						has_global_flag = ariphaos_patch_galaxy_size_2
-						has_global_flag = ariphaos_patch_galaxy_size_4
-						has_global_flag = ariphaos_patch_galaxy_size_6
+						has_global_flag = infinite_patch_galaxy_size_0
+						has_global_flag = infinite_patch_galaxy_size_2
+						has_global_flag = infinite_patch_galaxy_size_4
+						has_global_flag = infinite_patch_galaxy_size_6
 					}
 				}
 				event_target:imperial_homeland_3.solar_system = { origin_spawn_system_effect = { INITIALIZER = overlord_system_7_init } }
@@ -4413,8 +4413,8 @@ imperial_origin_start_effect = {
 		limit = {
 			any_system = { has_star_flag = overlord_system_2_flag }
 			NOR = {
-				has_global_flag = ariphaos_patch_galaxy_size_0
-				has_global_flag = ariphaos_patch_galaxy_size_2
+				has_global_flag = infinite_patch_galaxy_size_0
+				has_global_flag = infinite_patch_galaxy_size_2
 				any_system = { has_star_flag = overlord_system_5_flag }
 			}
 		}
@@ -4428,9 +4428,9 @@ imperial_origin_start_effect = {
 		limit = {
 			any_system = { has_star_flag = overlord_system_3_flag }
 			NOR = {
-				has_global_flag = ariphaos_patch_galaxy_size_0
-				has_global_flag = ariphaos_patch_galaxy_size_2
-				has_global_flag = ariphaos_patch_galaxy_size_4
+				has_global_flag = infinite_patch_galaxy_size_0
+				has_global_flag = infinite_patch_galaxy_size_2
+				has_global_flag = infinite_patch_galaxy_size_4
 				any_system = { has_star_flag = overlord_system_6_flag }
 			}
 		}
@@ -4444,10 +4444,10 @@ imperial_origin_start_effect = {
 		limit = {
 			any_system = { has_star_flag = overlord_system_3_flag }
 			NOR = {
-				has_global_flag = ariphaos_patch_galaxy_size_0
-				has_global_flag = ariphaos_patch_galaxy_size_2
-				has_global_flag = ariphaos_patch_galaxy_size_4
-				has_global_flag = ariphaos_patch_galaxy_size_6
+				has_global_flag = infinite_patch_galaxy_size_0
+				has_global_flag = infinite_patch_galaxy_size_2
+				has_global_flag = infinite_patch_galaxy_size_4
+				has_global_flag = infinite_patch_galaxy_size_6
 				any_system = { has_star_flag = overlord_system_7_flag }
 			}
 		}

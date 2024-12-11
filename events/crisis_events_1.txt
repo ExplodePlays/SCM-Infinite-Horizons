@@ -2914,7 +2914,7 @@ planet_event = {
 			reset_planet = yes
 			planet_event = { id = crisis.215 }
 			set_timed_planet_flag = {
-				flag = ariphaos_patch_recently_infested
+				flag = infinite_patch_recently_infested
 				days = 60
 			}
 			planet_event = { id = crisis.60203 days = 30 }

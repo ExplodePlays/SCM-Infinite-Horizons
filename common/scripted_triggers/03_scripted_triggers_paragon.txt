@@ -203,7 +203,7 @@ leader_has_empire_ethic = {
 
 suitable_for_chosen = {
 	has_psionic_leader_trait = yes
-	 # Ariphaos note: Now this just feels kind of barren.
+	 # infinite note: Now this just feels kind of barren.
 	OR = {
 		owner = { has_country_flag = composer_covenant_rank_3 }
 		owner = { has_country_flag = eater_covenant_rank_3 }

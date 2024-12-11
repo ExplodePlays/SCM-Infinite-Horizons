@@ -18,8 +18,8 @@ migration_control_yes = {
 			factor = 100
 			has_citizenship_type = { country = from type = citizenship_slavery }
 			OR = {
-				ariphaos_patch_slaves_rare_trait = no
-				ariphaos_patch_slaves_poor_merit = yes
+				infinite_patch_slaves_rare_trait = no
+				infinite_patch_slaves_poor_merit = yes
 			}
 		}
 	}

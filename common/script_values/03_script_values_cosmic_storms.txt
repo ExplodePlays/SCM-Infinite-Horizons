@@ -3,50 +3,50 @@ storm_size_multiplier = {
 
 	modifier = {
 		mult = 0.4
-		has_global_flag = ariphaos_patch_galaxy_size_0
+		has_global_flag = infinite_patch_galaxy_size_0
 	}
 
 	modifier = {
 		mult = 0.6
-		has_global_flag = ariphaos_patch_galaxy_size_2
+		has_global_flag = infinite_patch_galaxy_size_2
 	}
 
 	modifier = {
 		mult = 0.8
-		has_global_flag = ariphaos_patch_galaxy_size_4
+		has_global_flag = infinite_patch_galaxy_size_4
 	}
 
 	modifier = {
 		mult = 1
-		has_global_flag = ariphaos_patch_galaxy_size_6
+		has_global_flag = infinite_patch_galaxy_size_6
 	}
 
 	modifier = {
 		mult = 1.2
-		has_global_flag = ariphaos_patch_galaxy_size_8
+		has_global_flag = infinite_patch_galaxy_size_8
 	}
 
 	modifier = {
 		mult = 1.4
-		has_global_flag = ariphaos_patch_galaxy_size_10
+		has_global_flag = infinite_patch_galaxy_size_10
 	}
 
 	modifier = {
 		mult = 1.6
-		has_global_flag = ariphaos_patch_galaxy_size_12
+		has_global_flag = infinite_patch_galaxy_size_12
 	}
 
 	# Max radius is 500, so it eventually no longer matters.
 	modifier = {
 		mult = 1.8
 		NOR = {
-			has_global_flag = ariphaos_patch_galaxy_size_0
-			has_global_flag = ariphaos_patch_galaxy_size_2
-			has_global_flag = ariphaos_patch_galaxy_size_4
-			has_global_flag = ariphaos_patch_galaxy_size_6
-			has_global_flag = ariphaos_patch_galaxy_size_8
-			has_global_flag = ariphaos_patch_galaxy_size_10
-			has_global_flag = ariphaos_patch_galaxy_size_12
+			has_global_flag = infinite_patch_galaxy_size_0
+			has_global_flag = infinite_patch_galaxy_size_2
+			has_global_flag = infinite_patch_galaxy_size_4
+			has_global_flag = infinite_patch_galaxy_size_6
+			has_global_flag = infinite_patch_galaxy_size_8
+			has_global_flag = infinite_patch_galaxy_size_10
+			has_global_flag = infinite_patch_galaxy_size_12
 		}
 	}
 }
@@ -56,49 +56,49 @@ storm_range_min = {
 
 	modifier = {
 		set = 5
-		has_global_flag = ariphaos_patch_galaxy_size_0
+		has_global_flag = infinite_patch_galaxy_size_0
 	}
 
 	modifier = {
 		set = 6
-		has_global_flag = ariphaos_patch_galaxy_size_2
+		has_global_flag = infinite_patch_galaxy_size_2
 	}
 
 	modifier = {
 		set = 7
-		has_global_flag = ariphaos_patch_galaxy_size_4
+		has_global_flag = infinite_patch_galaxy_size_4
 	}
 
 	modifier = {
 		set = 8
-		has_global_flag = ariphaos_patch_galaxy_size_6
+		has_global_flag = infinite_patch_galaxy_size_6
 	}
 
 	modifier = {
 		set = 9
-		has_global_flag = ariphaos_patch_galaxy_size_8
+		has_global_flag = infinite_patch_galaxy_size_8
 	}
 
 	modifier = {
 		set = 10
-		has_global_flag = ariphaos_patch_galaxy_size_10
+		has_global_flag = infinite_patch_galaxy_size_10
 	}
 
 	modifier = {
 		set = 11
-		has_global_flag = ariphaos_patch_galaxy_size_12
+		has_global_flag = infinite_patch_galaxy_size_12
 	}
 
 	modifier = {
 		set = 12
 		NOR = {
-			has_global_flag = ariphaos_patch_galaxy_size_0
-			has_global_flag = ariphaos_patch_galaxy_size_2
-			has_global_flag = ariphaos_patch_galaxy_size_4
-			has_global_flag = ariphaos_patch_galaxy_size_6
-			has_global_flag = ariphaos_patch_galaxy_size_8
-			has_global_flag = ariphaos_patch_galaxy_size_10
-			has_global_flag = ariphaos_patch_galaxy_size_12
+			has_global_flag = infinite_patch_galaxy_size_0
+			has_global_flag = infinite_patch_galaxy_size_2
+			has_global_flag = infinite_patch_galaxy_size_4
+			has_global_flag = infinite_patch_galaxy_size_6
+			has_global_flag = infinite_patch_galaxy_size_8
+			has_global_flag = infinite_patch_galaxy_size_10
+			has_global_flag = infinite_patch_galaxy_size_12
 		}
 	}
 }
@@ -108,49 +108,49 @@ storm_range_max = {
 
 	modifier = {
 		set = 11
-		has_global_flag = ariphaos_patch_galaxy_size_0
+		has_global_flag = infinite_patch_galaxy_size_0
 	}
 
 	modifier = {
 		set = 12
-		has_global_flag = ariphaos_patch_galaxy_size_2
+		has_global_flag = infinite_patch_galaxy_size_2
 	}
 
 	modifier = {
 		set = 13
-		has_global_flag = ariphaos_patch_galaxy_size_4
+		has_global_flag = infinite_patch_galaxy_size_4
 	}
 
 	modifier = {
 		set = 14
-		has_global_flag = ariphaos_patch_galaxy_size_6
+		has_global_flag = infinite_patch_galaxy_size_6
 	}
 
 	modifier = {
 		set = 15
-		has_global_flag = ariphaos_patch_galaxy_size_8
+		has_global_flag = infinite_patch_galaxy_size_8
 	}
 
 	modifier = {
 		set = 16
-		has_global_flag = ariphaos_patch_galaxy_size_10
+		has_global_flag = infinite_patch_galaxy_size_10
 	}
 
 	modifier = {
 		set = 17
-		has_global_flag = ariphaos_patch_galaxy_size_12
+		has_global_flag = infinite_patch_galaxy_size_12
 	}
 
 	modifier = {
 		set = 18
 		NOR = {
-			has_global_flag = ariphaos_patch_galaxy_size_0
-			has_global_flag = ariphaos_patch_galaxy_size_2
-			has_global_flag = ariphaos_patch_galaxy_size_4
-			has_global_flag = ariphaos_patch_galaxy_size_6
-			has_global_flag = ariphaos_patch_galaxy_size_8
-			has_global_flag = ariphaos_patch_galaxy_size_10
-			has_global_flag = ariphaos_patch_galaxy_size_12
+			has_global_flag = infinite_patch_galaxy_size_0
+			has_global_flag = infinite_patch_galaxy_size_2
+			has_global_flag = infinite_patch_galaxy_size_4
+			has_global_flag = infinite_patch_galaxy_size_6
+			has_global_flag = infinite_patch_galaxy_size_8
+			has_global_flag = infinite_patch_galaxy_size_10
+			has_global_flag = infinite_patch_galaxy_size_12
 		}
 	}
 }
@@ -216,50 +216,50 @@ storm_area_placing_reticle_radius_multiplier = {
 
 	modifier = {
 		mult = 0.2
-		has_global_flag = ariphaos_patch_galaxy_size_0
+		has_global_flag = infinite_patch_galaxy_size_0
 	}
 
 	modifier = {
 		mult = 0.3
-		has_global_flag = ariphaos_patch_galaxy_size_2
+		has_global_flag = infinite_patch_galaxy_size_2
 	}
 
 	modifier = {
 		mult = 0.5
-		has_global_flag = ariphaos_patch_galaxy_size_4
+		has_global_flag = infinite_patch_galaxy_size_4
 	}
 
 	modifier = {
 		mult = 0.7
-		has_global_flag = ariphaos_patch_galaxy_size_6
+		has_global_flag = infinite_patch_galaxy_size_6
 	}
 
 	modifier = {
 		mult = 1
-		has_global_flag = ariphaos_patch_galaxy_size_8
+		has_global_flag = infinite_patch_galaxy_size_8
 	}
 
 	modifier = {
 		mult = 1.2
-		has_global_flag = ariphaos_patch_galaxy_size_10
+		has_global_flag = infinite_patch_galaxy_size_10
 	}
 
 	modifier = {
 		mult = 1.4
-		has_global_flag = ariphaos_patch_galaxy_size_12
+		has_global_flag = infinite_patch_galaxy_size_12
 	}
 
 	# Max radius is 500, so it eventually no longer matters.
 	modifier = {
 		mult = 1.6
 		NOR = {
-			has_global_flag = ariphaos_patch_galaxy_size_0
-			has_global_flag = ariphaos_patch_galaxy_size_2
-			has_global_flag = ariphaos_patch_galaxy_size_4
-			has_global_flag = ariphaos_patch_galaxy_size_6
-			has_global_flag = ariphaos_patch_galaxy_size_8
-			has_global_flag = ariphaos_patch_galaxy_size_10
-			has_global_flag = ariphaos_patch_galaxy_size_12
+			has_global_flag = infinite_patch_galaxy_size_0
+			has_global_flag = infinite_patch_galaxy_size_2
+			has_global_flag = infinite_patch_galaxy_size_4
+			has_global_flag = infinite_patch_galaxy_size_6
+			has_global_flag = infinite_patch_galaxy_size_8
+			has_global_flag = infinite_patch_galaxy_size_10
+			has_global_flag = infinite_patch_galaxy_size_12
 		}
 	}
 }
@@ -269,50 +269,50 @@ storm_area_placing_max_range_multiplier = {
 
 	modifier = {
 		mult = 0.1
-		has_global_flag = ariphaos_patch_galaxy_size_0
+		has_global_flag = infinite_patch_galaxy_size_0
 	}
 
 	modifier = {
 		mult = 0.2
-		has_global_flag = ariphaos_patch_galaxy_size_2
+		has_global_flag = infinite_patch_galaxy_size_2
 	}
 
 	modifier = {
 		mult = 0.3
-		has_global_flag = ariphaos_patch_galaxy_size_4
+		has_global_flag = infinite_patch_galaxy_size_4
 	}
 
 	modifier = {
 		mult = 0.4
-		has_global_flag = ariphaos_patch_galaxy_size_6
+		has_global_flag = infinite_patch_galaxy_size_6
 	}
 
 	modifier = {
 		mult = 0.5
-		has_global_flag = ariphaos_patch_galaxy_size_8
+		has_global_flag = infinite_patch_galaxy_size_8
 	}
 
 	modifier = {
 		mult = 0.6
-		has_global_flag = ariphaos_patch_galaxy_size_10
+		has_global_flag = infinite_patch_galaxy_size_10
 	}
 
 	modifier = {
 		mult = 0.7
-		has_global_flag = ariphaos_patch_galaxy_size_12
+		has_global_flag = infinite_patch_galaxy_size_12
 	}
 
 	# Max radius is 500, so it eventually no longer matters.
 	modifier = {
 		mult = 0.8
 		NOR = {
-			has_global_flag = ariphaos_patch_galaxy_size_0
-			has_global_flag = ariphaos_patch_galaxy_size_2
-			has_global_flag = ariphaos_patch_galaxy_size_4
-			has_global_flag = ariphaos_patch_galaxy_size_6
-			has_global_flag = ariphaos_patch_galaxy_size_8
-			has_global_flag = ariphaos_patch_galaxy_size_10
-			has_global_flag = ariphaos_patch_galaxy_size_12
+			has_global_flag = infinite_patch_galaxy_size_0
+			has_global_flag = infinite_patch_galaxy_size_2
+			has_global_flag = infinite_patch_galaxy_size_4
+			has_global_flag = infinite_patch_galaxy_size_6
+			has_global_flag = infinite_patch_galaxy_size_8
+			has_global_flag = infinite_patch_galaxy_size_10
+			has_global_flag = infinite_patch_galaxy_size_12
 		}
 	}
 

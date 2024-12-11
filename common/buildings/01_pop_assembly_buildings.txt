@@ -26,7 +26,7 @@ building_robot_assembly_plant = {
 			}
 			OR = {
 				is_ai = no
-				num_pops < @ariphaos_patch_ai_pop_limit
+				num_pops < @infinite_patch_ai_pop_limit
 			}
 		}
 		NOT = {	has_modifier = resort_colony }
@@ -78,7 +78,7 @@ building_robot_assembly_plant = {
 			}
 			owner = {
 				is_ai = yes
-				num_pops > @ariphaos_patch_ai_pop_limit
+				num_pops > @infinite_patch_ai_pop_limit
 			}
 		}
 	}
@@ -240,7 +240,7 @@ building_robot_assembly_complex = {
 			}
 			OR = {
 				is_ai = no
-				num_pops < @ariphaos_patch_ai_pop_limit
+				num_pops < @infinite_patch_ai_pop_limit
 			}
 		}
 	}
@@ -276,7 +276,7 @@ building_robot_assembly_complex = {
 			}
 			owner = {
 				is_ai = yes
-				num_pops > @ariphaos_patch_ai_pop_limit
+				num_pops > @infinite_patch_ai_pop_limit
 			}
 		}
 	}
@@ -435,7 +435,7 @@ building_machine_assembly_plant = {
 			}
 			OR = {
 				is_ai = no
-				num_pops < @ariphaos_patch_ai_pop_limit
+				num_pops < @infinite_patch_ai_pop_limit
 			}
 		}
 		NOR = { 
@@ -478,7 +478,7 @@ building_machine_assembly_plant = {
 			}
 			owner = {
 				is_ai = yes
-				num_pops > @ariphaos_patch_ai_pop_limit
+				num_pops > @infinite_patch_ai_pop_limit
 			}
 		}
 	}
@@ -575,7 +575,7 @@ building_machine_assembly_complex = {
 			}
 			OR = {
 				is_ai = no
-				num_pops < @ariphaos_patch_ai_pop_limit
+				num_pops < @infinite_patch_ai_pop_limit
 			}
 		}
 		NOR = { 
@@ -597,7 +597,7 @@ building_machine_assembly_complex = {
 		OR = {
 			owner = {
 				is_ai = yes
-				num_pops > @ariphaos_patch_ai_pop_limit
+				num_pops > @infinite_patch_ai_pop_limit
 			}
 			owner = {
 				is_robot_empire = no
@@ -704,7 +704,7 @@ building_spawning_pool = {
 			NOT = { has_origin = origin_progenitor_hive }
 			OR = {
 				is_ai = no
-				num_pops < @ariphaos_patch_ai_pop_limit
+				num_pops < @infinite_patch_ai_pop_limit
 			}
 		}
 		or = {
@@ -725,7 +725,7 @@ building_spawning_pool = {
 				has_origin = origin_progenitor_hive
 				AND = {
 					is_ai = yes
-					num_pops > @ariphaos_patch_ai_pop_limit
+					num_pops > @infinite_patch_ai_pop_limit
 				}
 			}
 		}
@@ -840,7 +840,7 @@ building_offspring_nest = {
 			has_origin = origin_progenitor_hive
 			OR = {
 				is_ai = no
-				num_pops < @ariphaos_patch_ai_pop_limit
+				num_pops < @infinite_patch_ai_pop_limit
 			}
 		}
 		or = {
@@ -860,7 +860,7 @@ building_offspring_nest = {
 				NOT = { has_origin = origin_progenitor_hive }
 				AND = {
 					is_ai = yes
-					num_pops > @ariphaos_patch_ai_pop_limit
+					num_pops > @infinite_patch_ai_pop_limit
 				}
 			}
 		}
@@ -1270,7 +1270,7 @@ building_clone_vats = {
 			has_tradition = tr_genetics_adopt
 			OR = {
 				is_ai = no
-				num_pops < @ariphaos_patch_ai_pop_limit
+				num_pops < @infinite_patch_ai_pop_limit
 			}
 		}
 		NOT = { has_modifier = resort_colony }
@@ -1299,7 +1299,7 @@ building_clone_vats = {
 		OR = {
 			owner = {
 				is_ai = yes
-				num_pops > @ariphaos_patch_ai_pop_limit
+				num_pops > @infinite_patch_ai_pop_limit
 			}
 			AND = {
 				owner = { is_ai = yes }
@@ -1434,7 +1434,7 @@ building_clone_army_clone_vat = {
 			}
 			OR = {
 				is_ai = no
-				num_pops < @ariphaos_patch_ai_pop_limit
+				num_pops < @infinite_patch_ai_pop_limit
 			}
 		}
 		if = {
@@ -1460,7 +1460,7 @@ building_clone_army_clone_vat = {
 		OR = {
 			owner = {
 				is_ai = yes
-				num_pops > @ariphaos_patch_ai_pop_limit
+				num_pops > @infinite_patch_ai_pop_limit
 			}
 			owner = {
 				OR = {
@@ -1586,7 +1586,7 @@ building_posthumous_employment_center = {
 			has_valid_civic = civic_permanent_employment
 			OR = {
 				is_ai = no
-				num_pops < @ariphaos_patch_ai_pop_limit
+				num_pops < @infinite_patch_ai_pop_limit
 			}
 		}
 	}
@@ -1604,7 +1604,7 @@ building_posthumous_employment_center = {
 			}
 			owner = {
 				is_ai = yes
-				num_pops > @ariphaos_patch_ai_pop_limit
+				num_pops > @infinite_patch_ai_pop_limit
 			}
 			AND = {
 				owner = { is_ai = yes }

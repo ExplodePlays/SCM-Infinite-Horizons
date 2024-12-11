@@ -4438,7 +4438,7 @@ ship_event = { #The Big Friendly Warform
 	is_triggered_only = yes
 
 	option = {
-		# Ariphaos Todo: Move this to dialog?
+		# infinite Todo: Move this to dialog?
 		trigger = {
 			owner = { NOR = { has_policy_flag = ai_outlawed is_machine_empire = yes } }
 		}
@@ -5603,7 +5603,7 @@ country_event = { #Cohabitants of Brainslugged pops generate initial Unrest
 				}
 			}
 		}
-		# Ariphaos TODO: Balance patch should do something about fanatic xenophobes and rulers here.
+		# infinite TODO: Balance patch should do something about fanatic xenophobes and rulers here.
 		else = { #Xenophobes result in higher unrest
 			every_owned_planet = {
 				limit = {
@@ -7970,7 +7970,7 @@ country_event = { #Create Full Ratling Empire #Root = Global Event Country
 				save_global_event_target_as = ratling_country
 				set_country_flag = ratling_country
 				country_event = {
-					id = ariphaos_patch.9998
+					id = infinite_patch.9998
 					days = 1
 				}
 				country_event = {

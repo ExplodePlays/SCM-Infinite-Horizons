@@ -1,7 +1,7 @@
 
 
 # We basically reimplement the on_action here.
-ariphaos_patch_purge_pop = {
+infinite_patch_purge_pop = {
 	planet = {
 		fire_on_action = { on_action = on_pop_purged scopes = { from = controller fromfrom = prev } }
 	}
@@ -11,7 +11,7 @@ ariphaos_patch_purge_pop = {
 	}
 }
 
-ariphaos_patch_primitive_world_conquered = {
+infinite_patch_primitive_world_conquered = {
 			# Add appropriate capital
 			if = {
 				limit = {
@@ -126,7 +126,7 @@ ariphaos_patch_primitive_world_conquered = {
 			}
 }
 
-ariphaos_patch_leader_change_traits = {
+infinite_patch_leader_change_traits = {
 	###########################################
 	# Erudite
 	###########################################

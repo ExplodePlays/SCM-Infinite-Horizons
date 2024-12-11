@@ -1,8 +1,8 @@
 @section_cost = 40
 
 ship_section_template = {
-	key = "ARIPHAOS_PATCH_CRUISER_BOW_L1"
-	ship_size = ariphaos_patch_salvage_cruiser
+	key = "infinite_PATCH_CRUISER_BOW_L1"
+	ship_size = infinite_patch_salvage_cruiser
 	fits_on_slot = bow
 	should_draw_components = yes
 	entity = "reptilian_01_cruiser_bow_L1_entity"
@@ -25,8 +25,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "ARIPHAOS_PATCH_CRUISER_MID_L1M1"
-	ship_size = ariphaos_patch_salvage_cruiser
+	key = "infinite_PATCH_CRUISER_MID_L1M1"
+	ship_size = infinite_patch_salvage_cruiser
 	fits_on_slot = mid
 	should_draw_components = yes
 	entity = "reptilian_01_cruiser_mid_L1M1_entity"
@@ -54,8 +54,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "ARIPHAOS_PATCH_CRUISER_STERN_M1"
-	ship_size = ariphaos_patch_salvage_cruiser
+	key = "infinite_PATCH_CRUISER_STERN_M1"
+	ship_size = infinite_patch_salvage_cruiser
 	fits_on_slot = stern
 	should_draw_components = yes
 	entity = "reptilian_01_cruiser_stern_M1_entity"
@@ -78,8 +78,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "ARIPHAOS_PATCH_SHROUD_CRUISER_BOW_L1"
-	ship_size = ariphaos_patch_shroud_cruiser
+	key = "infinite_PATCH_SHROUD_CRUISER_BOW_L1"
+	ship_size = infinite_patch_shroud_cruiser
 	fits_on_slot = bow
 	should_draw_components = yes
 	entity = "avian_01_cruiser_bow_L1_entity"
@@ -102,8 +102,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "ARIPHAOS_PATCH_SHROUD_CRUISER_MID_L1M1"
-	ship_size = ariphaos_patch_shroud_cruiser
+	key = "infinite_PATCH_SHROUD_CRUISER_MID_L1M1"
+	ship_size = infinite_patch_shroud_cruiser
 	fits_on_slot = mid
 	should_draw_components = yes
 	entity = "avian_01_cruiser_mid_L1M1_entity"
@@ -131,8 +131,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "ARIPHAOS_PATCH_SHROUD_CRUISER_STERN_M1"
-	ship_size = ariphaos_patch_shroud_cruiser
+	key = "infinite_PATCH_SHROUD_CRUISER_STERN_M1"
+	ship_size = infinite_patch_shroud_cruiser
 	fits_on_slot = stern
 	should_draw_components = yes
 	entity = "avian_01_cruiser_stern_M1_entity"

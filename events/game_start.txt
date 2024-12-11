@@ -1986,7 +1986,7 @@ event = {
 		get_galaxy_setup_value = {
 			setting = num_wormhole_pairs
 			which = local_wormholes_num
-			scale_by = @ariphaos_patch_wormhole_multiplier
+			scale_by = @infinite_patch_wormhole_multiplier
 		}
 		while = {
 			count = local_wormholes_num

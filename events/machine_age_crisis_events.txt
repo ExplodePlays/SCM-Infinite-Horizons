@@ -2951,7 +2951,7 @@ country_event = { # To infinity and beyond the event horizon
 				country_event = { id = crisis.7518 days = 5 }
 			}
 			while = { #Destroy ~10% random stars, for good measure
-				count = event_target:global_event_country.ariphaos_patch_systems_tens
+				count = event_target:global_event_country.infinite_patch_systems_tens
 				random_system = {
 					limit = {
 						NOT = {
@@ -5160,7 +5160,7 @@ event = {
 		synth_queen_create_convoy_fleet = yes
 		synth_queen_create_convoy_fleet = yes
 		# Creates the history sites
-		synth_queen_spawn_history_projects = { NUM_EXTRA_PROJECTS = event_target:global_event_country.ariphaos_patch_systems_synth }
+		synth_queen_spawn_history_projects = { NUM_EXTRA_PROJECTS = event_target:global_event_country.infinite_patch_systems_synth }
 	}
 }
 
@@ -7568,36 +7568,36 @@ event = {
 					modifier = { #Galaxy size ponderation.
 						factor = 0.5
 						OR = {
-							has_global_flag = ariphaos_patch_galaxy_size_0
-							has_global_flag = ariphaos_patch_galaxy_size_2
+							has_global_flag = infinite_patch_galaxy_size_0
+							has_global_flag = infinite_patch_galaxy_size_2
 						}
 					}
 					modifier = {
 						factor = 0.75
-						has_global_flag = ariphaos_patch_galaxy_size_6
+						has_global_flag = infinite_patch_galaxy_size_6
 					}
 					modifier = {
 						factor = 1.5
-						has_global_flag = ariphaos_patch_galaxy_size_8
+						has_global_flag = infinite_patch_galaxy_size_8
 					}
 					modifier = {
 						factor = 2
-						has_global_flag = ariphaos_patch_galaxy_size_10
+						has_global_flag = infinite_patch_galaxy_size_10
 					}
 					modifier = {
 						factor = 2.5
-						has_global_flag = ariphaos_patch_galaxy_size_12
+						has_global_flag = infinite_patch_galaxy_size_12
 					}
 					modifier = {
 						factor = 3
 						NOR = {
-							has_global_flag = ariphaos_patch_galaxy_size_0
-							has_global_flag = ariphaos_patch_galaxy_size_2
-							has_global_flag = ariphaos_patch_galaxy_size_4
-							has_global_flag = ariphaos_patch_galaxy_size_6
-							has_global_flag = ariphaos_patch_galaxy_size_8
-							has_global_flag = ariphaos_patch_galaxy_size_10
-							has_global_flag = ariphaos_patch_galaxy_size_12
+							has_global_flag = infinite_patch_galaxy_size_0
+							has_global_flag = infinite_patch_galaxy_size_2
+							has_global_flag = infinite_patch_galaxy_size_4
+							has_global_flag = infinite_patch_galaxy_size_6
+							has_global_flag = infinite_patch_galaxy_size_8
+							has_global_flag = infinite_patch_galaxy_size_10
+							has_global_flag = infinite_patch_galaxy_size_12
 						}
 					}
 					modifier = {
@@ -7611,8 +7611,8 @@ event = {
 									}
 								}
 								OR = {
-									has_global_flag = ariphaos_patch_galaxy_size_0
-									has_global_flag = ariphaos_patch_galaxy_size_2
+									has_global_flag = infinite_patch_galaxy_size_0
+									has_global_flag = infinite_patch_galaxy_size_2
 								}
 							}
 							AND = {
@@ -7622,7 +7622,7 @@ event = {
 										is_country_type = synth_queen_convoys
 									}
 								}
-								has_global_flag = ariphaos_patch_galaxy_size_4
+								has_global_flag = infinite_patch_galaxy_size_4
 							}
 							AND = {
 								count_country = {
@@ -7631,7 +7631,7 @@ event = {
 										is_country_type = synth_queen_convoys
 									}
 								}
-								has_global_flag = ariphaos_patch_galaxy_size_6
+								has_global_flag = infinite_patch_galaxy_size_6
 							}
 							AND = {
 								count_country = {
@@ -7640,7 +7640,7 @@ event = {
 										is_country_type = synth_queen_convoys
 									}
 								}
-								has_global_flag = ariphaos_patch_galaxy_size_8
+								has_global_flag = infinite_patch_galaxy_size_8
 							}
 							AND = {
 								count_country = {
@@ -7649,7 +7649,7 @@ event = {
 										is_country_type = synth_queen_convoys
 									}
 								}
-								has_global_flag = ariphaos_patch_galaxy_size_10
+								has_global_flag = infinite_patch_galaxy_size_10
 							}
 							AND = {
 								count_country = {
@@ -7658,7 +7658,7 @@ event = {
 										is_country_type = synth_queen_convoys
 									}
 								}
-								has_global_flag = ariphaos_patch_galaxy_size_12
+								has_global_flag = infinite_patch_galaxy_size_12
 							}
 							AND = {
 								count_country = {
@@ -7668,13 +7668,13 @@ event = {
 									}
 								}
 								NOR = {
-									has_global_flag = ariphaos_patch_galaxy_size_0
-									has_global_flag = ariphaos_patch_galaxy_size_2
-									has_global_flag = ariphaos_patch_galaxy_size_4
-									has_global_flag = ariphaos_patch_galaxy_size_6
-									has_global_flag = ariphaos_patch_galaxy_size_8
-									has_global_flag = ariphaos_patch_galaxy_size_10
-									has_global_flag = ariphaos_patch_galaxy_size_12
+									has_global_flag = infinite_patch_galaxy_size_0
+									has_global_flag = infinite_patch_galaxy_size_2
+									has_global_flag = infinite_patch_galaxy_size_4
+									has_global_flag = infinite_patch_galaxy_size_6
+									has_global_flag = infinite_patch_galaxy_size_8
+									has_global_flag = infinite_patch_galaxy_size_10
+									has_global_flag = infinite_patch_galaxy_size_12
 								}
 							}
 						}

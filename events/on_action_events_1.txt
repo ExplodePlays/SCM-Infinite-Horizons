@@ -4340,7 +4340,7 @@ country_event = {
 		}
 		else = {
 			fromfrom = {
-				ariphaos_patch_primitive_world_conquered = yes
+				infinite_patch_primitive_world_conquered = yes
 			}
 		}
 
@@ -5776,7 +5776,7 @@ country_event = {
 							# Automatically close borders on truce end, if default policy is to close borders.
 							limit = { has_policy_flag = border_policy_closed }
 							country_event = {
-								id = ariphaos_patch.44
+								id = infinite_patch.44
 								days = 3600
 								scopes = {
 									from = prevprev
@@ -7247,7 +7247,7 @@ planet_event = {
 		OR = {
 			has_orbital_bombardment_stance = armageddon
 			has_orbital_bombardment_stance = pox
-			has_planet_flag = ariphaos_patch_flag_tomb_bombardment
+			has_planet_flag = infinite_patch_flag_tomb_bombardment
 		}
 		from = {
 			OR = {

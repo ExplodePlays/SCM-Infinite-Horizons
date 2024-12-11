@@ -1,4 +1,4 @@
-# Ariphaos note: 
+# infinite note: 
 # This is to help reduce the chance of block-in,
 # or of having important systems be inaccessible. 
 fallen_empire_spiritualist = {

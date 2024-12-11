@@ -110,7 +110,7 @@ country_event = {
 			}
 		}
 		last_created_leader = { 
-			# Ariphaos TODO: This and others should also handle civic-added traits.
+			# infinite TODO: This and others should also handle civic-added traits.
 			save_event_target_as = officer 
 			add_leader_traits_after_modification = yes
 			remove_leader_traits_after_modification = yes

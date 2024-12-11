@@ -2334,12 +2334,12 @@ remove_muutagan_trades = {
 }
 
 add_leader_traits_after_modification = {
-	ariphaos_patch_leader_change_traits = yes
+	infinite_patch_leader_change_traits = yes
 }
 
 # Duplicated for compatibility purposes.
 remove_leader_traits_after_modification = {
-	ariphaos_patch_leader_change_traits = yes
+	infinite_patch_leader_change_traits = yes
 }
 
 incr_minerallump1_var = {
@@ -6320,7 +6320,7 @@ add_rare_resources_effect = {
 central_crystal_spawn_effect = {
 	if = {
 		limit = {
-			has_global_flag = ariphaos_patch_galaxy_size_0
+			has_global_flag = infinite_patch_galaxy_size_0
 		}
 		no_scope = {
 			# makes system positions originate from galactic core
@@ -6336,7 +6336,7 @@ central_crystal_spawn_effect = {
 	}
 	else_if = {
 		limit = {
-			has_global_flag = ariphaos_patch_galaxy_size_2
+			has_global_flag = infinite_patch_galaxy_size_2
 		}
 		no_scope = {
 			# makes system positions originate from galactic core
@@ -6352,7 +6352,7 @@ central_crystal_spawn_effect = {
 	}
 	else_if = {
 		limit = {
-			has_global_flag = ariphaos_patch_galaxy_size_4
+			has_global_flag = infinite_patch_galaxy_size_4
 		}
 		no_scope = {
 			# makes system positions originate from galactic core
@@ -6368,7 +6368,7 @@ central_crystal_spawn_effect = {
 	}
 	else_if = {
 		limit = {
-			has_global_flag = ariphaos_patch_galaxy_size_6
+			has_global_flag = infinite_patch_galaxy_size_6
 		}
 		no_scope = {
 			# makes system positions originate from galactic core
@@ -6384,7 +6384,7 @@ central_crystal_spawn_effect = {
 	}
 	else_if = {
 		limit = {
-			has_global_flag = ariphaos_patch_galaxy_size_8
+			has_global_flag = infinite_patch_galaxy_size_8
 		}
 		no_scope = {
 			# makes system positions originate from galactic core
@@ -6400,7 +6400,7 @@ central_crystal_spawn_effect = {
 	}
 	else_if = {
 		limit = {
-			has_global_flag = ariphaos_patch_galaxy_size_10
+			has_global_flag = infinite_patch_galaxy_size_10
 		}
 		no_scope = {
 			# makes system positions originate from galactic core

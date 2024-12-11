@@ -1640,10 +1640,10 @@ ship_design = {
 # Shroud-Touched Cruiser
 ship_design = {
 	name = "NAME_Shroud_Fragment"
-	ship_size = ariphaos_patch_shroud_cruiser
+	ship_size = infinite_patch_shroud_cruiser
 	is_event_design = yes
 	section = {
-		template = "ARIPHAOS_PATCH_SHROUD_CRUISER_BOW_L1"
+		template = "infinite_PATCH_SHROUD_CRUISER_BOW_L1"
 		slot = "bow"
 
 		component = {
@@ -1664,7 +1664,7 @@ ship_design = {
 		}
 	}
 	section = {
-		template = "ARIPHAOS_PATCH_SHROUD_CRUISER_MID_L1M1"
+		template = "infinite_PATCH_SHROUD_CRUISER_MID_L1M1"
 		slot = "mid"
 
 		component = {
@@ -1689,7 +1689,7 @@ ship_design = {
 		}
 	}
 	section = {
-		template = "ARIPHAOS_PATCH_SHROUD_CRUISER_STERN_M1"
+		template = "infinite_PATCH_SHROUD_CRUISER_STERN_M1"
 		slot = "stern"
 
 		component = {

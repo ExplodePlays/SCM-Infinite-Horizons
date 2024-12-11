@@ -1710,7 +1710,7 @@ action_form_migration_pact = {
 				NOT = { has_valid_civic = civic_fanatic_purifiers }
 			}
 		}
-		# Ariphaos TODO: Add ethics patch hooks
+		# infinite TODO: Add ethics patch hooks
 		custom_tooltip = {
 			fail_text = "requires_recipient_not_fanatic_purifiers"
 			OR = {
@@ -3010,14 +3010,14 @@ action_demand_subjugation = {
 				category = fleet
 				value <= pathetic
 			}
-			desc = ariphaos_patch_overwhelming
+			desc = infinite_patch_overwhelming
 		}
 		modifier = {
 			add = 100
 			from = {
 				values_others = yes
 			}
-			desc = ariphaos_patch_values_others
+			desc = infinite_patch_values_others
 		}
 		modifier = {
 			add = -100
@@ -3052,7 +3052,7 @@ action_demand_subjugation = {
 				category = all
 				value = equivalent
 			}
-			desc = ariphaos_patch_weak_overall
+			desc = infinite_patch_weak_overall
 		}
 		modifier = {
 			add = -900
@@ -3061,7 +3061,7 @@ action_demand_subjugation = {
 				category = all
 				value >= superior
 			}
-			desc = ariphaos_patch_weak_overall
+			desc = infinite_patch_weak_overall
 		}
 		modifier = {
 			add = -100
@@ -3070,7 +3070,7 @@ action_demand_subjugation = {
 				category = technology
 				value = superior
 			}
-			desc = ariphaos_patch_weak_technology
+			desc = infinite_patch_weak_technology
 		}
 		modifier = {
 			add = -900
@@ -3079,7 +3079,7 @@ action_demand_subjugation = {
 				category = technology
 				value >= overwhelming
 			}
-			desc = ariphaos_patch_weak_technology
+			desc = infinite_patch_weak_technology
 		}
 		modifier = {
 			add = -100
@@ -3088,7 +3088,7 @@ action_demand_subjugation = {
 				category = economy
 				value = superior
 			}
-			desc = ariphaos_patch_weak_economy
+			desc = infinite_patch_weak_economy
 		}
 		modifier = {
 			add = -900
@@ -3097,7 +3097,7 @@ action_demand_subjugation = {
 				category = economy
 				value >= overwhelming
 			}
-			desc = ariphaos_patch_weak_economy
+			desc = infinite_patch_weak_economy
 		}
 		modifier = {
 			add = -100
@@ -3106,7 +3106,7 @@ action_demand_subjugation = {
 				category = fleet
 				value = superior
 			}
-			desc = ariphaos_patch_weak_fleet
+			desc = infinite_patch_weak_fleet
 		}
 		modifier = {
 			add = -900
@@ -3115,7 +3115,7 @@ action_demand_subjugation = {
 				category = fleet
 				value >= overwhelming
 			}
-			desc = ariphaos_patch_weak_fleet
+			desc = infinite_patch_weak_fleet
 		}
 		modifier = {
 			add = -100
@@ -3123,7 +3123,7 @@ action_demand_subjugation = {
 				has_ethic = ethic_xenophobe
 				NOT = { is_same_species = ROOT }
 			}
-			desc = ariphaos_patch_xenophobic_bigots
+			desc = infinite_patch_xenophobic_bigots
 		}
 		modifier = {
 			add = -100
@@ -3133,7 +3133,7 @@ action_demand_subjugation = {
 				is_same_species = ROOT
 			}
 			is_xenophile = yes
-			desc = ariphaos_patch_xenophobic_bigots
+			desc = infinite_patch_xenophobic_bigots
 		}
 		modifier = {
 			add = -200
@@ -3141,7 +3141,7 @@ action_demand_subjugation = {
 				has_ethic = ethic_fanatic_xenophobe
 				NOT = { is_same_species = ROOT }
 			}
-			desc = ariphaos_patch_xenophobic_bigots
+			desc = infinite_patch_xenophobic_bigots
 		}
 		modifier = {
 			add = -100
@@ -3152,7 +3152,7 @@ action_demand_subjugation = {
 				values_others = no
 			}
 			is_machine_empire = no
-			desc = ariphaos_patch_incompatible_existence
+			desc = infinite_patch_incompatible_existence
 		}
 		modifier = {
 			add = -100
@@ -3163,7 +3163,7 @@ action_demand_subjugation = {
 				values_others = no
 			}
 			is_hive_empire = no
-			desc = ariphaos_patch_incompatible_existence
+			desc = infinite_patch_incompatible_existence
 		}
 		modifier = {
 			add = -100
@@ -3176,7 +3176,7 @@ action_demand_subjugation = {
 				is_hive_empire = yes
 				is_machine_empire = yes
 			}
-			desc = ariphaos_patch_incompatible_existence
+			desc = infinite_patch_incompatible_existence
 		}
 	}
 }
@@ -3460,7 +3460,7 @@ action_ask_to_be_released_subject = {
 				is_unfriendly = yes
 				has_civic = civic_machine_assimilator
 			}
-			desc = ariphaos_patch_unfriendly
+			desc = infinite_patch_unfriendly
 		}
 		modifier = {
 			add = 100
@@ -3469,7 +3469,7 @@ action_ask_to_be_released_subject = {
 				has_valid_civic = civic_machine_exploration_protocol
 				has_origin = origin_fruitful
 			}
-			desc = ariphaos_patch_values_others
+			desc = infinite_patch_values_others
 		}
 		modifier = {
 			add = 100
@@ -3480,7 +3480,7 @@ action_ask_to_be_released_subject = {
 				value <= equivalent
 			}
 			from = { is_synthetic_empire = no }
-			desc = ariphaos_patch_servitor_release
+			desc = infinite_patch_servitor_release
 		}
 		modifier = {
 			add = -100
@@ -3491,7 +3491,7 @@ action_ask_to_be_released_subject = {
 				value = superior
 			}
 			from = { is_synthetic_empire = no }
-			desc = ariphaos_patch_servitor_protective
+			desc = infinite_patch_servitor_protective
 		}
 		modifier = {
 			add = -900
@@ -3502,7 +3502,7 @@ action_ask_to_be_released_subject = {
 				value >= overwhelming
 			}
 			from = { is_synthetic_empire = no }
-			desc = ariphaos_patch_servitor_protective
+			desc = infinite_patch_servitor_protective
 		}
 		modifier = {
 			add = 50

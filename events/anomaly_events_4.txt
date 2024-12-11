@@ -4288,7 +4288,7 @@ ship_event = {
 	option = {
 		name = anomaly.3165.a
 		from = {
-			# Ariphaos Balance TODO: This could probably be something custom
+			# infinite Balance TODO: This could probably be something custom
 			# set_leader_flag = leader_death_events_blocked
 			kill_leader = {
 				class = scientist show_notification = no

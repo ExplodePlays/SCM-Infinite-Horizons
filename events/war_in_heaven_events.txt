@@ -1335,7 +1335,7 @@ country_event = {
 				has_country_flag = war_in_heaven_league_leader
 				is_subject = no
 			}
-			# Ariphaos TODO: This should check for dangerous federation types.
+			# infinite TODO: This should check for dangerous federation types.
 			country_event = { id = war_in_heaven.15 }
 		}
 	}

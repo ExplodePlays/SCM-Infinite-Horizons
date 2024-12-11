@@ -2850,7 +2850,7 @@ ship_event = {
 	trigger = {
 		has_ship_flag = fortress_vault
 		exists = owner
-		owner = { NOT = { has_country_flag = ariphaos_patch_fortress_block } }
+		owner = { NOT = { has_country_flag = infinite_patch_fortress_block } }
 		exists = from.owner
 		from.owner = {
 			OR = {
@@ -2862,7 +2862,7 @@ ship_event = {
 
 	immediate = {
 		from.owner = { country_event = { id = leviathans.2101 } }
-		owner = { set_timed_country_flag = { flag = ariphaos_patch_fortress_block days = 180 } }
+		owner = { set_timed_country_flag = { flag = infinite_patch_fortress_block days = 180 } }
 	}
 }
 
@@ -2889,7 +2889,7 @@ country_event = {
 		exists = event_target:fortress_country
 		from = { is_same_value = event_target:fortress_country }
 		exists = event_target:fortress_vault_core
-		NOT = { has_country_flag = ariphaos_patch_enigmatic_block }
+		NOT = { has_country_flag = infinite_patch_enigmatic_block }
 		event_target:fortress_country = {
 			count_controlled_ship = { # Check that all ships are disabled
 				limit = { is_disabled = no }
@@ -2911,7 +2911,7 @@ country_event = {
 			limit = { has_event_chain = "enigmatic_fortress_chain" }
 			end_event_chain = "enigmatic_fortress_chain"
 		}
-		set_timed_country_flag = { flag = ariphaos_patch_enigmatic_block days = 180 }
+		set_timed_country_flag = { flag = infinite_patch_enigmatic_block days = 180 }
 	}
 
 	option = {
@@ -4537,7 +4537,7 @@ country_event = {
 		NOT = { has_global_flag = hivers_appeared } #Sanity check
 	}
 
-	# Ariphaos TODO: Replace with weight-adjusted random pulse event.
+	# infinite TODO: Replace with weight-adjusted random pulse event.
 	mean_time_to_happen = {
 		years = 100
 

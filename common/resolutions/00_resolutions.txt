@@ -533,7 +533,7 @@ resolution_ecology_recycling_initiatives = {
 		modifier = {
 			factor = 0.4
 			country_uses_consumer_goods = no
-			desc = ariphaos_patch_gal_com_country_uses_goods_no
+			desc = infinite_patch_gal_com_country_uses_goods_no
 		}
 	}
 }
@@ -1794,12 +1794,12 @@ resolution_galacticstudies_extradimensional_experimentation = {
 		modifier = {
 			factor = 0.8
 			has_policy_flag = ai_outlawed
-			desc = ariphaos_patch_gal_com_policy_ai_outlawed
+			desc = infinite_patch_gal_com_policy_ai_outlawed
 		}
 		modifier = {
 			factor = 0.5
 			has_policy_flag = interference_not_allowed
-			desc = ariphaos_patch_gal_com_policy_passive_interference
+			desc = infinite_patch_gal_com_policy_passive_interference
 		}
 		modifier = {
 			factor = 0
@@ -1962,7 +1962,7 @@ resolution_commerce_repeal_2 = {
 				is_country_type = default
 				has_commercial_pact = prev
 			}
-			desc = ariphaos_patch_gal_com_have_commercial_pacts
+			desc = infinite_patch_gal_com_have_commercial_pacts
 		}
 
 		modifier = {
@@ -2406,7 +2406,7 @@ resolution_commerce_leveraged_privateering = {
 				is_country_type = default
 				has_commercial_pact = prev
 			}
-			desc = ariphaos_patch_gal_com_have_commercial_pacts
+			desc = infinite_patch_gal_com_have_commercial_pacts
 		}
 
 		modifier = {
@@ -2765,7 +2765,7 @@ resolution_industry_repeal_1 = {
 			factor = 0.2
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
-			desc = ariphaos_patch_gal_com_non_servitor_machine
+			desc = infinite_patch_gal_com_non_servitor_machine
 		}
 
 		modifier = {
@@ -2793,7 +2793,7 @@ resolution_industry_repeal_1 = {
 				has_valid_civic = civic_machine_servitor
 			}
 			has_technology = tech_colonization_3
-			desc = ariphaos_patch_gal_com_tech_compensates
+			desc = infinite_patch_gal_com_tech_compensates
 		}
 		
 		modifier = {
@@ -2870,7 +2870,7 @@ resolution_industry_repeal_2 = {
 			factor = 0.2
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
-			desc = ariphaos_patch_gal_com_non_servitor_machine
+			desc = infinite_patch_gal_com_non_servitor_machine
 		}
 
 		modifier = {
@@ -2898,7 +2898,7 @@ resolution_industry_repeal_2 = {
 				has_valid_civic = civic_machine_servitor
 			}
 			has_technology = tech_colonization_4
-			desc = ariphaos_patch_gal_com_tech_compensates
+			desc = infinite_patch_gal_com_tech_compensates
 		}
 		
 		modifier = {
@@ -2976,7 +2976,7 @@ resolution_industry_repeal_3 = {
 			factor = 0.2
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
-			desc = ariphaos_patch_gal_com_non_servitor_machine
+			desc = infinite_patch_gal_com_non_servitor_machine
 		}
 
 		modifier = {
@@ -3004,7 +3004,7 @@ resolution_industry_repeal_3 = {
 				has_valid_civic = civic_machine_servitor
 			}
 			has_technology = tech_colonization_5
-			desc = ariphaos_patch_gal_com_tech_compensates
+			desc = infinite_patch_gal_com_tech_compensates
 		}
 		
 		modifier = {
@@ -3086,7 +3086,7 @@ resolution_industry_repeal_4 = {
 			factor = 0.2
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
-			desc = ariphaos_patch_gal_com_non_servitor_machine
+			desc = infinite_patch_gal_com_non_servitor_machine
 		}
 
 		modifier = {
@@ -3114,7 +3114,7 @@ resolution_industry_repeal_4 = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_2 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3196,7 +3196,7 @@ resolution_industry_repeal_5 = {
 			factor = 0.5
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
-			desc = ariphaos_patch_gal_com_non_servitor_machine
+			desc = infinite_patch_gal_com_non_servitor_machine
 		}
 
 		modifier = {
@@ -3224,7 +3224,7 @@ resolution_industry_repeal_5 = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_3 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3309,7 +3309,7 @@ resolution_industry_regulatory_facilitation = {
 			factor = 5
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
-			desc = ariphaos_patch_gal_com_non_servitor_machine
+			desc = infinite_patch_gal_com_non_servitor_machine
 		}
 
 		modifier = {
@@ -3344,7 +3344,7 @@ resolution_industry_regulatory_facilitation = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_2 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 
 		modifier = {
@@ -3354,7 +3354,7 @@ resolution_industry_regulatory_facilitation = {
 				has_valid_civic = civic_machine_servitor
 			}
 			has_technology = tech_colonization_3
-			desc = ariphaos_patch_gal_com_tech_compensates
+			desc = infinite_patch_gal_com_tech_compensates
 		}
 	}
 }
@@ -3419,7 +3419,7 @@ resolution_industry_collective_waste_management = {
 			factor = 5
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
-			desc = ariphaos_patch_gal_com_non_servitor_machine
+			desc = infinite_patch_gal_com_non_servitor_machine
 		}
 
 		modifier = {
@@ -3454,7 +3454,7 @@ resolution_industry_collective_waste_management = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_2 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3464,7 +3464,7 @@ resolution_industry_collective_waste_management = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_3 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3474,7 +3474,7 @@ resolution_industry_collective_waste_management = {
 				has_valid_civic = civic_machine_servitor
 			}
 			has_technology = tech_colonization_4
-			desc = ariphaos_patch_gal_com_tech_compensates
+			desc = infinite_patch_gal_com_tech_compensates
 		}
 	}
 }
@@ -3558,7 +3558,7 @@ resolution_industry_building_a_better_tomorrow = {
 			factor = 5
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
-			desc = ariphaos_patch_gal_com_non_servitor_machine
+			desc = infinite_patch_gal_com_non_servitor_machine
 		}
 		
 		modifier = {
@@ -3575,7 +3575,7 @@ resolution_industry_building_a_better_tomorrow = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_2 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3586,7 +3586,7 @@ resolution_industry_building_a_better_tomorrow = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_3 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3597,7 +3597,7 @@ resolution_industry_building_a_better_tomorrow = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_4 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3607,7 +3607,7 @@ resolution_industry_building_a_better_tomorrow = {
 				has_valid_civic = civic_machine_servitor
 			}
 			has_technology = tech_colonization_5
-			desc = ariphaos_patch_gal_com_tech_compensates
+			desc = infinite_patch_gal_com_tech_compensates
 		}
 	}
 }
@@ -3679,7 +3679,7 @@ resolution_industry_environmental_ordinance_waivers = {
 			factor = 3
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
-			desc = ariphaos_patch_gal_com_non_servitor_machine
+			desc = infinite_patch_gal_com_non_servitor_machine
 		}
 
 		modifier = {
@@ -3714,7 +3714,7 @@ resolution_industry_environmental_ordinance_waivers = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_2 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3724,7 +3724,7 @@ resolution_industry_environmental_ordinance_waivers = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_3 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3734,7 +3734,7 @@ resolution_industry_environmental_ordinance_waivers = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_4 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3744,7 +3744,7 @@ resolution_industry_environmental_ordinance_waivers = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_5 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 	}
 }
@@ -3821,7 +3821,7 @@ resolution_industry_project_cornucopia = {
 			factor = 2
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
-			desc = ariphaos_patch_gal_com_non_servitor_machine
+			desc = infinite_patch_gal_com_non_servitor_machine
 		}
 
 		modifier = {
@@ -3849,7 +3849,7 @@ resolution_industry_project_cornucopia = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_2 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3866,7 +3866,7 @@ resolution_industry_project_cornucopia = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_3 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3877,7 +3877,7 @@ resolution_industry_project_cornucopia = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_4 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 		
 		modifier = {
@@ -3888,7 +3888,7 @@ resolution_industry_project_cornucopia = {
 				has_valid_civic = civic_machine_servitor
 			}
 			NOT = { has_technology = tech_colonization_5 }
-			desc = ariphaos_patch_gal_com_tech_not_compensates
+			desc = infinite_patch_gal_com_tech_not_compensates
 		}
 	}
 }
@@ -6262,7 +6262,7 @@ resolution_mutualdefense_castigation_denouncement = {
 		modifier = {
 			factor = 0
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 	}
 }
@@ -6337,7 +6337,7 @@ resolution_council_denouncement = {
 		modifier = {
 			factor = 0
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 
 		# weaklings are scared of BtC
@@ -9394,7 +9394,7 @@ resolution_galacticreforms_permanent_seat = {
 		modifier = {
 			factor = 2
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 	}
 }
@@ -9440,7 +9440,7 @@ resolution_galacticreforms_revoke_permanent_seat = {
 		modifier = {
 			factor = 0.5
 			is_in_federation_with = from
-			desc = ariphaos_patch_gal_com_share_federation
+			desc = infinite_patch_gal_com_share_federation
 		}
 	}
 }
@@ -13124,7 +13124,7 @@ resolution_galactic_focus_war_in_heaven_support_side_1 = {
 			factor = 0
 			has_federation = yes
 			alliance = { has_federation_flag = non_aligned_league }
-			desc = ariphaos_patch_gal_com_non_aligned_league
+			desc = infinite_patch_gal_com_non_aligned_league
 		}
 
 		modifier = {
@@ -13207,7 +13207,7 @@ resolution_galactic_focus_war_in_heaven_support_side_2 = {
 			factor = 0
 			has_federation = yes
 			alliance = { has_federation_flag = non_aligned_league }
-			desc = ariphaos_patch_gal_com_non_aligned_league
+			desc = infinite_patch_gal_com_non_aligned_league
 		}
 
 		modifier = {
@@ -13302,7 +13302,7 @@ resolution_galactic_focus_war_in_heaven_denounce_both = {
 			factor = 10
 			has_federation = yes
 			alliance = { has_federation_flag = non_aligned_league }
-			desc = ariphaos_patch_gal_com_non_aligned_league
+			desc = infinite_patch_gal_com_non_aligned_league
 		}
 
 		modifier = {
@@ -14053,7 +14053,7 @@ resolution_galactic_market_form = {
 		modifier = {
 			factor = 0.1
 			NOT = { has_global_flag = galactic_focus_pass_a_resolution_completed }
-			desc = ariphaos_patch_gal_com_first_resolution
+			desc = infinite_patch_gal_com_first_resolution
 		}
 
 		modifier = {

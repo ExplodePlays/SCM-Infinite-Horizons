@@ -226,7 +226,7 @@ planet_event = {
 			has_origin = origin_remnants
 		}
 		has_planet_flag = prescripted_ideal
-		has_planet_flag = ariphaos_patch_remnants
+		has_planet_flag = infinite_patch_remnants
 		NOT = { has_modifier = colonial_remains }
 		closest_system = {
 			limit = {

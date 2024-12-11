@@ -658,7 +658,7 @@ country_event = {
 				}
 			}
 			planet_event = { id = action.84 } # Imperialists are pleased
-			ariphaos_patch_primitive_world_conquered = yes
+			infinite_patch_primitive_world_conquered = yes
 			while = {
 				count = 3
 				root = {

@@ -201,7 +201,7 @@ evangelising_zealots = {
 		}
 		modifier = {
 			add = 1
-			ariphaos_patch_is_conformist = yes
+			infinite_patch_is_conformist = yes
 		}
 		modifier = {
 			add = 1
@@ -928,7 +928,7 @@ harmonious_hierarchy = {
 		weight = 10
 		modifier = {
 			add = 1
-			ariphaos_patch_is_conformist = yes
+			infinite_patch_is_conformist = yes
 		}
 		modifier = {
 			add = 1
@@ -1394,8 +1394,8 @@ migrating_flock = {
 			has_ethic = "ethic_fanatic_pacifist"
 		}
 		OR = {
-			ariphaos_patch_is_rapid_breeder = yes
-			ariphaos_patch_is_nomadic = yes
+			infinite_patch_is_rapid_breeder = yes
+			infinite_patch_is_nomadic = yes
 		}
 	}
 
@@ -1463,12 +1463,12 @@ metalhead = {
 				has_trait = "trait_robot_power_drills"
 			}
 			AND = {
-				ariphaos_patch_is_industrious = yes
-				ariphaos_patch_is_strong = yes
+				infinite_patch_is_industrious = yes
+				infinite_patch_is_strong = yes
 			}
 		}
-		ariphaos_patch_is_industrious = yes
-		ariphaos_patch_is_strong = yes
+		infinite_patch_is_industrious = yes
+		infinite_patch_is_strong = yes
 		OR = {
 			NOT = { has_authority = "auth_corporate" }
 			has_valid_civic = civic_criminal_heritage

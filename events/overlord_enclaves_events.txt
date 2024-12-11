@@ -425,7 +425,7 @@ country_event = { #Merc Destroyed (Destroyer)
 	}
 }
 
-# Ariphaos TODO: Add some flavor here.
+# infinite TODO: Add some flavor here.
 country_event = { #Merc Destroyed
 	id = enclave.26
 	title = "enclave.25"
@@ -753,7 +753,7 @@ country_event = {
 			is_hostile = event_target:mercenary_enclave_country
 			NOR = {
 				is_homicidal = yes
-				has_country_flag = ariphaos_patch_offended@event_target:mercenary_enclave_country
+				has_country_flag = infinite_patch_offended@event_target:mercenary_enclave_country
 			}
 		}
 		text = enclave.205.desc.hostile
@@ -763,7 +763,7 @@ country_event = {
 			is_hostile = event_target:mercenary_enclave_country
 			OR = {
 				is_homicidal = yes
-				has_country_flag = ariphaos_patch_offended@event_target:mercenary_enclave_country
+				has_country_flag = infinite_patch_offended@event_target:mercenary_enclave_country
 			}
 		}
 		text = enclave.205.desc.unfriendly
@@ -822,7 +822,7 @@ country_event = {
 			is_hostile = event_target:mercenary_enclave_country
 			NOR = {
 				is_homicidal = yes
-				has_country_flag = ariphaos_patch_offended@event_target:mercenary_enclave_country
+				has_country_flag = infinite_patch_offended@event_target:mercenary_enclave_country
 			}
 		}
 		allow = {
@@ -879,12 +879,12 @@ country_event = {
 	}
 	
 	option = {
-		name = ariphaos_patch_enclave.205.j
+		name = infinite_patch_enclave.205.j
 		trigger = {
 			is_hostile = event_target:mercenary_enclave_country
 			NOR = {
 				is_homicidal = yes
-				has_country_flag = ariphaos_patch_offended@event_target:mercenary_enclave_country
+				has_country_flag = infinite_patch_offended@event_target:mercenary_enclave_country
 			}
 		}
 	}
@@ -895,7 +895,7 @@ country_event = {
 			is_hostile = event_target:mercenary_enclave_country
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
-				has_country_flag = ariphaos_patch_offended@event_target:mercenary_enclave_country
+				has_country_flag = infinite_patch_offended@event_target:mercenary_enclave_country
 			}
 		}
 	}
@@ -906,7 +906,7 @@ country_event = {
 			is_hostile = event_target:mercenary_enclave_country
 			OR = {
 				has_valid_civic = civic_machine_terminator
-				#has_country_flag = ariphaos_patch_offended@event_target:mercenary_enclave_country
+				#has_country_flag = infinite_patch_offended@event_target:mercenary_enclave_country
 			}
 		}
 	}
@@ -917,24 +917,24 @@ country_event = {
 			is_hostile = event_target:mercenary_enclave_country
 			OR = {
 				has_valid_civic = civic_hive_devouring_swarm
-				#has_country_flag = ariphaos_patch_offended@event_target:mercenary_enclave_country
+				#has_country_flag = infinite_patch_offended@event_target:mercenary_enclave_country
 			}
 		}
 	}
 	
 	option = {
-		name = ariphaos_patch_enclave.205.k
+		name = infinite_patch_enclave.205.k
 		trigger = {
 			is_hostile = event_target:mercenary_enclave_country
 			NOR = {
 				is_homicidal = yes
-				has_country_flag = ariphaos_patch_offended@event_target:mercenary_enclave_country
+				has_country_flag = infinite_patch_offended@event_target:mercenary_enclave_country
 			}
 			is_xenophobe = yes
 			is_pacifist = no
 		}
 		hidden_effect = {
-			set_country_flag = ariphaos_patch_offended@event_target:mercenary_enclave_country
+			set_country_flag = infinite_patch_offended@event_target:mercenary_enclave_country
 		}
 	}
 
@@ -13288,7 +13288,7 @@ country_event = {
 		hidden_effect = {
 			random_planet_within_border = {
 				limit = {
-					# Ariphaos Note: Intentionally leaving this out of the astral scar fixes.
+					# infinite Note: Intentionally leaving this out of the astral scar fixes.
 					has_deposit = no
 					has_anomaly = no
 				}

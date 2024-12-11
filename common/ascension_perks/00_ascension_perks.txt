@@ -242,15 +242,15 @@ ap_become_the_crisis = {
 		}
 		modifier = {
 			factor = 2
-			ariphaos_patch_fleet_titanic = yes
+			infinite_patch_fleet_titanic = yes
 		}
 		modifier = {
 			factor = 0.5
-			ariphaos_patch_fleet_enormous = no
+			infinite_patch_fleet_enormous = no
 		}
 		modifier = {
 			factor = 0
-			ariphaos_patch_fleet_massive = no
+			infinite_patch_fleet_massive = no
 		}
 		modifier = {
 			factor = 2
@@ -870,8 +870,8 @@ ap_defender_of_the_galaxy = {
 		modifier = {
 			factor = 2
 			has_global_flag = galactic_crisis_happened
-			ariphaos_patch_fleet_titanic = no
-			ariphaos_patch_fleet_enormous = yes
+			infinite_patch_fleet_titanic = no
+			infinite_patch_fleet_enormous = yes
 		}
 	}
 }

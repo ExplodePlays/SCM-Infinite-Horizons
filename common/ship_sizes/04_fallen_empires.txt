@@ -118,14 +118,14 @@ large_ship_fallen_empire = {
 
 	possible_construction = {
 		custom_tooltip = {
-			fail_text = ariphaos_patch_juggernaut_disabled_tooltip
+			fail_text = infinite_patch_juggernaut_disabled_tooltip
 			OR = {
 				NOT = { is_scope_type = starbase }
 				NOT = { has_starbase_size = juggernaut }
 				AND = {
 					exists = owner
 					owner = {
-						has_policy_flag = ariphaos_patch_juggernaut_enabled
+						has_policy_flag = infinite_patch_juggernaut_enabled
 					}
 				}
 			}
@@ -183,14 +183,14 @@ small_ship_fallen_empire = {
 
 	possible_construction = {
 		custom_tooltip = {
-			fail_text = ariphaos_patch_juggernaut_disabled_tooltip
+			fail_text = infinite_patch_juggernaut_disabled_tooltip
 			OR = {
 				NOT = { is_scope_type = starbase }
 				NOT = { has_starbase_size = juggernaut }
 				AND = {
 					exists = owner
 					owner = {
-						has_policy_flag = ariphaos_patch_juggernaut_enabled
+						has_policy_flag = infinite_patch_juggernaut_enabled
 					}
 				}
 			}

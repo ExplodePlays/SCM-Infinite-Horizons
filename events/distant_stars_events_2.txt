@@ -2611,7 +2611,7 @@ ship_event = {
 
 	immediate = {
 		owner = {
-			# Ariphaos todo: This isn't really a 'remnant'.
+			# infinite todo: This isn't really a 'remnant'.
 			country_event = { id = story.5 days = 30 }
 		}
 	}
@@ -3985,7 +3985,7 @@ country_event = {
 		event_target:time_loop_world = {
 			clear_deposits = yes
 			set_planet_flag = repaired_time_loop_shield
-			# Ariphaos note - check for balance patch
+			# infinite note - check for balance patch
 			planet_event = { id = distar.2034 days = 7200 random = 14400 }
 		}
 	}
@@ -4507,7 +4507,7 @@ country_event = {
 		}
 		last_created_country = {
 			country_event = {
-				id = ariphaos_patch.9998
+				id = infinite_patch.9998
 				days = 1
 			}
 			country_event = {
@@ -4918,7 +4918,7 @@ country_event = {
 		}
 		last_created_country = {
 			country_event = {
-				id = ariphaos_patch.9998
+				id = infinite_patch.9998
 				days = 1
 			}
 			country_event = {

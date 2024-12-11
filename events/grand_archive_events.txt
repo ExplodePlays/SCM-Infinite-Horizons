@@ -794,57 +794,57 @@ country_event = {
 		}
 		OR = {
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_0
+				has_global_flag = infinite_patch_galaxy_size_0
 				num_ships < 2
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_2
+				has_global_flag = infinite_patch_galaxy_size_2
 				num_ships < 3
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_4
+				has_global_flag = infinite_patch_galaxy_size_4
 				num_ships < 6
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_6
+				has_global_flag = infinite_patch_galaxy_size_6
 				num_ships < 9
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_8
+				has_global_flag = infinite_patch_galaxy_size_8
 				num_ships < 12
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_10
+				has_global_flag = infinite_patch_galaxy_size_10
 				num_ships < 15
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_12
+				has_global_flag = infinite_patch_galaxy_size_12
 				num_ships < 18
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_14
+				has_global_flag = infinite_patch_galaxy_size_14
 				num_ships < 21
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_16
+				has_global_flag = infinite_patch_galaxy_size_16
 				num_ships < 24
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_18
+				has_global_flag = infinite_patch_galaxy_size_18
 				num_ships < 27
 			}
 			AND = {
 				NOR = {
-					has_global_flag = ariphaos_patch_galaxy_size_0
-					has_global_flag = ariphaos_patch_galaxy_size_2
-					has_global_flag = ariphaos_patch_galaxy_size_4
-					has_global_flag = ariphaos_patch_galaxy_size_6
-					has_global_flag = ariphaos_patch_galaxy_size_8
-					has_global_flag = ariphaos_patch_galaxy_size_10
-					has_global_flag = ariphaos_patch_galaxy_size_12
-					has_global_flag = ariphaos_patch_galaxy_size_14
-					has_global_flag = ariphaos_patch_galaxy_size_16
-					has_global_flag = ariphaos_patch_galaxy_size_18
+					has_global_flag = infinite_patch_galaxy_size_0
+					has_global_flag = infinite_patch_galaxy_size_2
+					has_global_flag = infinite_patch_galaxy_size_4
+					has_global_flag = infinite_patch_galaxy_size_6
+					has_global_flag = infinite_patch_galaxy_size_8
+					has_global_flag = infinite_patch_galaxy_size_10
+					has_global_flag = infinite_patch_galaxy_size_12
+					has_global_flag = infinite_patch_galaxy_size_14
+					has_global_flag = infinite_patch_galaxy_size_16
+					has_global_flag = infinite_patch_galaxy_size_18
 				}
 				num_ships < 30
 			}
@@ -3025,8 +3025,8 @@ event = {
 		OR = {
 			AND = {
 				OR = {
-					has_global_flag = ariphaos_patch_galaxy_size_0
-					has_global_flag = ariphaos_patch_galaxy_size_2
+					has_global_flag = infinite_patch_galaxy_size_0
+					has_global_flag = infinite_patch_galaxy_size_2
 				}
 				event_target:cutholoids_country = {
 					check_variable = {
@@ -3036,7 +3036,7 @@ event = {
 				}
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_4
+				has_global_flag = infinite_patch_galaxy_size_4
 				event_target:cutholoids_country = {
 					check_variable = {
 						which = alive_cutholoids
@@ -3045,7 +3045,7 @@ event = {
 				}
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_6
+				has_global_flag = infinite_patch_galaxy_size_6
 				event_target:cutholoids_country = {
 					check_variable = {
 						which = alive_cutholoids
@@ -3054,7 +3054,7 @@ event = {
 				}
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_8
+				has_global_flag = infinite_patch_galaxy_size_8
 				event_target:cutholoids_country = {
 					check_variable = {
 						which = alive_cutholoids
@@ -3063,7 +3063,7 @@ event = {
 				}
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_10
+				has_global_flag = infinite_patch_galaxy_size_10
 				event_target:cutholoids_country = {
 					check_variable = {
 						which = alive_cutholoids
@@ -3072,7 +3072,7 @@ event = {
 				}
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_12
+				has_global_flag = infinite_patch_galaxy_size_12
 				event_target:cutholoids_country = {
 					check_variable = {
 						which = alive_cutholoids
@@ -3081,7 +3081,7 @@ event = {
 				}
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_14
+				has_global_flag = infinite_patch_galaxy_size_14
 				event_target:cutholoids_country = {
 					check_variable = {
 						which = alive_cutholoids
@@ -3090,7 +3090,7 @@ event = {
 				}
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_16
+				has_global_flag = infinite_patch_galaxy_size_16
 				event_target:cutholoids_country = {
 					check_variable = {
 						which = alive_cutholoids
@@ -3099,7 +3099,7 @@ event = {
 				}
 			}
 			AND = {
-				has_global_flag = ariphaos_patch_galaxy_size_18
+				has_global_flag = infinite_patch_galaxy_size_18
 				event_target:cutholoids_country = {
 					check_variable = {
 						which = alive_cutholoids
@@ -3109,16 +3109,16 @@ event = {
 			}
 			AND = {
 				NOR = {
-					has_global_flag = ariphaos_patch_galaxy_size_0
-					has_global_flag = ariphaos_patch_galaxy_size_2
-					has_global_flag = ariphaos_patch_galaxy_size_4
-					has_global_flag = ariphaos_patch_galaxy_size_6
-					has_global_flag = ariphaos_patch_galaxy_size_8
-					has_global_flag = ariphaos_patch_galaxy_size_10
-					has_global_flag = ariphaos_patch_galaxy_size_12
-					has_global_flag = ariphaos_patch_galaxy_size_14
-					has_global_flag = ariphaos_patch_galaxy_size_16
-					has_global_flag = ariphaos_patch_galaxy_size_18
+					has_global_flag = infinite_patch_galaxy_size_0
+					has_global_flag = infinite_patch_galaxy_size_2
+					has_global_flag = infinite_patch_galaxy_size_4
+					has_global_flag = infinite_patch_galaxy_size_6
+					has_global_flag = infinite_patch_galaxy_size_8
+					has_global_flag = infinite_patch_galaxy_size_10
+					has_global_flag = infinite_patch_galaxy_size_12
+					has_global_flag = infinite_patch_galaxy_size_14
+					has_global_flag = infinite_patch_galaxy_size_16
+					has_global_flag = infinite_patch_galaxy_size_18
 				}
 				event_target:cutholoids_country = {
 					check_variable = {

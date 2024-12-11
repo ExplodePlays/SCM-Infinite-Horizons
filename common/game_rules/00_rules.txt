@@ -806,7 +806,7 @@ can_colonize_planet = {
 	}
 
 	custom_tooltip = {
-		fail_text = "ariphaos_patch_consecrated_world"
+		fail_text = "infinite_patch_consecrated_world"
 		exists = space_owner
 		NOT = { has_planet_flag = consecrated@space_owner }
 	}
@@ -1537,7 +1537,7 @@ ai_should_restrict_system = {
 					is_country_type = marauder_raiders
 					is_country_type = voidworms
 					is_country_type = caravaneer_fleet
-					ariphaos_patch_fleet_huge = no
+					infinite_patch_fleet_huge = no
 				}
 			}
 			OR = {
@@ -1617,7 +1617,7 @@ ai_should_restrict_system = {
 					is_country_type = caravaneer_fleet
 					AND = {
 						is_country_type = default
-						ariphaos_patch_fleet_huge = no
+						infinite_patch_fleet_huge = no
 					}
 				}
 			}

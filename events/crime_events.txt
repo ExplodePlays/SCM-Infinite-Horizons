@@ -1325,7 +1325,7 @@ planet_event = {
 
 	immediate = {
 		random_owned_pop = { kill_pop = yes }
-		# Ariphaos Balance TODO:
+		# infinite Balance TODO:
 		# Pop death is pretty brutal right now.
 		#random_owned_pop = { kill_pop = yes }
 		#random_owned_pop = { kill_pop = yes }
@@ -1427,7 +1427,7 @@ planet_event = {
 
 	immediate = {
 		random_owned_pop = { kill_pop = yes }
-		# Ariphaos Balance TODO:
+		# infinite Balance TODO:
 		#random_owned_pop = { kill_pop = yes }
 		#random_owned_pop = { kill_pop = yes }
 		#random_owned_pop = { kill_pop = yes }
@@ -1493,7 +1493,7 @@ planet_event = {
 
 	immediate = {
 		random_owned_pop = { kill_pop = yes }
-		# Ariphaos Balance TODO:
+		# infinite Balance TODO:
 		#random_owned_pop = { kill_pop = yes }
 		#random_owned_pop = { kill_pop = yes }
 		add_planet_devastation = 15
