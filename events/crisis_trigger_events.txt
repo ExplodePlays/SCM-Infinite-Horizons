@@ -1,0 +1,116 @@
+######################################
+#
+# Automatic Crisis Triggering
+#
+######################################
+
+namespace = crisis_trigger
+
+event = {
+	id = crisis_trigger.1
+	hide_window = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		AND = {
+			is_crises_allowed = yes
+			end_game_years_passed >= 0  
+			OR = {
+				NOT = { has_global_flag = galactic_crisis_happened }
+				AND = {
+					allowed_crisis_type = all
+					NOR = {
+						has_global_flag = galactic_crisis_recently_fired
+						any_country = {
+							is_crisis_faction = yes
+						}
+					}
+				}
+			}
+		}
+		
+	}
+
+	immediate = {
+		random_country = {
+			limit = { is_country_type = global_event } # Ensures global context
+
+			random_list = {
+
+				### Prethoryn Scourge
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							allowed_crisis_type = contingency
+							allowed_crisis_type = unbidden
+							allowed_crisis_type = synth_queen
+						}
+					}
+					country_event = { id = crisis.10 days = 1}
+					set_global_flag = galactic_crisis_happened
+					set_timed_global_flag = {
+						flag = galactic_crisis_recently_fired
+						years = 1
+					}
+				}
+
+				### Unbidden
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							allowed_crisis_type = contingency
+							allowed_crisis_type = prethoryn
+							allowed_crisis_type = synth_queen
+						}
+					}
+					country_event = { id = crisis.1000 days = 1}
+					set_global_flag = galactic_crisis_happened
+					set_timed_global_flag = {
+						flag = galactic_crisis_recently_fired
+						years = 1
+					}
+				}
+
+				### Contingency
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							allowed_crisis_type = prethoryn
+							allowed_crisis_type = unbidden
+							allowed_crisis_type = synth_queen
+						}
+					}
+					country_event = { id = crisis.2005 days = 1}
+					set_global_flag = galactic_crisis_happened
+					set_timed_global_flag = {
+						flag = galactic_crisis_recently_fired
+						years = 1
+					}
+				}
+
+				### Synth Queen
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							allowed_crisis_type = prethoryn
+							allowed_crisis_type = unbidden
+							allowed_crisis_type = contingency
+						}
+					}
+					country_event = { id = crisis.8005 days = 1}
+					set_global_flag = galactic_crisis_happened
+					set_timed_global_flag = {
+						flag = galactic_crisis_recently_fired
+						years = 1
+					}
+				}
+			}
+		}
+	}
+}
+

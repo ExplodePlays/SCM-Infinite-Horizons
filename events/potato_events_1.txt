@@ -1,0 +1,527 @@
+namespace = potato_event
+country_event = {
+	#become potato
+	id = potato_event.1
+	hide_window = no
+	title = potato_event.1.title
+	desc = potato_event.1.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = pc_machine
+	is_triggered_only = yes
+	option = {
+		name = potato_event.1.a
+		trigger = {
+			OR = {
+				AND = {
+					exists = event_target:raider_khanate
+					event_target:raider_khanate = {
+						is_ai = yes
+					}
+				}
+				any_country = {
+					is_country_type = awakened_marauders
+					is_ai = yes
+				}
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = awakened_marauders
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.b
+		trigger = {
+			OR = {
+				AND = {
+					exists = event_target:graygoo_country
+					event_target:graygoo_country = {
+						is_ai = yes
+					}
+				}
+				any_country = {
+					is_country_type = gray_goo
+					is_ai = yes
+				}
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = gray_goo
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.c
+		trigger = {
+			OR = {
+				AND = {
+					exists = event_target:prethoryn
+					event_target:prethoryn = {
+						is_ai = yes
+					}
+				}
+				any_country = {
+					is_country_type = swarm
+					is_ai = yes
+				}
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = swarm
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.d
+		trigger = {
+			OR = {
+				AND = {
+					exists = event_target:AI_crisis
+					event_target:AI_crisis = {
+						is_ai = yes
+					}
+				}
+				any_country = {
+					is_country_type = ai_empire
+					is_ai = yes
+				}
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = ai_empire
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.e
+		trigger = {
+			any_country = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = fallen_empire
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.f
+		trigger = {
+			any_country = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = awakened_fallen_empire
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.g
+		trigger = {
+			any_country = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = fallen_empire
+					has_ethic = ethic_fanatic_materialist
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.h
+		trigger = {
+			any_country = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = awakened_fallen_empire
+					has_ethic = ethic_fanatic_materialist
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.i
+		trigger = {
+			any_country = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = fallen_empire
+					has_ethic = ethic_fanatic_xenophile
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.j
+		trigger = {
+			any_country = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = awakened_fallen_empire
+					has_ethic = ethic_fanatic_xenophile
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.k
+		trigger = {
+			any_country = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = fallen_empire
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.l
+		trigger = {
+			any_country = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = awakened_fallen_empire
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.m
+		trigger = {
+			any_country = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = fallen_empire
+					has_ethic = ethic_gestalt_consciousness
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.n
+		trigger = {
+			any_country = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = awakened_fallen_empire
+					has_ethic = ethic_gestalt_consciousness
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.o
+		trigger = {
+			OR = {
+				AND = {
+					exists = event_target:extradimensionals
+					event_target:extradimensionals = {
+						is_ai = yes
+					}
+				}
+				any_country = {
+					is_country_type = extradimensional
+					is_ai = yes
+				}
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = extradimensional
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.p
+		trigger = {
+			OR = {
+				AND = {
+					exists = event_target:extradimensionals2
+					event_target:extradimensionals2 = {
+						is_ai = yes
+					}
+				}
+				any_country = {
+					is_country_type = extradimensional_2
+					is_ai = yes
+				}
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = extradimensional_2
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.q
+		trigger = {
+			OR = {
+				AND = {
+					exists = event_target:extradimensionals3
+					event_target:extradimensionals3 = {
+						is_ai = yes
+					}
+				}
+				any_country = {
+					is_country_type = extradimensional_3
+					is_ai = yes
+				}
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_country_type = extradimensional_3
+				}
+				set_player = root
+			}
+		}
+	}
+	option = {
+		name = potato_event.1.r
+	}
+}
+
+# Sleepers Awake - Potato backups
+country_event = {
+	id = potato_event.2
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = sleepers_awake_happened
+		add_modifier = {
+			modifier = ancient_cache_of_tech
+			days = -1
+		}
+		country_event = {
+			id = fallen_empires_awakening.3
+		}
+		# Notify players
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = {
+				id = fallen_empires_awakening.2
+			}
+		}
+		observer_event = {
+			id = observer.73
+		}
+		# Fragged a holy world
+		if = {
+			limit = {
+				has_country_flag = holy_world_killed
+			}
+			country_event = {
+				id = planet_destruction.611
+				days = 5
+			}
+		}
+		# War in Heaven
+		if = {
+			limit = {
+				host_has_dlc = "Leviathans Story Pack"
+			}
+			random_list = {
+				40 = {
+					# War in Heaven with Fallen Empire of opposing ethos
+					random_country = {
+						limit = {
+							NOT = {
+								is_same_value = root
+							}
+							is_country_type = fallen_empire
+							NOT = {
+								has_ethic = ethic_gestalt_consciousness
+							}
+							OR = {
+								AND = {
+									has_ethic = ethic_fanatic_xenophobe
+									root = {
+										has_ethic = ethic_fanatic_xenophile
+									}
+								}
+								AND = {
+									has_ethic = ethic_fanatic_xenophile
+									root = {
+										has_ethic = ethic_fanatic_xenophobe
+									}
+								}
+								AND = {
+									has_ethic = ethic_fanatic_spiritualist
+									root = {
+										has_ethic = ethic_fanatic_materialist
+									}
+								}
+								AND = {
+									has_ethic = ethic_fanatic_materialist
+									root = {
+										has_ethic = ethic_fanatic_spiritualist
+									}
+								}
+							}
+						}
+						set_country_flag = sleepers_awake_ancient_rival
+						set_timed_country_flag = {
+							flag = timed_ancient_rival
+							days = 3650
+						}
+						set_timed_country_flag = {
+							flag = ai_no_wars
+							days = 3650
+						}
+						root = {
+							set_timed_country_flag = {
+								flag = ai_no_wars
+								days = 3650
+							}
+						}
+						every_country = {
+							limit = {
+								is_country_type = default
+							}
+							set_timed_country_flag = {
+								flag = ai_no_wars
+								days = 3650
+							}
+						}
+					}
+				}
+				20 = {
+					# War in Heaven with Fallen Empire of different ethos
+					random_country = {
+						limit = {
+							NOT = {
+								is_same_value = root
+							}
+							is_country_type = fallen_empire
+							NOT = {
+								has_ethic = ethic_gestalt_consciousness
+							}
+						}
+						set_country_flag = sleepers_awake_ancient_rival
+						set_timed_country_flag = {
+							flag = timed_ancient_rival
+							days = 3650
+						}
+						set_timed_country_flag = {
+							flag = ai_no_wars
+							days = 3650
+						}
+						root = {
+							set_timed_country_flag = {
+								flag = ai_no_wars
+								days = 3650
+							}
+						}
+						every_country = {
+							limit = {
+								is_country_type = default
+							}
+							set_timed_country_flag = {
+								flag = ai_no_wars
+								days = 3650
+							}
+						}
+					}
+				}
+				40 = {
+					# No War in Heaven
+					set_global_flag = no_war_in_heaven
+				}
+			}
+		}
+		else = {
+			set_global_flag = no_war_in_heaven
+		}
+	}
+}

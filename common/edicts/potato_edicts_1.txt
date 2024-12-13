@@ -1,0 +1,192 @@
+##YES###
+#Choose you destiny
+potato_into_crisis = {
+	length = 10
+	icon = "GFX_edict_type_time"
+	potential = {
+		is_country_type = caravaneer_home
+	}
+	allow = {
+		always = yes
+	}
+	resources = {
+		category = edicts
+		cost = {
+			energy = 0
+		}
+	}
+	effect = {
+		country_event = {
+			id = potato_event.1
+			days = 0
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Unbidden reinforcements
+potato_unbidden_reinforcements = {
+	length = 2000
+	icon = "GFX_edict_type_time"
+	potential = {
+		OR = {
+			is_country_type = extradimensional
+			is_country_type = extradimensional_2
+			is_country_type = extradimensional_3
+		}
+	}
+	allow = {
+		always = yes
+	}
+	resources = {
+		category = edicts
+		cost = {
+			energy = 0
+		}
+	}
+	effect = {
+		country_event = {
+			id = potato_reinforcements.1
+			days = 0
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Praethroryn reinforcements
+potato_praethoryn_reinforcements = {
+	length = 720
+	icon = "GFX_edict_type_time"
+	potential = {
+		is_country_type = swarm
+	}
+	allow = {
+		always = yes
+	}
+	resources = {
+		category = edicts
+		cost = {
+			energy = 0
+		}
+	}
+	effect = {
+		country_event = {
+			id = potato_reinforcements.2
+			days = 0
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Robo forcements
+potato_ai_reinforcements = {
+	length = 1800
+	icon = "GFX_edict_type_time"
+	potential = {
+		is_country_type = ai_empire
+	}
+	allow = {
+		always = yes
+	}
+	resources = {
+		category = edicts
+		cost = {
+			energy = 0
+		}
+	}
+	effect = {
+		country_event = {
+			id = potato_reinforcements.3
+			days = 0
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Great Khan reinforcements
+potato_khan_reinforcements = {
+	length = 720
+	icon = "GFX_edict_type_time"
+	potential = {
+		is_country_type = awakened_marauders
+	}
+	allow = {
+		always = yes
+	}
+	resources = {
+		category = edicts
+		cost = {
+			energy = 0
+		}
+	}
+	effect = {
+		country_event = {
+			id = potato_reinforcements.4
+			days = 0
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#GreyGoo reinforcements
+potato_greygoo_reinforcements = {
+	length = 720
+	icon = "GFX_edict_type_time"
+	potential = {
+		is_country_type = gray_goo
+	}
+	allow = {
+		always = yes
+	}
+	resources = {
+		category = edicts
+		cost = {
+			energy = 0
+		}
+	}
+	effect = {
+		country_event = {
+			id = potato_reinforcements.5
+			days = 0
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+potato_awaken_a_fallen_empire = {
+	length = 10
+	icon = "GFX_edict_type_time"
+	potential = {
+		is_country_type = fallen_empire
+	}
+	allow = {
+		always = yes
+	}
+	resources = {
+		category = edicts
+		cost = {
+			energy = 0
+		}
+	}
+	effect = {
+		country_event = {
+			id = potato_event.2
+			days = 0
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

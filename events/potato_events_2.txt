@@ -1,0 +1,432 @@
+namespace = potato_reinforcements
+country_event = {
+	#get some interdimensexual bois
+	id = potato_reinforcements.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		# Must only trigger if portal is still alive
+		OR = {
+			count_owned_ship = {
+				limit = {
+					is_ship_size = dimensional_portal_ed
+				}
+				count > 0
+			}
+			any_country = {
+				is_country_type = portal_holder
+				count_owned_ship = {
+					limit = {
+						is_ship_size = dimensional_portal_ed
+					}
+					count > 0
+				}
+			}
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = portal_holder
+			}
+			random_owned_ship = {
+				limit = {
+					is_ship_size = dimensional_portal_ed
+				}
+				save_event_target_as = dimensional_portal
+			}
+		}
+		random_owned_ship = {
+			limit = {
+				is_ship_size = dimensional_portal_ed
+			}
+			save_event_target_as = dimensional_portal
+		}
+		#owner_species = { save_event_target_as = extradimensional_species }
+		random_list = {
+			50 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					traits = {
+						trait = leader_trait_ethereal
+					}
+				}
+			}
+			50 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					traits = {
+						trait = leader_trait_dimensional_stutter
+					}
+				}
+			}
+		}
+		create_fleet = {
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = random
+					design = "NAME_Revenant"
+					graphical_culture = "extra_dimensional_01"
+				}
+				while = {
+					count = 8
+					create_ship = {
+						name = random
+						design = "NAME_Revenant"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				while = {
+					count = 12
+					create_ship = {
+						name = random
+						design = "NAME_Phantom"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				while = {
+					count = 20
+					create_ship = {
+						name = random
+						design = "NAME_Wraith"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				set_location = {
+					target = event_target:dimensional_portal
+					distance = 5
+					angle = random
+				}
+				assign_leader = last_created_leader
+				set_fleet_stance = aggressive
+				set_fleet_bombardment_stance = armageddon
+			}
+		}
+	}
+}
+
+country_event = {
+	#get some vore-fetishists
+	id = potato_reinforcements.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		#exists = event_target:prethoryn_species
+	}
+	immediate = {
+		random_list = {
+			10 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					set_age = 3452
+					traits = {
+						trait = leader_trait_void_swimmer
+					}
+				}
+			}
+			10 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					set_age = 2967
+					traits = {
+						trait = leader_trait_void_swimmer
+					}
+				}
+			}
+			10 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					set_age = 4126
+					traits = {
+						trait = leader_trait_void_swimmer
+					}
+				}
+			}
+			10 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					set_age = 756
+					traits = {
+						trait = leader_trait_void_swimmer
+					}
+				}
+			}
+			10 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					set_age = 1007
+					traits = {
+						trait = leader_trait_void_swimmer
+					}
+				}
+			}
+			10 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					set_age = 2510
+					traits = {
+						trait = leader_trait_void_swimmer
+					}
+				}
+			}
+			10 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					set_age = 4831
+					traits = {
+						trait = leader_trait_void_swimmer
+					}
+				}
+			}
+			10 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					set_age = 3367
+					traits = {
+						trait = leader_trait_void_swimmer
+					}
+				}
+			}
+			10 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					set_age = 987
+					traits = {
+						trait = leader_trait_void_swimmer
+					}
+				}
+			}
+			10 = {
+				create_leader = {
+					class = admiral
+					species = owner_main_species
+					name = random
+					skill = 3
+					set_age = 4517
+					traits = {
+						trait = leader_trait_void_swimmer
+					}
+				}
+			}
+		}
+		random_owned_starbase = {
+			create_fleet = {
+				name = "NAME_Prethoryn_Star_Brood"
+				effect = {
+					set_owner = root
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							design = "NAME_Swarm_Large"
+							graphical_culture = "swarm_01"
+						}
+					}
+					while = {
+						count = 8
+						create_ship = {
+							name = random
+							design = "NAME_Swarm_Carrier"
+							graphical_culture = "swarm_01"
+						}
+					}
+					while = {
+						count = 35
+						create_ship = {
+							name = random
+							design = "NAME_Swarm_Small"
+							graphical_culture = "swarm_01"
+						}
+					}
+					set_location = PREV
+					set_fleet_stance = aggressive
+					assign_leader = last_created_leader
+					set_fleet_bombardment_stance = armageddon
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	#get some flashlight people
+	id = potato_reinforcements.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = event_target:contingency_bot
+	}
+	immediate = {
+		create_leader = {
+			class = admiral
+			species = event_target:contingency_bot
+			name = random
+			skill = 3
+			effect = {
+				set_age = 0
+				save_event_target_as = contingency_fleet_leader
+			}
+		}
+		random_owned_starbase = {
+			create_fleet = {
+				effect = {
+					set_owner = root
+					while = {
+						count = 8
+						create_ship = {
+							name = random
+							design = "NAME_Euthanizer"
+							graphical_culture = "ai_01"
+						}
+					}
+					while = {
+						count = 20
+						create_ship = {
+							name = random
+							design = "NAME_Sterilizer"
+							graphical_culture = "ai_01"
+						}
+					}
+					assign_leader = last_created_leader
+					set_location = PREV
+					set_fleet_stance = aggressive
+					set_fleet_bombardment_stance = armageddon
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	#get some ooga-booga bois
+	id = potato_reinforcements.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_leader = {
+			class = admiral
+			species = owner_main_species
+			name = random
+			skill = 3
+			leader_age_min = 25
+			leader_age_max = 45
+			traits = {
+				trait = leader_trait_mercenary_warrior
+				trait = random_trait
+			}
+		}
+		random_owned_starbase = {
+			create_fleet = {
+				effect = {
+					set_owner = root
+					while = {
+						count = 12
+						create_ship = {
+							name = random
+							design = "NAME_Outrider"
+							prefix = no
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 12
+						create_ship = {
+							name = random
+							design = "NAME_Lancer"
+							prefix = no
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 4
+						create_ship = {
+							name = random
+							design = "NAME_Void_Champion"
+							prefix = no
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 1
+						create_ship = {
+							name = random
+							design = "NAME_Ancestral_Glory"
+							prefix = no
+							graphical_culture = "pirate_01"
+						}
+					}
+					assign_leader = last_created_leader
+					set_location = PREV
+					set_fleet_stance = aggressive
+					set_fleet_bombardment_stance = armageddon
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	#get some sticky goo bois
+	id = potato_reinforcements.5
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_owned_starbase = {
+			create_fleet = {
+				effect = {
+					set_owner = root
+					create_ship = {
+						name = random
+						design = "NAME_Nanite_Mothership"
+						graphical_culture = "pirate_01"
+					}
+					while = {
+						count = 5
+						create_ship = {
+							name = random
+							design = "NAME_Nanite_Interdictor"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_location = PREV
+					set_fleet_stance = aggressive
+					set_fleet_bombardment_stance = armageddon
+				}
+			}
+		}
+	}
+}
