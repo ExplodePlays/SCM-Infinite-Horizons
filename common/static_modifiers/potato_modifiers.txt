@@ -1,0 +1,3 @@
+ancient_cache_of_tech = {
+	planet_building_build_speed_mult = 2
+}

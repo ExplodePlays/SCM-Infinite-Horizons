@@ -1,0 +1,7 @@
+﻿l_english:
+ FLAG_CATEGORY_history:0 "Historic"
+ FLAG_CATEGORY_other:0 "Other"
+ FLAG_CATEGORY_startrek:0 "Star Trek"
+ FLAG_CATEGORY_starwars:0 "Star Wars"
+ FLAG_CATEGORY_humanity:0 "Humanity"
+ FLAG_CATEGORY_corporation:0 "Organisations"

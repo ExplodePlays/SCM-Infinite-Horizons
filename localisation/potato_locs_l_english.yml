@@ -1,0 +1,46 @@
+﻿l_english:
+ 
+ potato_event.1.title:0 "It's Potato Time" 
+ potato_event.1.desc:0 "Pick an empire of your choosing"
+ potato_event.1.a:0 "Play as the Khan"
+ potato_event.1.b:0 "Play as the Gray Tempest"
+ potato_event.1.c:0 "Play as the Prethoryn"
+ potato_event.1.d:0 "Play as the Contingency"
+ potato_event.1.e:0 "Play as a Spiritualist Fallen Empire"
+ potato_event.1.f:0 "Play as a Spiritualist Awakened Empire"
+ potato_event.1.g:0 "Play as a Materialist Fallen Empire"
+ potato_event.1.h:0 "Play as a Materialist Awakened Empire"
+ potato_event.1.i:0 "Play as a Xenophile Fallen Empire"
+ potato_event.1.j:0 "Play as a Xenophile Awakened Empire"
+ potato_event.1.k:0 "Play as a Xenophobe Fallen Empire"
+ potato_event.1.l:0 "Play as a Xenophobe Awakened Empire"
+ potato_event.1.m:0 "Play as a Machine Fallen Empire"
+ potato_event.1.n:0 "Play as a Machine Awakened Empire"
+ potato_event.1.o:0 "Play as the Unbidden"
+ potato_event.1.p:0 "Play as the Aberrant"
+ potato_event.1.q:0 "Play as the Vehement"
+ potato_event.1.r:0 "Don't play?"
+ 
+ edict_potato_into_crisis:0 "Become The Crisis"
+ edict_potato_into_crisis_desc:0 "Yes, this is a reference to the Nemesis DLC"
+ 
+ edict_potato_unbidden_reinforcements:0 "Call more Etherials into the hunt"
+ edict_potato_unbidden_reinforcements_desc:0 ""
+ 
+ edict_potato_praethoryn_reinforcements:0 "Spawn more broods"
+ edict_potato_praethoryn_reinforcements_desc:0 ""
+ 
+ edict_potato_ai_reinforcements:0 "Commision extra autonomous fleets"
+ edict_potato_ai_reinforcements_desc:0 ""
+ 
+ edict_potato_khan_reinforcements:0 "Summon the hordes"
+ edict_potato_khan_reinforcements_desc:0 ""
+ 
+ edict_potato_greygoo_reinforcements:0 "Increase nanodrone production"
+ edict_potato_greygoo_reinforcements_desc:0 ""
+ 
+ edict_potato_awaken_a_fallen_empire:0 "Become an Awakened Empire"
+ edict_potato_awaken_a_fallen_empire_desc:0 ""
+ 
+ ancient_cache_of_tech:0 "Ancient Cache of Technologies"
+ ancient_cache_of_tech_desc:0 ""
