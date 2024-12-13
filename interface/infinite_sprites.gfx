@@ -1,0 +1,13 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_scm_main_title"
+		textureFile = "gfx/scm_main_title.dds"
+	}
+
+	spriteType = {
+		name = "GFX_infinite_horizons_title"
+		textureFile = "gfx/scm_infinite_horizons_title.dds"
+	}
+
+}
