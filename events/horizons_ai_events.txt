@@ -1,5 +1,6 @@
 namespace = horizons_ai
 
+# Main Call at game start
 country_event = {
 	id = horizons_ai.0
 	hide_window = yes
@@ -21,6 +22,7 @@ country_event = {
 	}
 }
 
+# Global Flags
 event = {
 	id = horizons_ai.1
 	hide_window = yes
@@ -41,6 +43,7 @@ event = {
 	}
 }
 
+# Main Gui Setup for edict
 country_event = {
 	id = horizons_ai.2
 	title = "horizons_ai.1.name"
@@ -160,7 +163,8 @@ country_event = {
 	}
 }
 
-country_event = {
+# Unemployed Pop Automatic Resettlement System
+country_event = { 
 	id = horizons_ai.3
 	hide_window = yes
 	is_triggered_only = yes
@@ -214,6 +218,7 @@ country_event = {
 	}
 }
 
+# AI Ship Spam Count
 country_event = {
 	id = horizons_ai.4
 	hide_window = yes
@@ -230,6 +235,7 @@ country_event = {
 	}
 
 	immediate = {
+		# switching corvettes to frigates
 		if = {
 			limit = {
 				has_technology = tech_corvettes
@@ -256,6 +262,7 @@ country_event = {
 				}
 			}
 		}
+		# switching frigates to destroyers
 		if = {
 			limit = {
 				has_technology = tech_destroyers
@@ -287,6 +294,7 @@ country_event = {
 				}
 			}
 		}
+		# switching destroyers to cruisers
 		if = {
 			limit = {
 				has_technology = tech_cruisers
@@ -318,6 +326,7 @@ country_event = {
 				}
 			}
 		}
+		# switching cruisers to battleships
 		if = {
 			limit = {
 				has_technology = tech_battleships
@@ -351,6 +360,7 @@ country_event = {
 		}
 	}
 }
+# MicroMarketing Modifier
 country_event = {
 	id = horizons_ai.5
 	hide_window = yes
@@ -368,6 +378,7 @@ country_event = {
 		}
 	}
 }
+#Pop Control Auto System
 country_event = {
 	id = horizons_ai.6
 	hide_window = yes
@@ -400,7 +411,7 @@ country_event = {
 		}
 	}
 }
-
+# AI Habitat Restriction
 country_event = {
 	id = horizons_ai.7
 	hide_window = yes
@@ -429,7 +440,7 @@ country_event = {
 		}
 	}
 }
-
+# AI Hyper Relay Restriction
 country_event = {
 	id = horizons_ai.8
 	hide_window = yes
@@ -448,7 +459,7 @@ country_event = {
 		}
 	}
 }
-
+# AI Gateway Restriction
 country_event = {
 	id = horizons_ai.9
 	hide_window = yes
@@ -467,7 +478,7 @@ country_event = {
 		}
 	}
 }
-
+#AI Ringworld Restriction
 country_event = {
 	id = horizons_ai.10
 	hide_window = yes
@@ -527,7 +538,7 @@ country_event = {
 		}
 	}
 }
-
+#AI Omnicodex Ban
 country_event = {
 	id = horizons_ai.11
 	hide_window = yes
@@ -561,6 +572,7 @@ country_event = {
 	}
 }
 
+# Modifier Optimisation System - Part 1
 country_event = {
 	id = horizons_ai.12
 	hide_window = yes
@@ -579,6 +591,7 @@ country_event = {
 	}
 }
 
+# Modifier Optimisation System - Part 2
 country_event = {
 	id = horizons_ai.13
 	hide_window = yes
@@ -593,6 +606,7 @@ country_event = {
 	}
 }
 
+# AI Fix Setup
 country_event = {
 	id = horizons_ai.14
 	hide_window = yes
@@ -697,6 +711,7 @@ country_event = {
 	}
 }
 
+# AI Gateway Restriction Trigger
 country_event = {
 	id = horizons_ai.15
 	hide_window = yes

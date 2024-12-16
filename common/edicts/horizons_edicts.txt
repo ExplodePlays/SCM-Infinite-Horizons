@@ -3,9 +3,6 @@ edict_mod_options = {
 	icon = GFX_resource_time
 	resources = {
 		category = edicts
-		#cost = {
-		#	energy = 1000
-		#}
 	}
 	
 	potential = {
