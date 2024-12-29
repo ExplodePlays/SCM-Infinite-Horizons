@@ -1,0 +1,218 @@
+
+# All leaders will have a common trait-point value set in defines, which they use to grab traits
+
+# leader_trait = yes - this tags the trait as a leader-trait and not a species-trait
+# initial = no - if set to no, this trait can not be granted to leaders when they are generated
+# leader_class = { admiral scientist }  -- OR  - if not set, it can be given to all leader-types except Rulers
+# requires_traits = { trait_psionic } -- AND - leader-trait can only be randomly given on generation if the leaders species has this trait
+# requires_governments = { despotic_hegemony ai_overlordship } -- OR - leader-trait can only be randomly given on generation if the Empire has this type of government form
+# prerequisites = { tech_psionic_theory } - AND - leader-trait can only be given if the technology specified has been researched by the Empire
+# ai_categories = { survey engineering physics society }
+# ai_weight - standard drop weight modifier, scope = country
+
+###########
+# Balance #
+###########
+#effects on research traits
+@categorybonus = 0.15
+
+
+
+####################
+# Species Traits #
+####################
+
+trait_zombie = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+	opposites = { "trait_nerve_stapled" }
+	initial = no
+	randomized = no
+	advanced_trait = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	infertile = yes
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_produces_mult = -0.25
+		planet_pops_upkeep_mult = -1
+		pop_amenities_usage_base = 0.5
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			OR = {
+				is_pop_category = ruler
+				is_pop_category = specialist
+			}
+		}
+		pop_demotion_time_mult = -10.0
+	}
+
+	icon = "gfx/interface/icons/traits/trait_zombie.dds"
+	custom_tooltip = TRAIT_ZOMBIE_EFFECT
+	slave_cost = {
+		energy = 500
+	}
+}
+
+trait_symbiotic = {
+	cost = 1
+	potential_crossbreeding_chance = 0.33
+	opposites = {
+		"trait_intelligent"
+		"trait_erudite"
+		"trait_natural_engineers"
+		"trait_natural_physicists"
+		"trait_natural_sociologists"
+	}
+	initial = no
+	randomized = no
+	species_potential_add = { always = no }
+	icon = "gfx/interface/icons/traits/trait_symbiotic.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	custom_tooltip = TRAIT_SYMBIOTIC_EFFECT
+	modifier = {
+		pop_happiness = 0.1
+		leader_skill_levels = -1
+		species_leader_exp_gain = -0.15
+	}
+}
+
+trait_slave_gene = {
+	cost = 0
+	potential_crossbreeding_chance = 0.33
+	opposites = {
+		"trait_intelligent"
+		"trait_erudite"
+		"trait_natural_engineers"
+		"trait_natural_physicists"
+		"trait_natural_sociologists"
+	}
+	initial = no
+	randomized = no
+	species_potential_add = {
+		hidden_trigger = { exists = from }
+		from = { has_civic = civic_slave_race }
+	}
+	species_possible_remove = {
+		hidden_trigger = { exists = from }
+		from = {
+			OR = {
+				has_tradition = tr_genetics_resequencing
+				has_civic = civic_slave_race
+				}
+		}
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	icon = "gfx/interface/icons/traits/trait_slave_gene.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	custom_tooltip = TRAIT_SLAVE_GENE_EFFECT
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.10
+		army_damage_mult = 0.30
+		army_health = 0.3
+		army_collateral_damage_mult = 0.15
+		pop_growth_speed = -0.15
+	}
+}
+
+leader_trait_expertise_good_trading = {
+	# This is needed due to the technocracy effects
+	force_councilor_trait = yes
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon_society
+		CLASS = scientist
+		ICON = "GFX_leader_trait_expertise_good_trading"
+		RARITY = free_or_veteran
+		COUNCIL = triggered
+		TIER = 1
+	}
+	councilor_modifier = {
+		category_good_trading_research_speed_mult = 0.05
+		category_good_trading_draw_chance_mult = 0.25
+	}
+	inline_script = {
+		script =  traits/technocracy_expertise_effects
+		FIELD = society
+		TIER = 1
+	}
+	leader_potential_add = {
+		is_specialist_researcher_society = no
+		can_leader_get_council_trait_trigger = yes
+		OR = {
+			has_paragon_dlc = no
+			has_trait = subclass_scientist_councilor
+		}
+	}
+	leader_class = { scientist }
+	ai_weight = 100
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_expertise_good_trading_2 = {
+	replace_traits = { "leader_trait_expertise_good_trading" }
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon_society
+		CLASS = scientist
+		ICON = "GFX_leader_trait_expertise_good_trading"
+		RARITY = free_or_veteran
+		COUNCIL = triggered
+		TIER = 2
+	}
+	councilor_modifier = {
+		category_good_trading_research_speed_mult = 0.1
+		category_good_trading_draw_chance_mult = 0.35
+	}
+	inline_script = {
+		script =  traits/technocracy_expertise_effects
+		FIELD = society
+		TIER = 2
+	}
+	leader_class = { scientist }
+	ai_weight = 100
+}
+
+leader_trait_expertise_good_trading_3 = {
+	replace_traits = { "leader_trait_expertise_good_trading_2" }
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon_society
+		CLASS = scientist
+		ICON = "GFX_leader_trait_expertise_good_trading"
+		RARITY = veteran
+		COUNCIL = triggered
+		TIER = 3
+	}
+	councilor_modifier = {
+		category_good_trading_research_speed_mult = 0.15
+		category_good_trading_draw_chance_mult = 0.75
+	}
+	inline_script = {
+		script =  traits/technocracy_expertise_effects
+		FIELD = society
+		TIER = 3
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+	}
+	leader_class = { scientist }
+	ai_weight = 100
+}

@@ -1,0 +1,1776 @@
+#E&C Exclusive Buildings#
+
+#National Eco-park
+building_national_park = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = trade
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_naturalism
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			NOR = {
+				has_deposit = d_massive_glacier
+				has_deposit = d_noxious_swamp
+				has_deposit = d_quicksand_basin
+				has_deposit = d_deep_sinkhole
+				has_deposit = d_toxic_kelp
+				has_deposit = d_dense_jungle
+				has_deposit = d_active_volcano
+				has_deposit = d_mountain_range
+				has_deposit = d_dangerous_wildlife_blocker
+				has_deposit = d_titanic_life_blocker
+				has_deposit = d_wandering_forests
+				has_deposit = d_migrating_forest_reserve
+				has_deposit = d_migrating_forests
+				has_deposit = d_alien_pets_deposit
+				has_deposit = d_savage_wildlands
+			}
+			owner = { NOT = { has_valid_civic = civic_naturalism } }
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		OR = {
+			has_deposit = d_massive_glacier
+			has_deposit = d_noxious_swamp
+			has_deposit = d_quicksand_basin
+			has_deposit = d_deep_sinkhole
+			has_deposit = d_toxic_kelp
+			has_deposit = d_dense_jungle
+			has_deposit = d_active_volcano
+			has_deposit = d_mountain_range
+			has_deposit = d_dangerous_wildlife_blocker
+			has_deposit = d_titanic_life_blocker
+			has_deposit = d_wandering_forests
+			has_deposit = d_migrating_forest_reserve
+			has_deposit = d_migrating_forests
+			has_deposit = d_alien_pets_deposit
+			has_deposit = d_savage_wildlands
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_naturalist_per_pop = 0.06
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_savage_wildlands }
+			}
+			unity = 4
+			society_research = 1.5 #2 3.11
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_alien_pets_deposit }
+			}
+			unity = 4
+			society_research = 1.5 #2 3.11
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_migrating_forests }
+			}
+			unity = 4
+			society_research = 1.5 #2 3.11
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_migrating_forest_reserve }
+			}
+			unity = 4
+			society_research = 1.5 #2 3.11
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_wandering_forests }
+			}
+			unity = 4
+			society_research = 1.5 #2 3.11
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_titanic_life_blocker }
+			}
+			unity = 4
+			society_research = 1.5 #2 3.11
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_dangerous_wildlife_blocker }
+			}
+			unity = 2
+			society_research = 1
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_mountain_range	}
+			}
+			unity = 2
+			society_research = 1
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_active_volcano	}
+			}
+			unity = 2
+			society_research = 1
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_dense_jungle }
+			}
+			unity = 2
+			society_research = 1
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_toxic_kelp }
+			}
+			unity = 2
+			society_research = 1
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_deep_sinkhole }
+			}
+			unity = 2
+			society_research = 1
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_quicksand_basin }
+			}
+			unity = 2
+			society_research = 1
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_noxious_swamp }
+			}
+			unity = 2
+			society_research = 1
+		}
+		produces = {
+			trigger = {
+				fromfrom.planet = { has_deposit = d_massive_glacier }
+			}
+			unity = 2
+			society_research = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_naturalist_effect_desc
+	}
+}
+
+#Climate Control Hab
+building_climate_control = {
+	base_buildtime = @b4_time
+	base_cap_amount = 1
+
+	category = research
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_terraforming
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+		}
+		exists = owner
+		owner = {
+			NOT = { has_valid_civic = civic_terraforming }
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 150
+		}
+		upkeep = {
+			energy = 10
+		}
+		produces = {
+			physics_research = 2
+			society_research = 2 #3 3.11
+		}
+	}
+}
+
+#Palace of Tribal Council
+building_tribal_council = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = government
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_in_perfect
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOR = { has_valid_civic = civic_in_perfect }
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		num_pops > 39
+	}
+
+	#num_unique_species > 9
+	#num_species > 3
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_the_elder_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			num_pops > 39
+			num_pops < 80
+		}
+		modifier = {
+			planet_stability_add = 4
+			planet_jobs_society_research_produces_mult = 0.04
+			planet_amenities_mult = 0.04
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			num_pops > 79
+			num_pops < 120
+		}
+		modifier = {
+			planet_stability_add = 6
+			planet_jobs_society_research_produces_mult = 0.06
+			planet_amenities_mult = 0.06
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			num_pops > 119
+			num_pops < 160
+		}
+		modifier = {
+			planet_stability_add = 8
+			planet_jobs_society_research_produces_mult = 0.08
+			planet_amenities_mult = 0.08
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			num_pops > 159
+			num_pops < 180
+		}
+		modifier = {
+			planet_stability_add = 10
+			planet_jobs_society_research_produces_mult = 0.1
+			planet_amenities_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			num_pops > 179
+			num_pops < 200
+		}
+		modifier = {
+			planet_stability_add = 12
+			planet_jobs_society_research_produces_mult = 0.12
+			planet_amenities_mult = 0.12
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			num_pops > 199
+		}
+		modifier = {
+			planet_stability_add = 15
+			planet_jobs_society_research_produces_mult = 0.15
+			planet_amenities_mult = 0.15
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+		upkeep = {
+			trigger = {
+				num_pops > 74
+				num_pops < 100
+			}
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				num_pops > 99
+				num_pops < 125
+			}
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				num_pops > 124
+				num_pops < 150
+			}
+			energy = 2
+		}
+		upkeep = {
+			trigger = {
+				num_pops > 149
+				num_pops < 175
+			}
+			energy = 2
+		}
+		upkeep = {
+			trigger = {
+				num_pops > 174
+				num_pops < 200
+			}
+			energy = 3
+		}
+		upkeep = {
+			trigger = {
+				num_pops > 200
+			}
+			energy = 3
+		}
+	}
+}
+
+#Ministry of National Security
+building_tribal_palace = {
+	base_buildtime = @b4_time
+	base_cap_amount = 1
+
+	category = government
+
+	potential = {
+		NOT = {has_modifier = slave_colony }
+		NOT = { owner = { any_owned_planet = { has_building = building_tribal_palace } } }
+
+		exists = owner
+		owner = {
+			is_xenophobe = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_xenophobe = no
+				num_owned_planets < 5
+			}
+		}
+	}
+
+	allow = {
+		has_building = building_system_capital
+		exists = owner
+		NOT = { owner = { any_owned_planet = { has_building = building_tribal_palace } } }
+		owner = {
+			is_regular_empire = yes
+			num_owned_planets > 4
+		}
+	}
+
+	#num_unique_species > 9
+	#num_species > 3
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_tribe_speaker_add = 1
+			planet_stability_add = 5
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+}
+
+#Nature Sanctuary
+building_nature_sanctuary = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_keepers_harmony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			NOR = {
+				has_deposit = d_massive_glacier
+				has_deposit = d_noxious_swamp
+				has_deposit = d_quicksand_basin
+				has_deposit = d_deep_sinkhole
+				has_deposit = d_toxic_kelp
+				has_deposit = d_dense_jungle
+				has_deposit = d_active_volcano
+				has_deposit = d_mountain_range
+				has_deposit = d_dangerous_wildlife_blocker
+				has_deposit = d_titanic_life_blocker
+				has_deposit = d_wandering_forests
+				has_deposit = d_migrating_forest_reserve
+				has_deposit = d_migrating_forests
+				has_deposit = d_alien_pets_deposit
+				has_deposit = d_savage_wildlands
+			}
+			owner = { NOT = { has_valid_civic = civic_keepers_harmony } }
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		OR = {
+			has_deposit = d_massive_glacier
+			has_deposit = d_noxious_swamp
+			has_deposit = d_quicksand_basin
+			has_deposit = d_deep_sinkhole
+			has_deposit = d_toxic_kelp
+			has_deposit = d_dense_jungle
+			has_deposit = d_active_volcano
+			has_deposit = d_mountain_range
+			has_deposit = d_dangerous_wildlife_blocker
+			has_deposit = d_titanic_life_blocker
+			has_deposit = d_wandering_forests
+			has_deposit = d_migrating_forest_reserve
+			has_deposit = d_migrating_forests
+			has_deposit = d_alien_pets_deposit
+			has_deposit = d_savage_wildlands
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_druid_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_savage_wildlands
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.05
+			pop_citizen_happiness = 0.03
+			pop_ethic_green_attraction_mult = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_alien_pets_deposit
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.1
+			pop_citizen_happiness = 0.03
+			pop_ethic_green_attraction_mult = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_migrating_forests
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.1
+			pop_citizen_happiness = 0.05
+			pop_ethic_green_attraction_mult = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_migrating_forest_reserve
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.1
+			pop_citizen_happiness = 0.05
+			pop_ethic_green_attraction_mult = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_wandering_forests
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.1
+			pop_citizen_happiness = 0.05
+			pop_ethic_green_attraction_mult = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_titanic_life_blocker
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.1
+			pop_citizen_happiness = 0.05
+			pop_ethic_green_attraction_mult = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_dangerous_wildlife_blocker
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.05
+			pop_citizen_happiness = 0.03
+			pop_ethic_green_attraction_mult = 0.03
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_mountain_range
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.05
+			pop_citizen_happiness = 0.03
+			pop_ethic_green_attraction_mult = 0.03
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_active_volcano
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.05
+			pop_citizen_happiness = 0.03
+			pop_ethic_green_attraction_mult = 0.03
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_dense_jungle
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.03
+			pop_citizen_happiness = 0.02
+			pop_ethic_green_attraction_mult = 0.03
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_toxic_kelp
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.03
+			pop_citizen_happiness = 0.02
+			pop_ethic_green_attraction_mult = 0.03
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_deep_sinkhole
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.03
+			pop_citizen_happiness = 0.02
+			pop_ethic_green_attraction_mult = 0.03
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_quicksand_basin
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.03
+			pop_citizen_happiness = 0.02
+			pop_ethic_green_attraction_mult = 0.03
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_noxious_swamp
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.03
+			pop_citizen_happiness = 0.02
+			pop_ethic_green_attraction_mult = 0.03
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_massive_glacier
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.03
+			pop_citizen_happiness = 0.02
+			pop_ethic_green_attraction_mult = 0.03
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			food = 12
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_druid_effect_desc
+	}
+}
+
+#Interstellar Military Coordination Center
+building_galactic_navy_academy = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = army
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		NOT = { owner = { any_owned_planet = { has_building = building_galactic_navy_academy } } }
+
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_xeno_militarist
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+			NOT = { has_valid_civic = civic_xeno_militarist }
+			num_species < 4
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		exists = owner
+		NOT = {
+			owner = {
+				any_owned_planet = {
+					OR = {
+						has_building = building_galactic_navy_academy
+						has_building = building_pangalactic_forum
+						has_building = building_galactic_trade_center
+						has_building = building_galactic_temple
+					}
+				}
+			}
+		}
+		owner = {
+			is_regular_empire = yes
+			num_species > 3
+			NOT = { has_policy_flag = border_policy_closed }
+		}
+	}
+
+	#num_unique_species > 9
+	#num_species > 3
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_head_commander_add = 1
+			planet_orbital_bombardment_damage = -0.15
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+}
+
+#Temple of Galactic Unity
+building_galactic_temple = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		NOT = { owner = { any_owned_planet = { has_building = building_galactic_temple } } }
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_evangelism
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+			NOT = { has_valid_civic = civic_evangelism }
+			num_species < 4
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		exists = owner
+		NOT = {
+			owner = {
+				any_owned_planet = {
+					OR = {
+						has_building = building_galactic_temple
+						has_building = building_pangalactic_forum
+						has_building = building_galactic_trade_center
+						has_building = building_galactic_navy_academy
+					}
+				}
+			}
+		}
+		owner = {
+			is_regular_empire = yes
+			num_species > 3
+			NOT = { has_policy_flag = border_policy_closed }
+		}
+	}
+
+	#num_unique_species > 9
+	#num_species > 3
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_head_preacher_add = 1
+			planet_jobs_unity_produces_mult = 0.05
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+}
+
+#Interstellar Trade Center
+building_galactic_trade_center = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = trade
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		NOT = { owner = { any_owned_planet = { has_building = building_galactic_trade_center } } }
+
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			OR = {
+				has_valid_civic = civic_globalism 
+				has_valid_civic = civic_globalism_corporate
+			} 
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				NOT = {
+					has_valid_civic = civic_globalism 
+					has_valid_civic = civic_globalism_corporate
+				} 
+				num_species < 4
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		exists = owner
+		NOT = {
+			owner = {
+				any_owned_planet = {
+					OR = {
+						has_building = building_galactic_trade_center
+						has_building = building_pangalactic_forum
+						has_building = building_galactic_temple
+						has_building = building_galactic_navy_academy
+					}
+				}
+			}
+		}
+		owner = {
+			is_regular_empire = yes
+			num_species > 3
+			NOT = { has_policy_flag = border_policy_closed }
+		}
+	}
+
+	#num_unique_species > 9
+	#num_species > 3
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_head_trader_add = 1
+			trade_value_mult = 0.05
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+}
+
+#Pan-Galactic Forum
+building_pangalactic_forum = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = research
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		NOT = { owner = { any_owned_planet = { has_building = building_pangalactic_forum } } }
+
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_peacekeepers
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+			NOT = { has_valid_civic = civic_peacekeepers }
+			num_species < 4
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		exists = owner
+		NOT = {
+			owner = {
+				any_owned_planet = {
+					OR = {
+						has_building = building_pangalactic_forum
+						has_building = building_galactic_trade_center
+						has_building = building_galactic_temple
+						has_building = building_galactic_navy_academy
+					}
+				}
+			}
+		}
+		owner = {
+			is_regular_empire = yes
+			num_species > 3
+			NOT = { has_policy_flag = border_policy_closed }
+		}
+	}
+
+	#num_unique_species > 9
+	#num_species > 3
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_head_ambassador_add = 1
+			planet_immigration_pull_mult = 0.25
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+	}
+}
+
+#Eco-Tourism Center
+building_ecotourism_center = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = trade
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			OR = { 
+				has_valid_civic = civic_natural_capitalism 
+				has_valid_civic = civic_natural_capitalism_corporate
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			NOR = {
+				has_deposit = d_massive_glacier
+				has_deposit = d_noxious_swamp
+				has_deposit = d_quicksand_basin
+				has_deposit = d_deep_sinkhole
+				has_deposit = d_toxic_kelp
+				has_deposit = d_dense_jungle
+				has_deposit = d_active_volcano
+				has_deposit = d_mountain_range
+				has_deposit = d_dangerous_wildlife_blocker
+				has_deposit = d_titanic_life_blocker
+				has_deposit = d_wandering_forests
+				has_deposit = d_migrating_forest_reserve
+				has_deposit = d_migrating_forests
+				has_deposit = d_alien_pets_deposit
+				has_deposit = d_savage_wildlands
+			}
+			owner = { 
+				NOT = { 
+					has_valid_civic = civic_natural_capitalism 
+					has_valid_civic = civic_natural_capitalism_corporate
+				}
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		OR = {
+			has_deposit = d_massive_glacier
+			has_deposit = d_noxious_swamp
+			has_deposit = d_quicksand_basin
+			has_deposit = d_deep_sinkhole
+			has_deposit = d_toxic_kelp
+			has_deposit = d_dense_jungle
+			has_deposit = d_active_volcano
+			has_deposit = d_mountain_range
+			has_deposit = d_dangerous_wildlife_blocker
+			has_deposit = d_titanic_life_blocker
+			has_deposit = d_wandering_forests
+			has_deposit = d_migrating_forest_reserve
+			has_deposit = d_migrating_forests
+			has_deposit = d_alien_pets_deposit
+			has_deposit = d_savage_wildlands
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_merchant_add = 1
+			planet_immigration_pull_mult = 0.15
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_savage_wildlands
+		}
+		modifier = {
+			trade_value_mult = 0.05
+			planet_amenities_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_alien_pets_deposit
+		}
+		modifier = {
+			trade_value_mult = 0.15
+			planet_amenities_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_migrating_forests
+		}
+		modifier = {
+			trade_value_mult = 0.1
+			planet_amenities_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_migrating_forest_reserve
+		}
+		modifier = {
+			trade_value_mult = 0.1
+			planet_amenities_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_wandering_forests
+		}
+		modifier = {
+			trade_value_mult = 0.1
+			planet_amenities_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_titanic_life_blocker
+		}
+		modifier = {
+			trade_value_mult = 0.15
+			planet_amenities_add = 7
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_dangerous_wildlife_blocker
+		}
+		modifier = {
+			trade_value_mult = 0.1
+			planet_amenities_add = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_mountain_range
+		}
+		modifier = {
+			trade_value_mult = 0.1
+			planet_amenities_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_active_volcano
+		}
+		modifier = {
+			trade_value_mult = 0.1
+			planet_amenities_add = 7
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_dense_jungle
+		}
+		modifier = {
+			trade_value_mult = 0.05
+			planet_amenities_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_toxic_kelp
+		}
+		modifier = {
+			trade_value_mult = 0.05
+			planet_amenities_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_deep_sinkhole
+		}
+		modifier = {
+			trade_value_mult = 0.05
+			planet_amenities_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_quicksand_basin
+		}
+		modifier = {
+			trade_value_mult = 0.05
+			planet_amenities_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_noxious_swamp
+		}
+		modifier = {
+			trade_value_mult = 0.05
+			planet_amenities_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_deposit = d_massive_glacier
+		}
+		modifier = {
+			trade_value_mult = 0.05
+			planet_amenities_add = 3
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_naturalist_effect_desc
+	}
+}
+
+#Deep Space Scanner
+building_deep_space_scanner = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	category = research
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_exploration
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+		}
+		exists = owner
+		owner = {
+			NOT = { has_valid_civic = civic_exploration }
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_sensor_range_add = 5
+		planet_jobs_physics_research_produces_mult = 0.05 #0.1 #3.11
+		pop_ethic_materialist_attraction_mult = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+		produces = {
+			unity = 5
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_researcher_effect_desc
+	}
+}
+
+building_symbol_harmony = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_asceticism
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = { has_valid_civic = civic_asceticism }
+		}
+	}
+
+	planet_modifier = {
+		pop_citizen_happiness = 0.1
+		pop_housing_usage_mult = -0.15
+		pop_government_ethic_attraction = 0.33
+		pop_ethic_socialism_attraction_mult = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+}
+
+building_symbol_purity = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_chosen_people
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = { has_valid_civic = civic_chosen_people }
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+		pop_growth_speed = 0.15
+		pop_ethic_xenophobe_attraction_mult	= 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+}
+
+building_collosal_monument = {
+	base_buildtime = @b4_time
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_machine_cult
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = { has_valid_civic = civic_machine_cult }
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_robotic_produces_mult = 0.05
+		pop_citizen_happiness = 0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		produces = {
+			unity = 7
+		}
+		upkeep = {
+			energy = 7
+		}
+	}
+}
+
+building_biofuel_plant = {
+	base_buildtime = 480
+
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	planet_modifier = {
+			job_biotechnologist_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_biotechnologist_effect_desc
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 0
+			count_owned_pop = {
+				limit = {
+					OR = {
+						is_unemployed = yes
+						has_job = servant
+					}
+				}
+				count < 1
+			}
+		}
+		modifier = {
+			factor = 5
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 5
+				}
+			}
+		}
+		# There are already unworked jobs
+		# Blocks buildings unworkable by remaining pops (slaves/robots etc)
+		# Will be improved... at some point
+		modifier = {
+			factor = 0
+			free_jobs > 0
+		}
+	}
+
+	ai_resource_production = {
+		energy = 2
+		minerals = 2
+		trigger = {
+			always = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_bioreactor"
+	}
+}
+
+building_thermal_borehole = {
+	base_buildtime = 600
+	base_cap_amount = 1
+
+	category = resource
+
+	potential = {
+		owner = { is_industrial = yes }
+		NOT = { has_modifier = resort_colony }
+
+		NOR = { # Ringworlds don't have mines
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+		}
+		OR = { # Habitats only have mines if they're built on an appropriate deposit
+			NOT = { is_planet_class = pc_habitat }
+			has_planet_flag = mining_habitat
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+			owner = { is_industrial = no }
+	}
+
+	planet_modifier = {
+		job_deep_miner_add = 3
+		pop_environment_tolerance = -0.05
+		planet_stability_add = -5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+			alloys = 200
+		}
+	}
+
+	prerequisites = {
+		"tech_thermal_borehole"
+	}
+
+	triggered_desc = {
+		text = job_deep_miner_effect_desc
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 5
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 5
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 5
+				}
+			}
+		}
+		# No one to work it
+		modifier = {
+			factor = 0
+			count_owned_pop = {
+				limit = {
+					OR = {
+						is_unemployed = yes
+						has_job = servant
+					}
+				}
+				count < 1
+			}
+		}
+	}
+
+	ai_resource_production = {
+		minerals = 1
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_colliseum = {
+	base_buildtime = 480
+	base_cap_amount = 1
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_slaver_guilds
+				has_civic = civic_divine_order
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		has_building = building_slave_processing
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			NOT = { has_building = building_slave_processing }
+			owner = {
+				NOR = {
+					has_civic = civic_slaver_guilds
+					has_civic = civic_divine_order
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_gladiator_add = 2
+		planet_housing_add = 2
+		trade_value_add = 5
+	}
+
+	army_modifier = {
+		army_damage_mult = 0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_civic = civic_warrior_culture
+			}
+		}
+		modifier = {
+			job_gladiator_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+			alloys = 50
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_desc = {
+		text = job_gladiator_effect_desc
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+
+	on_built = {
+		planet = {
+			owner = { set_timed_country_flag = { flag = buildings_new_alloys_building days = 480 } }
+		}
+	}
+}
+
+building_mecha_monastery = {
+	base_buildtime = 360
+	base_cap_amount = 1
+
+	category = pop_assembly
+
+	potential = {
+		owner = { has_civic = civic_machine_cult }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		job_techno_priest_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_desc = {
+		text = job_techno_priest_effect_desc
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_jobs > 0
+		}
+	}
+}

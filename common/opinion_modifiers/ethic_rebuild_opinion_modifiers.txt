@@ -1,0 +1,726 @@
+
+triggered_opinion_barbaric_despoilers = {
+	trigger = {
+		is_country_type = default
+		NOR = {
+			is_militarist = yes
+			is_pacifist = yes
+			is_authoritarian = yes
+			has_ethic = ethic_gestalt_consciousness
+			has_valid_civic = civic_fanatic_purifiers
+		}
+		NOT = { 
+			has_valid_civic = civic_barbaric_despoilers 
+			has_valid_civic = civic_barbaric_despoilers_corporate
+		}
+		FROM = { 
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers 
+				has_valid_civic = civic_barbaric_despoilers_corporate
+			}
+		}
+	}
+	opinion = {
+		base = -50
+	}
+}
+
+triggered_authoritarian_opinion_barbaric_despoilers = {
+	trigger = {
+		is_country_type = default
+		is_authoritarian = yes
+		is_militarist = no
+		is_pacifist = no
+		NOT = { 
+			has_valid_civic = civic_barbaric_despoilers 
+			has_valid_civic = civic_barbaric_despoilers_corporate
+		}
+		FROM = { 
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers 
+				has_valid_civic = civic_barbaric_despoilers_corporate
+			}
+		}
+	}
+	opinion = {
+		base = -40
+	}
+}
+
+triggered_militarist_opinion_barbaric_despoilers = {
+	trigger = {
+		is_country_type = default
+		is_militarist = yes
+		NOT = { 
+			has_valid_civic = civic_barbaric_despoilers 
+			has_valid_civic = civic_barbaric_despoilers_corporate
+		}
+		FROM = { 
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers 
+				has_valid_civic = civic_barbaric_despoilers_corporate
+			}
+		}
+	}
+	opinion = {
+		base = -20
+	}
+}
+
+triggered_pacifist_opinion_barbaric_despoilers = {
+	trigger = {
+		is_country_type = default
+		is_pacifist = yes
+		NOT = { 
+			has_valid_civic = civic_barbaric_despoilers 
+			has_valid_civic = civic_barbaric_despoilers_corporate
+		}
+		FROM = { 
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers 
+				has_valid_civic = civic_barbaric_despoilers_corporate
+			}
+		}
+	}
+	opinion = {
+		base = -80
+	}
+}
+
+triggered_fe_opinion_barbaric_despoilers = {
+	trigger = {
+		OR = {
+			is_country_type = awakened_fallen_empire
+			is_country_type = fallen_empire
+		}
+		has_ethic = ethic_fanatic_xenophile
+		is_mechanical_empire = no
+		is_cyborg_empire = no
+		FROM = { 
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers 
+				has_valid_civic = civic_barbaric_despoilers_corporate
+			}
+		}
+	}
+	opinion = {
+		base = -40
+	}
+}
+
+triggered_machine_cult_opinion_of_robot_empires = {
+	trigger = {
+		is_country_type = default
+		has_valid_civic = civic_machine_cult
+		FROM = {
+			is_robot_empire = yes
+			NOR = {
+				has_civic = civic_machine_terminator
+			}
+		}
+	}
+	opinion = {
+		base = 60
+	}
+}
+
+triggered_robot_empires_opinion_of_machine_cult = {
+	trigger = {
+		is_country_type = default
+		is_robot_empire = yes
+		NOR = {
+				has_civic = civic_machine_terminator
+			}
+		FROM = {
+			has_valid_civic = civic_machine_cult
+		}
+	}
+	opinion = {
+		base = 60
+	}
+}
+
+opinion_trade_enclave_vs_globalism = {
+	trigger = {
+		has_valid_civic = civic_trading_conglomerate
+		FROM = {
+			OR = {
+				has_valid_civic = "civic_globalism"
+				has_valid_civic = "civic_globalism_corporate"
+			}
+		}
+	}
+
+	opinion = {
+		base = 50 
+	}
+}
+
+opinion_artist_enclave_vs_cultural_heritage = {
+	trigger = {
+		has_valid_civic = civic_artist_collective
+		FROM = {
+			has_valid_civic = "civic_enlightment"
+		}
+	}
+
+	opinion = {
+		base = 50 
+	}
+}
+
+opinion_industrialist_vs_ecologist = {
+	trigger = {
+		OR = {
+			has_valid_civic = "civic_consumerism"
+			has_valid_civic = "civic_consumerism_corporate"
+			has_origin = "origin_mechanists"
+			has_valid_civic = "civic_industrial_economy"
+		}
+		OR = {
+			FROM = { has_valid_civic = "civic_environmentalist" }
+			FROM = { has_valid_civic = "civic_keepers_harmony" }
+		}
+	}
+
+	opinion = {
+		base = -50 
+	}
+}
+
+opinion_vs_ecologist_industrialist = {
+	trigger = {
+		OR = {
+			has_valid_civic = "civic_environmentalist"
+			has_valid_civic = "civic_keepers_harmony"
+		}
+		OR = {
+			FROM = { has_valid_civic = "civic_consumerism" }
+			FROM = { has_valid_civic = "civic_consumerism_corporate" }
+			FROM = { has_origin = "origin_mechanists" }
+			FROM = { has_valid_civic = "civic_industrial_economy" }
+		}
+	}
+
+	opinion = {
+		base = -50 
+	}
+}
+
+opinion_capitalists_vs_collectivists = {
+	trigger = {
+		has_ai_personality = ruthless_capitalists
+		is_capitalism = yes
+		FROM = { is_socialism = yes }
+	}
+
+	opinion = {
+		base = -50 
+	}
+}
+
+opinion_socialism_pos_1 = {
+	trigger = {
+		OR = {
+			has_ethic = "ethic_socialism"
+		}
+		from = {
+			has_ethic = "ethic_socialism"
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_socialism_pos_2 = {
+	trigger = {
+		OR = {
+			has_ethic = "ethic_socialism"
+		}
+		from = {
+			OR = {
+				has_ethic = "ethic_fanatic_socialism"
+			}
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_socialism_pos_3 = {
+	trigger = {
+		OR = {
+			has_ethic = "ethic_fanatic_socialism"
+		}
+		from = {
+			OR = {
+				has_ethic = "ethic_socialism"
+			}
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_socialism_pos_4 = {
+	trigger = {
+		OR = {
+			has_ethic = "ethic_fanatic_socialism"
+		}
+		from = {
+			OR = {
+				has_ethic = "ethic_fanatic_socialism"
+			}
+		}
+	}
+
+	opinion = {
+		base = 25
+	}
+}
+
+opinion_socialism_neg_1 = {
+	trigger = {
+		OR = {
+			has_ethic = "ethic_capitalism"
+		}
+		from = {
+			has_ethic = "ethic_socialism"
+		}
+	}
+
+	opinion = {
+		base = -20
+	}
+}
+
+opinion_socialism_neg_2 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_capitalism"
+		}
+		from = {
+			has_ethic ="ethic_fanatic_socialism"
+		}
+	}
+
+	opinion = {
+		base = -35
+	}
+}
+
+opinion_socialism_neg_3 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_capitalism"
+		}
+		from = {
+			has_ethic ="ethic_socialism"
+		}
+	}
+
+	opinion = {
+		base = -35
+	}
+}
+
+opinion_socialism_neg_4 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_capitalism"
+		}
+		from = {
+			has_ethic ="ethic_fanatic_socialism"
+		}
+		
+	}
+
+	opinion = {
+		base = -50
+	}
+}
+
+opinion_capitalism_pos_1 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_capitalism"
+		}
+		from = {
+				has_ethic ="ethic_capitalism"
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_capitalism_pos_2 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_capitalism"
+		}
+		from = {
+			OR = {
+				has_ethic ="ethic_fanatic_capitalism"
+			}
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_capitalism_pos_3 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_capitalism"
+		}
+		from = {
+			OR = {
+				has_ethic ="ethic_capitalism"
+			}
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_capitalism_pos_4 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_capitalism"
+		}
+		from = {
+			OR = {
+				has_ethic ="ethic_fanatic_capitalism"
+			}
+		}
+	}
+
+	opinion = {
+		base = 25
+	}
+}
+
+opinion_capitalism_neg_1 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_socialism"
+		}
+		from = {
+			has_ethic ="ethic_capitalism"
+		}
+	}
+
+	opinion = {
+		base = -20
+	}
+}
+
+opinion_capitalism_neg_2 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_socialism"
+		}
+		from = {
+			has_ethic ="ethic_fanatic_capitalism"
+		}
+	}
+
+	opinion = {
+		base = -35
+	}
+}
+
+opinion_capitalism_neg_3 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_socialism"
+		}
+		from = {
+			has_ethic ="ethic_capitalism"
+		}
+	}
+
+	opinion = {
+		base = -35
+	}
+}
+
+opinion_capitalism_neg_4 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_socialism"
+		}
+		from = {
+			has_ethic ="ethic_fanatic_capitalism"
+		}
+	}
+
+	opinion = {
+		base = -50
+	}
+}
+
+opinion_green_pos_1 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_green"
+		}
+		from = {
+			has_ethic ="ethic_green"
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_green_pos_2 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_green"
+		}
+		from = {
+			OR = {
+				has_ethic ="ethic_fanatic_green"
+			}
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_green_pos_3 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_green"
+		}
+		from = {
+			OR = {
+				has_ethic ="ethic_green"
+			}
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_green_pos_4 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_green"
+		}
+		from = {
+			OR = {
+				has_ethic ="ethic_fanatic_green"
+			}
+		}
+	}
+
+	opinion = {
+		base = 25
+	}
+}
+
+opinion_green_neg_1 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_industrial"
+		}
+		from = {
+			has_ethic = "ethic_green"
+		}
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+opinion_green_neg_2 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_industrial"
+		}
+		from = {
+			has_ethic = "ethic_fanatic_green"
+		}
+	}
+
+	opinion = {
+		base = -20
+	}
+}
+
+opinion_green_neg_3 = {
+	trigger = {
+	
+		OR = {
+			has_ethic ="ethic_fanatic_industrial"
+		}
+		from = {
+			has_ethic = "ethic_green"
+		}
+	}
+
+	opinion = {
+		base = -20
+	}
+}
+
+opinion_green_neg_4 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_industrial"
+		}
+		from = {
+			has_ethic = "ethic_fanatic_green"
+		}
+	}
+
+	opinion = {
+		base = -40
+	}
+}
+
+opinion_industrial_pos_1 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_industrial"
+		}
+		from = {
+			has_ethic = "ethic_industrial"
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_industrial_pos_2 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_industrial"
+		}
+		from = {
+			OR = {
+				has_ethic ="ethic_fanatic_industrial"
+			}
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_industrial_pos_3 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_industrial"
+		}
+		from = {
+			OR = {
+				has_ethic ="ethic_industrial"
+			}
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}
+
+opinion_industrial_pos_4 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_industrial"
+		}
+		from = {
+			OR = {
+				has_ethic ="ethic_fanatic_industrial"
+			}
+		}
+	}
+
+	opinion = {
+		base = 25
+	}
+}
+
+opinion_industrial_neg_1 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_green"
+		}
+		from = {
+			has_ethic = "ethic_industrial"
+		}
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+opinion_industrial_neg_2 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_green"
+		}
+		from = {
+			has_ethic = "ethic_fanatic_industrial"
+		}
+	}
+
+	opinion = {
+		base = -20
+	}
+}
+
+opinion_industrial_neg_3 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_green"
+		}
+		from = {
+			has_ethic = "ethic_industrial"
+		}
+	}
+
+	opinion = {
+		base = -20
+	}
+}
+
+opinion_industrial_neg_4 = {
+	trigger = {
+		OR = {
+			has_ethic ="ethic_fanatic_green"
+		}
+		from = {
+			has_ethic = "ethic_fanatic_industrial"
+		}
+	}
+
+	opinion = {
+		base = -40
+	}
+}

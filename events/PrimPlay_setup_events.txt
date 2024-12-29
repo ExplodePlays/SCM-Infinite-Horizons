@@ -1,0 +1,1555 @@
+namespace = nations
+
+################################################
+# Prepare capital world (on_game_start_country)#
+################################################
+country_event = {
+	id = nations.1
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		# exists = capital_scope
+		OR = {
+			has_origin = origin_primitive_player_pre_industrial_age
+			has_origin = origin_primitive_player_industrial_age
+			has_origin = origin_primitive_player_machine_age
+			has_origin = origin_primitive_player_atomic_age
+			has_origin = origin_primitive_player_early_space_age
+		}
+	}
+	immediate = {
+		###Set Up Fanatic Nations###
+		#ethic_fanatic_authoritarian#
+		#locked_random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_authoritarian }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_feudalism
+						civic = PrimPlayer_civic_isolationism
+					}
+					species = ROOT.owner_species
+					authority = "auth_imperial"
+					flag = {
+						icon = {
+							category="domination"
+							file="domination_18.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="flag_BG_43.dds"
+						}
+						colors = {
+							"purple"
+							"yellow"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_authoritarian }
+			#		species = ROOT.owner_species
+			#		authority = "auth_imperial"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		if = {
+			limit = {
+				ROOT = {
+					OR = {
+						has_origin = origin_primitive_player_machine_age
+						has_origin = origin_primitive_player_atomic_age
+						has_origin = origin_primitive_player_early_space_age
+					}
+				}
+			}
+			last_created_country = { 
+				if = {
+					limit = { has_civic = PrimPlayer_civic_feudalism }
+					force_remove_civic = PrimPlayer_civic_feudalism
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_capitalism } 
+						50 = { force_add_civic = PrimPlayer_civic_feudalism }
+					}
+				}
+				if = {
+					limit = { has_civic = PrimPlayer_civic_isolationism }
+					force_remove_civic = PrimPlayer_civic_isolationism
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_isolationism } 
+						50 = { force_add_civic = PrimPlayer_civic_internationalism }
+					}
+				}
+				set_country_flag = ethic_fanatic_authoritarian_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		else = {
+			last_created_country = { 
+				set_country_flag = ethic_fanatic_authoritarian_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		#ethic_fanatic_egalitarian#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_egalitarian }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_primitive
+						civic = PrimPlayer_civic_isolationism
+					}
+					species = ROOT.owner_species
+					authority = "auth_direct_democratic"
+					flag = {
+						icon = {
+							category="domination"
+							file="domination_7.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="00_solid.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_egalitarian }
+			#		species = ROOT.owner_species
+			#		authority = "auth_direct_democratic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		if = { 
+			limit = {
+				ROOT = {
+					OR = {
+						has_origin = origin_primitive_player_machine_age
+						has_origin = origin_primitive_player_atomic_age
+						has_origin = origin_primitive_player_early_space_age
+					}
+				}
+			}
+			last_created_country = { 
+				if = {
+					limit = { has_civic = PrimPlayer_civic_primitive }
+					force_remove_civic = PrimPlayer_civic_primitive
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_capitalism } 
+						50 = { force_add_civic = PrimPlayer_civic_socialism }
+					}
+				}
+				if = {
+					limit = { has_civic = PrimPlayer_civic_isolationism }
+					force_remove_civic = PrimPlayer_civic_isolationism
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_isolationism } 
+						50 = { force_add_civic = PrimPlayer_civic_internationalism }
+					}
+				}
+				set_country_flag = ethic_fanatic_egalitarian_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		else = {
+			last_created_country = { 
+				set_country_flag = ethic_fanatic_egalitarian_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		#ethic_fanatic_xenophobe#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_xenophobe }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_primitive
+						civic = PrimPlayer_civic_isolationism
+					}
+					species = ROOT.owner_species
+					authority = "auth_dictatorial"
+					flag = {
+						icon = {
+							category="human"
+							file="flag_human_14.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="flag_BG_4.dds"
+						}
+						colors = {
+							"white"
+							"red"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_xenophobe }
+			#		species = ROOT.owner_species
+			#		authority = "auth_oligarchic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		last_created_country = { 
+			set_country_flag = ethic_fanatic_xenophobe_nation@root
+			ethic_fanatic_nation_setup_effect = yes
+		}
+		#ethic_fanatic_xenophile#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_xenophile }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_primitive
+						civic = PrimPlayer_civic_internationalism
+					}
+					species = ROOT.owner_species
+					authority = "auth_democratic"
+					flag = {
+						icon = {
+							category="blocky"
+							file="flag_blocky_11.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="flag_BG_39.dds"
+						}
+						colors = {
+							"dark_blue"
+							"yellow"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_xenophile }
+			#		species = ROOT.owner_species
+			#		authority = "auth_oligarchic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		last_created_country = { 
+			set_country_flag = ethic_fanatic_xenophile_nation@root
+			ethic_fanatic_nation_setup_effect = yes
+		}
+		if = { 
+			limit = {
+				ROOT = {
+					OR = {
+						has_origin = origin_primitive_player_machine_age
+						has_origin = origin_primitive_player_atomic_age
+						has_origin = origin_primitive_player_early_space_age
+					}
+				}
+			}
+			last_created_country = { 
+				if = {
+					limit = { has_civic = PrimPlayer_civic_primitive }
+					force_remove_civic = PrimPlayer_civic_primitive
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_capitalism } 
+						50 = { force_add_civic = PrimPlayer_civic_socialism }
+					}
+				}
+				set_country_flag = ethic_fanatic_militarist_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		else = {
+			last_created_country = { 
+				set_country_flag = ethic_fanatic_militarist_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		#ethic_fanatic_militarist#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_militarist }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_primitive
+						civic = PrimPlayer_civic_isolationism
+					}
+					species = ROOT.owner_species
+					authority = "auth_oligarchic"
+					flag = {
+						icon = {
+							category="zoological"
+							file="flag_zoological_22.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="flag_BG_8.dds"
+						}
+						colors = {
+							"ochre_brown"
+							"red"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_militarist }
+			#		species = ROOT.owner_species
+			#		authority = "auth_oligarchic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		if = { 
+			limit = {
+				ROOT = {
+					OR = {
+						has_origin = origin_primitive_player_machine_age
+						has_origin = origin_primitive_player_atomic_age
+						has_origin = origin_primitive_player_early_space_age
+					}
+				}
+			}
+			last_created_country = { 
+				if = {
+					limit = { has_civic = PrimPlayer_civic_primitive }
+					force_remove_civic = PrimPlayer_civic_primitive
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_capitalism } 
+						50 = { force_add_civic = PrimPlayer_civic_socialism }
+					}
+				}
+				if = {
+					limit = { has_civic = PrimPlayer_civic_isolationism }
+					force_remove_civic = PrimPlayer_civic_isolationism
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_isolationism } 
+						50 = { force_add_civic = PrimPlayer_civic_internationalism }
+					}
+				}
+				set_country_flag = ethic_fanatic_militarist_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		else = {
+			last_created_country = { 
+				set_country_flag = ethic_fanatic_militarist_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		#ethic_fanatic_pacifist#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_pacifist }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_primitive
+						civic = PrimPlayer_civic_isolationism
+					}
+					species = ROOT.owner_species
+					authority = "auth_democratic"
+					flag = {
+						icon = {
+							category="human"
+							file="flag_human_3.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="flag_BG_1.dds"
+						}
+						colors = {
+							"dark_teal"
+							"burgundy"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_pacifist }
+			#		species = ROOT.owner_species
+			#		authority = "auth_oligarchic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		last_created_country = { 
+			set_country_flag = ethic_fanatic_pacifist_nation@root
+			ethic_fanatic_nation_setup_effect = yes
+		}
+		#ethic_fanatic_spiritualist#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_spiritualist }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_primitive
+						civic = PrimPlayer_civic_isolationism
+					}
+					species = ROOT.owner_species
+					authority = "auth_oligarchic"
+					flag = {
+						icon = {
+							category="ornate"
+							file="flag_ornate_23.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="new_dawn.dds"
+						}
+						colors = {
+							"yellow"
+							"moss_green"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_spiritualist }
+			#		species = ROOT.owner_species
+			#		authority = "auth_oligarchic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		if = { 
+			limit = {
+				ROOT = {
+					OR = {
+						has_origin = origin_primitive_player_machine_age
+						has_origin = origin_primitive_player_atomic_age
+						has_origin = origin_primitive_player_early_space_age
+					}
+				}
+			}
+			last_created_country = { 
+				if = {
+					limit = { has_civic = PrimPlayer_civic_primitive }
+					force_remove_civic = PrimPlayer_civic_primitive
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_capitalism } 
+						50 = { force_add_civic = PrimPlayer_civic_socialism }
+					}
+				}
+				if = {
+					limit = { has_civic = PrimPlayer_civic_isolationism }
+					force_remove_civic = PrimPlayer_civic_isolationism
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_isolationism } 
+						50 = { force_add_civic = PrimPlayer_civic_internationalism }
+					}
+				}
+				set_country_flag = ethic_fanatic_spiritualist_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		else = {
+			last_created_country = { 
+				set_country_flag = ethic_fanatic_spiritualist_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		#ethic_fanatic_materialist#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_materialist }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_primitive
+						civic = PrimPlayer_civic_isolationism
+					}
+					species = ROOT.owner_species
+					authority = "auth_democratic"
+					flag = {
+						icon = {
+							category="human"
+							file="flag_human_10.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="flag_BG_2.dds"
+						}
+						colors = {
+							"intense_blue"
+							"frog_green"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_materialist }
+			#		species = ROOT.owner_species
+			#		authority = "auth_oligarchic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		last_created_country = { 
+			set_country_flag = ethic_fanatic_materialist_nation@root
+			ethic_fanatic_nation_setup_effect = yes
+		}
+		#ethic_fanatic_green#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_green }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_primitive
+						civic = PrimPlayer_civic_internationalism
+					}
+					species = ROOT.owner_species
+					authority = "auth_democratic"
+					flag = {
+						icon = {
+							category="plantoid"
+							file="plantoid_11.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="circle.dds"
+						}
+						colors = {
+							"dark_green"
+							"teal"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_green }
+			#		species = ROOT.owner_species
+			#		authority = "auth_oligarchic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		if = { 
+			limit = {
+				ROOT = {
+					OR = {
+						has_origin = origin_primitive_player_machine_age
+						has_origin = origin_primitive_player_atomic_age
+						has_origin = origin_primitive_player_early_space_age
+					}
+				}
+			}
+			last_created_country = { 
+				if = {
+					limit = { has_civic = PrimPlayer_civic_primitive }
+					force_remove_civic = PrimPlayer_civic_primitive
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_capitalism } 
+						50 = { force_add_civic = PrimPlayer_civic_socialism }
+					}
+				}
+				set_country_flag = ethic_fanatic_green_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		else = {
+			last_created_country = { 
+				set_country_flag = ethic_fanatic_green_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		#ethic_fanatic_industrial#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_industrial }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_primitive
+						civic = PrimPlayer_civic_isolationism
+					}
+					species = ROOT.owner_species
+					authority = "auth_oligarchic"
+					flag = {
+						icon = {
+							category="toxoid"
+							file="toxoid_03.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="flag_BG_32.dds"
+						}
+						colors = {
+							"moss_green"
+							"beige"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_industrial }
+			#		species = ROOT.owner_species
+			#		authority = "auth_oligarchic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		if = { 
+			limit = {
+				ROOT = {
+					OR = {
+						has_origin = origin_primitive_player_machine_age
+						has_origin = origin_primitive_player_atomic_age
+						has_origin = origin_primitive_player_early_space_age
+					}
+				}
+			}
+			last_created_country = { 
+				if = {
+					limit = { has_civic = PrimPlayer_civic_primitive }
+					force_remove_civic = PrimPlayer_civic_primitive
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_capitalism } 
+						50 = { force_add_civic = PrimPlayer_civic_socialism }
+					}
+				}
+				if = {
+					limit = { has_civic = PrimPlayer_civic_isolationism }
+					force_remove_civic = PrimPlayer_civic_isolationism
+					random_list = { 
+						50 = { force_add_civic = PrimPlayer_civic_isolationism } 
+						50 = { force_add_civic = PrimPlayer_civic_internationalism }
+					}
+				}
+				set_country_flag = ethic_fanatic_industrial_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		else = {
+			last_created_country = { 
+				set_country_flag = ethic_fanatic_industrial_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		#ethic_fanatic_socialism#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_socialism }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_primitive
+						civic = PrimPlayer_civic_isolationism
+					}
+					species = ROOT.owner_species
+					authority = "auth_democratic"
+					flag = {
+						icon = {
+							category="human"
+							file="flag_human_12.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="00_solid.dds"
+						}
+						colors = {
+							"red"
+							"black"
+							"black"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_socialism }
+			#		species = ROOT.owner_species
+			#		authority = "auth_oligarchic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		if = { 
+			limit = {
+				ROOT = {
+					OR = {
+						has_origin = origin_primitive_player_machine_age
+						has_origin = origin_primitive_player_atomic_age
+						has_origin = origin_primitive_player_early_space_age
+					}
+				}
+			}
+			last_created_country = { 
+				if = {
+					limit = { has_civic = PrimPlayer_civic_primitive }
+					force_remove_civic = PrimPlayer_civic_primitive
+					force_add_civic = PrimPlayer_civic_socialism
+				}
+				if = {
+					limit = { has_civic = PrimPlayer_civic_isolationism }
+					force_remove_civic = PrimPlayer_civic_isolationism
+					force_add_civic = PrimPlayer_civic_internationalism
+				}
+				set_country_flag = ethic_fanatic_socialism_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		else = {
+			last_created_country = { 
+				set_country_flag = ethic_fanatic_socialism_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		#ethic_fanatic_capitalism#
+		#random_list = { .
+			#50 = {
+				create_country = {
+					name = random
+					type = PrimPlayer_ethic_fanatic_nation
+					ethos = { ethic = ethic_fanatic_capitalism }
+					civics = {
+						civic = PrimPlayer_civic_nation_state
+						civic = PrimPlayer_civic_feudalism
+						civic = PrimPlayer_civic_internationalism
+					}
+					species = ROOT.owner_species
+					authority = "auth_democratic"
+					flag = {
+						icon = {
+							category="human"
+							file="flag_human_13.dds"
+						}
+						background = {
+							category="backgrounds"
+							file="flag_BG_31.dds"
+						}
+						colors = {
+							"yellow"
+							"ochre_brown"
+							"blue"
+							"null"
+						}
+					}
+				}
+			#}
+			#50 = {
+			#	create_country = {
+			#		name = random
+			#		type = PrimPlayer_ethic_fanatic_nation
+			#		ethos = { ethic = ethic_fanatic_capitalism }
+			#		species = ROOT.owner_species
+			#		authority = "auth_oligarchic"
+			#		flag = {
+			#			icon= {
+			#				category = "special"
+			#				file = "gray_goo.dds"
+			#			}
+			#			background= {
+			#				category = "backgrounds"
+			#				file = "sinus.dds"
+			#			}
+			#			colors={
+			#				"grey"
+			#				"dark_grey"
+			#				"null"
+			#				"null"
+			#			}
+			#		}
+			#	}
+			#}
+		#}
+		if = { 
+			limit = {
+				ROOT = {
+					OR = {
+						has_origin = origin_primitive_player_machine_age
+						has_origin = origin_primitive_player_atomic_age
+						has_origin = origin_primitive_player_early_space_age
+					}
+				}
+			}
+			last_created_country = { 
+				if = {
+					limit = { has_civic = PrimPlayer_civic_feudalism }
+					force_remove_civic = PrimPlayer_civic_feudalism
+					force_add_civic = PrimPlayer_civic_capitalism
+				}
+				if = {
+					limit = { has_civic = PrimPlayer_civic_isolationism }
+					force_remove_civic = PrimPlayer_civic_isolationism
+					force_add_civic = PrimPlayer_civic_internationalism
+				}
+				set_country_flag = ethic_fanatic_capitalism_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		else = {
+			last_created_country = { 
+				set_country_flag = ethic_fanatic_capitalism_nation@root
+				ethic_fanatic_nation_setup_effect = yes
+			}
+		}
+		#Setting up Home System
+		capital_scope.solar_system = {
+			every_system_planet = { 
+				limit = { is_capital = no }
+				set_surveyed = { surveyed = no surveyor = ROOT }
+			}
+		}
+		#Setting up Capital World
+		capital_scope = {
+			#Reduce Population by 12 for the 12 fanatic ethic nations
+			random_owned_pop = { kill_pop = yes }	
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }	
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }	
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }	
+			random_owned_pop = { kill_pop = yes }
+			random_owned_pop = { kill_pop = yes }
+			set_planet_flag = PrimPlayer_primitive_world
+			#clear_deposits = no
+			set_planet_size = 30
+			every_deposit = {
+				limit = { 
+					OR = {
+						is_deposit_type =d_decrepit_dwellings
+						is_deposit_type =d_failing_infrastructure
+					}
+				}
+				clear_blocker = yes	#Custom planet blockers (nations) are used instead of industrial wastelands
+			}
+			#Add nation blockers
+			add_blocker = {
+				type = d_ethic_fanatic_authoritarian_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_egalitarian_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_xenophobe_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_xenophile_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_militarist_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_pacifist_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_spiritualist_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_materialist_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_green_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_industrial_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_socialism_nation_blocker
+				blocked_deposit = random
+			}
+			add_blocker = {
+				type = d_ethic_fanatic_capitalism_nation_blocker
+				blocked_deposit = random
+			}
+			
+			####District Set Up###
+			remove_all_districts = yes					#remove district buildings
+			add_deposit = d_PrimPlayer_nation_deposit	#Add Special Empire Deposit
+			if = { 
+				limit = { OWNER = { has_origin = origin_primitive_player_pre_industrial_age } }
+				#Nothing
+			}
+			else_if = { 
+				limit = { OWNER = { has_origin = origin_primitive_player_industrial_age } }
+				add_district = district_city
+				add_district = district_mining
+			}
+			else = {
+				add_district = district_city
+				add_district = district_generator
+				add_district = district_mining
+			}
+			if = {										
+				limit = { OWNER = { has_origin = origin_primitive_player_pre_industrial_age } }
+				#Nothing
+				random_owned_pop = { kill_pop = yes }	
+				random_owned_pop = { kill_pop = yes }
+				random_owned_pop = { kill_pop = yes }
+			}
+			else_if = { 
+				limit = { 
+					OWNER = { is_anglers_empire = yes }	# Replace farming districts with uncapped ones for anglers civic on ocean worlds
+					is_planet_class = pc_ocean
+				}
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_farming_uncapped
+				}
+			}
+			else = {
+				add_district = district_farming
+			}
+			###Building Set Up###
+			remove_all_buildings = yes
+			if = {
+				limit = { OWNER = { has_origin = origin_primitive_player_pre_industrial_age } }
+				add_building = building_stone_palace
+				add_building = building_primitive_dwellings
+				add_building = building_primitive_dwellings
+				add_building = building_primitive_mine
+				add_building = building_primitive_power_plant
+			}
+			else_if = {
+				limit = { OWNER = { has_origin = origin_primitive_player_industrial_age } }
+				add_building = building_primitive_capital
+				add_building = building_primitive_power_plant
+				add_building = building_primitive_factory
+			}
+			else = {
+				add_building = building_primitive_capital
+				add_building = building_primitive_factory
+				add_building = building_primitive_factory
+			}
+			if = {
+				limit = { 
+					OWNER = { 
+						has_technology = tech_cultural_heritage
+						OR = {
+							has_ethic = ethic_spiritualist
+							has_ethic = ethic_fanatic_spiritualist
+						}
+					} 
+				}
+				add_building = building_temple
+			}
+			if = {
+				limit = { 
+					OWNER = { has_technology = tech_cultural_heritage } 
+				}
+				if = {
+					limit = { 
+						OWNER = {
+							NOT = {
+								has_authority = auth_corporate
+								has_civic =civic_galactic_sovereign_megacorp
+							}
+						}
+					}
+					add_building = building_autochthon_monument
+				}
+				else_if = {
+					limit = { 
+						OWNER = {
+							OR = {
+								has_authority = auth_corporate
+								has_civic =civic_galactic_sovereign_megacorp
+							}
+						}
+					}
+					add_building = building_corporate_monument
+				}
+			}
+			else_if = { 
+				limit = { 
+					OWNER = { has_technology = tech_primimtive_historical_archives } 
+				}
+				add_building = building_heritage_museum 			
+			}
+			if = {
+				limit = { 
+					OWNER = { has_technology = tech_solarpunk_sapling } 
+				}
+				add_building = building_solarpunk_sapling
+			}
+			if = {
+				limit = { 
+					OWNER = { has_technology = tech_primitive_radiowave_telescope } 
+				}
+				add_building = building_pre_ftl_radio_telescope
+			}
+			
+		}
+		if = {
+			limit = { has_origin = origin_primitive_player_early_space_age }
+			create_fleet = {
+				name = "NAME_ISS_II"
+				effect = {
+					set_owner = ROOT
+					create_ship = {
+						name = "NAME_ISS_II"
+						design = "NAME_Space_Station"
+					}
+					set_location = ROOT.capital_scope
+				}
+			}
+			create_fleet = {
+				name = "NAME_Pre_FTL_Chemical_Ship"
+				effect = {
+					set_owner = prev
+					create_ship = {
+						name = "NAME_Pre_FTL_Chemical_Ship"
+						design = "NAME_Pre_FTL_Chemical_Ship"
+					}
+					set_fleet_flag = inteplanetary_flight_fleet
+					set_location = prev.capital_scope
+					set_fleet_stance = passive
+				}
+			}
+		}
+	}
+}
+
+#####################
+#  Form Spynetwork	#
+#####################
+
+
+# Setup, triggered by on_spynetwork_formed; from = spynetwork
+country_event = {
+	id = nations.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		from.target = { is_country_type = PrimPlayer_ethic_fanatic_nation }
+		FROM = { 
+			if = {
+				limit ={ TARGET = { has_ethic = ethic_fanatic_authoritarian } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_authoritarian_nation@ROOT }
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_egalitarian } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_egalitarian_nation@ROOT } 
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_xenophobe } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_xenophobe_nation@ROOT } 
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_xenophile } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_xenophile_nation@ROOT } 
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_militarist } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_militarist_nation@ROOT }
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_pacifist } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_pacifist_nation@ROOT } 
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_spiritualist } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_spiritualist_nation@ROOT } 
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_materialist } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_materialist_nation@ROOT }
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_green } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_green_nation@ROOT } 
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_industrial } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_industrial_nation@ROOT } 
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_capitalism } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_capitalism_nation@ROOT } 
+			}
+			else_if = { 
+				limit ={ TARGET = { has_ethic = ethic_fanatic_socialism } }
+				NOT = { has_spynetwork_flag = ethic_fanatic_socialism_nation@ROOT } 
+			}
+			else = { always = no }
+		}
+	}
+
+	immediate = {
+		FROM = { 
+			if = {
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_authoritarian }
+					NOT = { has_spynetwork_flag = ethic_fanatic_authoritarian_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_authoritarian_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_egalitarian }
+					NOT = { has_spynetwork_flag = ethic_fanatic_egalitarian_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_egalitarian_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_xenophobe }
+					NOT = { has_spynetwork_flag = ethic_fanatic_xenophobe_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_xenophobe_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_xenophile }
+					NOT = { has_spynetwork_flag = ethic_fanatic_xenophile_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_xenophile_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_militarist }
+					NOT = { has_spynetwork_flag = ethic_fanatic_militarist_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_militarist_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_pacifist }
+					NOT = { has_spynetwork_flag = ethic_fanatic_pacifist_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_pacifist_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_spiritualist }
+					NOT = { has_spynetwork_flag = ethic_fanatic_spiritualist_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_spiritualist_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_materialist }
+					NOT = { has_spynetwork_flag = ethic_fanatic_materialist_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_materialist_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_green }
+					NOT = { has_spynetwork_flag = ethic_fanatic_green_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_green_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_industrial }
+					NOT = { has_spynetwork_flag = ethic_fanatic_industrial_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_industrial_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_capitalism }
+					NOT = { has_spynetwork_flag = ethic_fanatic_capitalism_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_capitalism_nation@ROOT
+			}
+			else_if = { 
+				limit ={ 
+					TARGET = { has_ethic = ethic_fanatic_socialism }
+					NOT = { has_spynetwork_flag = ethic_fanatic_socialism_nation@ROOT } 
+				}
+				set_spynetwork_flag = ethic_fanatic_socialism_nation@ROOT
+			}
+		}
+	}
+}
+
+# Setup, triggered by on_spynetwork_formed; from = spynetwork
+country_event = {
+	id = nations.3
+	hide_window = no
+	is_triggered_only = yes
+
+	option = {
+		
+	}
+}
+
+#
+#country_event = {				#Cogger Note - Technology on start is now done via starting_potential = { }
+#    id = starter_tech.2
+#    #title = "Select AI starting FTL tech"
+#    #desc = "Choose whether AI empires start with FTL drives or not."
+#    #picture = TEMP_gasgiant
+#	
+#	hide_window = yes
+#    is_triggered_only = yes
+#    fire_only_once = yes
+#
+#    trigger = { is_ai = no } 
+#	
+#	immediate ={
+#		#name = "AI vanilla start"
+#        every_country = {
+#            limit = {
+#                has_origin_primitive_player = no
+#				is_low_tech_start = no
+#                is_country_type = default
+#            }
+#			give_technology = { tech = "tech_hyper_drive_15" message = no }
+#    ### Phy start techs ###
+#			give_technology = { tech = "tech_reactor_boosters_1" message = no }		#Vanilla Tech
+#			give_technology = { tech = "tech_shields_1" message = no }				#Vanilla Tech
+#			give_technology = { tech = "tech_power_plant_1" message = no }			#Vanilla Tech
+#	### Eng start techs	###	
+#			give_technology = { tech = "tech_space_exploration" message = no }		#Vanilla Tech
+#		    give_technology = { tech = "tech_corvettes" message = no }				#Vanilla Tech
+#			give_technology = { tech = "tech_starbase_1" message = no }				#Vanilla Tech
+#			give_technology = { tech = "tech_starbase_2" message = no }				#Vanilla Tech
+#			give_technology = { tech = "tech_assault_armies" message = no }			#Vanilla Tech
+#			give_technology = { tech = "tech_space_defense_station_1" message = no }#Vanilla Tech
+#			give_technology = { tech = "tech_basic_industry" message = no }			#Vanilla Tech
+#			give_technology = { tech = "tech_space_construction" message = no }		#Vanilla Tech
+#	### Soc start techs	###	
+#			give_technology = { tech = "tech_colonization_1" message = no }			#Vanilla Tech
+#		    give_technology = { tech = "tech_planetary_government" message = no }	#Vanilla Tech
+#			give_technology = { tech = "tech_cultural_heritage" message = no }		#Vanilla Tech
+#			#give_technology = { tech = "tech_eco_simulation" message = no }		#Deprecated Vanilla Code	
+#        }
+#		
+#		every_country = {
+#            limit = {
+#                has_origin_primitive_player = no
+#				is_low_tech_start = yes
+#                is_country_type = default
+#            }
+#			if = { 
+#				limit 
+#			give_technology = { tech = "tech_hyper_drive_15" message = no }
+#    ### Phy start techs ###
+#			give_technology = { tech = "tech_reactor_boosters_1" message = no }		#Vanilla Tech
+#			give_technology = { tech = "tech_shields_1" message = no }				#Vanilla Tech
+#			give_technology = { tech = "tech_power_plant_1" message = no }			#Vanilla Tech
+#	### Eng start techs	###	
+#			give_technology = { tech = "tech_space_exploration" message = no }		#Vanilla Tech
+#		  ##give_technology = { tech = "tech_corvettes" message = no }				#Vanilla Tech
+#			give_technology = { tech = "tech_starbase_1" message = no }				#Vanilla Tech
+#			give_technology = { tech = "tech_starbase_2" message = no }				#Vanilla Tech
+#			give_technology = { tech = "tech_assault_armies" message = no }			#Vanilla Tech
+#			give_technology = { tech = "tech_space_defense_station_1" message = no }#Vanilla Tech
+#			give_technology = { tech = "tech_basic_industry" message = no }			#Vanilla Tech
+#			give_technology = { tech = "tech_space_construction" message = no }		#Vanilla Tech
+#	### Soc start techs	###	
+#			give_technology = { tech = "tech_colonization_1" message = no }			#Vanilla Tech
+#		  ##give_technology = { tech = "tech_planetary_government" message = no }	#Vanilla Tech
+#			give_technology = { tech = "tech_cultural_heritage" message = no }		#Vanilla Tech
+#			#give_technology = { tech = "tech_eco_simulation" message = no }		#Deprecated Vanilla Code		
+#        }
+#		#every_country = {
+#        #   limit = {
+#        #       has_origin_primitive_player = yes
+#		#		is_ai = yes 
+#        #   }
+#		#	
+#		#}
+#    }
+#
+#    #option = { 
+#	#	name = "AI Primitive start" 
+#	#	every_country = {
+#    #        limit = {
+#    #            is_ai = yes 
+#    #            is_country_type = default
+#    #        }
+#	#		give_technology = { tech = "tech_eco_simulation" message = no } #  AI needs the farm help at start	#Deprecated Vanilla Code
+#	#	}
+#	#}
+#	#
+#    #option = {
+#    #    name = "AI Normal Techs, no FTL"
+#    #    every_country = {
+#    #        limit = {
+#    #            is_ai = yes 
+#    #            is_country_type = default
+#    #        }
+#    #        # Phys start techs		
+#	#		give_technology = { tech = "tech_reactor_boosters_1" message = no }
+#	#		give_technology = { tech = "tech_shields_1" message = no }
+#	#		give_technology = { tech = "tech_power_plant_1" message = no }
+#	#		# Eng start techs		
+#	#		give_technology = { tech = "tech_space_exploration" message = no }
+#	#		give_technology = { tech = "tech_corvettes" message = no }
+#	#		give_technology = { tech = "tech_starbase_1" message = no }
+#	#		give_technology = { tech = "tech_starbase_2" message = no }
+#	#		give_technology = { tech = "tech_assault_armies" message = no }
+#	#		give_technology = { tech = "tech_space_defense_station_1" message = no }
+#	#		give_technology = { tech = "tech_basic_industry" message = no }
+#	#		give_technology = { tech = "tech_space_construction" message = no }
+#	#		# Soc start techs		
+#	#		give_technology = { tech = "tech_colonization_1" message = no }
+#	#		give_technology = { tech = "tech_planetary_government" message = no }
+#	#		give_technology = { tech = "tech_cultural_heritage" message = no }
+#	#		give_technology = { tech = "tech_eco_simulation" message = no }
+#    #    }
+#    #}
+#}
+#

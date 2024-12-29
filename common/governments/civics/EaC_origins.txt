@@ -1,0 +1,461 @@
+origin_primitive_player_pre_industrial_age = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_life_seeded.dds"
+	picture = GFX_origin_broken_shackles
+	max_once_global = no
+
+	#initializers = { custom_starting_init_01 custom_starting_init_02 custom_starting_init_03 custom_starting_init_04 custom_starting_init_05 custom_starting_init_06 }
+	preferred_planet_class_neighbor = no
+
+	playable = { always = no }
+
+	possible = {
+		species_archetype = { NOT = { value = MACHINE } }
+		civics = {
+			OR = {
+				value = PrimPlayer_civic_electrifying_nation
+				value = PrimPlayer_civic_agrarian_nation
+				value = PrimPlayer_civic_industrializing_nation
+			}
+			OR = {
+				text = civic_tooltip_need_primitive_civic
+				value = PrimPlayer_civic_fortress_nation
+				value = PrimPlayer_civic_the_obelisk
+				value = PrimPlayer_civic_star_gazers
+				value = PrimPlayer_civic_symbiotic_presapients
+				value = PrimPlayer_civic_trading_nation
+				value = PrimPlayer_civic_environmental_synergy
+			}
+		}
+	}
+
+	#description = "origin_tooltip_broken_shackles_effects"
+	negative_description = "origin_primitive_player_pre_industrial_age_negative_effects"
+	flags = { custom_start_screen }
+
+	modifier = {
+		#all_technology_research_speed = -0.75
+		first_contact_speed_mult = -1
+	}
+
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_primitive_player_industrial_age = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_syncretic_evolution.dds"
+	picture = GFX_origin_syncretic_evolution
+	max_once_global = no
+
+	#initializers = { custom_starting_init_01 custom_starting_init_02 custom_starting_init_03 custom_starting_init_04 custom_starting_init_05 custom_starting_init_06 }
+	preferred_planet_class_neighbor = no
+
+	playable = { always = no }
+
+	possible = {
+		species_archetype = { NOT = { value = MACHINE } }
+		civics = {
+			OR = {
+				value = PrimPlayer_civic_electrifying_nation
+				value = PrimPlayer_civic_agrarian_nation
+				value = PrimPlayer_civic_industrializing_nation
+			}
+			OR = {
+				text = civic_tooltip_need_primitive_civic
+				value = PrimPlayer_civic_fortress_nation
+				value = PrimPlayer_civic_the_obelisk
+				value = PrimPlayer_civic_star_gazers
+				value = PrimPlayer_civic_symbiotic_presapients
+				value = PrimPlayer_civic_trading_nation
+				value = PrimPlayer_civic_environmental_synergy
+			}
+		}
+	}
+
+	#description = "origin_tooltip_broken_shackles_effects"
+	negative_description = "origin_primitive_player_industrial_age_negative_effects"
+	flags = { custom_start_screen }
+
+	modifier = {
+		#all_technology_research_speed = -0.75
+		first_contact_speed_mult = -1
+	}
+
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_primitive_player_machine_age = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_under_one_rule.dds"
+	picture = GFX_origin_legendary_leader
+	max_once_global = no
+
+	#initializers = { custom_starting_init_01 custom_starting_init_02 custom_starting_init_03 custom_starting_init_04 custom_starting_init_05 custom_starting_init_06 }
+	preferred_planet_class_neighbor = no
+
+	playable = { always = no }
+
+	possible = {
+		species_archetype = { NOT = { value = MACHINE } }
+		civics = {
+			OR = {
+				text = civic_tooltip_need_primitive_civic
+				value = PrimPlayer_civic_fortress_nation
+				value = PrimPlayer_civic_the_obelisk
+				value = PrimPlayer_civic_star_gazers
+				value = PrimPlayer_civic_symbiotic_presapients
+				value = PrimPlayer_civic_trading_nation
+				value = PrimPlayer_civic_environmental_synergy
+			}
+		}
+	}
+
+	#description = "origin_tooltip_broken_shackles_effects"
+	negative_description = "origin_primitive_player_machine_age_negative_effects"
+	flags = { custom_start_screen }
+
+	modifier = {
+		#all_technology_research_speed = -0.75
+		first_contact_speed_mult = -1
+	}
+
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_primitive_player_atomic_age = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_post_apocalyptic.dds"
+	picture = GFX_origin_post_apocalyptic
+	max_once_global = no
+
+	#initializers = { custom_starting_init_01 custom_starting_init_02 custom_starting_init_03 custom_starting_init_04 custom_starting_init_05 custom_starting_init_06 }
+	preferred_planet_class_neighbor = no
+
+	playable = { always = no }
+
+	possible = {
+		
+	}
+
+	#description = "origin_tooltip_broken_shackles_effects"
+	negative_description = "origin_primitive_player_atomic_age_negative_effects"
+	flags = { custom_start_screen }
+
+	modifier = {
+		#all_technology_research_speed = -0.75
+		first_contact_speed_mult = -1
+	}
+
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_primitive_player_early_space_age = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_lost_colony.dds"
+	picture = GFX_origin_lost_colony
+	max_once_global = no
+
+	#initializers = { custom_starting_init_01 custom_starting_init_02 custom_starting_init_03 custom_starting_init_04 custom_starting_init_05 custom_starting_init_06 }
+	preferred_planet_class_neighbor = no
+
+	playable = { always = no }
+
+	possible = {
+		
+	}
+
+	#description = "origin_tooltip_broken_shackles_effects"
+	negative_description = "origin_primitive_player_early_space_age_negative_effects"
+	flags = { custom_start_screen }
+
+	modifier = {
+		#all_technology_research_speed = -0.75
+		country_government_civic_points_add = 1
+		first_contact_speed_mult = -1
+	}
+
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+#This is what Primitive Players get upon reaching FTL Age
+
+#################################################################################################################
+
+origin_broken_shackles = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_broken_shackles.dds"
+	picture = GFX_origin_broken_shackles
+	max_once_global = yes
+
+	initializers = { custom_starting_init_01 custom_starting_init_02 custom_starting_init_03 custom_starting_init_04 custom_starting_init_05 custom_starting_init_06 }
+	preferred_planet_class_neighbor = no
+
+	playable = {
+		has_first_contact_dlc = yes
+	}
+
+	possible = {
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+			NOR = {
+				text = civic_tooltip_not_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_dystopian_society
+				value = civic_selective_kinship
+				# Or advanced tech
+				value = civic_private_healthcare_corporate
+			}
+			NOR = {
+				# Or low tech starts
+				text = civic_tooltip_not_eager_explorers
+				value = civic_eager_explorers
+				value = civic_privatized_exploration
+				value = civic_hive_stargazers
+				value = civic_machine_exploration_protocol
+			}
+		}
+		#species_archetype = { NOT = { value = MACHINE } }
+	}
+
+	description = "origin_tooltip_broken_shackles_effects"
+	negative_description = "origin_tooltip_broken_shackles_negative_effects"
+	flags = { custom_start_screen }
+
+	modifier = {
+		envoys_add = 1
+		first_contact_speed_mult = 0.20
+		spy_network_daily_value_mult = 0.20
+	}
+
+	blocks_random_machine_empire_generation	= yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_common_ground = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_common_ground.dds"
+	picture = GFX_origin_common_ground
+	max_once_global = yes
+
+	playable = {
+		host_has_dlc = "Federations"
+	}
+
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_barbaric_despoilers
+				value = civic_barbaric_despoilers_corporate
+				value = civic_inwards_perfection
+			}
+			NOR = {
+				text = civic_tooltip_not_genocidal
+				value = civic_fanatic_purifiers
+				value = civic_hive_devouring_swarm
+				value = civic_machine_terminator
+			}
+		}
+	}
+
+	description = "origin_tooltip_common_ground_effects"
+	flags = { custom_start_screen }
+
+	traits = {
+	}
+
+	random_weight = {
+		base = 5
+	}
+}
+
+origin_common_ground_npc = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_common_ground.dds"
+	picture = GFX_origin_common_ground
+
+	playable = {
+		always = no # Non-player origin
+	}
+
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_barbaric_despoilers
+				value = civic_barbaric_despoilers_corporate
+			}
+			NOR = {
+				text = civic_tooltip_not_genocidal
+				value = civic_fanatic_purifiers
+				value = civic_hive_devouring_swarm
+				value = civic_machine_terminator
+			}
+		}
+	}
+
+	description = origin_tooltip_common_ground_npc_effects
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_syncretic_evolution = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_syncretic_evolution.dds"
+	picture = GFX_origin_syncretic_evolution
+
+	playable = {
+		host_has_dlc = "Utopia"
+	}
+
+	possible = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_slave_race		#Modded
+				value = civic_symbiotic_race	#Modded
+			}
+			NOR = {
+				text = civic_tooltip_not_guided
+				value = civic_guided_sapience
+				value = civic_corporate_guided_sapience
+				value = civic_hive_guided_sapience
+				value = civic_machine_guided_sapience
+			}
+		}
+	}
+
+	description = origin_tooltip_syncretic_evolution_effects
+
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+		traits = {
+			trait = trait_syncretic_proles
+		}
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 10
+	}
+}
+
+origin_life_seeded = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_life_seeded.dds"
+	picture = GFX_origin_life_seeded
+
+	starting_colony = pc_gaia
+	habitability_preference = pc_gaia
+	preferred_planet_class_neighbor = no
+
+	playable = {
+		host_has_dlc = "Apocalypse"
+	}
+
+	possible = {
+		authority = { NOT = { value = auth_machine_intelligence } }		#Modded
+		civics = {
+			NOR = {
+				text = civic_tooltip_not_mutagenic
+				value = civic_toxic_baths
+				value = civic_toxic_baths_individual_machine
+				value = civic_corporate_toxic_baths
+				value = civic_corporate_toxic_baths_individual_machine
+				value = civic_hive_toxic_baths
+				value = civic_machine_toxic_baths
+				value = civic_machine_cult								#Modded
+				value = civic_slave_race								#Modded
+				value = civic_symbiotic_race							#Modded
+			}
+			NOR = {
+				text = civic_tooltip_not_relentless_industrialists
+				value = civic_relentless_industrialists
+				value = civic_corporate_relentless_industrialists
+				value = civic_relentless_industrialists_machine_cult
+			}
+			NOR = {
+				text = civic_tooltip_not_guided
+				value = civic_guided_sapience
+				value = civic_corporate_guided_sapience
+				value = civic_hive_guided_sapience
+				value = civic_machine_guided_sapience
+			}
+		}
+	}
+
+	description = "origin_tooltip_life_seeded_effects"
+	negative_description = "origin_tooltip_life_seeded_negative_effects"
+	random_weight = {
+		base = 5
+	}
+
+	swap_type = {
+		description = "origin_tooltip_life_seeded_effects"
+		negative_description = "origin_tooltip_life_seeded_machine_negative_effects"
+
+		trigger = {
+			OR = {
+				AND = {
+					is_scope_valid = no
+					local_human_species_class = MACHINE
+				}
+				AND = {
+					is_scope_valid = yes
+					OR = {
+						is_individual_machine = yes
+						is_machine_empire = yes
+					}
+				}
+			}
+		}
+	}
+}

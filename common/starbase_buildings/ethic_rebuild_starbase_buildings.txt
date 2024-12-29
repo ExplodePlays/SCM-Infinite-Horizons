@@ -1,0 +1,408 @@
+mercenary_garrison = {
+	icon = "GFX_starbase_mercenary_garrison"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			is_homicidal = no
+			has_country_flag = mercenary_enclave_diplomacy_engaged
+		}
+		is_normal_starbase = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		custom_tooltip = {
+			fail_text = "requires_mercenary_agreement"
+			owner = {
+				has_country_flag = mercenary_enclave_bought_mercenary_garrison
+			}
+		}
+		solar_system = {
+			count_starbase_buildings = {
+				type = pirate_mercenary_garrison
+				count < 1
+				include_being_constructed = yes
+			}
+			count_starbase_buildings = {
+				type = mercenary_garrison
+				count < 1
+				include_being_constructed = yes
+			}
+		}
+	}
+
+	abort_construction_trigger = {
+		solar_system = {
+			count_starbase_buildings = {
+				type = mercenary_garrison
+				count > 1
+				include_being_constructed = yes
+			}
+		}
+	}
+
+	equipped_component = "STARBASE_AURA_MERCENARY_GARRISON"
+
+	triggered_country_modifier = {
+		potential = {
+			hidden_trigger = { exists = this }
+
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+				is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+				is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+			}
+		}
+
+		country_naval_cap_add = 5
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+		}
+
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+pirate_mercenary_garrison = {
+	icon = "GFX_starbase_mercenary_garrison"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			is_homicidal = no
+			has_country_flag = mercenary_enclave_diplomacy_engaged
+		}
+		is_normal_starbase = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		custom_tooltip = {
+			fail_text = "requires_pirate_mercenary_agreement"
+			owner = {
+				has_country_flag = pirate_mercenary_enclave_bought_pirate_mercenary_garrison
+			}
+		}
+		solar_system = {
+			custom_tooltip = {
+				fail_text = "requires.EaC_civic_mechanic_events.pirate_enclave.star_flag"
+				has_star_flag = EaC_civic_mechanic_events.pirate_enclave.star_flag
+			}
+			count_starbase_buildings = {
+				type = pirate_mercenary_garrison
+				count < 1
+				include_being_constructed = yes
+			}
+			count_starbase_buildings = {
+				type = mercenary_garrison
+				count < 1
+				include_being_constructed = yes
+			}
+		}
+	}
+
+	abort_construction_trigger = {
+		solar_system = {
+			count_starbase_buildings = {
+				type = pirate_mercenary_garrison
+				count > 1
+				include_being_constructed = yes
+			}
+		}
+	}
+
+	equipped_component = "STARBASE_AURA_MERCENARY_GARRISON"
+	
+	country_modifier = {
+		country_naval_cap_add = 5
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			hidden_trigger = { exists = this }
+
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+				is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+				is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+			}
+		}
+
+		country_naval_cap_add = 5
+	}
+	
+	ship_modifier = {
+		ship_starting_experience_add = 50
+	}
+	
+	
+	#Pirate Lord and Criminal Heritage
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			OWNER = {
+				OR = {
+					has_valid_civic = civic_military_dictatorship_corporate 
+					has_valid_civic = civic_criminal_heritage
+				}
+				solar_system = {
+					has_star_flag = EaC_civic_mechanic_events.pirate_enclave.star_flag
+				}
+			}
+		}
+		planet_stability_add = 20
+	}
+	
+	#Not Pirate Lord or Criminal Heritage
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			OWNER = {
+				NOT = {
+					has_valid_civic = civic_military_dictatorship_corporate 
+					has_valid_civic = civic_criminal_heritage
+				}
+				solar_system = {
+					NOT = { has_star_flag = EaC_civic_mechanic_events.pirate_enclave.star_flag }
+				}
+			}
+		}
+		planet_stability_add = -10
+	}
+	
+	
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+		}
+
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+offworld_trading_company = {
+	icon = "GFX_starbase_offworld_trading_company"
+	construction_days = 360
+	
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_space_trading
+			is_gestalt = no
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		has_starbase_module = trading_hub
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_valid_civic = civic_corporate_dominion
+				}
+			}
+			unity = 4
+		}
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_corporate_dominion
+			}
+		}
+		trade_value_add = 4
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			hidden_trigger = { exists = this }
+			count_starbase_modules = {
+				type = trading_hub
+				count >= 1
+			}
+			count_starbase_modules = {
+				type = trading_hub
+				count < 2
+			}
+		}
+		trade_value_add = 2
+	}
+	triggered_station_modifier = {
+		potential = {
+			hidden_trigger = { exists = this }
+			count_starbase_modules = {
+				type = trading_hub
+				count >= 2
+			}
+			count_starbase_modules = {
+				type = trading_hub
+				count < 3
+			}
+		}
+		trade_value_add = 4
+	}
+	triggered_station_modifier = {
+		potential = {
+			hidden_trigger = { exists = this }
+			count_starbase_modules = {
+				type = trading_hub
+				count >= 3
+			}
+			count_starbase_modules = {
+				type = trading_hub
+				count < 4
+			}
+		}
+		trade_value_add = 6
+	}
+	triggered_station_modifier = {
+		potential = {
+			hidden_trigger = { exists = this }
+			count_starbase_modules = {
+				type = trading_hub
+				count >= 4
+			}
+			count_starbase_modules = {
+				type = trading_hub
+				count < 5
+			}
+		}
+		trade_value_add = 8
+	}
+	triggered_station_modifier = {
+		potential = {
+			hidden_trigger = { exists = this }
+			count_starbase_modules = {
+				type = trading_hub
+				count >= 5
+			}
+			count_starbase_modules = {
+				type = trading_hub
+				count < 6
+			}
+		}
+		trade_value_add = 10
+	}
+	triggered_station_modifier = {
+		potential = {
+			hidden_trigger = { exists = this }
+			count_starbase_modules = {
+				type = trading_hub
+				count >= 6
+			}
+		}
+		trade_value_add = 12
+	}
+	#Pirate Enclave
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			OWNER = {
+				OR = {
+					has_valid_civic = civic_military_dictatorship_corporate 
+					has_valid_civic = civic_criminal_heritage
+				}
+				solar_system = {
+					has_star_flag = EaC_civic_mechanic_events.pirate_enclave.star_flag
+				}
+			}
+		}
+		show_only_custom_tooltip = no
+		pop_ethic_xenophile_attraction_mult = 0.10
+		custom_tooltip = "EaC_civic_mechanic_events.pirate_enclave.offworld_trading_company.desc"
+		
+	}
+	#Not Pirate Enclave
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			OWNER = {
+				NOT = {
+					has_valid_civic = civic_military_dictatorship_corporate 
+					has_valid_civic = civic_criminal_heritage
+				}
+			}
+		}
+		custom_tooltip = "sm_offworld_trading_company_desc_modifier"
+	}
+	
+	on_finished = {
+		fleet = {
+			fleet_event = { id = EaC_civic_mechanic_events.2090 }
+		}
+	}
+
+	on_destroyed = {
+		fleet = {
+			fleet_event = { id = EaC_civic_mechanic_events.2091 }
+		}
+	}
+
+	show_in_tech = "tech_space_trading"
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 200
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = trading_hub
+				count < 3
+			}
+		}
+	}
+}

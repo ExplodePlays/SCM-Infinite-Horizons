@@ -1,0 +1,228 @@
+#################
+# OVERLORD ASCENSION PERKS
+#################
+
+ap_lord_of_war = {
+	potential = {
+		host_has_dlc = "Overlord"
+		NOT = { has_ascension_perk = ap_lord_of_war }
+		NOT = {	has_valid_civic = civic_fanatic_purifiers }
+		OR = {
+			is_regular_empire = yes
+			has_valid_civic = civic_machine_tactical_algorithms
+		}
+	}
+
+	on_enabled ={
+		custom_tooltip = ap_lord_of_war_tooltip
+	}
+
+	modifier = {
+		country_enclave_capacity_add = 1
+		diplo_weight_naval_mult = 0.25
+		#Bonus to dividends frequency handled in the dividends situation.
+	}
+
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 2
+			has_authority = auth_corporate
+		}
+		modifier = {
+			factor = 0
+			is_pacifist = yes
+		}
+		modifier = {
+			factor = 0.25
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 1000
+			OR = {
+				has_civic = civic_military_dictatorship_corporate
+				AND = {
+					has_civic = civic_criminal_heritage
+					has_civic = civic_crusader_spirit_corporate
+				}
+			}
+		}
+	}
+}
+
+# See traditions/README.txt for format
+
+ap_nihilistic_acquisition = {
+	potential = {
+		host_has_dlc = "Apocalypse"
+		NOT = {
+			has_ascension_perk = ap_nihilistic_acquisition
+		}
+		NOR = {
+			has_valid_civic = civic_barbaric_despoilers
+			has_valid_civic = civic_barbaric_despoilers_corporate
+			has_origin = origin_slavers
+			has_origin = origin_khan_successor
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = "allow_raiding"
+	}
+
+	possible = {
+		OR = {
+			is_authoritarian = yes
+			is_xenophobe = yes
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_ai_personality_behaviour = slaver }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+}
+
+ap_mastery_of_nature = {
+	on_enabled = {
+		custom_tooltip = "describe_decision_mastery_of_nature"
+	}
+	modifier = {
+		deposit_blockers_cost_mult = -0.33
+	}
+
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_mastery_of_nature
+			is_green = yes
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 0
+			OR = {
+				is_void_dweller_empire = yes
+				has_origin = origin_shattered_ring
+			}
+		}
+		modifier = {
+			factor = 0.5
+			num_ascension_perks > 0
+		}
+		modifier = {
+			factor = 0.1
+			num_ascension_perks > 1
+		}
+	}
+}
+
+#Future Society
+ap_future_society = {
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_future_society
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_tech_galactic_administration"
+			has_technology = tech_galactic_administration
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_4"
+			num_ascension_perks > 3
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# Cyborg Ascension (regular empires)
+ap_the_flesh_is_weak = {
+	on_enabled = {
+		custom_tooltip = "flesh_is_weak_tooltip"
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "synthetic_empire_synthetic_ascension"
+			NOT = { has_trait = trait_mechanical }
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			OR = {
+				num_ascension_perks > 1
+				has_origin = origin_cybernetic_creed
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_engineered_evolution"
+			NOT = { has_ascension_perk = ap_engineered_evolution }
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_mind_over_matter"
+			NOT = { has_ascension_perk = ap_mind_over_matter }
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_synthetic_evolution"
+			NOT = { has_ascension_perk = ap_synthetic_evolution }
+		}
+		custom_tooltip = {
+			fail_text = "requires_free_tradition_tree"
+			num_tradition_categories < @max_tradition_trees
+		}
+	}
+
+	potential = {
+		OR = {
+			has_utopia = yes
+			has_machine_age_dlc = yes
+		}
+		NOR = {
+			has_ascension_perk = ap_the_flesh_is_weak
+			has_origin = origin_shroudwalker_apprentice
+			has_origin = origin_cybernetic_creed
+			has_origin = origin_synthetic_fertility
+		}
+		is_gestalt = no
+		is_individual_machine = no
+		is_natural_design_empire = no
+	}
+
+	ai_weight = {
+		factor = @ascension_path_base_weight
+		modifier = {
+			factor = @ascension_path_anti_synergy_weight
+			has_flesh_is_weak_anti_synergy = yes
+		}
+	}
+}

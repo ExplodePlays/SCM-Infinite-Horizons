@@ -1,0 +1,298 @@
+## Environmentalists
+pop_faction_name_parts_list = {
+	key = "environmentalists_names_1"
+	parts = {
+		Evergreen = 1
+		Alive_Planet = 1
+		Treehuggers = 1
+		Green_Brothers = 1
+		Green_Planet = 1
+		Environmental_Defense = 1
+		People_for_Environment = 1
+		Friends_of_Nature = 1
+		People_for_Nature = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "environmentalists_names_2"
+	parts = {
+		Coalition = 1
+		Council = 1
+		Committee = 1
+		Center = 1
+		Foundation = 1
+		Initiative = 1
+		Society = 1
+		Watch = 1
+		Alliance = 1
+		Movement = 1
+		Group = 1
+		Organization = 1
+		Network = 1
+		Forum = 1
+		Association = 1
+		League = 1
+		Party = 1
+		Convention = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "environmentalists"
+		}
+	}
+	format = "{<environmentalists_names_1> {<environmentalists_names_2>}}"
+}
+
+## Manufacturers
+pop_faction_name_parts_list = {
+	key = "manufacturers_names_1"
+	parts = {
+		Miners = 1
+		Industrial_Growth = 1
+		Manufacturers = 1
+		Heavy_Industry = 1
+		Mining_and_Refining = 1
+		Industrialist = 1
+		Industry_Development = 1
+		Manufacturing_Industry = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "manufacturers_names_2"
+	parts = {
+		Coalition = 1
+		Council = 1
+		Committee = 1
+		Center = 1
+		Foundation = 1
+		Initiative = 1
+		Society = 1
+		Watch = 1
+		Alliance = 1
+		Movement = 1
+		Group = 1
+		Organization = 1
+		Network = 1
+		Forum = 1
+		Association = 1
+		League = 1
+		Party = 1
+		Convention = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "manufacturers"
+		}
+	}
+	format = "{<manufacturers_names_1> {<manufacturers_names_2>}}"
+}
+
+## Socialists
+pop_faction_name_parts_list = {
+	key = "socialists_names_1"
+	parts = {
+		Social_Prosperity = 1
+		Welfare_and_Care = 1
+		Compassion = 1
+		Social_Security = 1
+		Social_Progress = 1
+		Solidarity = 1
+		Socialist_Alternative = 1
+		Economic_Equality = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "socialists_names_2"
+	parts = {
+		Coalition = 1
+		Council = 1
+		Committee = 1
+		Center = 1
+		Foundation = 1
+		Initiative = 1
+		Society = 1
+		Watch = 1
+		Alliance = 1
+		Movement = 1
+		Group = 1
+		Organization = 1
+		Network = 1
+		Forum = 1
+		Association = 1
+		League = 1
+		Party = 1
+		Convention = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "socialists"
+		}
+	}
+	format = "{<socialists_names_1> {<socialists_names_2>}}"
+}
+
+## Traders
+pop_faction_name_parts_list = {
+	key = "bankers_names_1"
+	parts = {
+		Market_Development = 1
+		National_Trading = 1
+		Free_Trade = 1
+		Entrepreneurship_and_Trade = 1
+		Business_Investments = 1
+		Business_Development = 1
+		Financial_Independence = 1
+		Financial_Investments = 1
+		Prosperity_and_Trade = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "bankers_names_2"
+	parts = {
+		Coalition = 1
+		Council = 1
+		Committee = 1
+		Center = 1
+		Foundation = 1
+		Initiative = 1
+		Watch = 1
+		Alliance = 1
+		Group = 1
+		Organization = 1
+		Network = 1
+		Forum = 1
+		Association = 1
+		League = 1
+		Party = 1
+		Convention = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "bankers"
+		}
+	}
+	format = "{<bankers_names_1> {<bankers_names_2>}}"
+}
+
+
+## Cyber Creed Factions
+#Labor
+pop_faction_name_parts_list = {
+	key = "cyber_creed_labor"
+	parts = {
+	}
+}
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				is_pop_faction_type = "cyber_creed_labor"
+				is_pop_faction_type = "cyber_creed_labor_2"
+			}
+		}
+	}
+	format = "{cyber_creed_labor}"
+}
+
+#War
+pop_faction_name_parts_list = {
+	key = "cyber_creed_war"
+	parts = {
+	}
+}
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				is_pop_faction_type = "cyber_creed_war"
+				is_pop_faction_type = "cyber_creed_war_2"
+			}
+		}
+	}
+	format = "{cyber_creed_war}"
+}
+
+#Research
+pop_faction_name_parts_list = {
+	key = "cyber_creed_research"
+	parts = {
+	}
+}
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				is_pop_faction_type = "cyber_creed_research"
+				is_pop_faction_type = "cyber_creed_research_2"
+			}
+		}
+	}
+	format = "{cyber_creed_research}"
+}
+
+#Construction
+pop_faction_name_parts_list = {
+	key = "cyber_creed_construction"
+	parts = {
+	}
+}
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				is_pop_faction_type = "cyber_creed_construction"
+				is_pop_faction_type = "cyber_creed_construction_2"
+			}
+		}
+	}
+	format = "{cyber_creed_construction}"
+}
+
+#United Creed Faith
+pop_faction_name_parts_list = {
+	key = "cyber_creed_general"
+	parts = {
+	}
+}
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "cyber_creed_general"
+		}
+	}
+	format = "{cyber_creed_general}"
+}
