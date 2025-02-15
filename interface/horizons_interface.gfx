@@ -1,34 +1,34 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_background"
+		name = "GFX_horizon_background"
 		textureFile = "gfx/interface/main/horizons_background.dds"
 	}
 }
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_background_frame"
+		name = "GFX_horizon_background_frame"
 		textureFile = "gfx/interface/main/horizons_background_frame.dds"
 	}
 }
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_background_hex"
+		name = "GFX_horizon_background_hex"
 		textureFile = "gfx/interface/main/horizons_background_hex.dds"
 	}
 }
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_background_heading_frame"
+		name = "GFX_horizon_background_heading_frame"
 		textureFile = "gfx/interface/main/horizons_background_heading_frame.dds"
 	}
 }
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_option_all"
+		name = "GFX_horizon_option_all"
 		textureFile = "gfx/interface/main/horizons_option_all.dds"
 		noOfFrames = 3
 	}
@@ -36,7 +36,7 @@ spriteTypes = {
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_exit"
+		name = "GFX_horizon_exit"
 		textureFile = "gfx/interface/main/horizons_exit.dds"
 		noOfFrames = 3
 	}
@@ -44,42 +44,42 @@ spriteTypes = {
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_option"
+		name = "GFX_horizon_option"
 		textureFile = "gfx/interface/main/horizons_option.dds"
 	}
 }
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_option_underliner"
+		name = "GFX_horizon_option_underliner"
 		textureFile = "gfx/interface/main/horizons_option_underliner.dds"
 	}
 }
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_option_underliner_l"
+		name = "GFX_horizon_option_underliner_l"
 		textureFile = "gfx/interface/main/horizons_option_underliner_l.dds"
 	}
 }
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_option_underliner_r"
+		name = "GFX_horizon_option_underliner_r"
 		textureFile = "gfx/interface/main/horizons_option_underliner_r.dds"
 	}
 }
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_option_settings"
+		name = "GFX_horizon_option_settings"
 		textureFile = "gfx/interface/main/horizons_option_settings.dds"
 	}
 }
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_horizons_option_disable"
+		name = "GFX_horizon_option_disable"
 		textureFile = "gfx/interface/main/horizons_option_disable.dds"
 	}
 }

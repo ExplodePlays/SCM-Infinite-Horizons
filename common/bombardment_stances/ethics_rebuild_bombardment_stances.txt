@@ -26,7 +26,7 @@
 #	}
 #}
 
-EaC_liberate_slaves = {
+scm_liberate_slaves = {
 	trigger = {
 		OR = {
 			owner = { has_valid_civic = civic_anarchy_ideals }

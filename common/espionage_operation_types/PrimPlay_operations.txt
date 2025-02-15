@@ -68,7 +68,7 @@ PrimPlayer_operation_locate_strategic_targets = {
 	stage = {
 		difficulty = @diff_t6
 		icon = GFX_espionage_chapter_icon_document
-		event = EaC_operation.7000
+		event = scm_operation.7000
 	}
 
 	on_roll_failed = {

@@ -1,8 +1,8 @@
-namespace = horizons_ai
+namespace = horizon_ai
 
 # Main Call at game start
 country_event = {
-	id = horizons_ai.0
+	id = horizon_ai.0
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14,17 +14,17 @@ country_event = {
 	immediate = {
 		set_country_flag = host_country_flag
 		country_event = {
-			id = horizons_ai.12
+			id = horizon_ai.12
 		}
 		country_event = {
-			id = horizons_ai.2
+			id = horizon_ai.2
 		}
 	}
 }
 
 # Global Flags
 event = {
-	id = horizons_ai.1
+	id = horizon_ai.1
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -45,9 +45,9 @@ event = {
 
 # Main Gui Setup for edict
 country_event = {
-	id = horizons_ai.2
-	title = "horizons_ai.1.name"
-	desc = "horizons_ai.1.desc"
+	id = horizon_ai.2
+	title = "horizon_ai.1.name"
+	desc = "horizon_ai.1.desc"
 	diplomatic = yes
 	custom_gui = "fix_main_window"
 	is_triggered_only = yes
@@ -101,6 +101,7 @@ country_event = {
 				value = 1
 			}
 		}
+		# Gigastructures Compatibility
 		if = {
 			limit = {
 				has_global_flag = giga_game_started
@@ -165,7 +166,7 @@ country_event = {
 
 # Unemployed Pop Automatic Resettlement System
 country_event = { 
-	id = horizons_ai.3
+	id = horizon_ai.3
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -220,7 +221,7 @@ country_event = {
 
 # AI Ship Spam Count
 country_event = {
-	id = horizons_ai.4
+	id = horizon_ai.4
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -362,7 +363,7 @@ country_event = {
 }
 # MicroMarketing Modifier
 country_event = {
-	id = horizons_ai.5
+	id = horizon_ai.5
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -380,7 +381,7 @@ country_event = {
 }
 #Pop Control Auto System
 country_event = {
-	id = horizons_ai.6
+	id = horizon_ai.6
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -413,7 +414,7 @@ country_event = {
 }
 # AI Habitat Restriction
 country_event = {
-	id = horizons_ai.7
+	id = horizon_ai.7
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -442,7 +443,7 @@ country_event = {
 }
 # AI Hyper Relay Restriction
 country_event = {
-	id = horizons_ai.8
+	id = horizon_ai.8
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -461,7 +462,7 @@ country_event = {
 }
 # AI Gateway Restriction
 country_event = {
-	id = horizons_ai.9
+	id = horizon_ai.9
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -480,7 +481,7 @@ country_event = {
 }
 #AI Ringworld Restriction
 country_event = {
-	id = horizons_ai.10
+	id = horizon_ai.10
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -509,6 +510,7 @@ country_event = {
 					}
 				}
 			}
+			#Gigastructures Mod Compatibility
 			if = {
 				limit = {
 					has_global_flag = giga_game_started
@@ -525,6 +527,7 @@ country_event = {
 				}
 			}
 		}
+		#Gigastructures Mod Compatibility
 		else = {
 			if = {
 				limit = {
@@ -540,7 +543,7 @@ country_event = {
 }
 #AI Omnicodex Ban
 country_event = {
-	id = horizons_ai.11
+	id = horizon_ai.11
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -574,7 +577,7 @@ country_event = {
 
 # Modifier Optimisation System - Part 1
 country_event = {
-	id = horizons_ai.12
+	id = horizon_ai.12
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -585,7 +588,7 @@ country_event = {
 	immediate = {
 		set_update_modifiers_batch = begin
 		country_event = {
-			id = horizons_ai.13
+			id = horizon_ai.13
 			days = 9
 		}
 	}
@@ -593,14 +596,14 @@ country_event = {
 
 # Modifier Optimisation System - Part 2
 country_event = {
-	id = horizons_ai.13
+	id = horizon_ai.13
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
 		set_update_modifiers_batch = end
 		country_event = {
-			id = horizons_ai.12
+			id = horizon_ai.12
 			days = 3
 		}
 	}
@@ -608,7 +611,7 @@ country_event = {
 
 # AI Fix Setup
 country_event = {
-	id = horizons_ai.14
+	id = horizon_ai.14
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -713,7 +716,7 @@ country_event = {
 
 # AI Gateway Restriction Trigger
 country_event = {
-	id = horizons_ai.15
+	id = horizon_ai.15
 	hide_window = yes
 	is_triggered_only = yes
 

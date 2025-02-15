@@ -1,30 +1,54 @@
-# Performance Events
+# namespace = performance
+# # Performance Events
+# event = {
+# 	id = performance.1
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	desc = {
+# 		text = "Consolidate unemployed pops into resources to improve efficiency."
+# 	}
+# 	trigger = {
+# 		has_population = yes
+# 		is_unemployed = yes
+# 	}
+# 	immediate = {
+# 		# Logic to consolidate unemployed pops
+# 		set_variable = {
+# 			which = unemployed_pops_count
+# 			value = 0
+# 		}
+# 		while = {
+# 			count = all
+# 			limit = {
+# 				pop_has_job = no
+# 			}
+# 			add_to_variable = {
+# 				name = unemployed_pops_count
+# 				value = 1
+# 			}
+# 		}
+# 		add_resources = {
+# 			energy = unemployed_pops_count
+# 		}
+# 		country_event = {
+# 			id = performance.2
+# 			days = 0
+# 		}
+# 	}
+# 	mean_time_to_happen = {
+# 		days = 30
+# 	}
+# }
 
-event = {
-    id = performance.consolidate_unemployed_pops
-    title = "Consolidate Unemployed Pops"
-    desc = "Consolidate unemployed pops into resources to improve efficiency."
-    trigger = {
-        has_population = yes
-        is_unemployed = yes
-    }
-    immediate = {
-        # Logic to consolidate unemployed pops
-        set_variable = { name = unemployed_pops_count value = 0 }
-        count_unemployed_pops = {
-            set_variable = { name = unemployed_pops_count value = { count_unemployed_pops } }
-        }
-        add_resources = { energy = unemployed_pops_count }
-        country_event = {
-            id = performance.consolidate_message
-            days = 0
-        }
-    }
-}
-
-event = {
-    id = performance.consolidate_message
-    title = "Pops Consolidated"
-    desc = "Unemployed pops have been consolidated into resources."
-    picture = "GFX_evt_construction"
-}
+# country_event = {
+# 	id = performance.2
+# 	title = "Pops Consolidated"
+# 	hide_window = no
+# 	is_triggered_only = yes
+# 	desc = "Unemployed pops have been consolidated into resources."
+# 	picture = GFX_evt_nuclear_explosion
+# 	show_sound = evn_fc_disunity_origin
+# 	option = {
+# 		name = OK
+# 	}
+# }

@@ -112,8 +112,8 @@ pirate_mercenary_garrison = {
 		}
 		solar_system = {
 			custom_tooltip = {
-				fail_text = "requires.EaC_civic_mechanic_events.pirate_enclave.star_flag"
-				has_star_flag = EaC_civic_mechanic_events.pirate_enclave.star_flag
+				fail_text = "requires.scm_civic_mechanic_events.pirate_enclave.star_flag"
+				has_star_flag = scm_civic_mechanic_events.pirate_enclave.star_flag
 			}
 			count_starbase_buildings = {
 				type = pirate_mercenary_garrison
@@ -177,7 +177,7 @@ pirate_mercenary_garrison = {
 					has_valid_civic = civic_criminal_heritage
 				}
 				solar_system = {
-					has_star_flag = EaC_civic_mechanic_events.pirate_enclave.star_flag
+					has_star_flag = scm_civic_mechanic_events.pirate_enclave.star_flag
 				}
 			}
 		}
@@ -194,7 +194,7 @@ pirate_mercenary_garrison = {
 					has_valid_civic = civic_criminal_heritage
 				}
 				solar_system = {
-					NOT = { has_star_flag = EaC_civic_mechanic_events.pirate_enclave.star_flag }
+					NOT = { has_star_flag = scm_civic_mechanic_events.pirate_enclave.star_flag }
 				}
 			}
 		}
@@ -356,13 +356,13 @@ offworld_trading_company = {
 					has_valid_civic = civic_criminal_heritage
 				}
 				solar_system = {
-					has_star_flag = EaC_civic_mechanic_events.pirate_enclave.star_flag
+					has_star_flag = scm_civic_mechanic_events.pirate_enclave.star_flag
 				}
 			}
 		}
 		show_only_custom_tooltip = no
 		pop_ethic_xenophile_attraction_mult = 0.10
-		custom_tooltip = "EaC_civic_mechanic_events.pirate_enclave.offworld_trading_company.desc"
+		custom_tooltip = "scm_civic_mechanic_events.pirate_enclave.offworld_trading_company.desc"
 		
 	}
 	#Not Pirate Enclave
@@ -381,13 +381,13 @@ offworld_trading_company = {
 	
 	on_finished = {
 		fleet = {
-			fleet_event = { id = EaC_civic_mechanic_events.2090 }
+			fleet_event = { id = scm_civic_mechanic_events.2090 }
 		}
 	}
 
 	on_destroyed = {
 		fleet = {
-			fleet_event = { id = EaC_civic_mechanic_events.2091 }
+			fleet_event = { id = scm_civic_mechanic_events.2091 }
 		}
 	}
 

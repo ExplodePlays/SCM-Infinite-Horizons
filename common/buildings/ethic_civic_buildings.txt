@@ -169,7 +169,7 @@ building_paragon_memory_vaults = {
 		mult = planet.paragon_memory_vault
 	}
 	triggered_desc = {
-		text = EaC_civic_mechanic_events.103.building.modifier_tooltip_warning
+		text = scm_civic_mechanic_events.103.building.modifier_tooltip_warning
 	}
 
 	on_built = {

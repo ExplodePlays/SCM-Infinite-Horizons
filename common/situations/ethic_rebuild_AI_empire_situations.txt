@@ -34,7 +34,7 @@ pirate_mercenary_dividends = {
 	on_progress_complete = {
 		#Figure out Patron and give resources
 		custom_tooltip = situation_unknown_outcome_approach #not really necessary except to silence the error log
-		owner = { country_event = { id = EaC_civic_mechanic_events.275 } }
+		owner = { country_event = { id = scm_civic_mechanic_events.275 } }
 	}
 	on_fail = {
 		log_error = "mercenary_dividends situation failed, this is not meant to happen"

@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "Stellaris",
+			"path": "D:/SafeGuard/Apps/Steam/steamapps/common/Stellaris"
+		},
+		{
+			"name": "wooly-legacy",
+			"path": "../wooly-legacy"
+		},
+		{
+			"name": "SCM Infinite Horizons",
+			"path": "."
+		},
+		{
+			"name": "crashes",
+			"path": "../../crashes"
+		}
+	],
+	"settings": {}
+}

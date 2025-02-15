@@ -4670,8 +4670,8 @@ criminal = {
 						}
 					}
 					solar_system = {
-						has_star_flag = EaC_civic_mechanic_events.pirate_enclave.star_flag
-						has_star_flag = EaC_civic_mechanic_events.pirate_enclave.offworld_trading_company.star_flag
+						has_star_flag = scm_civic_mechanic_events.pirate_enclave.star_flag
+						has_star_flag = scm_civic_mechanic_events.pirate_enclave.offworld_trading_company.star_flag
 					}
 				}
 			}
@@ -4715,7 +4715,7 @@ criminal = {
 					#		same_solar_system = yes
 					#	}
 					#}
-					has_star_flag = EaC_civic_mechanic_events.pirate_enclave.star_flag #More efficient than commented section
+					has_star_flag = scm_civic_mechanic_events.pirate_enclave.star_flag #More efficient than commented section
 				}
 			}
 		}
