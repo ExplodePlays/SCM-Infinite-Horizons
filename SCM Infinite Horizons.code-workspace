@@ -13,6 +13,10 @@
 			"path": "."
 		},
 		{
+			"name": "Mod Merger",
+			"path": "../Mod Merger"
+		},
+		{
 			"name": "crashes",
 			"path": "../../crashes"
 		}
