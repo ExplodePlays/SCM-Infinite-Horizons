@@ -1,0 +1,624 @@
+@tier69 = 0
+
+# #Thermal Borehole
+# tech_thermal_borehole = {
+# 	cost = @tier3cost1
+# 	area = engineering
+# 	tier = 3
+# 	category = { industry }
+# 	prerequisites = { "tech_mining_3" }
+# 	weight = @tier3weight1
+
+# 	#allows Thermal Borehole
+
+# 	potential = {
+# 		always = no
+# 	}
+
+# 	weight_modifier = {
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
+# 		}
+# 	}
+
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
+# 		}
+# 	}
+# }
+
+# # Free Market
+# tech_free_market = {
+# 	cost = @tier3cost1
+# 	area = society
+# 	tier = 3
+# 	category = { good_trading }
+# 	prerequisites = { "tech_interstellar_economics" }
+# 	weight = @tier3weight1
+
+# 	potential = {
+# 		is_gestalt = no
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 1.5
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
+# 		}
+# 		modifier = {
+# 			factor = 1.25
+# 			has_tradition = tr_prosperity_adopt
+# 		}
+# 		modifier = {
+# 			factor = 1.25
+# 			has_tradition = tr_prosperity_adopt
+# 		}
+
+# 		modifier = {
+# 			factor = 0
+# 				OR = {
+# 					is_capitalism = yes
+# 					has_valid_civic = civic_ultimate_collective
+# 				}
+# 		}
+
+# 	}
+
+# 	ai_weight = {
+# 		factor = 2
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
+# 		}
+# 	}
+# }
+
+# # Planned Economy
+# tech_planned_economy = {
+# 	cost = @tier3cost1
+# 	area = society
+# 	tier = 3
+# 	category = { good_trading }
+# 	prerequisites = { "tech_interstellar_economics" }
+# 	weight = @tier3weight1
+
+# 	potential = {
+# 		is_gestalt = no
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 1.5
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
+# 		}
+# 		modifier = {
+# 			factor = 1.25
+# 			has_tradition = tr_prosperity_adopt
+# 		}
+
+# 		modifier = {
+# 			factor = 0
+# 				OR = {
+# 					is_capitalism = yes
+# 					has_valid_civic = civic_beacon_of_liberty
+# 				}
+# 		}
+# 	}
+
+# 	ai_weight = {
+# 		factor = 2
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
+# 		}
+# 	}
+# }
+
+# # Economic Paradigm: Innovation & Progress
+# tech_innovations = {
+# 	cost = @tier3cost1
+# 	area = society
+# 	tier = 2
+# 	category = { good_trading }
+# 	prerequisites = { "tech_space_trading" }
+# 	weight = @tier3weight1
+
+# 	potential = {
+# 		is_gestalt = no
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 1.5
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
+# 		}
+# 		modifier = {
+# 			factor = 1.25
+# 			has_tradition = tr_prosperity_adopt
+# 		}
+
+# 		modifier = {
+# 			factor = 2
+# 			has_valid_civic = civic_innovative_economy
+# 		}
+
+
+# 		modifier = {
+#             factor = 0
+# 			OR = {
+# 				has_valid_civic = civic_ultimate_collective
+# 			}
+# 		}
+
+# 	}
+
+# 	ai_weight = {
+# 		factor = 2
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
+# 		}
+# 	}
+# }
+
+# # Agri Consortium
+# tech_agri_consortium = {
+# 	cost = @tier3cost1
+# 	area = society
+# 	tier = 2
+# 	category = { good_trading }
+# 	prerequisites = { "tech_space_trading" }
+# 	weight = @tier3weight1
+
+# 	potential = {
+# 		is_gestalt = no
+# 	}
+
+# 	modifier = {
+# 		planet_farmers_food_produces_mult = 0.15
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 1.5
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
+# 		}
+
+
+# 		modifier = {
+# 			factor = 1.25
+# 			has_tradition = tr_prosperity_adopt
+# 		}
+
+# 		modifier = {
+# 			factor = 2
+# 			has_valid_civic = civic_agrarian_idyll
+# 		}
+
+
+
+# 	}
+
+# 	ai_weight = {
+# 		factor = 2
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
+# 		}
+# 	}
+# }
+
+# # Mining Consortium
+# tech_mining_consortium = {
+# 	cost = @tier3cost1
+# 	area = society
+# 	tier = 2
+# 	category = { good_trading }
+# 	prerequisites = { "tech_space_trading" }
+# 	weight = @tier3weight1
+
+# 	potential = {
+# 		is_gestalt = no
+# 	}
+
+# 	modifier = {
+# 		station_gatherers_produces_mult = 0.15
+# 	}
+
+# 	weight_modifier = {
+# 		factor = 1.5
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
+# 		}
+
+# 		modifier = {
+# 			factor = 2
+# 			has_valid_civic = civic_mining_guilds
+# 		}
+
+
+# 		modifier = {
+# 			factor = 1.25
+# 			has_tradition = tr_prosperity_adopt
+# 		}
+
+
+
+# 	}
+
+# 	ai_weight = {
+# 		factor = 2
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
+# 		}
+# 	}
+# }
+
+# # Centralized State
+# tech_centralized_state = {
+# 	cost = @tier3cost1
+# 	area = society
+# 	tier = 3
+# 	category = { statecraft }
+# 	prerequisites = { "tech_galactic_administration" }
+# 	weight = @tier3weight1
+
+
+
+# 	weight_modifier = {
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+# 		}
+# 		modifier = {
+# 			factor = 1.25
+# 				is_authoritarian = yes
+# 		}
+
+# 		modifier = {
+# 			factor = 0
+# 				is_egalitarian = yes
+# 		}
+
+# 	}
+
+# 	ai_weight = {
+# 		factor = 2
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+# 		}
+# 	}
+# }
+
+# # Federal State
+# tech_federal_state = {
+# 	cost = @tier3cost1
+# 	area = society
+# 	tier = 3
+# 	category = { statecraft }
+# 	prerequisites = { "tech_galactic_administration" }
+# 	weight = @tier3weight1
+
+
+
+# 	weight_modifier = {
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+# 		}
+# 		modifier = {
+# 			factor = 1.25
+# 			is_egalitarian = yes
+# 		}
+
+# 		modifier = {
+# 			factor = 0
+# 				is_authoritarian = yes
+# 		}
+
+# 	}
+
+# 	ai_weight = {
+# 		factor = 2
+# 		modifier = {
+# 			factor = 1.25
+# 			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+# 		}
+# 	}
+# }
+
+# Gauss Cannons
+tech_archotech_gauss = {
+	is_rare = yes
+	is_reverse_engineerable = no
+	area = physics
+	cost = @tier5cost2
+	tier = 5	
+	category = { particles }
+	weight = @tier69
+}
+
+#Archo Shields
+tech_archotech_shield = {
+	is_rare = yes
+	is_reverse_engineerable = no
+	area = physics
+	cost = @tier5cost2
+	tier = 5
+	category = { field_manipulation }
+	weight = @tier69
+}
+
+#Archo Armor
+tech_archotech_armor = {
+	is_rare = yes
+	is_reverse_engineerable = no
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	category = { materials }
+	weight = @tier69
+}
+
+#Archotech Wing
+tech_archotech_wing = {
+	is_rare = yes
+	is_reverse_engineerable = no
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = @tier69
+}
+
+#Archotech Sensors
+tech_archotech_sensor = {
+	is_rare = yes
+	is_reverse_engineerable = no
+	area = physics
+	cost = @tier5cost2
+	tier = 5
+	category = { computing }
+	weight = @tier69
+}
+
+#Archotech Thruster
+tech_archotech_thruster = {
+	is_rare = yes
+	is_reverse_engineerable = no
+	area = engineering
+	cost = @tier5cost2
+	tier = 5
+	category = { propulsion }
+	weight = @tier69
+}
+
+#Archotech Generator
+tech_archotech_generator = {
+	is_rare = yes
+	is_reverse_engineerable = no
+	area = physics
+	cost = @tier5cost2
+	tier = 5
+	category = { particles }
+	weight = @tier69
+}
+
+#Archotech Lance
+tech_archotech_gauss_lance = {
+	is_rare = yes
+	is_reverse_engineerable = no
+	area = physics
+	cost = @tier5cost2
+	tier = 5
+	category = { particles }
+	weight = @tier69
+}
+
+#Big Chungus Defense Platform
+tech_space_defense_station_2 = {
+	is_reverse_engineerable = no
+	cost = 0
+	tier = 5
+	area = engineering
+	category = { voidcraft }
+	weight = @tier69
+
+	modifier = {
+		starbase_defense_platform_capacity_add = 5
+	}
+}
+
+#Power Plant V
+tech_power_plant_5 = {
+	is_rare = yes
+	cost = @tier4cost1
+	area = physics
+	tier = 4
+	category = { field_manipulation }
+	prerequisites = { "tech_power_plant_4" }
+	potential = { has_ascension_perk = ap_secrets_of_the_galaxy }
+	weight = @tier4weight1
+
+	modifier = {
+		planet_technician_energy_produces_mult = 0.2
+		starbase_constructions_energy_produces_mult = 0.20
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_field_manipulation }
+		}
+	}
+
+	ai_weight = {
+		factor = 3	#power plants are good
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_field_manipulation }
+		}
+	}
+}
+
+#Space Science 6
+tech_space_science_6 = {
+	is_rare = yes
+	cost = @tier3cost1
+	area = physics
+	tier = 4
+	category = { computing }
+	prerequisites = { "tech_space_science_5" }
+	potential = { has_ascension_perk = ap_secrets_of_the_galaxy }
+	weight = @tier4weight1
+
+	modifier = {
+		station_researchers_produces_mult = 0.50
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
+		}
+	}
+}
+
+#Space Mining 6
+tech_space_mining_6 = {
+	is_rare = yes
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	category = { industry }
+	prerequisites = { "tech_space_mining_5" }
+	potential = { has_ascension_perk = ap_secrets_of_the_galaxy }
+	weight = @tier4weight1
+
+	modifier = {
+		station_gatherers_produces_mult = 0.50
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
+		}
+	}
+}
+
+#More Ship HP
+tech_AP_improved_ship_health = {
+	is_rare = yes
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	category = { voidcraft }
+	prerequisites = { "tech_battleships" }
+	potential = { has_ascension_perk = ap_secrets_of_the_galaxy }
+	weight = @tier4weight1
+	
+	weight_modifier = {
+		factor = 1
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+
+	
+	modifier = {
+		ship_hull_mult = 0.10
+	}
+}
+
+#diplo weight
+tech_AP_xeno_friend = {
+	is_rare = yes
+	cost = @tier4cost2
+	area = society
+	tier = 4
+	category = { statecraft }
+	prerequisites = { "tech_xeno_relations" }
+	potential = { 
+		has_ascension_perk = ap_secrets_of_the_galaxy
+		is_regular_empire = yes
+	}
+	weight = @tier4weight1
+	
+	modifier = {
+		diplo_weight_mult = 0.25
+	}
+
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 2
+			is_galactic_community_member = yes
+		}
+		modifier = {
+			factor = 0.01
+			has_civic = civic_inwards_perfection
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 0.01
+			has_civic = civic_inwards_perfection
+		}
+	}
+}

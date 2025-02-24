@@ -1,0 +1,830 @@
+######################
+##		GALCORE		##
+######################
+
+old_lantea_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_city_ruins.dds"
+	icon_frame = 1
+	planet_building_build_speed_mult = -1
+	planet_clear_blocker_time_mult = 1
+	show_only_custom_tooltip = no
+	custom_tooltip = old_lantea_modifier_tooltip
+}
+
+######################
+##		ECOLOGY		##
+######################
+
+resolution_ecology_recycling_initiatives = {
+	diplo_weight_economy_mult = -0.2
+	planet_pops_consumer_goods_upkeep_mult = -0.05
+	pop_amenities_usage_mult = -0.05
+	planet_clear_blocker_time_mult = 0.1
+	pop_environment_tolerance = 0.05
+}
+
+resolution_ecology_natural_sanctuaries = {
+	diplo_weight_economy_mult = -0.2
+	planet_pops_consumer_goods_upkeep_mult = -0.05
+	pop_amenities_usage_mult = -0.025
+	pop_environment_tolerance = 0.025
+	planet_clear_blocker_time_mult = 0.15
+	planet_building_build_speed_mult = -0.05
+	pop_happiness = 0.05
+	pop_growth_speed = 0.05
+}
+
+resolution_ecology_integrated_gardens = {
+	diplo_weight_economy_mult = -0.2
+	planet_pops_consumer_goods_upkeep_mult = -0.05
+	pop_amenities_usage_mult = -0.025
+	pop_environment_tolerance = 0.025
+	planet_jobs_food_produces_mult = 0.05
+	planet_clear_blocker_time_mult = 0.25
+	planet_building_build_speed_mult = -0.05
+	pop_happiness = 0.025
+	pop_growth_speed = 0.05
+}
+
+resolution_ecology_environmental_control_board = {
+	diplo_weight_economy_mult = -0.2
+	planet_pops_consumer_goods_upkeep_mult = -0.05
+	pop_amenities_usage_mult = -0.025
+	pop_environment_tolerance = 0.05
+	planet_jobs_food_produces_mult = 0.05
+	planet_building_build_speed_mult = -0.1
+	planet_clear_blocker_time_mult = 0.5
+	planet_jobs_alloys_produces_mult = -0.1
+	planet_jobs_minerals_produces_mult = -0.2
+	pop_happiness = 0.025
+	pop_growth_speed = 0.05
+	terraforming_cost_mult = 0.25
+}
+
+resolution_ecology_paradise_initiative = {
+	diplo_weight_economy_mult = -0.2
+	planet_pops_consumer_goods_upkeep_mult = -0.05
+	pop_amenities_usage_mult = -0.025
+	pop_environment_tolerance = 0.10
+	planet_building_build_speed_mult = -0.1
+	pop_growth_speed = 0.05
+	planet_jobs_food_produces_mult = 0.1
+	planet_clear_blocker_time_mult = 1
+	planet_jobs_alloys_produces_mult = -0.2
+	planet_jobs_minerals_produces_mult = -0.2
+	pop_happiness = 0.05
+	terraforming_cost_mult = 0.75
+}
+
+resolution_ecology_gardens_of_eden = {
+	diplo_weight_economy_mult = -0.4
+	pop_amenities_usage_mult = -0.05
+	planet_pops_consumer_goods_upkeep_mult = -0.05
+	planet_clear_blocker_time_mult = 2
+	pop_environment_tolerance = 0.15
+	planet_jobs_food_produces_mult = 0.1
+	planet_jobs_alloys_produces_mult = -0.2
+	planet_jobs_minerals_produces_mult = -0.2
+	pop_happiness = 0.05
+	pop_growth_speed = 0.10
+	terraforming_cost_mult = 1
+	planet_building_build_speed_mult = -0.20
+}
+
+##################################
+##		GALACTIC STUDIES		##
+##################################
+
+resolution_galacticstudies_cooperative_research_channels = {
+	diplo_weight_technology_mult = 0.2
+	station_researchers_produces_mult = 0.1
+	starbases_upkeep_mult = 0.05
+}
+
+resolution_galacticstudies_astral_studies_network = {
+	planet_sensor_range_add = 1
+	station_researchers_produces_mult = 0.1
+	diplo_weight_technology_mult = 0.2
+	starbases_upkeep_mult = 0.05
+}
+
+resolution_galacticstudies_advanced_xenostudies = {
+	diplo_weight_technology_mult = 0.2
+	station_researchers_produces_mult = 0.2
+	starbases_upkeep_mult = 0.05
+}
+
+resolution_galacticstudies_ethical_guideline_refactoring = {
+	station_researchers_produces_mult = 0.2
+	planet_researchers_produces_mult = 0.10
+	pop_cat_worker_happiness = -0.15
+	pop_cat_slave_happiness = -0.15
+	diplo_weight_technology_mult = 0.2
+	planet_researchers_upkeep_mult = 0.25
+	starbases_upkeep_mult = 0.05
+}
+
+resolution_galacticstudies_extradimensional_experimentation = {
+	station_researchers_produces_mult = 0.2
+	diplo_weight_technology_mult = 0.2
+	planet_researchers_produces_mult = 0.10
+	planet_researchers_upkeep_mult = 0.25
+	starbases_upkeep_mult = 0.05
+}
+
+resolution_galacticstudies_rift_probing = {
+	planet_sensor_range_add = 1
+	diplo_weight_technology_mult = 0.4
+	station_researchers_produces_mult = 0.20
+	planet_researchers_produces_mult = 0.30
+	planet_researchers_upkeep_mult = 0.15
+	pop_cat_worker_happiness = -0.10
+	pop_cat_slave_happiness = -0.10
+	starbases_upkeep_mult = 0.15
+}
+
+##################################
+##			DIVINITY			##
+##################################
+
+resolution_divinity_comfort_the_fallen = {
+	diplo_weight_technology_mult = -0.2
+	pop_ethic_spiritualist_attraction_mult = 0.20
+	planet_jobs_unity_produces_mult = 0.05
+	biological_pop_happiness = 0.025
+	lithoid_pop_happiness = 0.025
+	planet_researchers_upkeep_mult = 0.05
+	planet_priests_produces_mult = 0.025
+}
+
+resolution_divinity_tithe_on_the_soulless = {
+	diplo_weight_technology_mult = -0.2
+	pop_ethic_spiritualist_attraction_mult = 0.20
+	planet_jobs_unity_produces_mult = 0.05
+	biological_pop_happiness = 0.025
+	lithoid_pop_happiness = 0.025
+	planet_researchers_upkeep_mult = 0.05
+	planet_priests_produces_mult = 0.025
+}
+
+resolution_divinity_right_to_work = {
+	diplo_weight_technology_mult = -0.2
+	pop_ethic_spiritualist_attraction_mult = 0.20
+	planet_jobs_unity_produces_mult = 0.05
+	biological_pop_happiness = 0.025
+	lithoid_pop_happiness = 0.025
+	planet_researchers_upkeep_mult = 0.05
+	planet_priests_produces_mult = 0.025
+}
+
+resolution_divinity_silence_the_soulless = {
+	diplo_weight_technology_mult = -0.2
+	pop_ethic_spiritualist_attraction_mult = 0.40
+	planet_jobs_unity_produces_mult = 0.05
+	biological_pop_happiness = 0.025
+	lithoid_pop_happiness = 0.025
+	planet_researchers_upkeep_mult = 0.10
+	planet_priests_produces_mult = 0.025
+}
+
+resolution_divinity_a_defined_purpose = {
+	diplo_weight_technology_mult = -0.2
+	pop_ethic_spiritualist_attraction_mult = 0.50
+	planet_jobs_unity_produces_mult = 0.10
+	biological_pop_happiness = 0.05
+	lithoid_pop_happiness = 0.05
+	planet_researchers_upkeep_mult = 0.10
+	planet_priests_produces_mult = 0.05
+}
+
+resolution_divinity_heavenly_mandate = {
+	diplo_weight_technology_mult = -0.4
+	pop_ethic_spiritualist_attraction_mult = 1.5
+	planet_jobs_unity_produces_mult = 0.10
+	biological_pop_happiness = 0.10
+	lithoid_pop_happiness = 0.10
+	planet_researchers_upkeep_mult = 0.15
+	planet_priests_produces_mult = 0.10
+}
+
+##########################
+##		COMMERCE		##
+##########################
+
+resolution_commerce_buzzword_standardization = {
+	diplo_weight_economy_mult = 0.2
+	trade_value_mult = 0.05
+	planet_bureaucrats_upkeep_mult = 0.05
+}
+
+resolution_commerce_leveraged_privateering = {
+	diplo_weight_economy_mult = 0.2
+	trade_value_mult = 0.05
+	planet_bureaucrats_upkeep_mult = 0.05
+	local_trade_protection_add = 10
+	country_naval_cap_mult = -0.1
+}
+
+resolution_commerce_underdeveloped_system_utilization = {
+	diplo_weight_economy_mult = 0.2
+	trade_value_mult = 0.05
+	planet_bureaucrats_upkeep_mult = 0.05
+	country_naval_cap_mult = -0.05
+	show_only_custom_tooltip = no
+	custom_tooltip = resolution_commerce_underdeveloped_system_utilization_tooltip	
+}
+
+resolution_commerce_holistic_asset_coordination = {
+	diplo_weight_economy_mult = 0.2
+	trade_value_mult = 0.05
+	planet_bureaucrats_upkeep_mult = 0.05
+	local_trade_protection_add = 15
+	country_naval_cap_mult = -0.05	
+}
+
+resolution_commerce_profit_maximization_engines = {
+	diplo_weight_economy_mult = 0.2
+	trade_value_mult = 0.05
+	planet_bureaucrats_upkeep_mult = 0.10
+	country_naval_cap_mult = -0.10
+	planet_jobs_produces_mult = 0.1
+	pop_happiness = -0.15
+	pop_cat_ruler_happiness = 0.25
+	leaders_upkeep_mult = 0.5
+}
+
+resolution_commerce_commercial_absolutism = {
+	diplo_weight_economy_mult = 0.4
+	trade_value_mult = 0.25
+	planet_bureaucrats_upkeep_mult = 0.20
+	local_trade_protection_add = 25
+	country_naval_cap_mult = -0.20
+	planet_jobs_produces_mult = 0.10
+	pop_happiness = -0.15
+	pop_cat_ruler_happiness = 0.25
+	leaders_upkeep_mult = 0.5
+}
+
+##########################
+##		Industry		##
+##########################
+
+resolution_industry_regulatory_facilitation = {
+	diplo_weight_economy_mult = 0.2
+	planet_jobs_worker_produces_mult = 0.025
+	pop_environment_tolerance = -0.02
+}
+
+resolution_industry_collective_waste_management = {
+	diplo_weight_economy_mult = 0.2
+	planet_jobs_worker_produces_mult = 0.025
+	planet_jobs_alloys_produces_mult = 0.05
+	planet_jobs_minerals_produces_mult = 0.1
+	pop_environment_tolerance = -0.03
+	pop_happiness = -0.025
+	planet_stability_add = -2.5
+}
+
+resolution_industry_building_a_better_tomorrow = {
+	diplo_weight_economy_mult = 0.2
+	planet_jobs_worker_produces_mult = 0.025
+	planet_jobs_minerals_produces_mult = 0.05
+	planet_jobs_alloys_produces_mult = 0.05
+	planet_building_build_speed_mult = 0.1
+	pop_environment_tolerance = -0.05
+	planet_metallurgists_upkeep_mult = -0.05
+	pop_happiness = -0.025
+	planet_stability_add = -2.5
+}
+
+resolution_industry_environmental_ordinance_waivers = {
+	diplo_weight_economy_mult = 0.2
+	planet_jobs_worker_produces_mult = 0.025
+	planet_jobs_minerals_produces_mult = 0.05
+	planet_jobs_alloys_produces_mult = 0.05
+	show_only_custom_tooltip = no
+	custom_tooltip = resolution_industry_environmental_ordinance_waivers_tooltip
+	planet_metallurgists_upkeep_mult = -0.05
+	pop_happiness = -0.05
+	pop_environment_tolerance = -0.1
+	planet_stability_add = -2.5
+}
+
+resolution_industry_project_cornucopia = {
+	diplo_weight_economy_mult = 0.2
+	planet_jobs_worker_produces_mult = 0.05
+	planet_metallurgists_upkeep_mult = -0.1
+	planet_jobs_minerals_produces_mult = 0.10
+	planet_jobs_alloys_produces_mult = 0.05
+	pop_environment_tolerance = -0.10
+	planet_building_build_speed_mult = 0.10
+	pop_happiness = -0.05
+	planet_stability_add = -2.5
+}
+
+resolution_industry_industry_6.0 = {
+	diplo_weight_economy_mult = 0.4
+	planet_jobs_worker_produces_mult = 0.05
+	planet_jobs_minerals_produces_mult = 0.20
+	planet_jobs_alloys_produces_mult = 0.30
+	planet_metallurgists_upkeep_mult = -0.1
+	planet_building_build_speed_mult = 0.10
+	pop_environment_tolerance = -0.10
+	pop_happiness = -0.10
+}
+
+##############################
+##		MUTUAL DEFENSE		##
+##############################
+
+resolution_mutualdefense_the_readied_shield = {
+	diplo_weight_naval_mult = 0.2
+	country_naval_cap_mult = 0.10
+	starbase_shipyard_build_cost_mult = 0.05
+}
+
+resolution_mutualdefense_military_readiness_act = {
+	diplo_weight_naval_mult = 0.2
+	country_naval_cap_mult = 0.05
+	starbase_shipyard_build_cost_mult = 0.05
+}
+
+resolution_mutualdefense_enemy_of_my_enemy = {
+	diplo_weight_naval_mult = 0.2
+	country_naval_cap_mult = 0.05
+	starbase_shipyard_build_cost_mult = 0.05
+}
+
+resolution_mutualdefense_castigation_proclamation = {
+	diplo_weight_naval_mult = 0.2
+	country_naval_cap_mult = 0.05
+	starbase_shipyard_build_cost_mult = 0.05
+}
+
+resolution_mutualdefense_renegade_containment = {
+	diplo_weight_naval_mult = 0.2
+	country_naval_cap_mult = 0.10
+	starbase_shipyard_build_cost_mult = 0.10
+}
+
+resolution_mutualdefense_containment_escalation = {
+	diplo_weight_naval_mult = 0.4
+	country_naval_cap_mult = 0.15
+	starbase_shipyard_build_cost_mult = 0.15
+}
+
+##############################
+##		Rules Of War		##
+##############################
+
+resolution_rulesofwar_guardian_angels = {
+	diplo_weight_naval_mult = -0.2
+	ships_upkeep_mult = 0.05
+	ship_home_territory_fire_rate_mult = 0.10
+	country_claim_influence_cost_mult = 0.05
+	starbase_defensive_war_ship_build_speed_mult = 0.10
+}
+
+resolution_rulesofwar_reverence_for_life = {
+	diplo_weight_naval_mult = -0.2
+	country_war_exhaustion_mult = -0.05
+	ships_upkeep_mult = 0.025
+	ship_home_territory_fire_rate_mult = 0.05
+	country_claim_influence_cost_mult = 0.05
+	starbase_defensive_war_ship_build_speed_mult = 0.05
+}
+
+resolution_rulesofwar_independent_tribunals = {
+	diplo_weight_naval_mult = -0.2
+	country_war_exhaustion_mult = -0.05
+	ship_home_territory_fire_rate_mult = 0.05
+	ships_upkeep_mult = 0.025
+	country_claim_influence_cost_mult = 0.05
+	starbase_defensive_war_ship_build_speed_mult = 0.05
+}
+
+resolution_rulesofwar_last_resort_doctrine = {
+	diplo_weight_naval_mult = -0.2
+	country_war_exhaustion_mult = -0.05
+	ship_home_territory_fire_rate_mult = 0.05
+	starbase_defensive_war_ship_build_speed_mult = 0.25
+	pop_ethic_pacifist_attraction_mult = 0.5
+	ships_upkeep_mult = 0.05
+	country_claim_influence_cost_mult = 0.05
+	starbase_defensive_war_ship_build_speed_mult = 0.15
+}
+
+resolution_rulesofwar_demobilization_initiative = {
+	diplo_weight_naval_mult = -0.2
+	country_war_exhaustion_mult = -0.05
+	ship_home_territory_fire_rate_mult = 0.10
+	country_naval_cap_mult = -0.15
+	pop_ethic_pacifist_attraction_mult = 0.5
+	ships_upkeep_mult = 0.10
+	country_claim_influence_cost_mult = 0.10	
+	starbase_defensive_war_ship_build_speed_mult = 0.20
+}
+
+resolution_rulesofwar_forced_pacifism = {
+	diplo_weight_naval_mult = -0.2
+	country_war_exhaustion_mult = -0.10
+	ship_home_territory_fire_rate_mult = 0.15
+	country_naval_cap_mult = -0.15
+	pop_ethic_pacifist_attraction_mult = 1.0
+	ships_upkeep_mult = 0.15
+	country_claim_influence_cost_mult = 0.20
+	starbase_defensive_war_ship_build_speed_mult = 0.20
+}
+
+##############################
+##		Greater Good		##
+##############################
+
+resolution_greatergood_workers_rights = {
+	diplo_weight_pops_mult = 0.10
+	pop_cat_worker_happiness = 0.05
+	pop_cat_worker_political_power = 0.20
+	pop_cat_ruler_political_power = -0.10
+}
+
+resolution_greatergood_five_year_plans = {
+	diplo_weight_pops_mult = 0.10
+	pop_cat_worker_happiness = 0.025
+	pop_cat_ruler_happiness = -0.025
+	pop_cat_ruler_political_power = -0.10
+	pop_cat_worker_political_power = 0.30
+	show_only_custom_tooltip = no
+	custom_tooltip = resolution_greatergood_five_year_plans_tooltip
+}
+
+resolution_greatergood_greater_than_ourselves = {
+	diplo_weight_pops_mult = 0.10
+	pop_cat_worker_happiness = 0.025
+	pop_cat_worker_political_power = 0.50
+	pop_cat_ruler_political_power = -0.15
+	pop_cat_ruler_happiness = -0.025
+	show_only_custom_tooltip = no
+	custom_tooltip = resolution_greatergood_greater_than_ourselves_tooltip
+}
+
+resolution_greatergood_balance_in_the_middle = {
+	diplo_weight_pops_mult = 0.10
+	pop_cat_worker_happiness = 0.05
+	pop_cat_ruler_happiness = -0.05
+	pop_cat_ruler_political_power = -0.20
+	empire_size_pops_mult = -0.05
+	pop_housing_usage_mult = -0.05
+	pop_cat_worker_political_power = 0.50
+}
+
+resolution_greatergood_universal_prosperity_mandate = {
+	diplo_weight_pops_mult = 0.10
+	pop_cat_worker_happiness = 0.10
+	pop_cat_ruler_happiness = -0.05
+	pop_cat_ruler_political_power = -0.20
+	empire_size_pops_mult = -0.05
+	pop_housing_usage_mult = -0.05
+	pop_cat_worker_political_power = 0.50
+}
+
+resolution_greatergood_absolute_equality = {
+	diplo_weight_pops_mult = 0.10
+	pop_cat_worker_happiness = 0.15
+	pop_cat_ruler_happiness = -0.10
+	pop_cat_ruler_political_power = -0.25
+	empire_size_pops_mult = -0.1
+	pop_housing_usage_mult = -0.1
+	pop_cat_worker_political_power = 3.00
+}
+
+	#####LOOK INTO AGRI WORLD OUTPUT
+
+##############################################
+##			Innovative Leadership			##
+##############################################
+
+resolution_innovative_leadership_standardized_education = {
+	diplo_weight_pops_mult = -0.10
+	planet_jobs_ruler_produces_mult = 0.10
+	pop_cat_ruler_happiness = 0.025
+	pop_cat_ruler_political_power = 0.10
+	pop_cat_worker_political_power = -0.20
+	pop_cat_worker_happiness = 0
+}
+
+resolution_innovative_leadership_sanctioned_scholarships = {
+	diplo_weight_pops_mult = -0.10
+	planet_jobs_ruler_produces_mult = 0.15
+	pop_cat_ruler_happiness = 0.025
+	pop_cat_ruler_political_power = 0.10
+	pop_cat_worker_political_power = -0.30
+	pop_cat_worker_happiness = 0
+}
+
+resolution_innovative_leadership_exclusive_scholarships = {
+	diplo_weight_pops_mult = -0.10
+	planet_jobs_ruler_produces_mult = 0.15
+	pop_cat_ruler_happiness = 0.025
+	pop_cat_ruler_political_power = 0.15
+	pop_cat_worker_political_power = -0.50
+	pop_cat_worker_happiness = -0.025
+}
+
+resolution_innovative_leadership_lawful_nepotism = {
+	diplo_weight_pops_mult = -0.10
+	planet_jobs_ruler_produces_mult = 0.15
+	pop_cat_ruler_happiness = 0.025
+	pop_cat_ruler_political_power = 0.20
+	pop_cat_worker_political_power = -0.50
+	pop_cat_worker_happiness = -0.025
+}
+
+resolution_innovative_leadership_prioritized_stratification = {
+	diplo_weight_pops_mult = -0.10
+	planet_jobs_ruler_produces_mult = 0.20
+	pop_cat_ruler_happiness = 0.05
+	pop_cat_ruler_political_power = 0.20
+	pop_cat_worker_political_power = -0.50
+	pop_cat_worker_happiness = -0.05
+}
+
+resolution_innovative_leadership_new_age_classism = {
+	diplo_weight_pops_mult = -0.10
+	planet_jobs_ruler_produces_mult = 0.25
+	pop_cat_ruler_happiness = 0.10
+	pop_cat_ruler_political_power = 0.25
+	pop_cat_worker_political_power = -3.0
+	pop_cat_worker_happiness = -0.15
+}
+
+##############################################
+##			Galactic Vision					##
+##############################################
+
+resolution_galactic_vision_organic_legislature = {
+	planet_pops_organics_produces_mult = 0.025
+	planet_pops_organics_upkeep_mult = -0.05
+	pop_growth_speed = 0.05
+	planet_pops_robotics_produces_mult = -0.05
+	planet_pops_robotics_upkeep_mult = 0.10
+	planet_pop_assembly_mult = -0.15
+}
+
+resolution_galactic_vision_organic_protection = {
+	planet_pops_organics_produces_mult = 0.025
+	planet_pops_organics_upkeep_mult = -0.10
+	pop_growth_speed = 0.10
+	planet_pops_robotics_produces_mult = -0.05
+	planet_pops_robotics_upkeep_mult = 0.10
+	planet_pop_assembly_mult = -0.25
+}
+
+resolution_galactic_vision_organic_superiority = {
+	planet_pops_organics_produces_mult = 0.05
+	planet_pops_organics_upkeep_mult = -0.10
+	pop_growth_speed = 0.15
+	planet_pops_robotics_produces_mult = -0.10
+	planet_pops_robotics_upkeep_mult = 0.20
+	planet_pop_assembly_mult = -1.6
+}
+
+resolution_galactic_vision_synthetic_legislature = {
+	planet_pops_organics_produces_mult = -0.05
+	planet_pops_organics_upkeep_mult = 0.10
+	pop_growth_speed = -0.15
+	planet_pops_robotics_produces_mult = 0.025
+	planet_pops_robotics_upkeep_mult = -0.05
+	planet_pop_assembly_mult = 0.10
+}
+
+resolution_galactic_vision_synthetic_protection = {
+	planet_pops_organics_produces_mult = -0.05
+	planet_pops_organics_upkeep_mult = 0.10
+	pop_growth_speed = -0.25
+	planet_pops_robotics_produces_mult = 0.025
+	planet_pops_robotics_upkeep_mult = -0.10
+	planet_pop_assembly_mult = 0.15
+}
+
+resolution_galactic_vision_synthetic_superiority = {
+	planet_pops_organics_produces_mult = -0.10
+	planet_pops_organics_upkeep_mult = 0.20
+	pop_growth_speed = -1.6
+	planet_pops_robotics_produces_mult = 0.05
+	planet_pops_robotics_upkeep_mult = -0.10
+	planet_pop_assembly_mult = 0.15
+}
+
+##############################################
+##			Protectionism					##
+##############################################
+
+resolution_protectionism_local_business_encouragement = {
+	local_trade_protection_add = 5
+	country_starbase_capacity_add = 1
+	ship_military_station_small_cost_mult = -0.05
+	ship_military_station_small_upkeep_mult = -0.05
+	shipclass_military_station_hull_mult = 0.05
+	shipclass_military_station_damage_mult = 0.025
+	shipclass_starbase_hull_mult = 0.05
+	shipclass_starbase_damage_mult = 0.025
+	trade_value_mult = -0.05
+	country_trade_fee = 0.025
+}
+
+resolution_protectionism_foreign_investment_regulations = {
+	local_trade_protection_add = 5
+	country_starbase_capacity_add = 0
+	ship_military_station_small_cost_mult = -0.05
+	ship_military_station_small_upkeep_mult = -0.05
+	shipclass_military_station_hull_mult = 0.05
+	shipclass_military_station_damage_mult = 0.025	
+	shipclass_starbase_hull_mult = 0.05
+	shipclass_starbase_damage_mult = 0.025
+	trade_value_mult = -0.05
+	country_trade_fee = 0.025
+}
+
+resolution_protectionism_armed_trading_posts = {
+	local_trade_protection_add = 10
+	country_starbase_capacity_add = 1
+	ship_military_station_small_cost_mult = -0.10
+	ship_military_station_small_upkeep_mult = -0.10
+	shipclass_military_station_hull_mult = 0.05
+	shipclass_military_station_damage_mult = 0.05
+	shipclass_starbase_hull_mult = 0.05
+	shipclass_starbase_damage_mult = 0.025	
+	trade_value_mult = -0.05
+	country_trade_fee = 0.025
+}
+
+resolution_protectionism_trade_fortresses = {
+	local_trade_protection_add = 10
+	country_starbase_capacity_add = 0
+	ship_military_station_small_cost_mult = -0.10
+	ship_military_station_small_upkeep_mult = -0.10
+	shipclass_military_station_hull_mult = 0.05
+	shipclass_military_station_damage_mult = 0.025	
+	shipclass_starbase_hull_mult = 0.05
+	shipclass_starbase_damage_mult = 0.025
+	trade_value_mult = -0.05
+	country_trade_fee = 0.025
+}
+
+resolution_protectionism_legalized_foreign_privateering = {
+	local_trade_protection_add = 30
+	country_starbase_capacity_add = 1
+	ship_military_station_small_cost_mult = -0.10
+	ship_military_station_small_upkeep_mult = -0.10
+	shipclass_military_station_hull_mult = 0.10
+	shipclass_military_station_damage_mult = 0.025	
+	shipclass_starbase_hull_mult = 0.05
+	shipclass_starbase_damage_mult = 0.05
+	trade_value_mult = -0.05
+	country_trade_fee = 0.05
+}
+
+resolution_protectionism_aggressive_protectionism = {
+	local_trade_protection_add = 40
+	country_starbase_capacity_add = 0
+	ship_military_station_small_cost_mult = -0.10
+	ship_military_station_small_upkeep_mult = -0.10
+	shipclass_military_station_hull_mult = 0.20
+	shipclass_military_station_damage_mult = 0.05	
+	shipclass_starbase_hull_mult = 0.05
+	shipclass_starbase_damage_mult = 0.05
+	trade_value_mult = -0.25
+	country_trade_fee = 0.05
+}
+
+##############################################
+##			Multiculturalism				##
+##############################################
+
+resolution_multiculturalism_xenophile_exchange_programs = {
+	planet_amenities_mult = 0.075
+	pop_growth_from_immigration = 0.50
+	planet_stability_add = 0
+	pop_growth_speed = -0.05
+	country_resettlement_cost_mult = 0 
+}
+
+resolution_multiculturalism_xenophile_legalized_marriage = {
+	planet_amenities_mult = 0.075
+	pop_growth_from_immigration = 0.50
+	planet_stability_add = -2.5
+	pop_growth_speed = -0.10
+	country_resettlement_cost_mult = 0 
+}
+
+resolution_multiculturalism_xenophile_galactic_citizenship = {
+	planet_amenities_mult = 0.15
+	pop_growth_from_immigration = 1.00
+	planet_stability_add = -2.5
+	pop_growth_speed = -0.10
+	country_resettlement_cost_mult = 0 
+}
+
+resolution_multiculturalism_xenophobe_border_regulation = {
+	planet_amenities_mult = 0
+	pop_growth_from_immigration = -0.25
+	planet_stability_add = 2.5
+	pop_growth_speed = 0.05
+	country_resettlement_cost_mult = -0.10
+}
+
+resolution_multiculturalism_xenophobe_traditional_families = {
+	planet_amenities_mult = -0.05
+	pop_growth_from_immigration = -0.25
+	planet_stability_add = 2.5
+	pop_growth_speed = 0.10
+	country_resettlement_cost_mult = -0.15
+}
+
+resolution_multiculturalism_xenophobe_outlawed_migration = {
+	planet_amenities_mult = -0.15
+	pop_growth_from_immigration = -0.50
+	planet_stability_add = 5
+	pop_growth_speed = 0.15
+	country_resettlement_cost_mult = -0.25
+}
+
+##############################################
+##			Galactic Exploration			##
+##############################################
+
+resolution_galactic_exploration_archaeology_initiative = {
+	country_base_minor_artifacts_produces_add = 0.25
+	planet_archaeologists_minor_artifacts_produces_add = 0.015
+	science_ship_survey_speed = 0.25
+	ship_anomaly_generation_chance_mult = 0.025 
+	ship_anomaly_research_speed_mult = 0.25
+	ship_archaeological_site_excavation_speed_mult = 0.25 
+}
+
+resolution_galactic_exploration_outer_rim_expeditions = {
+	country_base_minor_artifacts_produces_add = 0.25
+	planet_archaeologists_minor_artifacts_produces_add = 0.015
+	science_ship_survey_speed = 0.25
+	ship_anomaly_generation_chance_mult = 0.025
+	ship_anomaly_research_speed_mult = 0.25
+	ship_archaeological_site_excavation_speed_mult = 0.25
+}
+
+resolution_galactic_exploration_inner_core_expeditions = {
+	country_base_minor_artifacts_produces_add = 0.5
+	planet_archaeologists_minor_artifacts_produces_add = 0.020
+	science_ship_survey_speed = 0.5
+	ship_anomaly_generation_chance_mult = 0.05
+	ship_anomaly_research_speed_mult = 0.5
+	ship_archaeological_site_excavation_speed_mult = 0.5
+}
+
+
+##################################
+##			SANCTIONS			##
+##################################
+
+resolution_sanctions_tech = {
+	all_technology_research_speed = -0.15
+	diplo_weight_technology_mult = -0.25
+}
+
+resolution_sanctions_economic = {
+	country_trade_fee = 0.15
+	diplo_weight_economy_mult = -0.25
+}
+
+resolution_sanctions_military = {
+	country_naval_cap_mult = -0.25
+	diplo_weight_naval_mult = -0.25
+}
+
+resolution_sanctions_administrative = {
+	empire_size_mult = 0.15
+	diplomacy_upkeep_mult = 0.25
+}
+
+resolution_culture_sanctions = {
+	country_unity_produces_mult = -0.15
+	pop_happiness = -0.05
+}
+
+##################################
+##			ArchotechNono		##
+##################################
+
+fed_archotech_bonk = {
+	country_base_minor_artifacts_upkeep_add = 50
+}
+
+minor_artifacts_deficit = {
+	ship_weapon_damage = -0.66
+	ship_armor_mult = -0.66
+	ship_shield_mult = -0.66
+	ship_hull_mult = -0.66
+}
+
+scm_unity_deficit = {
+	country_produces_mult = -0.50
+}

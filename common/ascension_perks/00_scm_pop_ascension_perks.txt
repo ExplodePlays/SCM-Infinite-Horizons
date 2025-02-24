@@ -1,0 +1,105 @@
+@ap_engineered_evolution_POINTS = 3
+@ap_engineered_evolution_COST_MULT = -0.25
+
+@ap_evolutionary_mastery_POINTS = 3
+@ap_evolutionary_mastery_COST_MULT = -0.25
+
+####Phase Shifted
+#ap_phase_smithing = {
+#	on_enabled = {
+#		custom_tooltip = "phase_smithing_tooltip"
+#		hidden_effect = {
+#			#country_event = { id = scm_ascension_perks.1 }
+#		}
+#	}
+#	possible = {
+#		custom_tooltip = {
+#			fail_text = "requires_ascension_perks_1"
+#			num_ascension_perks > 0
+#		}
+#		custom_tooltip = {
+#			fail_text = "pop_ascension_selected"
+#			NOR = {
+#				NOT = { has_ascension_perk = ap_engineered_evolution }
+#				NOT = { has_ascension_perk = ap_the_flesh_is_weak }
+#				NOT = { has_ascension_perk = ap_mind_over_matter }
+#			}
+#		}
+#	}
+#
+#	potential = {
+#		NOR = {
+#			has_ascension_perk = ap_phase_smithing
+#			has_authority = "auth_machine_intelligence"
+#			has_authority = "auth_hive_mind"
+#		}
+#		is_mechanical_empire = no
+#		is_cyborg_empire = no
+#	}
+#}
+#
+#ap_phase_shifted = {
+#	on_enabled = {
+#		custom_tooltip = "phase_shifted_tooltip"
+#		hidden_effect = {
+#			#country_event = { id = scm_ascension_perks.1 }
+#		}
+#		add_research_option = tech_telepathy
+#	}
+#	possible = {
+#		custom_tooltip = {
+#			fail_text = "requires_ascension_perks_2"
+#			num_ascension_perks > 1
+#		}
+#		has_ascension_perk = ap_phase_smithing
+#	}
+#
+#	potential = {
+#		has_ascension_perk = ap_phase_smithing
+#		NOT = { has_ascension_perk = ap_phase_shifted }
+#	}
+#}
+
+####Age Of Machines
+#Merged into the tr_synthetics tradition
+
+ap_machine_worlds = {
+	on_enabled = {
+		custom_tooltip = "allow_machine_worlds"
+		custom_tooltip = "describe_machine_worlds"
+		custom_tooltip = "allow_assimilation"
+
+		if = {
+			limit = { has_civic = civic_machine_servitor }
+			custom_tooltip = "01_BERSERK_MACHINE_EMPIRE_ERROR"
+			custom_tooltip = "anomaly.3060.c"
+			custom_tooltip = "01_BERSERK_MACHINE_EMPIRE_ERROR"
+		}
+	}
+
+	potential = {
+		host_has_dlc = "Synthetic Dawn Story Pack"
+		OR = {
+			has_active_tradition = tr_synthetics_finish 
+			has_active_tradition = tr_synthetics_finish_machine
+		}
+		NOT = {
+			has_ascension_perk = ap_machine_worlds
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_tech_climate_restoration"
+			has_technology = tech_climate_restoration
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}

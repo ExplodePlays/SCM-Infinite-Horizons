@@ -185,6 +185,20 @@ clerk = {
 		pop_political_power = 0.25
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR= {
+					has_valid_civic = civic_consumerism
+					has_valid_civic = civic_consumerism_corporate
+				}
+			 }
+		}
+		trade_value_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
 	triggered_pop_modifier = {
 		potential = {
 			exists = owner

@@ -1,0 +1,87 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_resolution_innovative_leadership"
+		textureFile = "gfx/interface/icons/resolutions/resolution_innovative_leadership.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_resolution_galactic_vision"
+		textureFile = "gfx/interface/icons/resolutions/resolution_galactic_vision.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_resolution_protectionism"
+		textureFile = "gfx/interface/icons/resolutions/resolution_protectionism.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_resolution_multiculturalism"
+		textureFile = "gfx/interface/icons/resolutions/resolution_multiculturalism.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_resolution_galactic_exploration"
+		textureFile = "gfx/interface/icons/resolutions/resolution_galactic_exploration.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_ship_gauss_beam"
+		textureFile = "gfx/interface/icons/ship_parts/ship_gauss_beam.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_ship_archotech_shield"
+		textureFile = "gfx/interface/icons/ship_parts/ship_archotech_shield.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_ship_archotech_armor"
+		textureFile = "gfx/interface/icons/ship_parts/ship_archotech_armor.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_ship_archotech_wing"
+		textureFile = "gfx/interface/icons/ship_parts/ship_archotech_wing.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_ship_archotech_thruster"
+		textureFile = "gfx/interface/icons/ship_parts/ship_archotech_thruster.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_ship_archotech_sensor"
+		textureFile = "gfx/interface/icons/ship_parts/ship_archotech_sensor.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_ship_archotech_generator"
+		textureFile = "gfx/interface/icons/ship_parts/ship_archotech_generator.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_ship_gauss_lance"
+		textureFile = "gfx/interface/icons/ship_parts/ship_gauss_lance.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_ap_archotech_knowledge"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_archotech_knowledge.dds"
+		noOfFrames = 1
+	}
+	
+}

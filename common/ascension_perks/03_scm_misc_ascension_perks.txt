@@ -1,0 +1,31 @@
+#Archotech Knowledge
+ap_archotech_knowledge = {
+
+
+	modifier = {
+		planet_archaeologists_minor_artifacts_produces_add = 0.05
+	}
+	
+	potential = {			
+		always = yes
+	}
+	
+	on_enabled = {
+		custom_tooltip = "ap_archotech_knowledge_tooltip"
+		hidden_effect = {
+			country_event = {
+				id = SCM_resolutions.19
+				days = 0
+			}		
+		}
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}	
+	
+}
+

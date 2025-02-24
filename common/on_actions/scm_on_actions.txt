@@ -1,0 +1,6 @@
+# this = country
+on_yearly_pulse_country = {
+	events = {		
+		SCM_resolutions.14 #anomalies
+	}
+}

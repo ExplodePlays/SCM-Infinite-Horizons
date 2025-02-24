@@ -1,0 +1,331 @@
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
+@resolution_weight_popular = 6.5
+@resolution_weight_loved = 7
+
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_t6 = 400
+@resolution_cost_denounce = 25
+
+@resolution_flag_timer = 360
+
+#example_resolution = {
+	#	icon = "name of the icon key"
+	#	resources = {} # cost and category
+	#	target = yes/no # if this resolution requires a target country
+	#	harmful = yes/no # if the AI should consider this harmful when choosing target
+	#	modifier = {} # modifier to be applied to all community members if passed
+	#	fire_and_forget = yes/no # if "yes", the resolution will not be added to the list of active/passed resolutions. Mainly used for repeal resolutions. Default: no
+	#	triggered_modifier = {} # triggered modifier to be applied, scope is country
+	#	effect = {} # effect to be applied if passed, scope is proposer unless there is a target country - then scope is target country, with proposer in from scope
+	#	fail_effects = {} # effect to be applied if failed, scope is proposer unless there is a target country - then scope is target country, with proposer in from scope
+	#	potential = {} # potential trigger, scope is country
+	#	allow = {} # allow trigger, scope is country
+	#	active = {} # Enacted resolutions are cancelled if this trigger fails
+	#
+	#	ai_weight = {} # ai weight modifiers, scope is country. from scope is the target country for targeted resolutions
+	#	NOTE: all ai_weight modifiers are multiplicative. The end result is also multiplied with a factor based on the opinion towards the proposer and/or target,
+	#	see RESOLUTION_TARGET_OPINION_MIN_FACTOR etc. in 00_defines.txt. Also see RESOLUTION_VOTE_SUPPORT_THRESHOLD etc. for balancing the values.
+	#
+	#	valid_target = {} # valid targets trigger, scope is country
+	#}
+	
+	# NOTE: Remember to add Resolutions to a Resolution Category!
+
+# Galactic Exploration
+
+resolution_galactic_exploration_repeal_1 = {
+	icon = "GFX_resolution_repeal_blue"
+	ai_weight = {
+		base = 1
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_galactic_exploration_repeal_1_effect_success
+
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_galactic_exploration_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_galactic_exploration_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_galactic_exploration_archaeology_initiative"
+	}
+
+}
+
+resolution_galactic_exploration_repeal_2 = {
+	icon = "GFX_resolution_repeal_blue"
+	ai_weight = {
+		base = 1
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_galactic_exploration_repeal_2_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_galactic_exploration_archaeology_initiative"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_galactic_exploration_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_galactic_exploration_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_galactic_exploration_outer_rim_expeditions"
+	}
+
+	modifier = {
+		resolution_galactic_exploration_archaeology_initiative = 1
+	}
+
+}
+
+resolution_galactic_exploration_repeal_3 = {
+	icon = "GFX_resolution_repeal_blue"
+	ai_weight = {
+		base = 1
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_galactic_exploration_repeal_3_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_galactic_exploration_outer_rim_expeditions"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_galactic_exploration_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_galactic_exploration_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_galactic_exploration_inner_core_expeditions"
+	}
+
+	modifier = {
+		resolution_galactic_exploration_archaeology_initiative = 1
+		resolution_galactic_exploration_outer_rim_expeditions = 1
+	}
+
+}
+
+resolution_galactic_exploration_archaeology_initiative = {
+	icon = "GFX_resolution_galactic_exploration"
+	ai_weight = {
+		base = 1
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+	level = 1
+
+	modifier = {
+		resolution_galactic_exploration_archaeology_initiative = 1
+	}
+
+	effect = {
+		custom_tooltip = archaeology_initiative_tooltip
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_galactic_exploration days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = agalactic_community_resolution_failed_galactic_exploration days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOR = {
+				is_active_resolution = "resolution_galactic_exploration_archaeology_initiative"
+				is_active_resolution = "resolution_galactic_exploration_outer_rim_expeditions"
+				is_active_resolution = "resolution_galactic_exploration_inner_core_expeditions"
+			}
+		}
+	}
+
+}
+
+resolution_galactic_exploration_outer_rim_expeditions = {
+	icon = "GFX_resolution_galactic_exploration"
+	ai_weight = {
+		base = 1
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	target = no
+	level = 2
+
+	modifier = {
+		resolution_galactic_exploration_archaeology_initiative = 1
+		resolution_galactic_exploration_outer_rim_expeditions = 1
+	}
+
+	allow = {
+		is_active_resolution = "resolution_galactic_exploration_archaeology_initiative"
+	}
+
+	effect = {
+		custom_tooltip = outer_rim_expeditions_tooltip
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_galactic_exploration days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = agalactic_community_resolution_failed_galactic_exploration days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+}
+
+resolution_galactic_exploration_inner_core_expeditions = {
+	icon = "GFX_resolution_galactic_exploration"
+	ai_weight = {
+		base = 1
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+	level = 3
+
+	modifier = {
+		resolution_galactic_exploration_archaeology_initiative = 1
+		resolution_galactic_exploration_outer_rim_expeditions = 1
+		resolution_galactic_exploration_inner_core_expeditions = 1
+	}
+
+	allow = {
+		is_active_resolution = "resolution_galactic_exploration_outer_rim_expeditions"
+	}
+
+	effect = {
+		custom_tooltip = inner_core_expeditions_tooltip
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_galactic_exploration days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			random_country = {
+				country_event = { 
+					id = SCM_resolutions.12
+					days = 3600
+				}
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = agalactic_community_resolution_failed_galactic_exploration days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+}

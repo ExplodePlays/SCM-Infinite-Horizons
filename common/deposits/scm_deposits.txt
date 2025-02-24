@@ -1,0 +1,237 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet
+# constant_modifier - applied to planet always
+# station = station class in orbit to gather
+# blocker_swap_types = {}
+# all_blocker_swap_types = yes/no
+# use_weights_for_blocker_swap_types = yes/no
+# terraforming_swap_types = { }
+# should_swap_deposit_on_terraforming = yes/no
+# all_terraforming_swap_types = yes/no
+# use_weights_for_terraforming_swap_types = yes/no
+
+@blocker_high = 10
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 0.5
+@mid_rare = 0.25
+@low_rare = 0.1
+
+@planet_type_bonus = 1.5
+
+d_galactic_core = {
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			influence = 4
+		}
+	}
+	
+	potential = { always = no }
+	
+	station = shipclass_mining_station
+	is_for_colonizable = no
+	category = deposit_cat_rare
+	
+	drop_weight = {
+		weight = 0
+	}	
+}
+
+##planet deposits
+
+d_hunk_of_scrap = {
+	time = 270
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+	potential = {
+		is_planet_class = pc_machine
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			minerals = 750
+		}
+	}
+
+	planet_modifier = {
+		planet_max_buildings_add = -1
+		planet_max_districts_add = -1
+	}
+}
+
+d_lantean_relic_site = {
+	icon = "unused/d_city_ruins"
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = {
+		always = no
+	}
+
+	planet_modifier = {
+		building_archaeologist_station_max = 3
+		planet_archaeologists_minor_artifacts_produces_add = 0.5
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_shrouded_psionic_fields = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	icon = d_psionic_region
+	should_swap_deposit_on_terraforming = no
+
+	category = deposit_cat_energy
+
+	planet_modifier = {
+		district_generator_max = 2
+	}
+
+	potential = {
+		is_planet_class = pc_shrouded_habitable
+	}
+
+	drop_weight = {
+		weight = @high
+	}
+}
+
+d_shrouded_cliffs = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	icon = d_psionic_region
+	category = deposit_cat_minerals
+	
+	planet_modifier = {
+		district_mining_max = 2
+	}
+
+	potential = {
+		is_planet_class = pc_shrouded_habitable
+	}
+
+	drop_weight = {
+		weight = @high
+	}
+}
+
+d_shrouded_plains = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	icon = d_psionic_region
+	category = deposit_cat_food
+
+	planet_modifier = {
+		district_farming_max = 2
+	}
+
+	potential = {
+		is_planet_class = pc_shrouded_habitable
+	}
+
+	drop_weight = {
+		weight = @high
+	}
+}
+
+d_zro_veins = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_psionic_region
+	potential = { 
+		is_planet_class = pc_shrouded_habitable
+	}
+	
+	planet_modifier = { 
+		building_zro_distillery_max = 2
+	}
+	
+	drop_weight = {
+		weight = @low
+	}
+}
+
+d_sacrificial_planet = {
+
+	resources = {
+		category = artifact_actions
+		produces = {
+			minerals = 30
+			alloys = 10
+		}
+	}
+	
+	potential = { always = no }
+	
+	station = shipclass_mining_station
+	is_for_colonizable = no
+	category = deposit_cat_rare
+	
+	drop_weight = {
+		weight = 0
+	}	
+}
+
+d_faction_natural_reserve = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_great_river
+	potential = { 
+		always = no
+	}
+	
+	planet_modifier = { 
+		planet_amenities_add = 5
+		pop_environment_tolerance = 0.05
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_exploitable_land_modded = {
+	time = 360
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+	icon = default_blocker
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+
+	potential = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+	
+
+	drop_weight = {
+		weight = 0
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+
+}

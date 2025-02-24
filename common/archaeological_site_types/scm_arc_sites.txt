@@ -1,0 +1,161 @@
+#high_charity_arc_site = {
+	#	desc = high_charity_arc_site_desc
+	#	picture = GFX_evt_ancient_alien_temple
+	#	max_instances = 1
+	#	stages = 4
+	#	
+	#	allow = {
+	#		is_ship_class = shipclass_science_ship
+	#		exists = leader
+	#	}
+	#	
+	#	visible = {
+	#		default_site_visible_trigger = yes
+	#	}
+	#	
+	#	
+	#	weight = {
+	#		base = 0
+	#	}
+	#	
+	#	stage = {
+	#		difficulty = 1
+	#		icon = GFX_archaeology_runes_C1
+	#		event = SCM_archaeology.1
+	#	}
+	#	stage = {
+	#		difficulty = 2
+	#		icon = GFX_archaeology_runes_C2
+	#		event = SCM_archaeology.2
+	#	}
+	#	stage = {
+	#		difficulty = 3
+	#		icon = GFX_archaeology_runes_C3
+	#		event = SCM_archaeology.3
+	#	}
+	#	stage = {
+	#		difficulty = 4
+	#		icon = GFX_archaeology_runes_C4
+	#		event = SCM_archaeology.4
+	#	}
+	#	stage = {
+	#		difficulty = 5
+	#		icon = GFX_archaeology_runes_C4
+	#		event = SCM_archaeology.5
+	#	}
+	#	stage = {
+	#		difficulty = 6
+	#		icon = GFX_archaeology_runes_C4
+	#		event = SCM_archaeology.6
+	#	}
+	#	stage = {
+	#		difficulty = 7
+	#		icon = GFX_archaeology_runes_C4
+	#		event = SCM_archaeology.7
+	#	}
+	#
+	#	on_roll_failed = {
+	#		from = {
+	#			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+	#		}
+	#	}
+	#}
+	
+	old_lantea_arc_site = {
+		desc = old_lantea_arc_site_desc
+		picture = GFX_evt_ancient_alien_temple
+		max_instances = 1
+		stages = 4
+		
+		allow = {
+			is_ship_class = shipclass_science_ship
+			exists = leader
+		}
+		
+		visible = {
+			default_site_visible_trigger = yes
+		}
+		
+		
+		weight = {
+			base = 0
+		}
+		
+		stage = {
+			difficulty = 2
+			icon = GFX_archaeology_runes_C1
+			event = SCM_resolutions.15
+		}
+		stage = {
+			difficulty = 4
+			icon = GFX_archaeology_runes_C2
+			event = SCM_resolutions.16
+		}
+		stage = {
+			difficulty = 6
+			icon = GFX_archaeology_runes_C3
+			event = SCM_resolutions.17
+		}
+		stage = {
+			difficulty = 10
+			icon = GFX_archaeology_runes_C4
+			event = SCM_resolutions.18
+		}
+	
+		on_roll_failed = {
+			from = {
+				standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+			}
+		}
+	}
+	
+	new_lantea_arc_site = {
+		desc = new_lantea_arc_site_desc
+		picture = GFX_evt_ancient_alien_temple
+		max_instances = 1
+		stages = 4
+		
+		allow = {
+			is_ship_class = shipclass_science_ship
+			exists = leader
+		}
+		
+		visible = {
+			default_site_visible_trigger = yes
+		}
+		
+		on_visible = {
+			country_event = { id = SCM_resolutions.25 days = 5 }
+		}
+		
+		weight = {
+			base = 0
+		}
+		
+		stage = {
+			difficulty = 2
+			icon = GFX_archaeology_runes_C1
+			event = SCM_resolutions.20
+		}
+		stage = {
+			difficulty = 4
+			icon = GFX_archaeology_runes_C2
+			event = SCM_resolutions.21
+		}
+		stage = {
+			difficulty = 6
+			icon = GFX_archaeology_runes_C3
+			event = SCM_resolutions.22
+		}
+		stage = {
+			difficulty = 10
+			icon = GFX_archaeology_runes_C4
+			event = SCM_resolutions.23
+		}
+	
+		on_roll_failed = {
+			from = {
+				standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+			}
+		}
+	}

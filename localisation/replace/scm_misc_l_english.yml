@@ -1,0 +1,546 @@
+﻿l_english:
+ requires_tradition_synchronicity_harmonious_directives:0 "$TRIGGER_FAIL$§RRequires the §YFlexible Thought Routines§! Synchronicity Tradition.§!" 
+
+
+
+ pc_shrouded_habitable:0 "Shrouded Planet"
+ pc_shrouded_habitable_desc:0 "A planet engulfhed in psionic energy and a thick fog. The planet seems to be posses an ideal living environment."
+ 
+ pc_shattered_ring_habitable_adj:0 "Shattered Ring"
+ pc_manufactory_adj:0 "Manufactorium"
+ district_manufactory_alloys_plural:0 "Alloy Districts"
+ district_manufactory_housing_plural:0 "Housing Districts"
+
+ tr_domination_colonial_viceroys:0 "Colonial Viceroys"
+ tr_domination_colonial_viceroys_desc:0 "Colonial Viceroys"
+
+ job_administrator:0 "$job_politician$"
+ job_administrator_desc:0 "$job_politician_desc$"
+
+ scm_decision_make_planet_shrouded:0 "Shroud the Planet"
+ scm_decision_make_planet_shrouded_desc:0 "There are ways to shroud a planet if one uses enough zro."
+
+ pc_manufactory:0 "Grand Manufactory"
+ pc_manufactory_desc:0 "This is less of a planet and more of a planet-sized factory, working non-stop in a smog filled, barely habitable environment."
+ mod_pc_manufactory_habitability:0 "Manufactory Habitability"
+ mod_scm_aesthetics_3_xenophobe:0 "Art of War"
+ mod_scm_aesthetics_3_xenophobe_desc:0 ""
+ mod_scm_commerce_2_energy:0 "Energy Focus"
+ mod_scm_commerce_2_energy_desc:0 ""
+ mod_scm_commerce_2_food:0 "Food Focus"
+ mod_scm_commerce_2_food_desc:0 ""
+ mod_scm_commerce_2_minerals:0 "Minerals Focus"
+ mod_scm_commerce_2_minerals_desc:0 ""
+
+ mod_planet_priests_unity_produces_mult:0 "Unity from Priests"
+
+ 
+ 
+
+
+
+ d_shrouded_psionic_fields:0 "Psionic Fields"
+ d_shrouded_psionic_fields_desc:0 "An area with strong psionic energy fields, such a location can be utilized for energy production."
+ 
+ d_shrouded_cliffs:0 "Shrouded Cliffs"
+ d_shrouded_cliffs_desc:0 "An exposed mountain side, whos metals are exposed to the thick psionic fog of the planet."
+ 
+ d_shrouded_plains:0 "Shrouded Plains"
+ d_shrouded_plains_desc:0 "Fertile, grassy plains covered in a thick psionic fog."
+ 
+ d_zro_veins:0 "Zro Veins"
+ d_zro_veins_desc:0 "Exposed veins of pure liquid zro."
+
+ d_galactic_core:0 "Galactic Core"
+ 
+
+
+
+ planet_bank_managers:0 "Bank Managers"
+ planet_socialist_traders:0 "Soclialist Traders"
+ 
+ job_zro_distiller:0 "Zro Distiller"
+ job_zro_distiller_plural:0 "Zro Distillers"
+ job_zro_distiller_desc:0 "Zro distiller work on the raw Zro preparation processes."
+ 
+ job_zro_distiller_drone:0 "Zro Distiller Drone"
+ job_zro_distiller_drone_plural:0 "Zro Distiller Drones"
+ job_zro_distiller_drone_desc:0 "Zro distiller drones work on the raw Zro preparation processes."
+ 
+ mod_job_zro_distiller_add:0 "Zro Distiller jobs"
+ mod_job_zro_distiller_drone_add:0 "Zro Distiller Drone jobs"
+ 
+ mod_pc_shrouded_habitable_habitability:0 "Shrouded World Habitability"
+ mod_building_zro_distillery_max:0 "Planet §YZro Distillery§! cap"
+ 
+
+
+ 
+ building_zro_distillery:0 "Zro Distillery"
+ building_zro_distillery_desc:0 "This is where raw Zro gets turned into usable Zro."
+ 
+
+
+
+ NAME_core_guardian:0 "Galactic Core Guardian"
+ 
+
+
+
+ sc_supermassive_black_hole:0 "Galactic Core"
+ 
+
+
+
+ tech_naval_support_infrastructure:0 "Naval Support Infrastructure"
+ tech_naval_support_infrastructure_desc:0 ""
+  
+
+
+
+ scm_unity_deficit:0 "Unity Deficit"
+ scm_unity_deficit_desc:0 ""
+
+ mod_country_produces_mult:0 "Country Resource Production"
+ mod_country_produces_mult_desc:0 ""
+
+ blood_sacrifice:0 "Blood Sacrifice"
+ blood_sacrifice_desc:0 ""
+ 
+ planet_blood_sacrifice:0 "Blood Sacrifice"
+ planet_blood_sacrifice_desc:0 "Blood Sacrifice"
+ 
+ capitalism_unrest:0 "Capitalism Unrest"
+ capitalism_unrest_desc:0 ""
+ 
+ socialism_unrest:0 "Socialism Unrest"
+ socialism_unrest_desc:0 ""
+ 
+ green_unrest:0 "Green Unrest"
+ green_unrest_desc:0 ""
+ 
+ industrial_unrest:0 "Industrial Unrest"
+ industrial_unrest_desc:0 ""
+ 
+ pluralist_unrest:0 "Pluralist Unrest"
+ pluralist_unrest_desc:0 ""
+ 
+ elitist_unrest:0 "Elitist Unrest"
+ elitist_unrest_desc:0 ""
+ 
+ mod_shipclass_starbase_build_speed_mult:0 "Starbase Building Speed"
+ mod_shipclass_starbase_build_speed_mult_desc:0 ""
+ 
+ mod_starbase_buildings_alloys_cost_mult:0 "Starbase Buildings Alloy Cost"
+ mod_starbase_buildings_alloys_cost_mult_desc:0 ""
+ 
+
+
+
+ mixed_healthcare_name:0 "Mixed Healthcare"
+ mixed_healthcare_name_desc:0 ""
+ 
+ private_healthcare_name:0 "Private Healthcare"
+ private_healthcare_name_desc:0 ""
+ 
+ public_healthcare_name:0 "Public Healthcare"
+ public_healthcare_name_desc:0 ""
+ 
+ mixed_education_name:0 "Mixed Education"
+ mixed_education_name_desc:0 ""
+ 
+ private_education_name:0 "Private Education"
+ private_education_name_desc:0 ""
+ 
+ public_education_name:0 "Public Education"
+ public_education_name_desc:0 ""
+ 
+
+
+
+ MARTIAL_BROTHERHOOD:0 "Martial Brotherhood"
+ 
+
+
+
+ is_slaves_not_battle_thralls_or_livestock:0 "This is a slave pop, not a battle thrall or livestock."
+ 
+
+
+
+ immortal_ruler.1.desc:0 "Our God-like Ruler has achieved immortality."
+ 
+
+
+
+ casus_belli_cb_conversion:0 "Conversion"
+ casus_belli_cb_conversion_desc:0 ""
+ conversion_wars_name:0 "Conversion Wars"
+ 
+ conversion_wars:0 "Conversion Wars"
+ conversion_wars_desc:0 "Conversion Wars"
+ 
+ wg_plunder_accept_us_21:0 "Plunder"
+ 
+
+
+
+ job_naval_support_staff_desc:0 "Naval Support Staff"
+
+
+
+
+
+ civic_machine_replication:0 "Rapid Replicator"
+ civic_machine_replication_desc:0 "The Units that constitute the Machine Intelligence were originally designed for rapid proliferation. The Machine Intelligence retains many of these early production pipeline optimizations. \n\nAdds an additional §R0.5§! £alloys£§YAlloys§! to the upkeep of §YReplicator§! Jobs."
+ civic_tooltip_crafters_effects:0 "£job_artisan£ §Y$job_artisan_plural$§! are replaced with £job_artisan£ §Y$job_artificer_plural$§!.\n§Y$job_artificer_plural$§! produce §G+0.5§! £consumer_goods£ §Y$consumer_goods$§! as well as §Y1§! £trade_value£ §YTrade Value§! and §Y0.5§! £engineering£ §YEngineering Research§!.\nEvery §Y5§! §HIndustrial Districts§! grant §G1§! £building£ §YBuilding Slot§!, except on Habitats."
+ scm_civic_tooltip_catalytic_effects:0 "§RHaving a £food£ §Y$food$§! deficit will seriously impact your alloy production§!."
+ civic_tooltip_not_death_cult:0 "Does NOT have the §YDeath Cult§! civic"
+ civic_tooltip_not_origin_machine_cult:0 "Does NOT have Origin: §YMachine Cult§!" 
+ civic_diplomatic_corps_tooltip:0 "Envoys generate §Y10§! £unity£ §EUnity§! for each country you are either improving or hurting relations with."
+ civic_functional_architecture_tooltip:0 "Districts grant §G+1§! £housing£ §YHousing§!."
+ civic_police_state_tooltip:0 "£job_enforcer£ §YEnforcers§! increase planet £stability£ §YStability§! by §G1§!\n£job_enforcer §Y$job_enforcer_plural$§! also produce §Y1§! £unity£ Unity, buildings §YPrecinct House§! and §YHall of judgment§! have their £energy£ upkeep increased." 
+ civic_byzantine_bureaucracy:0 "The Bureaucratic Aparatus"
+ civic_byzantine_bureaucracy_desc:2 "This society is largely governed by a complex and, to the outsider, almost labyrinthine system of bureaucracy. An army of officials and functionaries work tirelessly to keep the government running smoothly and ensure no citizens are allocated resources they cannot demonstrate a properly filed and triple-stamped need for."
+ civic_tooltip_byzantine_bureaucracy_effects:2 "£job_bureaucrat£ §Y$job_bureaucrat_plural$§! increases planet £stability£ §YStability§! by §G1§! and produce §G1§! extra £unity£ §EUnity§!."
+ scm_civic_ancestor_worship_modifier:0 "Ancestor Worship"
+ scm_civic_ancestor_worship_modifier_desc:0 ""
+ civic_ancestor_worship_tooltip:0 "Whenever a leader of skill level 5 (level 7 for admirals and generals) or above dies, our country's £unity£ §EUnity§! and £society£ §GSociety Research§! production is increased by §G1%§!.\n§RDoes not work for volatile species leaders§!."
+ civic_distinguished_admiralty_tooltip:0 "Admirals have a small chance to gain an extra trait after a battle, limited to 1 extra trait per admiral."
+ civic_evangelism_tooltip:0 "Harming or improving relations with another empire gives them additional §YSpiritualist§! ethics attraction. §RMultiple envoys per nation don't stack the effect§!" 
+ scm_civic_evangelism_modifier:0 "Being Evangelized"
+ scm_civic_evangelism_modifier_desc:0 "There are foreign missionaries within our nation, spreading various heresies."
+ civic_innovative_economy_tooltip:0 "Country is §Rlocked§! into the §YInnovative Economy§! trade policy.\n\n£job_researcher£ $job_researcher_plural$ produce half as much £physics£ £society£ £engineering£ §BScience§!, but produce §Y2§! £trade_value£ §YTrade Value§!."
+ civic_nationalistic_zeal_tooltip:0 "During war your populace will give random resource donations yearly."
+ civic_naval_traditions_tooltip:0 "Gain access to an advanced starbase building §YGrand Fleet Academy§!, which replaces the standard one."
+ sm_scm_grand_fleet_academy:0 "Grand Fleet Academy"
+ sm_scm_grand_fleet_academy_desc:0 "It's like a fleet academy, but better."
+ civic_enlightment_tooltip:0 "Starts with the ability to build the §YNational Heritage Site§! building, which improves the planet's £unity£ §EUnity§! generation."
+ scm_building_national_heritage_site:0 "National Heritage Site"
+ scm_building_national_heritage_site_desc:0 "A site of national importace, a symbol of a nations cultural status."
+ civic_industrial_economy_tooltip:0 "Gain bulk £energy£ £minerals£ £food£ resources whenever you remove a blocker.\n\nGain a planetary decision to create new blockers at the expense of planetary deposits.\n\nCan't use §YIncreased Environmental Regulation§! policy and §YRecycling Campaign§!."
+ scm_decision_exploit_planetary_depost:0 "Exploit Land"
+ scm_decision_exploit_planetary_depost_desc:0 "Prepare lucrative parts of the planet for exploitation."
+ d_exploitable_land_modded:0 "Exploitable Land"
+ d_exploitable_land_modded_desc:0 "Land prepared for ruthless exploitation."
+ civic_tooltip_technocracy_effects:2 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n\n§YScientists§! have twice as high a chance to discover a technology that falls within their field of study.\n\n§Y$job_researcher_plural$§! also produce §Y0.5§! £unity£ Unity"
+ scm_origin_evo_architects:0 "Evolutionary Architects"
+ scm_origin_evo_architects_desc:0 "This civilization, whether by necessity or excess, was pushed towards biological perfection."
+ scm_origin_evo_architects_tooltip:0 "- Starts the game with the £society£ §Y$tech_gene_tailoring$§! technology."
+ scm_origin_machine_cult:0 "Machine Cult"
+ scm_origin_machine_cult_desc:0 "This civilization reveres the mechanical as arcane and holy."
+ scm_origin_machine_cult_tooltip:0 "- Start the game with §Y2§! £pop£ Pops being robots\n- Priests grant §G0.15§! £mod_planet_pop_assembly_add£ §Y$MOD_PLANET_POP_ASSEMBLY_ADD$§!\n- High Priests boost planet £mod_planet_pop_assembly_add£ §Y$MOD_PLANET_POP_ASSEMBLY_ADD$§! by §G2%§!\n- Normal £job_roboticist£ §YRoboticist§! jobs are §Runavailable§!."
+ scm_origin_shroud_touched:0 "Shroud Touched"
+ scm_origin_shroud_touched_desc:0 "This civilization started on a shrouded worlds, it has been both a blessing and a curse."
+ scm_origin_shroud_touched_tooltip:0 "- Starts the game on a §YShrouded Planet§!, which eventually gains the §YZro Vein§! deposit\n- Start the game with the £society£ §Y$tech_psionic_theory$§! technology."
+ scm_civic_events.7.title:0 "Zro Vein Discovery on [Root.GetName]!"
+ scm_civic_events.7.desc:0 "We have discovered Zro Veins on our capital, we should exploit such findings immediately!"
+ civic_weapons_cult:0 "School of Firepower"
+ civic_weapons_cult_desc:0 "This civilization has adopted the school of firepower - the most aggressive of the three naval philosophies. In their opinion, the answer to every  practical problem is the same - use more gun."
+ school_of_firepower_tooltip:0 "Can build the non-artificial planet unique §YMilitary Engineering Guild§! building, which gives access to a £job_military_engineer£ §YMilitary  Engineer§! job\n£job_military_engineer£ §YMilitary Engineers§! increase §YShip Tracking§! by §G+0.5%§!"
+ civic_school_of_armor:0 "School of Armor"
+ civic_school_of_armor_desc:0 "This civilization has adopted the school of armor - the most defensive of the three naval philosophies. In their opinion, the answer to every  practical problem is the same - use more plating."
+ school_of_armor_tooltip:0 "Can build the non-artificial planet unique §YMilitary Engineering Guild§! building, which gives access to a £job_military_engineer£ §YMilitary  Engineer§! job\n£job_military_engineer£ §YMilitary Engineers§! increase §YShip Hull Points§! by §G+1%§!"
+ civic_school_of_speed:0 "School of Speed"
+ civic_school_of_speed_desc:0 "This civilization has adopted the school of speed - the most flexible of the three naval philosophies. In their opinion, the answer to every  practical problem is the same - faster is better."
+ school_of_speed_tooltip:0 "Can build the non-artificial planet unique §YMilitary Engineering Guild§! building, which gives access to a £job_military_engineer£ §YMilitary  Engineer§! job\n£job_military_engineer£ §YMilitary Engineers§! increase §YShip Speed§! by §G+2.5%§!"
+ job_military_engineer:0 "Military Engineer"
+ job_military_engineer_plural:0 "Military Engineers"
+ job_military_engineer_desc:0 "Military engineers make new breakthroughs in the fiel of... Military engineering..."
+ mod_job_military_engineer_add:0 "Military Engineers Jobs"
+ scm_military_engineering_guild:0 "Military Engineering Guild"
+ scm_military_engineering_guild_desc:0 "A place where the brightest engineers gather to bolster the nation's military."
+ civic_globalism_tooltip:0 "§YClerks§! £job_clerk£ give an additional §G+0.25%§! £trade_value£ §YTrade Value§! per job, for a total of §G+0.75%§! per clerk"
+ civic_corporate_dominion:0 "Grand Stock Market"
+ civic_corporate_dominion_desc:0 "This society operates on a very simple idea - line go up - good; line go down - bad. They do everything they can to make sure that the lines go up as much as possible, for as long as possible."
+ civic_corporate_dominion_tooltip:0 "£job_merchant£ §Y$job_merchant_plural$§! grant §G+0.5%§! £trade_value£ §YTrade Value§!, for a total of §G+1.5%§! per merchant"
+ civic_great_hoarders:0 "Great Hoarders"
+ civic_great_hoarders_desc:0 "This civilization takes pride in keeping great stockpiles of resources for times of need."
+ civic_great_hoarders_tooltip:0 "Gains access to the §YNational Silo§! building, an upgrade version of the §YResource Silo§!, which grant additional resource storage space and an extra £job_merchant£ §Y$job_merchant$§!\n"
+ scm_national_silo:0 "National Silo"
+ scm_national_silo_desc:0 "It's like a normal resource silo, but bigger and national."
+ sm_resource_silo:0 "Resource Management Office"
+ sm_resource_silo_desc:0 "Offices dedicated to managing system resource stockpiles."
+ scm_resource_silo_tooltip:0 "§YResource Silo§! starbase modules grant §G+1000§! resource capacity."
+ sm_scm_resource_silo_module:0 "Resource Silo"
+ sm_scm_resource_silo_module_desc:0 "Massive resource silos and storage facilities where large quantities of resources can be safely kept."
+ civic_distributism_tooltip:0 "Can't set up §YFree Market§! policy, build §YGalactic Stock Exchange§! or have §YMogul§! jobs in general"
+ civic_divine_council_tooltip:0 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest §Y$job_high_priest_plural$§!, buildings §YSacred Nexus§! and §YCitadel of Faith§! provide additional §YHigh Priest§! jobs.\n£job_priest£ §Y$job_priest_plural$§! produce §Y1§! additional £unity£ Unity"
+ civic_terraforming_tooltip:0 "Benefits from a various range of planetary features and §YBlockers§!, which provides them with some §YHousing§! and special scientific jobs, like §YXeno-biologist§! and §YGeo-physicist§!. \n\nAllows to invoke special planetary decision in order to eradicate particular environmental planetary anomalies, such as §YIrradiated Planet§!, §YTidal Locked§!, §YDamaged Ecology§! and so on \n\nStarts with §YTerrestrial Sculpting§! technology.  \n\nClearing off planetary §YBlockers§! may provide some various one-time resource gaining"
+ civic_merchant_guilds_tooltip:0 "§YCapital Buildings§! replace one £job_administrator£ §YPolitician§! with a £job_mogul£ §Y$job_mogul$§! Ruler Job, which increases §YAmenities§! and produces §YTrade Value§!. \nCan't use §YPublic Healthcare§! or §YPublic Education§! policies \nEach §Y$job_mogul$§! increases a planets £trade_value£ §YTrade Value§! output by an additional §G+1%§!, giving a total of §G+2.5%§! per mogul."
+ civic_imperial_cult_tooltip:0 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest §Y$job_high_priest_plural$§!, buildings §YSacred Nexus§! and §YCitadel of Faith§! provide additional §YHigh Priest§! jobs.\n£job_priest£ §Y$job_priest_plural$§! produce §Y1§! additional £unity£ Unity \n\nAllows special edict - §YDeclare Immortal Ruler§!, which can make the current Ruler immortal \n\nAmbition §YScientific Revolution§! is unavailable"
+ civic_xeno_militarist_tooltip:0 "§YDefensive§! and §YGuarantee Independence§! pacts do not cost influence to maintain.\nHarming or improving relations with another empire gives them additional §YPacifist§! ethics attraction. §RMultiple envoys per nation don't stack the effect§!"
+ civic_keepers_harmony_tooltip:0 "Benefits from a various range of planetary §YFeatures§! and §YBlockers§!, which provides them with some §YHousing§! and special priest jobs - §YDruids§!. \nBuilding §YParadise Dome§! provides additional £housing£ §YHousing§! and increases  £unity£ §YUnity§! output \nSome rare planetary blockers and features, like §YWandering Forest§! or §YTitanic Life§! will increase local §YHappiness§!. \nCan enact special planetary decision, allowing to eradicate such planetary anomalies as §YDangerous Wildlife§!, §YBleak§!, §YHazardous Weather§!, §YWild Storms§!, §YDamaged Ecology§!, §YIrradiated Planet§!, §YWasteland Radiation§!  \n§YMining Districts§! decrease £amenities£ §YAmenities§! by §R1§! \nCan't use §YReduced Environmental Regulation§! policy"
+ civic_defenders_faith_tooltip:0 "Temples replace £job_priest£ §YPriests§! with £job_templar£ §Y$job_templar$§! Jobs \n\nAllowed to use special Unity Ambition - §YDivine Crusade§!."
+ civic_environmentalist_tooltip:0 "Benefits from clearable §YBlockers§!, which provides them with some §YHousing§! and worker jobs, like §YMiners§! (from §YMountain Range§!), §YTechnicians§! (from §YActive Volcano§!), §YFarmers§! (from §YDense Jungle§!) and so on  \nSome negative effects from §YBlockers§! are reduced \nNatural §YBlockers§! increase §YHabitability§! by §G+1%§! \nStarts with §YParadise Dome§! technology"
+ civic_inwards_perfection_tooltip:0 "Cannot have §YRivals§!\nCannot form §YDefensive Pacts§!\nCannot form §YMigration Treaties§!\nCannot form §YResearch Agreements§!\nCannot form §YCommercial Pacts§!\nCannot §YGuarantee Independence§!\nCannot join §YFederations§!\nCannot §YInfiltrate§! primitives\nCannot have forced §YSubjects§!\nCannot use §YUnrestricted Wars§! policy\nBuilding §YPlanetary Shield Generator§! produce additional £unity£ §YUnity§! \n§YBorder Policy§! is §YClosed§! by default"
+ civic_aristocratic_elite_tooltip:0 "£job_noble£ §Y$job_noble_plural$§! replace some £job_administrator£ §Y$job_administrator$§! Jobs\nCan construct £building£ §Y$building_noble_estates$§! buildings that add additional £job_noble£ §Y$job_noble$§! Jobs \n§YElitists§! faction will be pleased. \n\n£job_noble£ §Y$job_noble_plural$§! generate extra §E3§! £unity£ §EUnity§! and §G+1§! £stability£ §YStability§!."
+ civic_patriotic_service_tooltip:0 "£job_soldier£ §Y$job_soldier_plural$§! also produce §Y2§! £unity£ Unity."
+ civic_executive_committee_tooltip:0 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!, which produce £unity£ §YUnity§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§! and multiply planetary $mod_planet_jobs_society_research_produces_mult$."
+ civic_private_militaries_tooltip:0 "Buildings §YStronghold§! and §YFortress§! provide additional £job_soldier£ $job_mercenary$ Jobs. Mercenaries act mostly like $job_soldier_plural$, but also produce some £mod_trade_value_add£ §Y$TRADE_VALUE$§! and require §YConsumer Goods§! for upkeep"
+ civic_scientific_quotas:0 "Scientific Quotas"
+ civic_scientific_quotas_desc:0 "There are quotas that need to be met, and competition arises among the scientists! Every scientist in this society is rushing to do whatever they can to get their latest project done, or be quick to make their latest discovery. The government encourages this, and thus these scientists work overtime purely for competition among one another!"
+ civic_scientific_quotas_tooltip:0 "£job_researcher£ $job_researcher_plural$ produce an additional §G+0.5§! £physics£ £society£ £engineering£ §BScience§!, but produce §R-1§! £unity£ §HUnity§!"
+ civic_shared_burden_tooltip:0 "Obligated to have §YPublic Healthcare§! and §YPublic Education§! policies \nAllows special Worker job - £job_primitive_laborer£ §YLabour Hero§!, which produce small amount of £minerals£ §YMinerals§!, £food£ §YFood§!, £energy£ §YEnergy§! and £unity£ §YUnity§! \nObligated to have §YSocial Equality§! living standards"
+ civic_beacon_of_liberty_tooltip:0 "Certain internal policies are locked into a libertarian state"
+ civic_spiritual_seekers_tooltip:0 "§YSystem Capital§! and §YCitadel of Faith§! provide additional §G+1§! £job_transcend£ $job_transcend$ Jobs, who produce small amount of £unity£ §YUnity§!, £society£ §YSociety§!, £physics£ §Y$physics_research$§! and £engineering£ §Y$engineering_research$§! and reduce §YCrime§! \n\nHas increased chance to pick up §YPsionic Theory§! research option."
+ civic_star_settlers_tooltip:0 "tarts game with §YGalactic Ambitions§! technology already unlocked \n\n£job_colonist£ §Y$job_colonist_plural$§! also produce §Y5§! £unity£ Unity \n\nCan't set up neither §YMilitary Transportation§! nor §YMilitary Telecommunications§! policy."
+ civic_citizen_service_tooltip:0 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!, which increase Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, and reduce damage from §YBombardment§!  \n\n£job_commandante£ §Y$job_commandante_plural$§! provide additional £unity£ §YUnity§! and £amenities£ §YAmenities§! \n\nAllows to conduct special country Edict - §YPatriotic Call§!"
+ civic_tooltip_warrior_culture_effects:1 "Starts with §YCentralized Command§! tech\nReplaces £job_entertainer£ §Y$job_entertainer$§! Jobs with £job_duelist£ §Y$job_duelist$§! Jobs.\n$job_duelist_effect_desc$"
+ civic_well_funded_militia_tooltip:0 "The §YMartial Law§! Planetary Decision is replaced by the §YRally The Militia§! Planetary Decision, which §Rstops§! all §HPop Growth and Resource Production§!, but provides a §G50%§! increase to §YArmy Build Speed§! at the cost of §Y25§! £influence£ §MInfluence§!. \n\nTrains §YAssault Militia§! instead of §YAssault Armies§!. The Militia have half the attributes of a regular army (with the exception of §HCollateral Damage§!), but they come with half the §YCost§! and §YTraining Time§!"
+ civic_xeno_militarist_modifier:0 "Peacekeeper Pressure"
+ civic_free_haven_tooltip:0 "§YMigration Pacts§! cost no influence to maintain\nHarming or improving relations with another empire has a small chance to resettle one of their pops into your empire. §RMultiple envoys per nation don't stack the effect§!"
+ civic_tooltip_exalted_priesthood_effects:0 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n\n £job_priest£ §Y$job_priest_plural$§! produce §G2§! £physics£ £society£ £engineering£ §BResearch§!, £job_high_priest£ §Y$job_high_priest_plural$§! produce §G3§! £physics£ £society£ £engineering£ §BResearch§!, however §YResearch Labs§! are unavailable."
+ civic_tooltip_agrarian_idyll_effects:7 "§YGenerator§!, §YMining§! and §YAgriculture Districts§! provide §G1§! more £housing£ §YHousing§!\n§YCity Districts§! provide §R1§! less £housing£ §YHousing§!\n£job_farmer£ §Y$job_farmer_plural$§! also produce §G1§! £amenities£ §YAmenities§!\nEvery §Y4§! §HAgriculture Districts§! grant §G1§! £building£ §YBuilding Slot§!."
+ civic_tooltip_inward_perfection_effects:9 "Cannot have §YRivals§!\nCannot form §YDefensive Pacts§!\nCannot form §YMigration Treaties§!\nCannot form §YResearch Agreements§!\nCannot form §YCommercial Pacts§!\nCannot §YGuarantee Independence§!\nCannot join §YFederations§!\nCannot §YInfiltrate§! primitives\nCannot have forced §YSubjects§!\nIs locked into §YDefensive Wars§! policy\n"
+ 
+ 
+ 
+ 
+  
+
+
+
+ mod_country_resource_max_energy_add:0 "Max energy cap"
+ mod_ship_components_volatile_motes_cost_mult:0 "Volatile Motes Cost"
+ mod_ship_components_exotic_gases_cost_mult:0 "Exotic Gases Cost"
+ mod_ship_components_rare_crystals_cost_mult:0 "Rare Crystals Cost"
+ mod_ship_components_sr_living_metal_cost_mult:0 "Living Metal Cost"
+ mod_ship_components_sr_zro_cost_mult:0 "Zro Cost"
+ mod_ship_components_sr_dark_matter_cost_mult:0 "Dark Matter Cost"
+ mod_ship_components_nanites_cost_mult:0 "Nanites Cost"
+ mod_planet_farmers_minerals_produces_add:0 "Farmer Mineral Production"
+ mod_planet_technician_unity_produces_mult:0 "Technician Unity Production"
+ mod_planet_metallurgists_minerals_upkeep_add:0 "Metallurgist Mineral Upkeep"
+ mod_planet_culture_workers_society_research_produces_add:0 "Culture Worker Society Output"
+ mod_planet_synapse_drones_produces_mult:0 "Synapse Drone Production"
+ mod_planet_entertainers_unity_produces_add:0 "Entertainers Unity Production"
+ mod_planet_pops_food_upkeep_mult:0 "Pop Food Upkeep"
+ mod_rivalries_influence_produces_mult:0 "Rivalry Influence Production"
+ mod_planet_building_energy_grid_build_speed_mult:0 "Energy Grid Construction Speed"
+ 
+ requires_independence:0 "Needs to be Independant"
+
+
+
+
+ building_scm_aesthetics_5_wonder_garden:0 "Gardens of Beauty"
+ building_scm_aesthetics_5_wonder_garden_desc:0 "The fabled gardens of beauty. The gardeners have filled it with plants from all over our empire, composing them to a symphony of vegetation. By most it is considered the single greatest work of art in this galaxy and the pinnacle of beauty."
+ building_scm_aesthetics_5_wonder_monument:0 "Monument of Memories"
+ building_scm_aesthetics_5_wonder_monument_desc:0 "The Monument of Memories is one of the largest building in the galaxy, so large is its structure that it can be seen from space. It was built in honour of what has been, but some say that it is named from the fact that after one have seen it, it will never leave ones memories. "
+ building_scm_aesthetics_5_wonder_stage:0 "Stage of Glory"
+ building_scm_aesthetics_5_wonder_stage_desc:0 "The most accomplished of performers travel from all over the galaxy to show their skill on the stage of glory. Every evening, the performances on this stage becomes the greatest show in this galaxy."
+ building_scm_aesthetics_5_wonder_halls:0 "Halls of Tranquillity"
+ building_scm_aesthetics_5_wonder_halls_desc:0 "It is said that one can walk for hours in the halls of tranquillity and never see another soul. Yet these halls are filled with thousands, walking in quiet, in search for inspiration and understanding or inner peace. These halls seem endless, the hallways and chambers end only in darkness, not walls. Neither the ceiling high above can be seen, the pillars holding it up seemingly disappearing into the void."
+ building_scm_aesthetics_5_wonder_museum:0 "The Grand Museum"
+ building_scm_aesthetics_5_wonder_museum_desc:0 "The Grand Museum contains the greatest collection of artefacts from this galaxy, and possibly even a few from beyond it. Items from this collection range from those that have played an important part in recent events, to items from civilizations long since gone. So large is the collection that one could spend an entire solar cycle walking through its galleries and exhibitions and yet not see it all."
+
+
+
+ building_scm_aesthetics_finish_gallery:0 "Gallery"
+ building_scm_aesthetics_finish_gallery_desc:0 "Our galleries contain various exhibitions, from arts natural history, local culture to various archaeological artefacts collected from throughout our empire and galaxy."
+ 
+
+
+
+ building_est_archivist_finish_archive:0 "Planetary Archive"
+ building_est_archivist_finish_archive_desc:0 "The archives spread across our world are used to keep the records of this galaxy. These buildings hold the greatest collection of information across the galaxy."
+ 
+
+
+
+ building_est_cybernetics_finish_automated_mine:2 "Automated Mine"
+ building_est_cybernetics_finish_automated_mine_desc:1 "The Automated Mine is able to produce minerals with minimal supervision."
+ building_est_cybernetics_finish_automated_power_plant:2 "Automated Power Plant"
+ building_est_cybernetics_finish_automated_power_plant_desc:1 "The Automated Power Plant is able to produce energy with minimal supervision."
+ building_est_cybernetics_finish_automated_farm:2 "Automated Farm"
+ building_est_cybernetics_finish_automated_farm_desc:1 "The Automated Farm is able to produce food with minimal supervision."
+ 
+
+
+
+ building_scm_industry_3_blast_furnace:0 "Blast Furnace"
+ building_scm_industry_3_blast_furnace_desc:0 "The Blast Furnace can significantly boost a planets alloy production."
+ 
+ 
+
+
+ building_est_nature_preservation:0 "Preservation"
+ building_est_nature_preservation_desc:0 "Every planet have their own natural habitat, unique in the galaxy. We must ensure that at least parts of it is preserved without disruption, to remain as it has before we arrived."
+ 
+
+
+
+ building_mass_digester:0 "Mass Digester"
+ building_mass_digester_desc:0 "Nom Nom Nom, gud green (or red for rock lovers), take yellow in return."
+ 
+
+
+
+ trait_robot_scm_industry_adopt:0 "Mining Bot"
+ trait_robot_scm_industry_adopt_desc:0 "§LThese machines are built with the purpose of efficient mineral extraction.§!"
+ 
+
+
+
+ opinion_scm_aesthetics_2_3:0 "Galactic Fair"
+ opinion_scm_aesthetics_2_3_FE:0 "Galactic Fair"
+ opinion_scm_aesthetics_2_4:0 "Delivered Play to Ambassadors"
+ opinion_scm_aesthetics_2_31:0 "Friendship Monument"
+ opinion_scm_aesthetics_3:0 "$tr_scm_aesthetics_3$"
+ opinion_scm_aesthetics_3_FE:0 "$tr_scm_aesthetics_3$"
+ 
+
+
+
+ decision_scm_commerce_2_energy_activate:0 "Specialise Planet - Energy Credits"
+ decision_scm_commerce_2_energy_activate_desc:0 "$tr_scm_commerce_2_delayed$"
+ decision_scm_commerce_2_energy_activate_tooltip:0 "Increase planet £energy  §YEnergy Credit§! output by §G+20%§! while reducing £food  §YFood§! and £minerals  §YMineral§! output by §R-15%§!."
+ decision_scm_commerce_2_energy_deactivate:0 "Stop Specialised Planet - Energy Credits"
+ decision_scm_commerce_2_energy_deactivate_desc:0 "$tr_scm_commerce_2_delayed$"
+ decision_scm_commerce_2_energy_deactivate_tooltip:0 "Removes the §Y$mod_scm_commerce_2_energy$§! modifier."
+ decision_scm_commerce_2_food_activate:0 "Specialise Planet - Food"
+ decision_scm_commerce_2_food_activate_desc:0 "$tr_scm_commerce_2_delayed$"
+ decision_scm_commerce_2_food_activate_tooltip:0 "Increase planet £food  §YFood§! output by §G+20%§! while reducing £energy  §YEnergy Credit§! and £minerals  §YMineral§! output by §R-15%§!."
+ decision_scm_commerce_2_food_deactivate:0 "Stop Specialised Planet - Food"
+ decision_scm_commerce_2_food_deactivate_desc:0 "$tr_scm_commerce_2_delayed$"
+ decision_scm_commerce_2_food_deactivate_tooltip:0 "Removes the §Y$mod_scm_commerce_2_food$§! modifier."
+ decision_scm_commerce_2_minerals_activate:0 "Specialise Planet - Minerals"
+ decision_scm_commerce_2_minerals_activate_desc:0 "$tr_scm_commerce_2_delayed$"
+ decision_scm_commerce_2_minerals_activate_tooltip:0 "Increase planet £minerals  §YMineral§! output by §G+20%§! while reducing £food  §YFood§! and £energy  §YEnergy Credit§! output by §R-15%§!."
+ decision_scm_commerce_2_minerals_deactivate:0 "Stop Specialised Planet - Minerals"
+ decision_scm_commerce_2_minerals_deactivate_desc:0 "$tr_scm_commerce_2_delayed$"
+ decision_scm_commerce_2_minerals_deactivate_tooltip:0 "Removes the §Y$mod_scm_commerce_2_minerals$§! modifier."
+ 
+ 
+
+ decision_anthr_land_clearance:0 "Land Clearance"
+ decision_anthr_land_clearance_desc:0 ""
+ decision_anthr_land_clearance_tooltip:0 "Increases planet size by §Y1§!."
+ 
+ 
+
+
+
+ decision_scm_industry_5_activate:0 "Designate Forge World"
+ decision_scm_industry_5_activate_desc:0 "$tr_scm_industry_5_delayed$"
+ decision_scm_industry_5_activate_tooltip:0 "Increase £minerals  §YMineral§!, £alloys  §YAlloy§!, and £consumer_goods  §YConsumer Goods§! output by §G+10%§!. Reuduce £food  §YFood§! output, £mod_pop_growth_speed  §Y$MOD_POP_GROWTH_SPEED$§!, and §Y$MOD_PLANET_IMMIGRATION_PULL_MULT$§! by §R-20%§!, reduce £happiness §YHappiness§! by §R-10%§!."
+ decision_scm_industry_5_deactivate:0 "Normalise Forger World"
+ decision_scm_industry_5_deactivate_desc:0 "$tr_scm_industry_5_delayed$"
+ decision_scm_industry_5_deactivate_tooltip:0 "Removes the $mod_scm_industry_5$ modifier."
+ decision_scm_industry_5_GC_activate:0 "$decision_scm_industry_5_activate$"
+ decision_scm_industry_5_GC_activate_desc:0 "$decision_scm_industry_5_deactivate_desc$"
+ decision_scm_industry_5_GC_activate_tooltip:0 "Increase £minerals  §YMineral§! and £alloy  §YAlloy§! output by §G+20%§!. Reuduce £food  §YFood§! output and £mod_pop_growth_speed  §Y$MOD_POP_GROWTH_SPEED$§! by §R-30%§!."
+ decision_scm_industry_5_GC_deactivate:0 "$decision_scm_industry_5_deactivate$"
+ decision_scm_industry_5_GC_deactivate_desc:0 "$decision_scm_industry_5_deactivate_desc$"
+ decision_scm_industry_5_GC_deactivate_tooltip:0 "$decision_scm_industry_5_deactivate_tooltip$"
+ decision_scm_industry_5_machines_activate:0 "$decision_scm_industry_5_activate$"
+ decision_scm_industry_5_machines_activate_desc:0 "$decision_scm_industry_5_activate_desc$"
+ decision_scm_industry_5_machines_activate_tooltip:0 "Increase £minerals  §YMineral§! and £alloy  §YAlloy§! output by §G+20%§!. Reuduce £energy  §YEnergy§! output and £mod_pop_assembly_speed  §Y$MOD_POP_ASSEMBLY_SPEED$§! by §R-25%§!."
+ decision_scm_industry_5_machines_deactivate:0 "$decision_scm_industry_5_deactivate$"
+ decision_scm_industry_5_machines_deactivate_desc:0 "$decision_scm_industry_5_deactivate_desc$"
+ decision_scm_industry_5_machines_deactivate_tooltip:0 "$decision_scm_industry_5_deactivate_tooltip$"
+ 
+ country_food_produces_add:0 "Monthly Food"
+ 
+ 
+
+
+
+ scm_academy_adopt.name:0 "Select Research Area Specialization"
+ scm_academy_adopt.desc:0 "What research area should we specialize in?"
+ scm_academy_adopt.option.particles:0 "Particles"
+ scm_academy_adopt.option.computing:0 "Computing"
+ scm_academy_adopt.option.field_manipulation:0 "Field Manipulation"
+ scm_academy_adopt.option.voidcraft:0 "Voidcraft"
+ scm_academy_adopt.option.biology:0 "Biology"
+ scm_academy_adopt.option.statecraft:0 "Statecraft"
+ scm_academy_adopt.option.new_worlds:0 "New Worlds"
+ scm_academy_adopt.option.military_theory:0 "Military Theory"
+ scm_academy_adopt.option.materials:0 "Materials"
+ scm_academy_adopt.option.industry:0 "Industry"
+ scm_academy_adopt.option.rocketry:0 "Propulsion"
+  
+
+
+
+ any_war_participant_trigger:0 "Any War Participant"
+ effect_every_neighbor_country:0 "Every Neighbour Country"
+ effect_every_combatant_fleet:0 "Every Combatant Fleet"
+ 
+
+
+
+ planets_energy_produces_mult:0 "£energy  §YEnergy Credits§!"
+ planets_food_produces_mult:0 "£food  §YFood§!"
+ planets_minerals_produces_mult:0 "£minerals  §YMinerals§!"
+ 
+ mod_shipclass_mining_station_build_cost_mult:0 "Mining Station Build Cost"
+ mod_planet_miners_rare_crystals_produces_mult:0 "£rare_crystals  Rare Crystal Output from Crystal Miners"
+ mod_planet_metallurgists_energy_produces_add:0 "£energy  Energy from £job_foundry£ Metallurgists"
+ mod_planet_metallurgists_energy_upkeep_add:0 "£energy  Energy upkeep for £job_foundry£ Metallurgists"
+ 
+ mod_planets_energy_produces_mult:0 "Monthly Energy Credits"
+ mod_planets_food_produces_mult:0 "Monthly Food"
+ mod_planets_minerals_produces_mult:0 "Monthly Minerals"
+ 
+ mod_planet_clerk_energy_produces_mult:0 "£energy£ $energy$ from £job_clerk£ $job_clerk_plural$"
+ 
+
+
+
+ scm_remnants_nerf:0 "Concrete Jungle"
+ scm_remnants_nerf_desc:0 "Surprisingly enough, the long decayed infrastructure of this planet makes it very difficult to develop any new infrastructure. This concrete jungle is to be tamed if the local population is to flourish.\n\n§RModifier will be removed upon clearing every blocker§!"
+
+
+
+
+ mod_scm_aesthetics_adopt:0 "$tr_scm_aesthetics_adopt$"
+ mod_scm_aesthetics_adopt_desc:0 "$tr_scm_aesthetics_desc$"
+ 
+ mod_planet_priests_unity_produces_add:0 "Priest Unity Output"
+ mod_planet_priests_consumer_goods_upkeep_add:0 "Priest Consumer Goods Upkeep"
+ 
+ mod_subjects_influence_produces_add:0 "Subject Influence Production"
+ 
+
+
+
+ mod_est_shared_burdens_war:0 "The Permanent Revolution"
+ 
+ 
+
+
+ mod_scm_industry_5:0 "Forge World"
+ mod_scm_industry_5_desc:0 "$tr_scm_industry_5_delayed$"
+ mod_scm_industry_5_GC:0 "$mod_scm_industry_5$"
+ mod_scm_industry_5_GC_desc:0 "$mod_scm_industry_5_desc$"
+ mod_scm_industry_5_machines:0 "$mod_scm_industry_5$"
+ mod_scm_industry_5_machines_desc:0 "$mod_scm_industry_5_desc$"
+ 
+ mod_scm_hacking_2:0 "$tr_scm_hacking_2$"
+ mod_scm_hacking_4:0 "$tr_scm_hacking_4$"
+ 
+
+
+
+ mod_scm_generation_1_1:0 "Accumulation"
+ mod_scm_generation_1_2:0 "Accumulation"
+ mod_scm_generation_1_3:0 "Accumulation"
+ mod_scm_generation_1_4:0 "Accumulation"
+ 
+
+
+
+ envoy_unity_1_effect:2 "Gain §Y5§! Unity and §Y5%§! Trust Growth for each Envoy assigned to the federation by any member."
+ envoy_unity_2_effect:1 "Gain §Y5§! Unity and raise Trust Cap by §Y5§! for each Envoy assigned to the federation by any member."
+
+ BRANCH_OFFICE_NOT_ON_PI:0 "£trigger_no£ §RParanoid Isolationists religiously hunt down foreign markets on their worlds.§!"
+
+
+
+
+ requires_diplostance_not_isolationist:2 "$TRIGGER_FAIL$§RWe are focusing on our own diplomatic stance of §Y$diplo_stance_isolationist$§! and have little interest in diplomacy with other empires.§!"
+ requires_recipient_diplostance_not_isolationist:2 "$TRIGGER_FAIL$§RThey are focusing on their diplomatic stance of §Y$diplo_stance_isolationist$§! and have little interest in diplomacy with other empires.§!"
+ ACTION_ACTOR_MUST_NOT_BE_SCION:2 "$TRIGGER_FAIL$§RWe are a subject §Y$origin_scion$§! and rely on our overlord instead of engauging in diplomacy with other empires.§!"
+ ACTION_RECIPIENT_MUST_NOT_BE_SCION:2 "$TRIGGER_FAIL$§RThey are a subject §Y$origin_scion$§! and rely on their overlord instead of engauging in diplomacy with other empires.§!"

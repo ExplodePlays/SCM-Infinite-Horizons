@@ -1,0 +1,121 @@
+﻿l_english: 
+
+ mod_country_base_minor_artifacts_upkeep_add:0 "Country base £minor_artifacts£ §YMinor Artifacts§! upkeep"
+ minor_artifacts_deficit:0 "£minor_artifacts£ §YMinor Artifacts§! deficit"
+ 
+ fed_archotech_bonk: "§RArcane Knowledge Sharing§!"
+ fed_archotech_bonk_desc: "§RTHIS MEANS YOU HAVE ARCHOTECH SHIPS IN A FEDERATION FLEET!§!"
+
+ mod_ships_energy_upkeep_mult:0 "Ship energy upkeep"
+ 
+ tech_archotech_gauss:0 "Arcane Knowledge: Archotech Beam Weaponry"
+ tech_archotech_gauss_desc:0 "By delwing deeper into the inner-workings of ancient artifacts, we should be able to decypher certain arcane technologies."
+ 
+ tech_archotech_shield:0 "Arcane Knowledge: Archotech Shields"
+ tech_archotech_shield_desc:0 "$tech_archotech_gauss_desc$"
+ 
+ tech_archotech_armor:0 "Arcane Knowledge: Archotech Armor Plating"
+ tech_archotech_armor_desc:0 "$tech_archotech_gauss_desc$"
+ 
+ tech_archotech_wing:0 "Arcane Knowledge: Archotech Strike Craft"
+ tech_archotech_wing_desc:0 "$tech_archotech_gauss_desc$"
+ 
+ tech_archotech_sensor:0 "Arcane Knowledge: Archotech Sensors"
+ tech_archotech_sensor_desc:0 "$tech_archotech_gauss_desc$"
+ 
+ tech_archotech_thruster:0 "Arcane Knowledge: Archotech Thrusters"
+ tech_archotech_thruster_desc:0 "$tech_archotech_gauss_desc$"
+ 
+ tech_archotech_generator:0 "Arcane Knowledge: Archotech Generators"
+ tech_archotech_generator_desc:0 "$tech_archotech_gauss_desc$"
+ 
+ tech_archotech_gauss_lance:0 "Arcane Knowledge: Archotech Titanic Weaponry"
+ tech_archotech_gauss_lance_desc:0 "$tech_archotech_gauss_desc$"
+ 
+ GAUSS_BEAM:0 "Gauss Beam"
+ GAUSS_BEAM_DESC:0 "Gauss Beams are devastating weapons, capable of tearing apart their target at a fundemental sub-atomic level with terrifying efficiency."
+ SMALL_GAUSS_BEAM:0 "Small Gauss Beam"
+ SMALL_GAUSS_BEAM_DESC:0 "$GAUSS_BEAM_DESC$"
+ MEDIUM_GAUSS_BEAM:0 "Medium Gauss Beam"
+ MEDIUM_GAUSS_BEAM_DESC:0 "$GAUSS_BEAM_DESC$"
+ LARGE_GAUSS_BEAM:0 "Large Gauss Beam"
+ LARGE_GAUSS_BEAM_DESC:0 "$GAUSS_BEAM_DESC$"
+ GAUSS_LANCE_TITAN:0 "Titanic Gauss Lance"
+ GAUSS_LANCE_TITAN_DESC:0 "$GAUSS_BEAM_DESC$"
+ 
+ 
+ ARCHOTECH_SHIELD:0 "Archotech Shields"
+ ARCHOTECH_SHIELD_DESC:0 "The effectiveness of these arcane shields dwarfs any other concievable technology, we don't understand how they work, but atleast we now how to generate them."
+ SMALL_ARCHOTECH_SHIELD:0 "Small Archotech Shields"
+ SMALL_ARCHOTECH_SHIELD_desc:0 "$ARCHOTECH_SHIELD_DESC$"
+ MEDIUM_ARCHOTECH_SHIELD:0 "Medium Archotech Shields"
+ MEDIUM_ARCHOTECH_SHIELD_desc:0 "$ARCHOTECH_SHIELD_DESC$"
+ LARGE_ARCHOTECH_SHIELD:0 "Large Archotech Shields"
+ LARGE_ARCHOTECH_SHIELD_desc:0 "$ARCHOTECH_SHIELD_DESC$"
+ 
+ ARCHOTECH_ARMOR:0 "Archotech Armor Plating"
+ ARCHOTECH_ARMOR_DESC:0 "These arcane armor platings are made out of what seems to be living neutronium: it's not only denser than normal neutronium, it's also self-repairing."
+ SMALL_ARCHOTECH_ARMOR:0 "Small Archotech Armor Plating"
+ SMALL_ARCHOTECH_ARMOR_desc:0 "$ARCHOTECH_ARMOR_DESC$"
+ MEDIUM_ARCHOTECH_ARMOR:0 "Medium Archotech Armor Plating"
+ MEDIUM_ARCHOTECH_ARMOR_desc:0 "$ARCHOTECH_ARMOR_DESC$"
+ LARGE_ARCHOTECH_ARMOR:0 "Large Archotech Armor Plating"
+ LARGE_ARCHOTECH_ARMOR_desc:0 "$ARCHOTECH_ARMOR_DESC$"
+ 
+ ARCHOTECH_FIGHTER_WING:0 "Archotech Strike Craft"
+ ARCHOTECH_FIGHTER_WING_DESC:0 "These arcane fighters utilize yet to be understood propulsion, weaponry and pilot-sync technologies. The blueprints themselves mention something about being designed by maritime pirates..."
+ 
+ ARCHOTECH_SENSOR:0 "Archotech Sensors"
+ ARCHOTECH_SENSOR_DESC:0 "These arcane senors track object via, what seems to be, inter-dimensional wavelengths."
+ 
+ SMALL_ARCHOTECH_THRUSTER:0 "Archotech Thrusters"
+ SMALL_ARCHOTECH_THRUSTER_DESC:0 "These thrusters utilize arcane technology to generate propulsion, by seemingly pushing off of compact dimensions."
+ DESTROYER_ARCHOTECH_THRUSTER: "$SMALL_ARCHOTECH_THRUSTER$"
+ DESTROYER_ARCHOTECH_THRUSTER_DESC:0 "$SMALL_ARCHOTECH_THRUSTER_DESC$"
+ CRUISER_SHIP_ARCHOTECH_THRUSTER: "$SMALL_ARCHOTECH_THRUSTER$"
+ CRUISER_SHIP_ARCHOTECH_THRUSTER_DESC:0 "$SMALL_ARCHOTECH_THRUSTER_DESC$"
+ BATTLESHIP_SHIP_ARCHOTECH_THRUSTER: "$SMALL_ARCHOTECH_THRUSTER$"
+ BATTLESHIP_SHIP_ARCHOTECH_THRUSTER_DESC:0 "$SMALL_ARCHOTECH_THRUSTER_DESC$"
+ TITAN_SHIP_ARCHOTECH_THRUSTER: "$SMALL_ARCHOTECH_THRUSTER$"
+ TITAN_SHIP_ARCHOTECH_THRUSTER_DESC:0 "$SMALL_ARCHOTECH_THRUSTER_DESC$"
+ COLOSSUS_SHIP_ARCHOTECH_THRUSTER: "$SMALL_ARCHOTECH_THRUSTER$"
+ COLOSSUS_SHIP_ARCHOTECH_THRUSTER_DESC:0 "$SMALL_ARCHOTECH_THRUSTER_DESC$"
+ 
+ REACTOR_ARCHOTECH_GENERATOR:0 "Archotech Generator"
+ REACTOR_ARCHOTECH_GENERATOR_DESC:0 "These arcane generators create a massive amount of energy, overcharging the ships shields and still producing extra energy, which we can siphon into our energy grid."
+ archotech_generator_tooltip:0 "Ship shield mult: §G+33%§!\nShip generates §G5§! £energy §YEnergy§!"
+ 
+ GAUSS_LANCE_TITANIC:0 "Titanic Gauss Lance"
+ GAUSS_LANCE_TITANIC_DESC:0 "A massive gauss lance, capable of ripping through planets and stars with little trouble."
+ 
+ GAUSS_LANCE_XL:0 "Gauss Lance"
+ GAUSS_LANCE_XL_DESC:0 "A large gauss beam, capable of unmatched destruction, by tearing apart massive structure on a sub-atomic level."
+ 
+ tech_space_defense_station_2:0 "Grand Fortresses"
+ tech_space_defense_station_2_desc:0 "We now have the ability to construct large defensive platforms."
+ 
+ building_grand_planetary_shield_generator:0 "Grand Shield Generator"
+ building_grand_planetary_shield_generator_desc:0 "A superior version of the planetary shield generator, which even blocks planet-killer weapons from hurting the planet."
+ has_grand_shield:0 "Planet has a Grand Shield Generator"
+ 
+ tech_power_plant_5:0 "Arcane Power Plants"
+ tech_power_plant_5_desc:0 "There are secret ways, only known to the most intelligent, of how to generate more energy."
+  
+ tech_space_science_6:0 "Arcane Space Science"
+ tech_space_science_6_desc:0 "There are secret ways, only known to the most intelligent, of how to generate more research."
+  
+ tech_space_mining_6:0 "Arcane Space Mining"
+ tech_space_mining_6_desc:0 "There are secret ways, only known to the most intelligent, of how to generate more resources."
+ 
+ tech_AP_improved_ship_health:0 "Arcane Ship Hulls"
+ tech_AP_improved_ship_health_desc:0 "There are secret methods to cramming more hull into a ship..."
+ 
+ tech_AP_xeno_friend:0 "Arcane Diplomacy"
+ tech_AP_xeno_friend_desc:0 "Surely our great comprehension of the sciences will help us in interstellar politics."
+
+ PLATFORM_L_FISSION_REACTOR:0 "$FISSION_REACTOR$"
+ PLATFORM_L_FUSION_REACTOR:0 "$FUSION_REACTOR$"
+ PLATFORM_L_COLD_FUSION_REACTOR:0 "$COLD_FUSION_REACTOR$"
+ PLATFORM_L_ANTIMATTER_REACTOR:0 "$ANTIMATTER_REACTOR$"
+ PLATFORM_L_ZERO_POINT_REACTOR:0 "$ZERO_POINT_REACTOR$"
+ PLATFORM_L_DARK_MATTER_REACTOR:0 "$DARK_MATTER_REACTOR$"

@@ -1,0 +1,1060 @@
+####Warmonger
+ap_trial_by_fire = {
+	on_enabled = {
+		custom_tooltip = "ap_trial_by_fire_tooltip"
+		custom_tooltip = "gov_ascension_perk_T1"
+	}
+	modifier = {
+		commander_skill_levels = 3
+		ship_experience_gain_mult = 1
+		starbase_shipyard_build_cost_mult = -0.15
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "gov_ascension_selected"
+			NOR = {
+				has_ascension_perk = ap_trial_by_fire
+				has_ascension_perk = ap_eternal_vigilance
+				has_ascension_perk = ap_universal_transactions
+				has_ascension_perk = ap_shared_destiny
+				has_ascension_perk = ap_mastery_of_nature
+				has_ascension_perk = ap_void_shapers
+				has_ascension_perk = ap_technological_ascendancy
+				has_ascension_perk = ap_cult_of_personality
+				has_ascension_perk = ap_reverent_mines
+			}
+		}
+	}
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_trial_by_fire
+			has_ascension_perk = ap_eternal_vigilance
+			has_ascension_perk = ap_universal_transactions
+			has_ascension_perk = ap_shared_destiny
+			has_ascension_perk = ap_mastery_of_nature
+			has_ascension_perk = ap_void_shapers
+			has_ascension_perk = ap_technological_ascendancy
+			has_ascension_perk = ap_cult_of_personality
+			has_ascension_perk = ap_reverent_mines
+		}
+	}
+}
+
+ap_path_of_conquest = {
+	on_enabled = {
+		custom_tooltip = "ap_path_of_conquest_tooltip"
+		custom_tooltip = "gov_ascension_perk_T2"
+	}
+	modifier = {
+		country_war_exhaustion_mult = -0.10
+		army_experience_gain_mult = 0.5
+		country_naval_cap_mult = 0.2
+	}
+	possible = {
+		has_ascension_perk = ap_trial_by_fire
+		custom_tooltip = {
+			fail_text = "missing_tech_doctrine_navy_size_2"
+			has_technology = tech_doctrine_navy_size_2
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_trial_by_fire
+		NOT = {
+			has_ascension_perk = ap_path_of_conquest
+		}
+	}
+}
+
+ap_the_great_conquerors = {
+	on_enabled = {
+		custom_tooltip = "ap_the_great_conquerors_tooltip"
+		custom_tooltip = "gov_ascension_perk_T3"
+	}
+	modifier = {
+		country_claim_influence_cost_mult = -0.05
+		country_war_exhaustion_mult = -0.10
+		army_damage_mult = 0.33
+		army_health = 0.33
+	}
+	possible = {
+		has_ascension_perk = ap_path_of_conquest
+		custom_tooltip = {
+			fail_text = "missing_tech_doctrine_navy_size_4"
+			has_technology = tech_doctrine_navy_size_4
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_path_of_conquest
+		NOT = {
+			has_ascension_perk = ap_the_great_conquerors
+		}
+	}
+}
+
+###The Great Turtling Build
+ap_eternal_vigilance = {
+	on_enabled = {
+		custom_tooltip = "ap_eternal_vigilance_tooltip"
+		custom_tooltip = "gov_ascension_perk_T1"
+	}
+	modifier = {
+		shipclass_starbase_damage_mult = 0.1
+		shipclass_starbase_hull_mult = 0.1
+		shipclass_military_station_damage_mult = 0.1
+		ship_military_station_small_cost_mult = -0.15
+		starbase_defense_platform_capacity_add = 5
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "gov_ascension_selected"
+			NOR = {
+				has_ascension_perk = ap_trial_by_fire
+				has_ascension_perk = ap_eternal_vigilance
+				has_ascension_perk = ap_universal_transactions
+				has_ascension_perk = ap_shared_destiny
+				has_ascension_perk = ap_mastery_of_nature
+				has_ascension_perk = ap_void_shapers
+				has_ascension_perk = ap_technological_ascendancy
+				has_ascension_perk = ap_cult_of_personality
+				has_ascension_perk = ap_reverent_mines
+			}
+		}
+	}
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_trial_by_fire
+			has_ascension_perk = ap_eternal_vigilance
+			has_ascension_perk = ap_universal_transactions
+			has_ascension_perk = ap_shared_destiny
+			has_ascension_perk = ap_mastery_of_nature
+			has_ascension_perk = ap_void_shapers
+			has_ascension_perk = ap_technological_ascendancy
+			has_ascension_perk = ap_cult_of_personality
+			has_ascension_perk = ap_reverent_mines
+		}
+	}
+}
+
+ap_defence_of_the_ancients = {
+	on_enabled = {
+		custom_tooltip = "ap_defence_of_the_ancients_tooltip"
+		custom_tooltip = "gov_ascension_perk_T2"
+	}
+	modifier = {
+		shipclass_starbase_damage_mult = 0.1
+		shipclass_starbase_hull_mult = 0.1
+		shipclass_military_station_damage_mult = 0.1
+		ship_military_station_small_cost_mult = -0.15
+		starbase_defense_platform_capacity_add = 5
+	}
+	possible = {
+		has_ascension_perk = ap_eternal_vigilance
+		custom_tooltip = {
+			fail_text = "missing_tech_starbase_3"
+			has_technology = tech_starbase_3
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_eternal_vigilance
+		NOT = {
+			has_ascension_perk = ap_defence_of_the_ancients
+		}
+	}
+}
+
+ap_grand_fortresses = {
+	on_enabled = {
+		custom_tooltip = "ap_grand_fortresses_tooltip"
+		custom_tooltip = "gov_ascension_perk_T3"
+		hidden_effect = {
+			give_technology = {
+				tech = tech_modular_engineering
+				message = no
+			}
+			give_technology = {
+				tech = tech_space_defense_station_2
+				message = no
+			}
+		}
+	}
+	modifier = {
+	}
+	possible = {
+		has_ascension_perk = ap_defence_of_the_ancients
+		custom_tooltip = {
+			fail_text = "missing_tech_starbase_5"
+			has_technology = tech_starbase_5
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_defence_of_the_ancients
+		NOT = {
+			has_ascension_perk = ap_grand_fortresses
+		}
+	}
+}
+
+###Megacorp Ascension
+ap_universal_transactions = {
+	on_enabled = {
+		custom_tooltip = "free_commercial_pacts"
+		custom_tooltip = "ap_universal_transactions_tooltip"
+		custom_tooltip = "gov_ascension_perk_T1"
+	}
+	modifier = {
+		planet_branch_offices_cost_mult = -0.15
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "gov_ascension_selected"
+			NOR = {
+				has_ascension_perk = ap_trial_by_fire
+				has_ascension_perk = ap_eternal_vigilance
+				has_ascension_perk = ap_universal_transactions
+				has_ascension_perk = ap_shared_destiny
+				has_ascension_perk = ap_mastery_of_nature
+				has_ascension_perk = ap_void_shapers
+				has_ascension_perk = ap_technological_ascendancy
+				has_ascension_perk = ap_cult_of_personality
+				has_ascension_perk = ap_reverent_mines
+			}
+		}
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_trial_by_fire
+			has_ascension_perk = ap_eternal_vigilance
+			has_ascension_perk = ap_universal_transactions
+			has_ascension_perk = ap_shared_destiny
+			has_ascension_perk = ap_mastery_of_nature
+			has_ascension_perk = ap_void_shapers
+			has_ascension_perk = ap_technological_ascendancy
+			has_ascension_perk = ap_cult_of_personality
+			has_ascension_perk = ap_reverent_mines
+		}
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+ap_builders_of_nations = {
+	on_enabled = {
+		custom_tooltip = "ap_builders_of_nations_tooltip"
+		custom_tooltip = "gov_ascension_perk_T2"
+	}
+	modifier = {
+		planet_non_artificial_max_districts_add = 2
+		planet_building_build_speed_mult = 0.5
+		trade_value_mult = 0.15
+	}
+	possible = {
+		has_ascension_perk = ap_universal_transactions
+		custom_tooltip = {
+			fail_text = "missing_tech_space_trading"
+			has_technology = tech_space_trading
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_universal_transactions
+		NOT = {
+			has_ascension_perk = ap_builders_of_nations
+		}
+	}
+}
+
+ap_road_of_the_golden_void = {
+	on_enabled = {
+		custom_tooltip = "ap_road_of_the_golden_void_tooltip"
+		custom_tooltip = "gov_ascension_perk_T3"
+	}
+	modifier = {
+		job_merchant_per_pop = 0.02
+	}
+	possible = {
+		has_ascension_perk = ap_builders_of_nations
+		custom_tooltip = {
+			fail_text = "missing_tech_interstellar_economics"
+			has_technology = tech_interstellar_economics
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_builders_of_nations
+		NOT = {
+			has_ascension_perk = ap_road_of_the_golden_void
+		}
+	}
+}
+
+######Diplomatic Ascension
+ap_shared_destiny = {
+	on_enabled = {
+		custom_tooltip = "gov_ascension_perk_T1"
+	}
+	modifier = {
+		envoys_add = 1
+		diplo_weight_mult = 0.1
+		country_trust_cap_add = 50
+		country_trust_growth = 0.5
+		subject_integration_influence_cost_mult = -0.5
+		country_subject_trust_cap_add = 100
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "gov_ascension_selected"
+			NOR = {
+				has_ascension_perk = ap_trial_by_fire
+				has_ascension_perk = ap_eternal_vigilance
+				has_ascension_perk = ap_universal_transactions
+				has_ascension_perk = ap_shared_destiny
+				has_ascension_perk = ap_mastery_of_nature
+				has_ascension_perk = ap_void_shapers
+				has_ascension_perk = ap_technological_ascendancy
+				has_ascension_perk = ap_cult_of_personality
+				has_ascension_perk = ap_reverent_mines
+			}
+		}
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_trial_by_fire
+			has_ascension_perk = ap_eternal_vigilance
+			has_ascension_perk = ap_universal_transactions
+			has_ascension_perk = ap_shared_destiny
+			has_ascension_perk = ap_mastery_of_nature
+			has_ascension_perk = ap_void_shapers
+			has_ascension_perk = ap_technological_ascendancy
+			has_ascension_perk = ap_cult_of_personality
+			has_ascension_perk = ap_reverent_mines
+		}
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+}
+
+ap_tongues_of_silver = {
+	on_enabled = {
+		custom_tooltip = "gov_ascension_perk_T2"
+	}
+	modifier = {
+		envoys_add = 1
+		diplo_weight_mult = 0.2
+		envoy_improve_relations_mult = 0.5
+		envoy_harm_relations_mult = 0.5
+		resolutions_influence_cost_mult = -0.25
+		diplomacy_upkeep_mult = -0.5
+		add_base_country_intel = 5
+	}
+	possible = {
+		has_ascension_perk = ap_shared_destiny
+		custom_tooltip = {
+			fail_text = "missing_tech_xeno_diplomacy"
+			has_technology = tech_xeno_diplomacy
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_shared_destiny
+		NOT = {
+			has_ascension_perk = ap_tongues_of_silver
+		}
+	}
+}
+
+ap_words_of_truth = {
+	on_enabled = {
+		custom_tooltip = "gov_ascension_perk_T3"
+	}
+	modifier = {
+		envoys_add = 2
+		diplo_weight_mult = 0.2
+		diplomacy_upkeep_mult = -0.5
+		spy_network_daily_value_mult = 0.5
+		intel_encryption_add = 1
+		intel_decryption_add = 1
+		add_base_country_intel = 5
+	}
+	possible = {
+		has_ascension_perk = ap_tongues_of_silver
+		custom_tooltip = {
+			fail_text = "missing_tech_xeno_relations"
+			has_technology = tech_xeno_relations
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_tongues_of_silver
+		NOT = {
+			has_ascension_perk = ap_words_of_truth
+		}
+	}
+}
+
+####Gardener Ascension
+ap_mastery_of_nature = {
+	on_enabled = {
+		custom_tooltip = "allow_decision_mastery_of_nature"
+		custom_tooltip = "describe_decision_mastery_of_nature"
+		custom_tooltip = "gov_ascension_perk_T1"
+	}
+	modifier = {
+		deposit_blockers_cost_mult = -0.5
+		planet_non_artificial_max_districts_add = 2
+		planet_stability_add = 2.5
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "gov_ascension_selected"
+			NOR = {
+				has_ascension_perk = ap_trial_by_fire
+				has_ascension_perk = ap_eternal_vigilance
+				has_ascension_perk = ap_universal_transactions
+				has_ascension_perk = ap_shared_destiny
+				has_ascension_perk = ap_mastery_of_nature
+				has_ascension_perk = ap_void_shapers
+				has_ascension_perk = ap_technological_ascendancy
+				has_ascension_perk = ap_cult_of_personality
+				has_ascension_perk = ap_reverent_mines
+			}
+		}
+		NOT = {
+			has_ascension_perk = ap_lessons_of_the_seeders
+		}
+	}
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_trial_by_fire
+			has_ascension_perk = ap_eternal_vigilance
+			has_ascension_perk = ap_universal_transactions
+			has_ascension_perk = ap_shared_destiny
+			has_ascension_perk = ap_mastery_of_nature
+			has_ascension_perk = ap_void_shapers
+			has_ascension_perk = ap_technological_ascendancy
+			has_ascension_perk = ap_cult_of_personality
+			has_ascension_perk = ap_reverent_mines
+		}
+		NOT = {
+			has_ascension_perk = ap_lessons_of_the_seeders
+		}
+	}
+}
+
+ap_gardening_initiative = {
+	on_enabled = {
+		custom_tooltip = "ap_gardening_initiative_tooltip"
+		custom_tooltip = "gov_ascension_perk_T2"
+		hidden_effect = {
+			#if = {
+			#	limit = {
+			#		NOT = { has_technology = tech_climate_restoration }
+			#	}
+			#	add_research_option = tech_climate_restoration
+			#	add_tech_progress = {
+			#		tech = tech_climate_restoration
+			#		progress = 0.33
+			#	}
+			#}
+		}
+	}
+	modifier = {
+		planet_stability_add = 2.5
+		district_generator_max = 2
+		district_mining_max = 2
+		district_farming_max = 2
+	}
+	possible = {
+		has_ascension_perk = ap_mastery_of_nature
+		custom_tooltip = {
+			fail_text = "missing_tech_terrestrial_sculpting"
+			has_technology = tech_terrestrial_sculpting
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_mastery_of_nature
+		NOT = {
+			has_ascension_perk = ap_gardening_initiative
+		}
+	}
+}
+
+ap_world_shaper = {
+	on_enabled = {
+		custom_tooltip = "allow_gaia"
+		custom_tooltip = "ap_world_shaper_tooltip"
+		custom_tooltip = "gov_ascension_perk_T3"
+		hidden_effect = {
+			#if = {
+			#	limit = {
+			#		NOT = { has_technology = tech_ecological_adaptation }
+			#	}
+			#	add_research_option = tech_ecological_adaptation
+			#	add_tech_progress = {
+			#		tech = tech_ecological_adaptation
+			#		progress = 0
+			#	}
+			#}
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_tech_climate_restoration"
+			has_technology = tech_climate_restoration
+		}
+		has_ascension_perk = ap_gardening_initiative
+	}
+	modifier = {
+		planet_stability_add = 5
+		terraforming_cost_mult = -0.5
+	}
+	potential = {
+		has_ascension_perk = ap_gardening_initiative
+		NOT = {
+			has_ascension_perk = ap_world_shaper
+		}
+	}
+	ai_weight = {
+		factor = 5
+	}
+}
+
+###Lessons of the seeders
+ap_lessons_of_the_seeders = {
+	on_enabled = {
+		custom_tooltip = "allow_gaia"
+		custom_tooltip = "ap_lessons_of_the_seeders_tooltip"
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_tech_climate_restoration"
+			has_technology = tech_climate_restoration
+		}
+		has_origin = origin_life_seeded
+	}
+	modifier = {
+	}
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_mastery_of_nature
+		}
+		NOT = {
+			has_ascension_perk = ap_lessons_of_the_seeders
+		}
+		has_origin = origin_life_seeded
+	}
+	ai_weight = {
+		factor = 5
+	}
+}
+
+##Great Builders
+ap_void_shapers = {
+	on_enabled = {
+		custom_tooltip = "ap_void_shapers_tooltip"
+		custom_tooltip = "gov_ascension_perk_T1"
+	}
+	modifier = {
+		station_gatherers_produces_mult = 0.05
+		station_gatherers_cost_mult = -0.25
+		country_starbase_capacity_add = 1
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "gov_ascension_selected"
+			NOR = {
+				has_ascension_perk = ap_trial_by_fire
+				has_ascension_perk = ap_eternal_vigilance
+				has_ascension_perk = ap_universal_transactions
+				has_ascension_perk = ap_shared_destiny
+				has_ascension_perk = ap_mastery_of_nature
+				has_ascension_perk = ap_void_shapers
+				has_ascension_perk = ap_technological_ascendancy
+				has_ascension_perk = ap_cult_of_personality
+				has_ascension_perk = ap_reverent_mines
+			}
+		}
+	}
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_trial_by_fire
+			has_ascension_perk = ap_eternal_vigilance
+			has_ascension_perk = ap_universal_transactions
+			has_ascension_perk = ap_shared_destiny
+			has_ascension_perk = ap_mastery_of_nature
+			has_ascension_perk = ap_void_shapers
+			has_ascension_perk = ap_technological_ascendancy
+			has_ascension_perk = ap_cult_of_personality
+			has_ascension_perk = ap_reverent_mines
+		}
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+ap_space_engineers = {
+	on_enabled = {
+		custom_tooltip = "ap_space_engineers_tooltip"
+		custom_tooltip = "gov_ascension_perk_T2"
+	}
+	modifier = {
+		country_starbase_capacity_add = 1
+		megastructure_build_speed_mult = 0.15
+		country_megastructure_build_cap_add = 1
+	}
+	possible = {
+		has_ascension_perk = ap_void_shapers
+		custom_tooltip = {
+			fail_text = "missing_tech_space_mining_3"
+			has_technology = tech_space_mining_3
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_void_shapers
+		NOT = {
+			has_ascension_perk = ap_space_engineers
+		}
+	}
+}
+
+ap_great_builders = {
+	on_enabled = {
+		custom_tooltip = "ap_great_builders_tooltip"
+		custom_tooltip = "gov_ascension_perk_T3"
+	}
+	modifier = {
+		megastructure_build_speed_mult = 0.15
+		country_megastructure_build_cap_add = 1
+	}
+	possible = {
+		has_ascension_perk = ap_space_engineers
+		custom_tooltip = {
+			fail_text = "missing_tech_space_mining_5"
+			has_technology = tech_space_mining_5
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_space_engineers
+		NOT = {
+			has_ascension_perk = ap_great_builders
+		}
+	}
+}
+
+###Galactic Wonders AND ecus now for everyone
+ap_galactic_wonders_utopia_and_megacorp = {
+	on_enabled = {
+		custom_tooltip = "add_research_options_galactic_wonders_utopia_megacorp"
+		custom_tooltip = "gov_ascension_perk_T4"
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_mega_engineering
+					}
+				}
+				add_research_option = tech_mega_engineering
+				add_tech_progress = {
+					tech = tech_mega_engineering
+					progress = 0.33
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_ring_world
+					}
+				}
+				add_research_option = tech_ring_world
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_dyson_sphere
+					}
+				}
+				add_research_option = tech_dyson_sphere
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_matter_decompressor
+					}
+				}
+				add_research_option = tech_matter_decompressor
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_mega_shipyard
+					}
+				}
+				add_research_option = tech_mega_shipyard
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_juggernaut
+					}
+				}
+				add_research_option = tech_juggernaut
+			}
+		}
+	}
+	possible = {
+		OR = {
+			has_ascension_perk = ap_great_builders
+			has_ascension_perk = ap_the_great_conquerors
+			has_ascension_perk = ap_grand_fortresses
+			has_ascension_perk = ap_words_of_truth
+			has_ascension_perk = ap_world_shaper
+			has_ascension_perk = ap_unlimited_power
+			has_ascension_perk = ap_total_indoctrination
+			has_ascension_perk = ap_officina_magnificum
+			has_ascension_perk = ap_road_of_the_golden_void
+		}
+		has_technology = tech_mega_engineering
+	}
+	potential = {
+		OR = {
+			has_ascension_perk = ap_great_builders
+			has_ascension_perk = ap_the_great_conquerors
+			has_ascension_perk = ap_grand_fortresses
+			has_ascension_perk = ap_words_of_truth
+			has_ascension_perk = ap_world_shaper
+			has_ascension_perk = ap_unlimited_power
+			has_ascension_perk = ap_total_indoctrination
+			has_ascension_perk = ap_officina_magnificum
+			has_ascension_perk = ap_road_of_the_golden_void
+		}
+		NOR = {
+			has_ascension_perk = ap_arcology_project
+			has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+		}
+	}
+}
+
+ap_arcology_project = {
+	on_enabled = {
+		custom_tooltip = "allow_arcology_project"
+		custom_tooltip = "decision_arcology_project_effects"
+		custom_tooltip = "gov_ascension_perk_T4"
+	}
+	modifier = {
+		planet_districts_cost_mult = -0.25
+		planet_districts_upkeep_mult = -0.25
+		empire_size_districts_mult = -0.5
+	}
+	possible = {
+		OR = {
+			has_ascension_perk = ap_great_builders
+			has_ascension_perk = ap_the_great_conquerors
+			has_ascension_perk = ap_grand_fortresses
+			has_ascension_perk = ap_words_of_truth
+			has_ascension_perk = ap_world_shaper
+			has_ascension_perk = ap_unlimited_power
+			has_ascension_perk = ap_total_indoctrination
+			has_ascension_perk = ap_officina_magnificum
+			has_ascension_perk = ap_road_of_the_golden_void
+		}
+		owner = {
+			has_technology = tech_housing_2
+		}
+		owner = {
+			has_technology = tech_construction_templates
+		}
+		owner = {
+			has_technology = tech_terrestrial_sculpting
+		}
+		owner = {
+			has_technology = tech_power_hub_2
+		}
+	}
+	potential = {
+		OR = {
+			has_ascension_perk = ap_great_builders
+			has_ascension_perk = ap_the_great_conquerors
+			has_ascension_perk = ap_grand_fortresses
+			has_ascension_perk = ap_words_of_truth
+			has_ascension_perk = ap_world_shaper
+			has_ascension_perk = ap_unlimited_power
+			has_ascension_perk = ap_total_indoctrination
+			has_ascension_perk = ap_officina_magnificum
+			has_ascension_perk = ap_road_of_the_golden_void
+		}
+		NOR = {
+			has_ascension_perk = ap_arcology_project
+			has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+		}
+	}
+}
+
+###Stinky Science
+ap_technological_ascendancy = {
+	on_enabled = {
+		custom_tooltip = "ap_technological_ascendancy_rare"
+		custom_tooltip = "gov_ascension_perk_T1"
+	}
+	modifier = {
+		all_technology_research_speed = 0.05
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "gov_ascension_selected"
+			NOR = {
+				has_ascension_perk = ap_trial_by_fire
+				has_ascension_perk = ap_eternal_vigilance
+				has_ascension_perk = ap_universal_transactions
+				has_ascension_perk = ap_shared_destiny
+				has_ascension_perk = ap_mastery_of_nature
+				has_ascension_perk = ap_void_shapers
+				has_ascension_perk = ap_technological_ascendancy
+				has_ascension_perk = ap_cult_of_personality
+				has_ascension_perk = ap_reverent_mines
+			}
+		}
+	}
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_trial_by_fire
+			has_ascension_perk = ap_eternal_vigilance
+			has_ascension_perk = ap_universal_transactions
+			has_ascension_perk = ap_shared_destiny
+			has_ascension_perk = ap_mastery_of_nature
+			has_ascension_perk = ap_void_shapers
+			has_ascension_perk = ap_technological_ascendancy
+			has_ascension_perk = ap_cult_of_personality
+			has_ascension_perk = ap_reverent_mines
+		}
+	}
+}
+
+ap_secrets_of_the_galaxy = {
+	on_enabled = {
+		custom_tooltip = "ap_secrets_of_the_galaxy_tooltip"
+		custom_tooltip = "gov_ascension_perk_T2"
+	}
+	modifier = {
+	}
+	possible = {
+		has_ascension_perk = ap_technological_ascendancy
+		custom_tooltip = {
+			fail_text = "missing_tech_basic_science_lab_2"
+			has_technology = tech_basic_science_lab_2
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_technological_ascendancy
+		NOT = {
+			has_ascension_perk = ap_secrets_of_the_galaxy
+		}
+	}
+}
+
+ap_unlimited_power = {
+	on_enabled = {
+		custom_tooltip = "ap_unlimited_power_tooltip"
+		custom_tooltip = "gov_ascension_perk_T3"
+	}
+	modifier = {
+	}
+	possible = {
+		has_ascension_perk = ap_secrets_of_the_galaxy
+		custom_tooltip = {
+			fail_text = "missing_tech_basic_science_lab_3"
+			has_technology = tech_basic_science_lab_3
+		}
+	}
+	potential = {
+		has_ascension_perk = ap_secrets_of_the_galaxy
+		NOT = {
+			has_ascension_perk = ap_unlimited_power
+		}
+	}
+}
+
+###Culty Stuff
+# ap_cult_of_personality = {
+# 	on_enabled = {
+# 		custom_tooltip = "ap_cult_of_personality_tooltip"
+# 		custom_tooltip = "gov_ascension_perk_T1"
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = SCM_ap_events.11
+# 			}
+# 		}
+# 	}
+# 	modifier = {
+# 	}
+# 	possible = {
+# 		custom_tooltip = {
+# 			fail_text = "gov_ascension_selected"
+# 			NOR = {
+# 				has_ascension_perk = ap_trial_by_fire
+# 				has_ascension_perk = ap_eternal_vigilance
+# 				has_ascension_perk = ap_universal_transactions
+# 				has_ascension_perk = ap_shared_destiny
+# 				has_ascension_perk = ap_mastery_of_nature
+# 				has_ascension_perk = ap_void_shapers
+# 				has_ascension_perk = ap_technological_ascendancy
+# 				has_ascension_perk = ap_cult_of_personality
+# 				has_ascension_perk = ap_reverent_mines
+# 			}
+# 		}
+# 		NOT = {
+# 			has_ethic = ethic_gestalt_consciousness
+# 		}
+# 	}
+# 	potential = {
+# 		NOR = {
+# 			has_ascension_perk = ap_trial_by_fire
+# 			has_ascension_perk = ap_eternal_vigilance
+# 			has_ascension_perk = ap_universal_transactions
+# 			has_ascension_perk = ap_shared_destiny
+# 			has_ascension_perk = ap_mastery_of_nature
+# 			has_ascension_perk = ap_void_shapers
+# 			has_ascension_perk = ap_technological_ascendancy
+# 			has_ascension_perk = ap_cult_of_personality
+# 			has_ascension_perk = ap_reverent_mines
+# 		}
+# 		NOT = {
+# 			has_ethic = ethic_gestalt_consciousness
+# 		}
+# 	}
+# }
+
+# ap_one_vision = {
+# 	on_enabled = {
+# 		custom_tooltip = "ap_one_vision_tooltip"
+# 		custom_tooltip = "gov_ascension_perk_T2"
+# 	}
+# 	modifier = {
+# 		pop_amenities_usage_mult = -0.1
+# 		pop_government_ethic_attraction = 0.5
+# 	}
+# 	possible = {
+# 		has_ascension_perk = ap_cult_of_personality
+# 		custom_tooltip = {
+# 			fail_text = "missing_tech_artificial_moral_codes"
+# 			has_technology = tech_artificial_moral_codes
+# 		}
+# 	}
+# 	potential = {
+# 		has_ascension_perk = ap_cult_of_personality
+# 		NOT = {
+# 			has_ascension_perk = ap_one_vision
+# 		}
+# 	}
+# }
+
+# ap_total_indoctrination = {
+# 	on_enabled = {
+# 		custom_tooltip = "ap_total_indoctrination_tooltip"
+# 		custom_tooltip = "gov_ascension_perk_T3"
+# 	}
+# 	modifier = {
+# 	}
+# 	possible = {
+# 		has_ascension_perk = ap_one_vision
+# 		custom_tooltip = {
+# 			fail_text = "missing_tech_synthetic_thought_patterns"
+# 			has_technology = tech_synthetic_thought_patterns
+# 		}
+# 	}
+# 	potential = {
+# 		has_ascension_perk = ap_one_vision
+# 		NOT = {
+# 			has_ascension_perk = ap_total_indoctrination
+# 		}
+# 	}
+# }
+
+# ###Manufactorium
+# ap_reverent_mines = {
+# 	on_enabled = {
+# 		custom_tooltip = "ap_reverent_mines_tooltip"
+# 		custom_tooltip = "gov_ascension_perk_T1"
+# 	}
+# 	modifier = {
+# 	}
+# 	possible = {
+# 		custom_tooltip = {
+# 			fail_text = "gov_ascension_selected"
+# 			NOR = {
+# 				has_ascension_perk = ap_trial_by_fire
+# 				has_ascension_perk = ap_eternal_vigilance
+# 				has_ascension_perk = ap_universal_transactions
+# 				has_ascension_perk = ap_shared_destiny
+# 				has_ascension_perk = ap_mastery_of_nature
+# 				has_ascension_perk = ap_void_shapers
+# 				has_ascension_perk = ap_technological_ascendancy
+# 				has_ascension_perk = ap_cult_of_personality
+# 				has_ascension_perk = ap_reverent_mines
+# 			}
+# 		}
+# 	}
+# 	potential = {
+# 		NOR = {
+# 			has_ascension_perk = ap_trial_by_fire
+# 			has_ascension_perk = ap_eternal_vigilance
+# 			has_ascension_perk = ap_universal_transactions
+# 			has_ascension_perk = ap_shared_destiny
+# 			has_ascension_perk = ap_mastery_of_nature
+# 			has_ascension_perk = ap_void_shapers
+# 			has_ascension_perk = ap_technological_ascendancy
+# 			has_ascension_perk = ap_cult_of_personality
+# 			has_ascension_perk = ap_reverent_mines
+# 		}
+# 	}
+# }
+
+# ap_sacrificial_planets = {
+# 	on_enabled = {
+# 		custom_tooltip = "ap_sacrificial_planets_tooltip"
+# 		custom_tooltip = "gov_ascension_perk_T2"
+# 	}
+# 	modifier = {
+# 	}
+# 	possible = {
+# 		has_ascension_perk = ap_reverent_mines
+# 		custom_tooltip = {
+# 			fail_text = "missing_tech_advanced_metallurgy_1"
+# 			has_technology = tech_advanced_metallurgy_1
+# 		}
+# 	}
+# 	potential = {
+# 		has_ascension_perk = ap_reverent_mines
+# 		NOT = {
+# 			has_ascension_perk = ap_sacrificial_planets
+# 		}
+# 	}
+# }
+
+# ap_officina_magnificum = {
+# 	on_enabled = {
+# 		custom_tooltip = "ap_officina_magnificum_tooltip"
+# 		custom_tooltip = "gov_ascension_perk_T3"
+# 	}
+# 	modifier = {
+# 	}
+# 	possible = {
+# 		has_ascension_perk = ap_sacrificial_planets
+# 		custom_tooltip = {
+# 			fail_text = "missing_tech_advanced_metallurgy_2"
+# 			has_technology = tech_advanced_metallurgy_2
+# 		}
+# 	}
+# 	potential = {
+# 		has_ascension_perk = ap_sacrificial_planets
+# 		NOT = {
+# 			has_ascension_perk = ap_officina_magnificum
+# 		}
+# 	}
+# }

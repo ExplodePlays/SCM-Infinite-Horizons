@@ -1,0 +1,861 @@
+music = {
+	name = "GalacticCoreDLC"
+	file = "GalacticCoreDLC.ogg"
+	volume = 0.80
+}
+
+music = {
+	name = "BeyondInfinity"
+	file = "BeyondInfinity.ogg"
+	volume = 0.80
+}
+
+music = {
+	name = "BeyondTheVeil"
+	file = "BeyondTheVeil.ogg"
+	volume = 0.80
+}
+
+music = {
+	name = "DeadByDaylight"
+	file = "DeadByDaylight.ogg"
+	volume = 0.80
+}
+
+music = {
+	name = "DeusPatriaRei"
+	file = "DeusPatriaRei.ogg"
+	volume = 0.80
+}
+
+music = {
+	name = "GalacticCustodian"
+	file = "GalacticCustodian.ogg"
+	volume = 0.80
+}
+
+music = {
+	name = "InfiniteHorizonsTheme"
+	file = "InfiniteHorizonsTheme.ogg"
+	volume = 0.80
+}
+
+music = {
+	name = "RebornEpicTheme"
+	file = "RebornEpicTheme.ogg"
+	volume = 0.80
+}
+
+music = {
+	name = "ScoutingIntro"
+	file = "ScoutingIntro.ogg"
+	volume = 0.80
+}
+
+music = {
+	name = "SpaceExplorer"
+	file = "SpaceExplorer.ogg"
+	volume = 0.80
+}
+
+music = {
+	name = "Alienhand - Falling classic"
+	file = "Alienhand - Falling classic.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Alienhand - Long way home"
+	file = "Alienhand - Long way home.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Alienhand - Starsouls"
+	file = "Alienhand - Starsouls.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Alienhand - Circle of Life"
+	file = "Alienhand - Circle of Life.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Alienhand - The Kill"
+	file = "Alienhand - The Kill.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Alienhand - Dark Corners"
+	file = "Alienhand - Dark Corners.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Alienhand - Catarina"
+	file = "Alienhand - Catarina.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Alienhand - Forever lost"
+	file = "Alienhand - Forever lost.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - But Still we Goon"
+	file = "Eve Online - But Still we Goon.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - Revelations Expansion Theme"
+	file = "Eve Online - Revelations Expansion Theme.ogg"
+	volume = 0.50
+}
+
+
+music = {
+	name = "Eve Online - Trinity Login Theme"
+	file = "Eve Online - Trinity Login Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - Tomorrows Never Ending Yesterday"
+	file = "Eve Online - Tomorrows Never Ending Yesterday.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - New Moon"
+	file = "Eve Online - New Moon.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - Seek and you shall find"
+	file = "Eve Online - Seek and you shall find.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - Merchants Looters and Ghosts"
+	file = "Eve Online - Merchants Looters and Ghosts.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - We fight proud for the holder"
+	file = "Eve Online - We fight proud for the holder.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - These sovereign Systems"
+	file = "Eve Online - These sovereign Systems.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - Parallax Release Theme"
+	file = "Eve Online - Parallax Release Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - Vanguard Release Theme"
+	file = "Eve Online - Vanguard Release Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - Galatea Release Theme"
+	file = "Eve Online - Galatea Release Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - Carnyx Release Theme"
+	file = "Eve Online - Carnyx Release Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - Scylla Release Theme"
+	file = "Eve Online - Scylla Release Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - Tiamat Release Theme"
+	file = "Eve Online - Tiamat Release Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Stellar Drone - Billions and Billions"
+	file = "Stellar Drone - Billions and Billions.ogg"
+	volume = 0.50
+
+}
+
+music = {
+	name = "Mass Effect 2 - The Illusiveman"
+	file = "Mass Effect 2 - The Illusiveman.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Endless Space - The Endless"
+	file = "Endless Space - The Endless.ogg"
+	volume = 0.45
+}
+
+music = {
+	name = "Endless Space - Gravity Well"
+	file = "Endless Space - Gravity Well.ogg"
+	volume = 0.45
+}
+
+music = {
+	name = "Mass Effect 3 - A Future for the Krogan"
+	file = "Mass Effect 3 - A Future for the Krogan.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Mass Effect 3 - I was lost without you"
+	file = "Mass Effect 3 - I was lost without you.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Mass Effect 3 - An end once and for all"
+	file = "Mass Effect 3 - An end once and for all.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Endless Space - Slice and collide"
+	file = "Endless Space - Slice and collide.ogg"
+	volume = 0.45
+}
+
+music = {
+	name = "Endless Space - Flawless Theory"
+	file = "Endless Space - Flawless Theory.ogg"
+	volume = 0.45
+}
+
+music = {
+	name = "John Dreamer - End of my journey"
+	file = "John Dreamer - End of my journey.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "John Williams - The Scavenger"
+	file = "John Williams - The Scavenger.ogg"
+	volume = 0.60
+}
+
+music = {
+	name = "Dead Space - 3200 Years ago on an icy Planet"
+	file = "Dead Space - 3200 Years ago on an icy Planet.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Mass Effect 3 - Wake up Extended Cut Soundtrack"
+	file = "Mass Effect 3 - Wake up Extended Cut Soundtrack.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Mass Effect 3 - I will watch over those who live on"
+	file = "Mass Effect 3 - I will watch over those who live on.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Mass Effect 3 - I am alive and i am not alone"
+	file = "Mass Effect 3 - I am alive and i am not alone.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Mass Effect 2 - What the future holds"
+	file = "Mass Effect 2 - What the future holds.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Mass Effect 2 - Charges of Treason"
+	file = "Mass Effect 2 - Charges of Treason.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Command and Conquer 4 - Welcome back Commander"
+	file = "Command and Conquer 4 - Welcome back Commander.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Tron Legacy - Overture"
+	file = "Tron Legacy - Overture.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Tron Legacy - Recognizer"
+	file = "Tron Legacy - Recognizer.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Tron Legacy - Armory"
+	file = "Tron Legacy - Armory.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Tron Legacy - Flynn lives"
+	file = "Tron Legacy - Flynn lives.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Interstellar - Cornfield chase"
+	file = "Interstellar - Cornfield chase.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Interstellar - Stay"
+	file = "Interstellar - Stay.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Elysium - Breaking a Promise"
+	file = "Elysium - Breaking a Promise.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Inception - Time"
+	file = "Inception - Time.ogg"
+	volume = 0.50
+}
+
+
+music = {
+	name = "The Martian - Making Water"
+	file = "The Martian - Making Water.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "The Martian - Mars"
+	file = "The Martian - Mars.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "The Martian - Messages from Hermes"
+	file = "The Martian - Messages from Hermes.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Endless Space 2 - Memories of the Lost"
+	file = "Endless Space 2 - Memories of the Lost.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Endless Space 2 - Quantum dub"
+	file = "Endless Space 2 - Quantum dub.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Halo 4 - Legacy"
+	file = "Halo 4 - Legacy.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Halo 4 - Requiem"
+	file = "Halo 4 - Requiem.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "X Rebirth - Birth of New Era"
+	file = "X Rebirth - Birth of New Era.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "X Rebirth - Main Theme"
+	file = "X Rebirth - Main Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "X Rebirth - The Teladi Outpost"
+	file = "X Rebirth - The Teladi Outpost.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Deus Ex Human Revolution - The Mole"
+	file = "Deus Ex Human Revolution - The Mole.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Deus Ex Human Revolution - Singapore Omega Lab Ambient"
+	file = "Deus Ex Human Revolution - Singapore Omega Lab Ambient.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Deus Ex Human Revolution - Penthouse"
+	file = "Deus Ex Human Revolution - Penthouse.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Deus Ex Human Revolution - Limb Clinic"
+	file = "Deus Ex Human Revolution - Limb Clinic.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Deus Ex Human Revolution - Adam Jensens Apartment"
+	file = "Deus Ex Human Revolution - Adam Jensens Apartment.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Endless Legend - Time of Change"
+	file = "Endless Legend - Time of Change.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Endless Space - Falling Night Stars"
+	file = "Endless Space - Falling Night Stars.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - yc1183 Theme"
+	file = "Eve Online - yc1183 Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Eve Online - yc1185 Theme"
+	file = "Eve Online - yc1185 Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Moon - Memories someone well never know"
+	file = "Moon - Memories someone well never know.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Two Steps From Hell - Across the Bloodwater"
+	file = "Two Steps From Hell - Across the Bloodwater.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "XCom Enemy Unknown - Breaking Ground"
+	file = "XCom Enemy Unknown - Breaking Ground.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Anno 2070 - God smiles"
+	file = "Anno 2070 - God smiles.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Anno 2205 - Global Union Anthem"
+	file = "Anno 2205 - Global Union Anthem.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Halo Wars 2 - Menu Theme"
+	file = "Halo Wars 2 - Menu Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Halo Wars 2 - Isabels Awakening"
+	file = "Halo Wars 2 - Isabels Awakening.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Project Cars 2 - The Long Road"
+	file = "Project Cars 2 - The Long Road.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Mass Effect Andromeda - Heleus"
+	file = "Mass Effect Andromeda - Heleus.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Destiny - The Traveler"
+	file = "Destiny - The Traveler.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Destiny - Excerpt from the Hope"
+	file = "Destiny - Excerpt from the Hope.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Destiny - Excerpt from the Ecstasy"
+	file = "Destiny - Excerpt from the Ecstasy.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Destiny 2 - Inner Light"
+	file = "Destiny 2 - Inner Light.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Destiny 2 - Journey (featuring Kronos Quartet)"
+	file = "Destiny 2 - Journey (featuring Kronos Quartet).ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Aphex Twin - Stone In Focus"
+	file = "Aphex Twin - Stone In Focus.ogg"
+	volume = 0.40
+}
+
+music = {
+	name = "Bensound - Relaxing"
+	file = "Bensound - Relaxing.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Captain Panic! & Systek - Proxy"
+	file = "Captain Panic! & Systek - Proxy.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Interstellar - No Time For Caution"
+	file = "Interstellar - No Time For Caution.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Stellardrone - Penumbra (Remix)"
+	file = "Stellardrone - Penumbra (Remix).ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Anno 2205 - Dear Distant Earth"
+	file = "Anno 2205 - Dear Distant Earth.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Anno 2205 - Helium 3"
+	file = "Anno 2205 - Helium 3.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Anno 2205 - Lunar by Birth"
+	file = "Anno 2205 - Lunar by Birth.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Anno 2205 - The Second Wave Overture"
+	file = "Anno 2205 - The Second Wave Overture.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Hegemonia - Ambient3"
+	file = "Hegemonia - Ambient3.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Hegemonia - Ambient6"
+	file = "Hegemonia - Ambient6.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Hegemonia - Ambient11"
+	file = "Hegemonia - Ambient11.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Hegemonia - Main Theme"
+	file = "Hegemonia - Main Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Homeworld - Adagio for Strings"
+	file = "Homeworld - Adagio for Strings.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Age of Wonders Planetfall - Celestium"
+	file = "Age of Wonders Planetfall - Celestium.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Age of Wonders Planetfall - Fog of War"
+	file = "Age of Wonders Planetfall - Fog of War.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Age of Wonders Planetfall - I Gaze Into Infinity"
+	file = "Age of Wonders Planetfall - I Gaze Into Infinity.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Age of Wonders Planetfall - Lunar Labour"
+	file = "Age of Wonders Planetfall - Lunar Labour.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Age of Wonders Planetfall - Promethean"
+	file = "Age of Wonders Planetfall - Promethean.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Age of Wonders Planetfall - Terraformer"
+	file = "Age of Wonders Planetfall - Terraformer.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Age of Wonders Planetfall - Tranquility"
+	file = "Age of Wonders Planetfall - Tranquility.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Naruto Shippuden OST 3 - Decision"
+	file = "Naruto Shippuden OST 3 - Decision.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Christian Sandquist - Wanderers"
+	file = "Christian Sandquist - Wanderers.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Clinton Shorter - Prawnkus"
+	file = "Clinton Shorter - Prawnkus.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Deus Ex Mankind Divided - Main Menu Theme"
+	file = "Deus Ex Mankind Divided - Main Menu Theme.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Deus Ex Mankind Divided - TF29"
+	file = "Deus Ex Mankind Divided - TF29.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Dune 2 - Battle for Arrakis - Command Post (remake)"
+	file = "Dune 2 - Battle for Arrakis - Command Post (remake).ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Dune 2 - Battle for Arrakis - Turbulence - Orchestral Music Remake"
+	file = "Dune 2 - Battle for Arrakis - Turbulence - Orchestral Music Remake.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Elite Dagerous - Exploration - Neutral - Lonely Pulsar"
+	file = "Elite Dagerous - Exploration - Neutral - Lonely Pulsar.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Elite Dangerous - Frameshift & Starports - Frameshift Suite - First Movement - Andromeda"
+	file = "Elite Dangerous - Frameshift & Starports - Frameshift Suite - First Movement - Andromeda.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Emperor - Battle for Dune - Sand Excursion"
+	file = "Emperor - Battle for Dune - Sand Excursion.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Frozen Synapse - Menu"
+	file = "Frozen Synapse - Menu.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Hans Zimmer - Someone Lived This"
+	file = "Hans Zimmer - Someone Lived This.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "It Follows - Detroit"
+	file = "It Follows - Detroit.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Limbo - Menu"
+	file = "Limbo - Menu.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Mass Effect Andromeda - Undiscovered"
+	file = "Mass Effect Andromeda - Undiscovered.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Michael McCann - There And Back Again"
+	file = "Michael McCann - There And Back Again.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Michiel van den Bos - Home Base"
+	file = "Michiel van den Bos - Home Base.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Mirrors Edge Catalyst - Faith"
+	file = "Mirrors Edge Catalyst - Faith.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Quantum Break - A Whisper"
+	file = "Quantum Break - A Whisper.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Sam Hulick - Ancient Sands"
+	file = "Sam Hulick - Ancient Sands.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Sam Hulick - The Colossus"
+	file = "Sam Hulick - The Colossus.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Sins of a solar Empire - Expulsion"
+	file = "Sins of a solar Empire - Expulsion.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Sins of a solar Empire - ten thousand years"
+	file = "Sins of a solar Empire - ten thousand years.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Sins of a solar Empire - The Fallen Empire"
+	file = "Sins of a solar Empire - The Fallen Empire.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Stellar Drone - Red Giant"
+	file = "Stellar Drone - Red Giant.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Synchronicity - Absence Of Paradox"
+	file = "Synchronicity - Absence Of Paradox.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Synchronicity - Kmc014"
+	file = "Synchronicity - Kmc014.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "The Enigma tng - deceptive metropolis"
+	file = "The Enigma tng - deceptive metropolis.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "XCOM 2 - Lazarus"
+	file = "XCOM 2 - Lazarus.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "Big Giant Circles - The Echo"
+	file = "Big Giant Circles - The Echo.ogg"
+	volume = 0.50
+}
+

@@ -1,0 +1,1151 @@
+#Veik tu prakeiktas grybe po velniais
+galactic_core_initializer = {
+	usage_odds = 0
+	class = "sc_supermassive_black_hole"
+	name = "The Core"
+	flags = { galactic_core_system_flag inner_cluster_hyperlane_flag }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 200 }
+	planet = {
+		name = "The Core"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 150
+		has_ring = no
+		init_effect = { 
+			prevent_anomaly = yes
+			clear_deposits = yes
+			add_deposit = d_galactic_core
+			create_country = {
+				name = "NAME_core_guardian"
+				type = guardian_stellarite
+				flag = {
+					icon = {
+						category = "zoological"
+						file = "flag_zoological_1.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors={
+						"black"
+						"black"
+						"null"
+						"null"
+					}
+				}
+			}
+			last_created_country = {
+				save_global_event_target_as = core_stellar_guardian
+			}
+			create_fleet = {
+				name = "NAME_Stellarite_Devourer"
+				settings = {
+					spawn_debris = no 
+					is_boss = yes
+				}
+				effect = {
+					create_ship = {
+						name = "NAME_Stellar_Devourer"
+						design = "NAME_Stellarite"
+					}
+					set_owner = event_target:core_stellar_guardian
+					set_location = PREV
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 100
+				}
+			}
+		}
+	}
+	
+	change_orbit = 100
+
+	planet = {
+		name = "Old Lantea"
+		class = pc_relic
+		size = 30
+		has_ring = no
+		orbit_angle = { min = 90 max = 270 }
+
+		init_effect = { 
+			prevent_anomaly = yes
+			clear_deposits = yes
+			relic_world_deposits = yes
+			add_deposit = d_lantean_relic_site
+			add_modifier =  { modifier = old_lantea_modifier days = -1 }
+			set_planet_flag = old_lantea_flag
+			create_archaeological_site = old_lantea_arc_site
+		}
+
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		name = "New Lantea"
+		class = pc_shattered
+		size = 18
+		has_ring = no
+		orbit_angle = { min = 90 max = 270 }
+
+		init_effect = { 
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_planet_flag = new_lantea_flag
+		}
+
+	}
+
+	init_effect = {
+		save_global_event_target_as = galactic_core_location
+	}	
+
+}
+
+gate_carron_initializer = {
+	usage_odds = 0
+	class = "sc_black_hole"
+	name = "Gate Carron"
+	flags = { inner_cluster_hyperlane_flag }
+	
+	asteroid_belt = { type = rocky_asteroid_belt radius = 50 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 100 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 120 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 140 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 160 }
+	
+	planet = {
+		name = "Carron"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 60
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}	
+	
+	change_orbit = 50
+	
+	planet = {
+		count = { min = 2 max = 3 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+		init_effect = {
+		clear_deposits = yes
+		add_random_orbital_deposit = yes
+		add_random_orbital_deposit = yes
+		add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 50
+	
+	planet = {
+		count = { min = 2 max = 3 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+		init_effect = {
+		clear_deposits = yes
+		add_random_orbital_deposit = yes
+		add_random_orbital_deposit = yes
+		add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		count = { min = 2 max = 3 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+		init_effect = {
+		clear_deposits = yes
+		add_random_orbital_deposit = yes
+		add_random_orbital_deposit = yes
+		add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		count = { min = 2 max = 3 }
+		class = pc_ice_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+		init_effect = {
+		clear_deposits = yes
+		add_random_orbital_deposit = yes
+		add_random_orbital_deposit = yes
+		add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		count = { min = 2 max = 3 }
+		class = pc_ice_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+		init_effect = {
+		clear_deposits = yes
+		add_random_orbital_deposit = yes
+		add_random_orbital_deposit = yes
+		add_random_orbital_deposit = yes
+		}
+	}
+	
+}
+
+gate_valion_initializer = {
+	usage_odds = 0
+	class = "sc_black_hole"
+	name = "Gate Valion"
+	flags = { inner_cluster_hyperlane_flag }
+	#asteroid_belt = { type = rocky_asteroid_belt radius = 200 }
+	planet = {
+		name = "Valion"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 63
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+
+	change_orbit = 60
+
+	planet = {
+		name = "Dunsparce"
+		class = "pc_pulsar"
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 16
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 60
+	
+	planet = {
+		name = "Perrogi"
+		class = pc_pulsar
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 19
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+}
+
+gate_arcturus_initializer = {
+	usage_odds = 0
+	class = "sc_black_hole"
+	name = "Gate Arcturus"
+	flags = { inner_cluster_hyperlane_flag }
+	#asteroid_belt = { type = rocky_asteroid_belt radius = 200 }
+	planet = {
+		name = "Arcturus Major"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 55
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+		
+	change_orbit = 	70
+	
+	planet = {
+		name = "Arcturus Minor"
+		class = "pc_black_hole"
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 25
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+}
+
+gate_insignia_initializer = {
+	usage_odds = 0
+	class = "sc_black_hole"
+	name = "Gate Insignia"
+	flags = { inner_cluster_hyperlane_flag }
+	
+	asteroid_belt = { type = rocky_asteroid_belt radius = 50 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 55 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 60 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 65 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 70 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 75 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 80 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 85 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 90 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 95 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 100 }
+	
+	planet = {
+		name = "Insignia"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 42
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}	
+}
+
+c_cluster_zla_initializer = {
+	usage_odds = 0
+	class = "sc_a"
+	name = "Zla"
+	flags = { inner_cluster_hyperlane_flag }
+	asteroid_belt = { type = icy_asteroid_belt radius = 150 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 155 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 160 }
+	planet = {
+		name = "Zla"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 45
+		has_ring = no
+		init_effect = { 
+		}
+	}
+
+	change_orbit = 50
+	
+	planet = {
+		class = pc_molten
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 18
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		class = pc_barren
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 15
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		class = pc_desert
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 22
+		has_ring = no
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 17
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		class = pc_arctic
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 24
+		has_ring = no
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		class = pc_frozen
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 18
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+}
+
+c_cluster_foot_initializer = {
+	usage_odds = 0
+	class = "sc_a"
+	name = "Foot"
+	flags = { inner_cluster_hyperlane_flag }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 50 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 100 }
+	planet = {
+		name = "Foot"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 37
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 50
+	
+	planet = {
+		count = { min = 6 max = 7 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 50
+
+	planet = {
+		count = { min = 3 max = 4 }
+		class = pc_ice_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}			
+}
+
+c_cluster_ofei_initializer = {
+	usage_odds = 0
+	class = "sc_binary_2"
+	name = "Ofei"
+	flags = { inner_cluster_hyperlane_flag }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 100 }
+	planet = {
+		name = "Ofei A"
+        class = star
+        size = { min = 25 max = 30 }
+        orbit_distance = 25
+        orbit_angle = { min = 90 max = 270 }
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+    }
+    planet = {
+		name = "Ofei B"
+        class = star
+        size = { min = 20 max = 25 }
+        orbit_distance = 10
+        orbit_angle = 180
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+    }
+	
+	change_orbit = 50
+	
+	planet = {
+		class = pc_barren
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 22
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+}
+
+c_cluster_deh_initializer = {
+	usage_odds = 0
+	class = "sc_trinary_1"
+	name = "Deh"
+	flags = { inner_cluster_hyperlane_flag }
+	#asteroid_belt = { type = rocky_asteroid_belt radius = 200 }
+    planet = {
+		name = "Deh A"
+        class = star
+        size = { min = 25 max = 30 }
+        orbit_distance = 25
+        orbit_angle = { min = 90 max = 270 }
+    }
+    planet = {
+		name = "Deh B"
+        class = star
+        size = { min = 20 max = 25 }
+        orbit_distance = 10
+        orbit_angle = 120
+    }	
+	planet = {
+		name = "Deh C"
+        class = star
+        size = { min = 20 max = 25 }
+        orbit_distance = 10
+        orbit_angle = 120
+    }
+	
+	change_orbit = 50
+	
+	planet = {
+		class = pc_barren
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 22
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		class = pc_desert
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 20
+		has_ring = no
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 38
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+}
+
+c_cluster_asluk_initializer = {
+	usage_odds = 0
+	class = "sc_m_giant"
+	name = "Asluk"
+	flags = { inner_cluster_hyperlane_flag }
+	#asteroid_belt = { type = rocky_asteroid_belt radius = 200 }
+	planet = {
+		name = "Asluk"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 65
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}	
+	
+	change_orbit = 60
+	
+	planet = {
+		class = pc_molten
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 15
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 40
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 38
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+		
+		moon = {
+			class = "pc_gaia"
+			orbit_distance = 18
+			size = 12
+			orbit_angle = { min = 90 max = 270 }
+		}
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 15
+		has_ring = yes
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 150
+	
+	planet = {
+		class = pc_black_hole
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 8
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+}
+
+c_cluster_srintaem_initializer = {
+	usage_odds = 0
+	class = "sc_neutron_star"
+	name = "Srintaem"
+	flags = { inner_cluster_hyperlane_flag }
+	#asteroid_belt = { type = rocky_asteroid_belt radius = 200 }
+	planet = {
+		name = "Srintaem"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 15
+		has_ring = no
+		init_effect = { 
+		}
+	}	
+	
+	change_orbit = 25
+	
+	planet = {
+		class = pc_barren
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 12
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		class = pc_toxic
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 18
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		class = pc_nuked
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 20
+		has_ring = no
+	}
+	
+	change_orbit = 15
+	
+	planet = {
+		class = pc_nuked
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 17
+		has_ring = yes
+	}
+	
+	change_orbit = 40
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 42
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+}
+
+c_cluster_pleimap_initializer = {
+	usage_odds = 0
+	class = "sc_b"
+	name = "Pleimap"
+	flags = { inner_cluster_hyperlane_flag }
+	
+	asteroid_belt = { type = rocky_asteroid_belt radius = 80 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 110 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 140 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 170 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 200 }
+	
+	planet = {
+		name = "Pleimap"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 45
+		has_ring = no
+		init_effect = { 
+		}
+	}	
+	
+	change_orbit = 50
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 40
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 40
+	
+	planet = {
+		class = pc_barren
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 10 max = 29 }
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		class = pc_barren
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 10 max = 29 }
+		has_ring = no
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		class = pc_barren
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 10 max = 29 }
+		has_ring = no
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		class = pc_barren_cold
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 10 max = 29 }
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 30
+	
+	planet = {
+		class = pc_frozen
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 10 max = 29 }
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+}
+
+c_cluster_izezlih_initializer = {
+	usage_odds = 0
+	class = "sc_m_giant"
+	name = "Izezlih"
+	flags = { inner_cluster_hyperlane_flag }
+	
+	asteroid_belt = { type = rocky_asteroid_belt radius = 60 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 80 }
+	
+	planet = {
+		name = "Izezlih"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 55
+		has_ring = no
+		init_effect = { 
+		}
+	}
+
+	change_orbit = 70
+	
+	planet = {
+		class = pc_black_hole
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 10
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 50
+	
+	planet = {
+		class = pc_toxic
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 15 max = 25 }
+		has_ring = no
+		init_effect = {
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+	}
+}
+
+c_cluster_acriot_initializer = {
+	usage_odds = 0
+	class = "sc_pulsar"
+	name = "Acriot"
+	flags = { inner_cluster_hyperlane_flag }
+	
+	asteroid_belt = { type = rocky_asteroid_belt radius = 30 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 35 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 40 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 45 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 50 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 55 }
+	
+	planet = {
+		name = "Acriot"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 14
+		has_ring = no
+		init_effect = { 
+		}
+	}	
+	
+	change_orbit = 90
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 38
+		has_ring = no
+		moon = {
+			class = "pc_relic"
+			orbit_distance = 16
+			size = 16
+			orbit_angle = { min = 90 max = 270 }
+		}
+	}
+
+}
+
+c_cluster_bammaob_initializer = {
+	usage_odds = 0
+	class = "sc_a"
+	name = "Bammaob"
+	flags = { inner_cluster_hyperlane_flag }
+	
+	asteroid_belt = { type = rocky_asteroid_belt radius = 120 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 125 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 130 }
+	asteroid_belt = { type = rocky_asteroid_belt radius = 135 }
+	
+	planet = {
+		name = "Bammaob"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 38
+		has_ring = no
+		init_effect = { 
+		}
+	}	
+	
+	change_orbit = 45
+	
+	planet = {
+		class = pc_molten
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 8 max = 30 }
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 25
+	
+	planet = {
+		class = pc_barren
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 8 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 17
+	
+	planet = {
+		class = pc_toxic
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 8 max = 30 }
+		has_ring = no
+		init_effect = { 
+			add_random_orbital_deposit = yes
+			add_random_orbital_deposit = yes
+		}
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		class = pc_barren_cold
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 8 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 70
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 30 max = 50 }
+		has_ring = no
+		
+		moon = {
+			class = "pc_frozen"
+			orbit_distance = 20
+			size = { min = 6 max = 12 }
+			orbit_angle = { min = 90 max = 270 }
+		}
+		moon = {
+			class = "pc_molten"
+			orbit_distance = 5
+			size = { min = 6 max = 12 }
+			orbit_angle = { min = 90 max = 270 }
+		}
+		moon = {
+			class = "pc_barren"
+			orbit_distance = 5
+			size = { min = 6 max = 12 }
+			orbit_angle = { min = 90 max = 270 }
+		}
+	}
+}
+
+c_cluster_vloonel_initializer = {
+	usage_odds = 0
+	class = "sc_binary_6"
+	name = "Vloonel"
+	flags = { inner_cluster_hyperlane_flag }
+	
+	asteroid_belt = { type = icy_asteroid_belt radius = 190 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 195 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 200 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 205 }
+	asteroid_belt = { type = icy_asteroid_belt radius = 210 }
+	
+    planet = {
+		name = "Vloonel A"
+        class = star
+        size = { min = 25 max = 30 }
+        orbit_distance = 25
+        orbit_angle = { min = 90 max = 270 }
+    }	
+	planet = {
+		name = "Vloonel B"
+        class = star
+        size = { min = 20 max = 25 }
+        orbit_distance = 10
+        orbit_angle = 180
+    }
+	
+	change_orbit = 45
+	
+	planet = {
+		class = pc_toxic
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 8 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 35
+	
+	planet = {
+		class = pc_continental
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 15 max = 25 }
+		has_ring = yes
+		moon = {
+			class = pc_asteroid
+			size = 1
+			orbit_distance = 7
+			orbit_angle = { min = 90 max = 270 }
+		}
+	}
+	
+	change_orbit = 110
+	
+	planet = {
+		class = pc_frozen
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 10 max = 30 }
+		has_ring = yes
+		init_effect = { 
+			add_random_orbital_deposit = yes
+		}
+	}
+}
+
+c_cluster_wastrea_initializer = {
+	usage_odds = 0
+	class = "sc_f"
+	name = "Wastrea"
+	flags = { inner_cluster_hyperlane_flag }
+	#asteroid_belt = { type = rocky_asteroid_belt radius = 200 }
+	planet = {
+		name = "Wastrea"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 35
+		has_ring = no
+		init_effect = { 
+		}
+	}
+
+	change_orbit = 45
+	
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = { min = 20 max = 40 }
+		has_ring = no
+	}	
+	
+	change_orbit = 110
+	
+	planet = {
+		class = pc_shrouded_habitable
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+		size = 25
+		has_ring = no
+		moon = {
+			class = pc_rare_crystal_asteroid 
+			size = 1
+			orbit_distance = 12
+			orbit_angle = { min = 90 max = 270 }
+			init_effect = { 
+				add_deposit = d_rare_crystals_3				
+			}
+		}
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			add_deposit = d_shrouded_psionic_fields
+			add_deposit = d_shrouded_psionic_fields
+			add_deposit = d_shrouded_psionic_fields
+			add_deposit = d_shrouded_psionic_fields
+			add_deposit = d_shrouded_psionic_fields
+			add_deposit = d_shrouded_cliffs
+			add_deposit = d_shrouded_cliffs
+			add_deposit = d_shrouded_cliffs
+			add_deposit = d_shrouded_cliffs
+			add_deposit = d_shrouded_cliffs
+			add_deposit = d_shrouded_plains
+			add_deposit = d_shrouded_plains
+			add_deposit = d_shrouded_plains
+			add_deposit = d_shrouded_plains
+			add_deposit = d_shrouded_plains
+			add_deposit = d_zro_veins
+		}
+	}
+}

@@ -1,0 +1,1824 @@
+namespace = SCM_resolutions
+# # The Unbidden Event Loop
+# country_event = {
+# 	id = SCM_resolutions.1
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		NOT = {
+# 			has_global_flag = extradimensional_invasion_happened
+# 		}
+# 	}
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_country_flag = unbidden_loop_flag
+# 				}
+# 			}
+# 			set_country_flag = unbidden_loop_flag
+# 		}
+# 		random_list = {
+# 			1 = {
+# 				modifier = {
+# 					factor = 0
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value < 250
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.15
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value > 250
+# 					}
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value < 400
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value > 400
+# 					}
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value < 750
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 5
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value > 750
+# 					}
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value < 1000
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 10
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value > 1000
+# 					}
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value < 1250
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 40
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value > 1250
+# 					}
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value < 2000
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 60
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value > 2000
+# 					}
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value < 2500
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 90
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value > 2500
+# 					}
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value < 3000
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 120
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value > 3000
+# 					}
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value < 3500
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 140
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value > 3500
+# 					}
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value < 4000
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 200
+# 					has_monthly_income = {
+# 						resource = physics_research
+# 						value > 4000
+# 					}
+# 				}
+# 				country_event = {
+# 					id = SCM_resolutions.3
+# 				}
+# 			}
+# 			120 = {
+# 			}
+# 		}
+# 	}
+# }
+
+# #Reloop if no trigger
+# country_event = {
+# 	id = SCM_resolutions.2
+# 	hide_window = yes
+# 	trigger = {
+# 		has_country_flag = unbidden_loop_flag
+# 		NOT = {
+# 			has_global_flag = unbidden_loop_finished_flag
+# 		}
+# 	}
+# 	mean_time_to_happen = {
+# 		days = 15
+# 	}
+# 	immediate = {
+# 		country_event = {
+# 			id = SCM_resolutions.1
+# 			days = 1
+# 		}
+# 	}
+# }
+
+# #Close loop, begin White Plateau event chain
+# country_event = {
+# 	id = SCM_resolutions.3
+# 	hide_window = yes
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		set_global_flag = unbidden_loop_finished_flag
+# 		country_event = {
+# 			id = SCM_resolutions.4
+# 			days = 2000
+# 		}
+# 		every_country = {
+# 			country_event = {
+# 				id = SCM_resolutions.7
+# 				days = 365
+# 			}
+# 		}
+# 	}
+# }
+
+# #Alt. Unbidden Spawn
+# country_event = {
+# 	id = SCM_resolutions.4
+# 	hide_window = yes
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		set_crisis_sound = extradimensional_crisis_ambient_stage_1
+# 		set_crisis_stage_1 = yes
+# 		create_country = {
+# 			name = "NAME_Portal_Holder_1"
+# 			type = portal_holder
+# 			flag = {
+# 				icon = {
+# 					category = "special"
+# 					file = "extradimensional_01.dds"
+# 				}
+# 				background = {
+# 					category = "backgrounds"
+# 					file = "circle.dds"
+# 				}
+# 				colors = {
+# 					"black"
+# 					"black"
+# 					"null"
+# 					"null"
+# 				}
+# 			}
+# 			effect = {
+# 				save_global_event_target_as = portal_holder_1
+# 				every_playable_country = {
+# 					establish_communications_no_message = event_target:portal_holder_1
+# 				}
+# 			}
+# 		}
+# 		awaken_guardians_of_the_galaxy = yes
+# 		endgame_telemetry = extradimensional
+# 		set_global_flag = extradimensional_invasion_happened
+# 		set_global_flag = galactic_crisis_happened
+# 		capital_scope = {
+# 			solar_system = {
+# 				#limit = {
+# 				#	NOT = {
+# 				#		any_country = {
+# 				#			OR = {
+# 				#				is_country_type = fallen_empire
+# 				#				is_country_type = awakened_fallen_empire
+# 				#			}
+# 				#			any_system_within_border = {
+# 				#				is_same_value = prev
+# 				#			}
+# 				#		}
+# 				#	}
+# 				#}
+# 				set_star_flag = extradimensional_origin_system
+# 				save_event_target_as = extradimensional_system
+# 				random_system_planet = {
+# 					create_species = {
+# 						name = "NAME_Unbidden"
+# 						class = EXD
+# 						namelist = Extradimensional
+# 						portrait = exd1
+# 						traits = random
+# 						effect = {
+# 							save_event_target_as = extradimensional_species
+# 						}
+# 					}
+# 					create_country = {
+# 						name = "NAME_Unbidden"
+# 						type = "extradimensional"
+# 						species = event_target:extradimensional_species
+# 						name_list = "Extradimensional"
+# 						flag = {
+# 							icon = {
+# 								category = "special"
+# 								file = "extradimensional_01.dds"
+# 							}
+# 							background = {
+# 								category = "backgrounds"
+# 								file = "circle.dds"
+# 							}
+# 							colors = {
+# 								"indigo"
+# 								"blue"
+# 								"null"
+# 								"null"
+# 							}
+# 						}
+# 						effect = {
+# 							set_country_flag = unbidden
+# 							create_ship_design = {
+# 								design = "NAME_Void_Shaper"
+# 							}
+# 							add_ship_design = last_created_design
+# 							create_ship_design = {
+# 								design = "NAME_Unbidden_Anchor"
+# 							}
+# 							add_ship_design = last_created_design
+# 							create_ship_design = {
+# 								design = "NAME_Unbidden_Starbase"
+# 							}
+# 							add_ship_design = last_created_design
+# 							save_global_event_target_as = extradimensionals
+# 							establish_communications_no_message = event_target:portal_holder_1
+# 							set_faction_hostility = {
+# 								target = event_target:portal_holder_1
+# 								set_hostile = no
+# 							}
+# 							set_graphical_culture = extra_dimensional_01
+# 							save_event_target_as = extradimensionals
+# 						}
+# 					}
+# 					event_target:extradimensionals = {
+# 						create_fleet = {
+# 							name = "NAME_Dimensional_Portal"
+# 							effect = {
+# 								set_owner = PREV
+# 								create_ship = {
+# 									name = random
+# 									design = "NAME_Unbidden_Portal"
+# 									graphical_culture = "extra_dimensional_01"
+# 									effect = {
+# 										set_ship_flag = unbidden_portal
+# 									}
+# 								}
+# 								set_location = {
+# 									target = PREVPREV
+# 									distance = 40
+# 									angle = random
+# 								}
+# 								save_event_target_as = dimensional_portal
+# 								fleet_event = {
+# 									id = crisis.1003
+# 									days = 15
+# 								}								# Second Fleet Arrives
+# 								fleet_event = {
+# 									id = crisis.1003
+# 									days = 30
+# 								}								# Third Fleet Arrives
+# 								fleet_event = {
+# 									id = crisis.1003
+# 									days = 55
+# 								}								# Fourth Fleet Arrives
+# 								fleet_event = {
+# 									id = crisis.1003
+# 									days = 90
+# 								}								# Fifth Fleet Arrives
+# 								fleet_event = {
+# 									id = crisis.1003
+# 									days = 180
+# 								}								# Sixth Fleet Arrives
+# 								fleet_event = {
+# 									id = crisis.1003
+# 									days = 265
+# 								}								# Seventh Fleet Arrives
+# 								fleet_event = {
+# 									id = crisis.1003
+# 									days = 340
+# 								}								# Eight Fleet Arrives
+# 								fleet_event = {
+# 									id = crisis.1003
+# 									days = 425
+# 								}								# Ninth Fleet Arrives
+# 								fleet_event = {
+# 									id = crisis.1003
+# 									days = 550
+# 								}								# Tenth Fleet Arrives
+# 								fleet_event = {
+# 									id = crisis.1006
+# 									days = 20
+# 								}								# First Constructor Arrives
+# 								fleet_event = {
+# 									id = crisis.1006
+# 									days = 25
+# 								}								# Second Constructor Arrives
+# 								fleet_event = {
+# 									id = crisis.1006
+# 									days = 160
+# 								}								# Third Constructor Arrives
+# 								fleet_event = {
+# 									id = crisis.1006
+# 									days = 310
+# 								}								# Fourth Constructor Arrives
+# 								event_target:extradimensionals = {
+# 									country_event = {
+# 										id = crisis.1260
+# 										days = 350
+# 									}
+# 								}								# Spawn Cycle starts
+# 								#set_owner = event_target:portal_holder_1 #when first anchor built
+# 							}
+# 						}
+# 						create_leader = {
+# 							class = commander
+# 							species = event_target:extradimensional_species
+# 							name = random
+# 							skill = 3
+# 							traits = {
+# 								trait = leader_trait_ethereal
+# 							}
+# 						}
+# 						create_fleet = {
+# 							effect = {
+# 								set_owner = PREV
+# 								create_ship = {
+# 									name = random
+# 									design = "NAME_Revenant"
+# 									graphical_culture = "extra_dimensional_01"
+# 								}
+# 								assign_leader = last_created_leader
+# 								while = {
+# 									count = 20
+# 									create_ship = {
+# 										name = random
+# 										design = "NAME_Revenant"
+# 										graphical_culture = "extra_dimensional_01"
+# 									}
+# 								}
+# 								while = {
+# 									count = 30
+# 									create_ship = {
+# 										name = random
+# 										design = "NAME_Phantom"
+# 										graphical_culture = "extra_dimensional_01"
+# 									}
+# 								}
+# 								while = {
+# 									count = 45
+# 									create_ship = {
+# 										name = random
+# 										design = "NAME_Wraith"
+# 										graphical_culture = "extra_dimensional_01"
+# 									}
+# 								}
+# 								set_location = {
+# 									target = event_target:dimensional_portal
+# 									distance = 5
+# 									angle = random
+# 								}
+# 								set_fleet_stance = aggressive
+# 								set_aggro_range = 500
+# 								set_aggro_range_measure_from = self
+# 								set_fleet_bombardment_stance = armageddon
+# 							}
+# 						}
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						exists = starbase
+# 					}
+# 					starbase = {
+# 						fleet = {
+# 							destroy_fleet = this
+# 						}
+# 					}
+# 				}
+# 				create_starbase = {
+# 					size = starbase_exd
+# 					owner = event_target:extradimensionals
+# 				}
+# 				star = {
+# 					create_ambient_object = {
+# 						type = "extradimensional_2"
+# 						location = this
+# 					}
+# 					last_created_ambient_object = {
+# 						set_ambient_object_flag = extradimensional_system_effect_2
+# 						set_location = {
+# 							target = prev
+# 							distance = 0
+# 							angle = random
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		observer_event = {
+# 			id = observer.34
+# 		}
+# 		# make portal invincible
+# 		event_target:extradimensionals = {
+# 			random_owned_ship = {
+# 				ship_event = {
+# 					id = crisis.1280
+# 				}
+# 			}
+# 		}
+# 		# Custodian/Emperor Announcements
+# 		event_target:extradimensionals = {
+# 			save_event_target_as = crisis_country
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_galactic_custodian = yes
+# 			}
+# 			random_playable_country = {
+# 				limit = {
+# 					is_galactic_custodian = yes
+# 				}
+# 				country_event = {
+# 					id = custodian.50
+# 					days = 30
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_galactic_emperor = yes
+# 			}
+# 			random_playable_country = {
+# 				limit = {
+# 					is_galactic_emperor = yes
+# 				}
+# 				country_event = {
+# 					id = emperor.90
+# 					days = 30
+# 				}
+# 			}
+# 		}
+# 		every_country = {
+# 			limit = {
+# 				OR = {
+# 					is_country_type = default
+# 					is_country_type = fallen_empire
+# 					is_country_type = awakened_fallen_empire
+# 				}
+# 				intel_level = {
+# 					level = high
+# 					system = event_target:extradimensional_system
+# 				}
+# 			}
+# 			country_event = {
+# 				id = crisis.1007
+# 			}
+# 		}
+# 		every_country = {
+# 			limit = {
+# 				OR = {
+# 					is_country_type = default
+# 					is_country_type = fallen_empire
+# 					is_country_type = awakened_fallen_empire
+# 				}
+# 				NOT = {
+# 					intel_level = {
+# 						level = high
+# 						system = event_target:extradimensional_system
+# 					}
+# 				}
+# 			}
+# 			country_event = {
+# 				id = crisis.1008
+# 			}
+# 		}
+# 	}
+# }
+
+# ###Grants rewards for pacified space bois
+# # Tiyanki Rewards
+# country_event = {
+# 	id = SCM_resolutions.5
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		is_active_resolution = "resolution_tiyanki_conservation_act"
+# 		OR = {
+# 			exists = event_target:iyanki_garrison_country
+# 			exists = event_target:tiyanki_country
+# 		}
+# 		NOT = {
+# 			has_country_flag = "tiyanki_conservation_tick"
+# 		}
+# 		any_system_within_border = {
+# 			any_fleet_in_system = {
+# 				owner = {
+# 					OR = {
+# 						is_country_type = tiyanki
+# 						is_country_type = tiyanki_garrison
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 		set_timed_country_flag = {
+# 			flag = "tiyanki_conservation_tick"
+# 			days = 30
+# 		}
+# 		if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = tiyanki
+# 							is_country_type = tiyanki_garrison
+# 						}
+# 						num_fleets > 9
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_10 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = tiyanki
+# 							is_country_type = tiyanki_garrison
+# 						}
+# 						num_fleets = 9
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_9 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = tiyanki
+# 							is_country_type = tiyanki_garrison
+# 						}
+# 						num_fleets = 8
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_8 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = tiyanki
+# 							is_country_type = tiyanki_garrison
+# 						}
+# 						num_fleets = 7
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_7 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = tiyanki
+# 							is_country_type = tiyanki_garrison
+# 						}
+# 						num_fleets = 6
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_6 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = tiyanki
+# 							is_country_type = tiyanki_garrison
+# 						}
+# 						num_fleets = 5
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_5 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = tiyanki
+# 							is_country_type = tiyanki_garrison
+# 						}
+# 						num_fleets = 4
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_4 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = tiyanki
+# 							is_country_type = tiyanki_garrison
+# 						}
+# 						num_fleets = 3
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_3 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = tiyanki
+# 							is_country_type = tiyanki_garrison
+# 						}
+# 						num_fleets = 2
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_2 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = tiyanki
+# 							is_country_type = tiyanki_garrison
+# 						}
+# 						num_fleets = 1
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_1 = yes
+# 		}
+# 	}
+# }
+
+# #Amoeba awards
+# country_event = {
+# 	id = SCM_resolutions.6
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		has_modifier = pacified_amoebas
+# 		is_active_resolution = "resolution_amoeba_conservation_act"
+# 		OR = {
+# 			exists = event_target:amoeba_country
+# 			exists = event_target:amoeba_borderless_country
+# 			exists = event_target:amoeba_garrison_country
+# 		}
+# 		NOT = {
+# 			has_country_flag = "amoeba_conservation_tick"
+# 		}
+# 		any_system_within_border = {
+# 			any_fleet_in_system = {
+# 				owner = {
+# 					OR = {
+# 						is_country_type = amoeba
+# 						is_country_type = amoeba_borderless
+# 						is_country_type = amoeba_garrison
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 		set_timed_country_flag = {
+# 			flag = "amoeba_conservation_tick"
+# 			days = 30
+# 		}
+# 		if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = amoeba
+# 							is_country_type = amoeba_borderless
+# 							is_country_type = amoeba_garrison
+# 						}
+# 						num_fleets > 9
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_10 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = amoeba
+# 							is_country_type = amoeba_borderless
+# 							is_country_type = amoeba_garrison
+# 						}
+# 						num_fleets = 9
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_9 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = amoeba
+# 							is_country_type = amoeba_borderless
+# 							is_country_type = amoeba_garrison
+# 						}
+# 						num_fleets = 8
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_8 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = amoeba
+# 							is_country_type = amoeba_borderless
+# 							is_country_type = amoeba_garrison
+# 						}
+# 						num_fleets = 7
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_7 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = amoeba
+# 							is_country_type = amoeba_borderless
+# 							is_country_type = amoeba_garrison
+# 						}
+# 						num_fleets = 6
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_6 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = amoeba
+# 							is_country_type = amoeba_borderless
+# 							is_country_type = amoeba_garrison
+# 						}
+# 						num_fleets = 5
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_5 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = amoeba
+# 							is_country_type = amoeba_borderless
+# 							is_country_type = amoeba_garrison
+# 						}
+# 						num_fleets = 4
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_4 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = amoeba
+# 							is_country_type = amoeba_borderless
+# 							is_country_type = amoeba_garrison
+# 						}
+# 						num_fleets = 3
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_3 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = amoeba
+# 							is_country_type = amoeba_borderless
+# 							is_country_type = amoeba_garrison
+# 						}
+# 						num_fleets = 2
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_2 = yes
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				any_system_within_border = {
+# 					any_country = {
+# 						OR = {
+# 							is_country_type = amoeba
+# 							is_country_type = amoeba_borderless
+# 							is_country_type = amoeba_garrison
+# 						}
+# 						num_fleets = 1
+# 					}
+# 				}
+# 			}
+# 			tiyanki_conservation_rewards_1 = yes
+# 		}
+# 	}
+# }
+
+# ###"White Plateau" event chain
+# #White Plateau opens up
+# country_event = {
+# 	id = SCM_resolutions.7
+# 	title = "SCM_resolutions.7.name"
+# 	desc = "SCM_resolutions.7.desc"
+# 	picture = GFX_evt_physics_research
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		country_event = {
+# 			id = SCM_resolutions.8
+# 			days = 365
+# 		}
+# 	}
+# 	option = {
+# 		name = "SCM_resolutions.7.a"
+# 		add_resource = {
+# 			physics_research = 500
+# 		}
+# 		add_resource = {
+# 			society_research = 500
+# 		}
+# 		add_resource = {
+# 			engineering_research = 500
+# 		}
+# 	}
+# }
+
+# #White Plateau show promise
+# country_event = {
+# 	id = SCM_resolutions.8
+# 	title = "SCM_resolutions.8.name"
+# 	desc = "SCM_resolutions.8.desc"
+# 	picture = GFX_evt_physics_research
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		country_event = {
+# 			id = SCM_resolutions.9
+# 			days = 365
+# 		}
+# 	}
+# 	option = {
+# 		name = "SCM_resolutions.8.a"
+# 		add_resource = {
+# 			physics_research = 2000
+# 		}
+# 		add_resource = {
+# 			society_research = 2000
+# 		}
+# 		add_resource = {
+# 			engineering_research = 2000
+# 		}
+# 	}
+# }
+
+# #Unforeseen consequences
+# country_event = {
+# 	id = SCM_resolutions.9
+# 	title = "SCM_resolutions.9.name"
+# 	desc = "SCM_resolutions.9.desc"
+# 	picture = GFX_evt_analyzing_artifacts
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		country_event = {
+# 			id = SCM_resolutions.10
+# 			days = 365
+# 		}
+# 	}
+# 	option = {
+# 		name = "SCM_resolutions.9.a"
+# 		add_resource = {
+# 			physics_research = 5000
+# 		}
+# 		add_resource = {
+# 			society_research = 5000
+# 		}
+# 		add_resource = {
+# 			engineering_research = 5000
+# 		}
+# 	}
+# }
+
+# #Full-Life
+# country_event = {
+# 	id = SCM_resolutions.10
+# 	title = "SCM_resolutions.10.name"
+# 	desc = "SCM_resolutions.10.desc"
+# 	picture = GFX_evt_analyzing_artifacts
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		country_event = {
+# 			id = SCM_resolutions.11
+# 			days = 365
+# 		}
+# 	}
+# 	option = {
+# 		name = "SCM_resolutions.10.a"
+# 		add_resource = {
+# 			physics_research = 20000
+# 		}
+# 		add_resource = {
+# 			society_research = 20000
+# 		}
+# 		add_resource = {
+# 			engineering_research = 20000
+# 		}
+# 	}
+# }
+
+# #White Plateau goes quiet
+# country_event = {
+# 	id = SCM_resolutions.11
+# 	title = "SCM_resolutions.11.name"
+# 	desc = "SCM_resolutions.11.desc"
+# 	picture = GFX_evt_relic_world_street
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = "SCM_resolutions.11.a"
+# 	}
+# }
+
+#May the gods bless this code
+country_event = {
+	id = SCM_resolutions.12
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			has_global_flag = scm_core_has_been_spawned
+		}
+	}
+	immediate = {
+		set_global_flag = scm_core_has_been_spawned
+		set_spawn_system_batch = begin
+		no_scope = {
+			spawn_system = {
+				min_distance >= 1
+				max_distance <= 1
+				min_orientation_angle = 1
+				max_orientation_angle = 1
+				initializer = "galactic_core_initializer"
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = c_cluster_core
+				}
+			}
+			event_target:c_cluster_core = {
+				spawn_system = {
+					min_distance >= 8
+					max_distance <= 15
+					min_orientation_angle = -20
+					max_orientation_angle = 20
+					initializer = gate_valion_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_valion
+					}
+				}
+				spawn_system = {
+					min_distance >= 8
+					max_distance <= 15
+					min_orientation_angle = 70
+					max_orientation_angle = 110
+					initializer = gate_carron_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_carron
+					}
+				}
+				spawn_system = {
+					min_distance >= 8
+					max_distance <= 15
+					min_orientation_angle = 160
+					max_orientation_angle = 200
+					initializer = gate_insignia_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_insignia
+					}
+				}
+				spawn_system = {
+					min_distance >= 8
+					max_distance <= 15
+					min_orientation_angle = 250
+					max_orientation_angle = 290
+					initializer = gate_arcturus_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_arcturus
+					}
+				}
+				######
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 30
+					min_orientation_angle = -5
+					max_orientation_angle = 30
+					initializer = c_cluster_ofei_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_ofei
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 30
+					min_orientation_angle = 35
+					max_orientation_angle = 70
+					initializer = c_cluster_foot_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_foot
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 30
+					min_orientation_angle = 75
+					max_orientation_angle = 110
+					initializer = c_cluster_zla_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_zla
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 30
+					min_orientation_angle = 115
+					max_orientation_angle = 150
+					initializer = c_cluster_vloonel_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_vloonel
+					}
+				}
+				add_hyperlane_to_galactic_core = yes
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 30
+					min_orientation_angle = 170
+					max_orientation_angle = 200
+					initializer = c_cluster_bammaob_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_bammaob
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 30
+					min_orientation_angle = 210
+					max_orientation_angle = 240
+					initializer = c_cluster_izezlih_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_izezlih
+					}
+				}
+				add_hyperlane_to_galactic_core = yes
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 30
+					min_orientation_angle = 250
+					max_orientation_angle = 265
+					initializer = c_cluster_pleimap_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_pleimap
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 30
+					min_orientation_angle = 270
+					max_orientation_angle = 280
+					initializer = c_cluster_srintaem_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_srintaem
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 30
+					min_orientation_angle = 290
+					max_orientation_angle = 320
+					initializer = c_cluster_asluk_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_asluk
+					}
+				}
+				add_hyperlane_to_galactic_core = yes
+				spawn_system = {
+					min_distance >= 30
+					max_distance <= 50
+					min_orientation_angle = 30
+					max_orientation_angle = 60
+					initializer = c_cluster_deh_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_deh
+					}
+				}
+				add_hyperlane_to_galactic_core = yes
+				spawn_system = {
+					min_distance >= 16
+					max_distance <= 17
+					min_orientation_angle = 124
+					max_orientation_angle = 127
+					initializer = c_cluster_wastrea_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_wastrea
+					}
+				}
+				spawn_system = {
+					min_distance >= 30
+					max_distance <= 50
+					min_orientation_angle = 248
+					max_orientation_angle = 255
+					initializer = c_cluster_acriot_initializer
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = c_cluster_acriot
+					}
+				}
+			}
+		}
+		event_target:c_cluster_core = {
+			add_hyperlane = {
+				from = event_target:c_cluster_core
+				to = event_target:c_cluster_valion
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_core
+				to = event_target:c_cluster_carron
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_core
+				to = event_target:c_cluster_insignia
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_core
+				to = event_target:c_cluster_arcturus
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_valion
+				to = event_target:c_cluster_carron
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_carron
+				to = event_target:c_cluster_insignia
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_insignia
+				to = event_target:c_cluster_arcturus
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_arcturus
+				to = event_target:c_cluster_valion
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_carron
+				to = event_target:c_cluster_zla
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_carron
+				to = event_target:c_cluster_foot
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_foot
+				to = event_target:c_cluster_zla
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_foot
+				to = event_target:c_cluster_ofei
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_ofei
+				to = event_target:c_cluster_deh
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_ofei
+				to = event_target:c_cluster_asluk
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_ofei
+				to = event_target:c_cluster_valion
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_asluk
+				to = event_target:c_cluster_srintaem
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_srintaem
+				to = event_target:c_cluster_arcturus
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_srintaem
+				to = event_target:c_cluster_pleimap
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_arcturus
+				to = event_target:c_cluster_pleimap
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_pleimap
+				to = event_target:c_cluster_izezlih
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_izezlih
+				to = event_target:c_cluster_acriot
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_izezlih
+				to = event_target:c_cluster_bammaob
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_bammaob
+				to = event_target:c_cluster_insignia
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_bammaob
+				to = event_target:c_cluster_vloonel
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_vloonel
+				to = event_target:c_cluster_wastrea
+			}
+			add_hyperlane = {
+				from = event_target:c_cluster_vloonel
+				to = event_target:c_cluster_zla
+			}
+		}
+		set_spawn_system_batch = end
+		every_playable_country = {
+			country_event = {
+				id = SCM_resolutions.13
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SCM_resolutions.13
+	title = "SCM_resolutions.13.name"
+	desc = "SCM_resolutions.13.desc"
+	show_sound = event_radio_chatter
+	picture = GFX_evt_black_hole
+	location = event_target:galactic_core_location
+	is_triggered_only = yes
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = SCM_resolutions.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_galactic_community_member = yes
+		OR = {
+			is_active_resolution = resolution_galactic_exploration_outer_rim_expeditions
+			is_active_resolution = resolution_galactic_exploration_inner_core_expeditions
+		}
+	}
+	immediate = {
+		random_list = {
+			1 = {
+				random_planet_within_border = {
+					limit = {
+						is_preventing_anomaly = no
+						habitable_planet = no
+						is_star = no
+					}
+					add_random_basic_anomaly = yes
+				}
+			}
+			12 = {
+			}
+		}
+	}
+}
+
+fleet_event = {
+	#1st lantean arc stage
+	id = SCM_resolutions.15
+	title = "SCM_resolutions.15.name"
+	desc = SCM_resolutions.15.desc
+	picture = GFX_evt_ancient_alien_temple
+	show_sound = event_metal_fatigue
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = SCM_resolutions.15.a
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	#2nd lantean arc stage
+	id = SCM_resolutions.16
+	title = "SCM_resolutions.16.name"
+	desc = SCM_resolutions.16.desc
+	picture = GFX_evt_ancient_alien_temple
+	show_sound = event_metal_fatigue
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = SCM_resolutions.16.a
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	#3rd lantean arc stage
+	id = SCM_resolutions.17
+	title = "SCM_resolutions.17.name"
+	desc = SCM_resolutions.17.desc
+	picture = GFX_evt_ancient_alien_temple
+	show_sound = event_metal_fatigue
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = SCM_resolutions.17.a
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	#4th lantean arc stage
+	id = SCM_resolutions.18
+	title = "SCM_resolutions.18.name"
+	desc = SCM_resolutions.18.desc
+	picture = GFX_evt_ancient_alien_temple
+	show_sound = event_metal_fatigue
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = owner
+	}
+	option = {
+		name = SCM_resolutions.18.a
+		medium_artifact_reward = yes
+		owner = {
+			country_event = {
+				id = SCM_resolutions.19
+				days = 0
+			}
+		}
+	}
+	immediate = {
+		set_global_flag = old_lantea_arc_finished
+	}
+}
+
+country_event = {
+	#Archotech Knowledge
+	id = SCM_resolutions.19
+	title = "SCM_resolutions.19.name"
+	desc = SCM_resolutions.19.desc
+	picture = GFX_evt_ancient_alien_temple
+	show_sound = event_energy_field
+	is_triggered_only = yes
+	option = {
+		name = SCM_resolutions.19.a
+		trigger = {
+			NOT = {
+				has_technology = tech_archotech_gauss
+			}
+		}
+		add_research_option = tech_archotech_gauss
+		add_tech_progress = {
+			tech = tech_archotech_gauss
+			progress = 0.2
+		}
+	}
+	option = {
+		name = SCM_resolutions.19.b
+		trigger = {
+			NOT = {
+				has_technology = tech_archotech_shield
+			}
+		}
+		add_research_option = tech_archotech_shield
+		add_tech_progress = {
+			tech = tech_archotech_shield
+			progress = 0.2
+		}
+	}
+	option = {
+		name = SCM_resolutions.19.c
+		trigger = {
+			NOT = {
+				has_technology = tech_archotech_armor
+			}
+		}
+		add_research_option = tech_archotech_armor
+		add_tech_progress = {
+			tech = tech_archotech_armor
+			progress = 0.2
+		}
+	}
+	option = {
+		name = SCM_resolutions.19.d
+		trigger = {
+			NOT = {
+				has_technology = tech_archotech_wing
+			}
+		}
+		add_research_option = tech_archotech_wing
+		add_tech_progress = {
+			tech = tech_archotech_wing
+			progress = 0.2
+		}
+	}
+	option = {
+		name = SCM_resolutions.19.e
+		trigger = {
+			NOT = {
+				has_technology = tech_archotech_sensor
+			}
+		}
+		add_research_option = tech_archotech_sensor
+		add_tech_progress = {
+			tech = tech_archotech_sensor
+			progress = 0.2
+		}
+	}
+	option = {
+		name = SCM_resolutions.19.f
+		trigger = {
+			NOT = {
+				has_technology = tech_archotech_thruster
+			}
+		}
+		add_research_option = tech_archotech_thruster
+		add_tech_progress = {
+			tech = tech_archotech_thruster
+			progress = 0.2
+		}
+	}
+	option = {
+		name = SCM_resolutions.19.g
+		trigger = {
+			NOT = {
+				has_technology = tech_archotech_generator
+			}
+		}
+		add_research_option = tech_archotech_generator
+		add_tech_progress = {
+			tech = tech_archotech_generator
+			progress = 0.2
+		}
+	}
+	option = {
+		name = SCM_resolutions.19.h
+		trigger = {
+			NOT = {
+				has_technology = tech_archotech_gauss_lance
+			}
+		}
+		add_research_option = tech_archotech_gauss_lance
+		add_tech_progress = {
+			tech = tech_archotech_gauss_lance
+			progress = 0.2
+		}
+	}
+}
+
+fleet_event = {
+	#1st new lantean arc stage
+	id = SCM_resolutions.20
+	title = "SCM_resolutions.20.name"
+	desc = SCM_resolutions.20.desc
+	picture = GFX_evt_ancient_alien_temple
+	show_sound = event_metal_fatigue
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = SCM_resolutions.20.a
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	#2nd new lantean arc stage
+	id = SCM_resolutions.21
+	title = "SCM_resolutions.21.name"
+	desc = SCM_resolutions.21.desc
+	picture = GFX_evt_ancient_alien_temple
+	show_sound = event_metal_fatigue
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = SCM_resolutions.21.a
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	#3rd new lantean arc stage
+	id = SCM_resolutions.22
+	title = "SCM_resolutions.22.name"
+	desc = SCM_resolutions.22.desc
+	picture = GFX_evt_ancient_alien_temple
+	show_sound = event_metal_fatigue
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = SCM_resolutions.22.a
+		medium_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	#4th new lantean arc stage
+	id = SCM_resolutions.23
+	title = "SCM_resolutions.23.name"
+	desc = SCM_resolutions.23.desc
+	picture = GFX_evt_ancient_alien_temple
+	show_sound = event_metal_fatigue
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = owner
+	}
+	option = {
+		name = SCM_resolutions.23.a
+		medium_artifact_reward = yes
+		owner = {
+			country_event = {
+				id = SCM_resolutions.19
+				days = 0
+			}
+		}
+	}
+}
+
+planet_event = {
+	#spawn new lantea arc site
+	id = SCM_resolutions.24
+	hide_window = yes
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = old_lantea_arc_finished
+		has_planet_flag = new_lantea_flag
+	}
+	mean_time_to_happen = {
+		days = 720
+	}
+	immediate = {
+		create_archaeological_site = new_lantea_arc_site
+	}
+}
+
+country_event = {
+	#popu for new lantea arc site
+	id = SCM_resolutions.25
+	is_triggered_only = yes
+	title = "SCM_resolutions.25.name"
+	desc = SCM_resolutions.25.desc
+	picture = GFX_evt_ancient_alien_temple
+	show_sound = event_metal_fatigue
+	location = fromfrom
+	option = {
+		name = SCM_resolutions.25.a
+	}
+}
+
+country_event = {
+	#fed bonk
+	id = SCM_resolutions.26
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		any_owned_ship = {
+			OR = {
+				has_component = SMALL_GAUSS_BEAM
+				has_component = MEDIUM_GAUSS_BEAM
+				has_component = LARGE_GAUSS_BEAM
+				has_component = SMALL_ARCHOTECH_SHIELD
+				has_component = MEDIUM_ARCHOTECH_SHIELD
+				has_component = LARGE_ARCHOTECH_SHIELD
+				has_component = SMALL_ARCHOTECH_ARMOR
+				has_component = MEDIUM_ARCHOTECH_ARMOR
+				has_component = LARGE_ARCHOTECH_ARMOR
+				has_component = SMALL_ARCHOTECH_THRUSTER
+				has_component = DESTROYER_ARCHOTECH_THRUSTER
+				has_component = CRUISER_SHIP_ARCHOTECH_THRUSTER
+				has_component = BATTLESHIP_SHIP_ARCHOTECH_THRUSTER
+				has_component = TITAN_SHIP_ARCHOTECH_THRUSTER
+				has_component = COLOSSUS_SHIP_ARCHOTECH_THRUSTER
+				has_component = ARCHOTECH_FIGHTER_WING
+				has_component = ARCHOTECH_SENSOR
+				has_component = REACTOR_ARCHOTECH_GENERATOR
+				has_component = GAUSS_LANCE_TITAN
+				has_component = GAUSS_LANCE_XL
+			}
+			fleet = {
+				is_alliance_fleet = yes
+			}
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = fed_archotech_bonk
+			days = -1
+		}
+	}
+}
+
+country_event = {
+	#fed unbonk
+	id = SCM_resolutions.27
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_modifier = fed_archotech_bonk
+		NOT = {
+			any_owned_ship = {
+				OR = {
+					has_component = SMALL_GAUSS_BEAM
+					has_component = MEDIUM_GAUSS_BEAM
+					has_component = LARGE_GAUSS_BEAM
+					has_component = SMALL_ARCHOTECH_SHIELD
+					has_component = MEDIUM_ARCHOTECH_SHIELD
+					has_component = LARGE_ARCHOTECH_SHIELD
+					has_component = SMALL_ARCHOTECH_ARMOR
+					has_component = MEDIUM_ARCHOTECH_ARMOR
+					has_component = LARGE_ARCHOTECH_ARMOR
+					has_component = SMALL_ARCHOTECH_THRUSTER
+					has_component = DESTROYER_ARCHOTECH_THRUSTER
+					has_component = CRUISER_SHIP_ARCHOTECH_THRUSTER
+					has_component = BATTLESHIP_SHIP_ARCHOTECH_THRUSTER
+					has_component = TITAN_SHIP_ARCHOTECH_THRUSTER
+					has_component = COLOSSUS_SHIP_ARCHOTECH_THRUSTER
+					has_component = ARCHOTECH_FIGHTER_WING
+					has_component = ARCHOTECH_SENSOR
+					has_component = REACTOR_ARCHOTECH_GENERATOR
+					has_component = GAUSS_LANCE_TITAN
+					has_component = GAUSS_LANCE_XL
+				}
+				fleet = {
+					is_alliance_fleet = yes
+				}
+			}
+		}
+	}
+	immediate = {
+		remove_modifier = fed_archotech_bonk
+	}
+}

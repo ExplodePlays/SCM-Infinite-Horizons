@@ -1,0 +1,66 @@
+# Icons set here are the ones shown in component editor list.
+
+component_set = {
+	key = "GAUSS_BEAM"
+	
+	icon = "GFX_ship_gauss_beam"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ARCHOTECH_SHIELD"
+	
+	icon = "GFX_ship_archotech_shield"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ARCHOTECH_ARMOR"
+	
+	icon = "GFX_ship_archotech_armor"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ARCHOTECH_FIGHTER_WING"
+	
+	icon = "GFX_ship_archotech_wing"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "REACTOR_ARCHOTECH_GENERATOR"
+	
+	icon = "GFX_ship_archotech_generator"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "GAUSS_LANCE_XL"
+	
+	icon = "GFX_ship_gauss_lance"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "GAUSS_LANCE_TITANIC"
+	
+	icon = "GFX_ship_gauss_lance"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ARCHOTECH_THRUSTER"
+	
+	required_component_set = yes
+	icon = "GFX_ship_archotech_thruster"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ARCHOTECH_SENSOR"
+	
+	required_component_set = yes
+	icon = "GFX_ship_archotech_sensor"
+	icon_frame = 1	
+}

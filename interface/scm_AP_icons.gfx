@@ -1,0 +1,153 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ap_archotech_knowledge"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_archotech_knowledge.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_trial_by_fire"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_trial_by_fire.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_path_of_conquest"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_path_of_conquest.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_the_great_conquerors"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_the_great_conquerors.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_defence_of_the_ancients"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_defence_of_the_ancients.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_grand_fortresses"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_grand_fortresses.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_builders_of_nations"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_builders_of_nations.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_road_of_the_golden_void"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_road_of_the_golden_void.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_tongues_of_silver"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_tongues_of_silver.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_words_of_truth"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_words_of_truth.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_gardening_initiative"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_gardening_initiative.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_lessons_of_the_seeders"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_lessons_of_the_seeders.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_void_shapers"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_void_shapers.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_space_engineers"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_space_engineers.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_great_builders"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_great_builders.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_secrets_of_the_galaxy"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_secrets_of_the_galaxy.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_unlimited_power"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_unlimited_power.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_cult_of_personality"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_cult_of_personality.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_total_indoctrination"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_total_indoctrination.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_reverent_mines"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_reverent_mines.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_sacrificial_planets"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_sacrificial_planets.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_officina_magnificum"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_officina_magnificum.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_arcane_cyphers"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_arcane_cyphers.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ap_mechanical_transcendance"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_mechanical_transcendance.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_system_operations_hq"
+		texturefile = "gfx/interface/icons/modules/system_operations_hq.dds"
+	}
+	spriteType = {
+		name = "GFX_ap_scm_galaxy_brain"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_scm_galaxy_brain.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_SCM_army_icons"
+		textureFile = "gfx/interface/planetview/SCM_army_icon.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_army_type_centurion"
+		sprite_sheet_sprite_type = "GFX_SCM_army_icons"
+		default_frame = 2
+	}	
+	spriteType = {
+		name = "GFX_army_type_hoplite"
+		sprite_sheet_sprite_type = "GFX_SCM_army_icons"
+		default_frame = 1
+	}	
+	spriteType = {
+		name = "GFX_army_type_hoplite"
+		sprite_sheet_sprite_type = "GFX_SCM_army_icons"
+		default_frame = 1
+	}	
+}

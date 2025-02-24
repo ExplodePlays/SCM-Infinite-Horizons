@@ -1,0 +1,327 @@
+﻿l_english:
+ 
+ #########################
+ ##         KEYS       ###
+ #########################
+ 
+ planet_pops_organics:0 "Organics"
+ planet_pops_robotics:0 "Robots"
+ mod_planet_pops_organics_upkeep_mult:0 "Organic Pop Upkeep"
+ mod_planet_pops_organics_produces_mult:0 "Organic Pop Output"
+ mod_planet_pops_robotics_produces_mult:0 "Robot Output"
+ ship_military_station_small:0 "Defense Platform"
+ mod_ship_military_station_small_upkeep_mult:"Defense Platform Upkeep"
+ pc_shrouded_habitable_adj:0 "Shrouded"
+ 
+ resolution_tiyanki_conservation_act_tooltip:0 "Any empire that kills a §YTiyanki§! will be considered in §RBreach of Galactic Law§!. Having Tiyanki within borders will grant passive bonuses to £unity£ §YUnity§! and £society  §YSociety Research§!."
+ resolution_amoeba_conservation_act_tooltip:0 "Any empire that does not agree to peacefully coexist with §YSpace Amoebas§! will be considered in §RBreach of Galactic Law§!. Having §YSpace Amoebas§! within borders will grant passive bonuses to £unity£ §YUnity§! and £society  §YSociety Research§!."
+ 
+ resolution_ecology_gardens_of_eden:0 "Gardens of Eden"
+ resolution_ecology_gardens_of_eden_desc:0 "The filth of civilization should never sully the perfection of the natural world. Every planet is beautiful in it's own right and this beauty must be protected at all costs."
+ resolution_ecology_repeal_6:0 "Repeal Gardens of Eden"
+ resolution_ecology_repeal_6_desc:0 "$resolution_ecology_repeal_1_desc$"
+ resolution_ecology_repeal_6_effect_success:0 "Repeals the §YGardens of Eden§! resolution, leaving §Y$resolution_ecology_paradise_initiative$§! as galactic law."
+ 
+ resolution_galacticstudies_rift_probing:0 "Rift Probing"
+ resolution_galacticstudies_rift_probing_desc:0 "The scientific community is perplexed: what if the knowledge well of our own universe will run dry? We should combine our scientific efforts to find a way to reach other universes and dimensions, to make sure that our craving of new knowledge can always be sated.\n\n§RThere will be consequences...§!"
+ resolution_galacticstudies_repeal_6:0 "Repeal Rift Probing"
+ resolution_galacticstudies_repeal_6_desc:0 "$resolution_galacticstudies_repeal_1_desc$"
+ resolution_galacticstudies_repeal_6_effect_success:0 "Repeals the §YRift Probing§! resolution, leaving §Y$resolution_galacticstudies_extradimensional_experimentation$§! as galactic law."
+  
+ resolution_divinity_heavenly_mandate:0 "Heavenly Mandate"
+ resolution_divinity_heavenly_mandate_desc:0 "The divinity of life and it's grand purpose cannot be denied. All who argue against the spiritual law of the galaxy must convert, or else."
+ resolution_divinity_repeal_6:0 "Repeal Heavenly Mandate"
+ resolution_divinity_repeal_6_desc:0 "$resolution_divinity_repeal_1_desc$"
+ resolution_divinity_repeal_6_effect_success:0 "Repeals the §YHeaveny Mandate§! resolution, leaving §Y$resolution_divinity_a_defined_purpose$§! as galactic law."
+  
+ resolution_commerce_commercial_absolutism:0 "Commercial Absolutism"
+ resolution_commerce_commercial_absolutism_desc:0 "Only by allowing capitalism complete and total autonomy in the eyes of the law can we ensure economical growth across the galaxy."
+ resolution_commerce_repeal_6:0 "Repeal Commercial Absolutism"
+ resolution_commerce_repeal_6_desc:0 "$resolution_commerce_repeal_1_desc$"
+ resolution_commerce_repeal_6_effect_success:0 "Repeals the §YCommercial Absolutism§! resolution, leaving §Y$resolution_commerce_profit_maximization_engines$§! as galactic law."
+  
+ resolution_industry_industry_6.0:0 "Industry 6.0"
+ resolution_industry_industry_6.0_desc:0 "No longer should people work for the "good of the community", from now on everyone will work for the good of the industry. Let all welcome the sixth industrial revolution!"
+ resolution_industry_repeal_6:0 "Repeal Industry 6.0"
+ resolution_industry_repeal_6_desc:0 "$resolution_industry_repeal_1_desc$"
+ resolution_industry_repeal_6_effect_success:0 "Repeals the §YIndustry 6.0§! resolution, leaving §Y$resolution_industry_project_cornucopia$§! as galactic law."
+  
+ industry_2_amenities_tooltip:0 "Reduces £mod_planet_amenities_no_happiness_add£ §YAmenities§! gained from £job_maintenance_drone£ §YMaintenance drones§! by §R5%§!."
+ industry_3_amenities_tooltip:0 "Reduces £mod_planet_amenities_no_happiness_add£ §YAmenities§! gained from £job_maintenance_drone£ §YMaintenance drones§! by §R15%§!."
+ industry_4_amenities_tooltip:0 "Reduces £mod_planet_amenities_no_happiness_add£ §YAmenities§! gained from £job_maintenance_drone£ §YMaintenance drones§! by §R25%§!."
+ industry_5_amenities_tooltip:0 "Reduces £mod_planet_amenities_no_happiness_add£ §YAmenities§! gained from £job_maintenance_drone£ §YMaintenance drones§! by §R40%§!."
+ industry_6_amenities_tooltip:0 "Reduces £mod_planet_amenities_no_happiness_add£ §YAmenities§! gained from £job_maintenance_drone£ §YMaintenance drones§! by §R50%§!."
+ 
+ resolution_mutualdefense_containment_escalation:0 "Containment Escalation"
+ resolution_mutualdefense_containment_escalation_desc:0 "Being outside the jurisdiction of the galactic community is now considered an affront to existance itself. Every member of the galactic community MUST be prepared to answer to these renegades outside of the community with devestating force."
+ resolution_mutualdefense_repeal_6:0 "Repeal Containment Escalation"
+ resolution_mutualdefense_repeal_6_desc:0 "$resolution_mutualdefense_repeal_1_desc$"
+ resolution_mutualdefense_repeal_6_effect_success:0 "Repeals the §YContainmet Escalation§! resolution, leaving §Y$resolution_mutualdefense_renegade_containment$§! as galactic law."
+ 
+ resolution_rulesofwar_forced_pacifism:0 "Forced Pacifism"
+ resolution_rulesofwar_forced_pacifism_desc:0 "Only by completely outlawing guns, military ships, militarized starbases, even violence itself can we be sure of the well being of galactic community members."
+ resolution_rulesofwar_repeal_6:0 "Repeal Forces Pacifism"
+ resolution_rulesofwar_repeal_6_desc:0 "$resolution_rulesofwar_repeal_1_desc$"
+ resolution_rulesofwar_repeal_6_effect_success:0 "Repeals the §YForced Pacifism§! resolution, leaving §Y$resolution_rulesofwar_demobilization_initiative$§! as galactic law."
+  
+ resolution_greatergood_absolute_equality:0 "Absolute Equality"
+ resolution_greatergood_absolute_equality_desc:0 "From now on every single citizen within the galactic community will be completely economically and politically equal to any other member in every single way - wage, voting power, height, weight, IQ, eye colour and every other way conceivable."
+ resolution_greatergood_repeal_6:0 "Repeal Aboslute Equality"
+ resolution_greatergood_repeal_6_desc:0 "$resolution_greatergood_repeal_1_desc$"
+ resolution_greatergood_repeal_6_effect_success:0 "Repeals the §YAbsolute Equality§! resolution, leaving §Y$resolution_greatergood_universal_prosperity_mandate$§! as galactic law."
+ 
+ resolution_sanctions_tech_4:0 "Extreme Research Sanctions"
+ resolution_sanctions_tech_4_desc:0 "Empires that are in §RBreach of Galactic Law§! must allow full scientific regulation."
+ resolution_sanctions_tech_repeal_4:0 "§RRepeal $resolution_sanctions_tech_4$§!"
+ resolution_sanctions_tech_repeal_4_desc:0 "$resolution_sanctions_tech_repeal_1_desc$"
+ resolution_sanctions_tech_repeal_4_effect_success:2 "Repeals the §Y$resolution_sanctions_tech_4$§! resolution, leaving §Y$resolution_sanctions_tech_3$§! as galactic law."
+
+ resolution_sanctions_economic_4:0 "Extreme Economic Sanctions"
+ resolution_sanctions_economic_4_desc:0 "Empires that are in §RBreach of Galactic Law§! must allow full economic regulation."
+ resolution_sanctions_economic_repeal_4:0 "§RRepeal $resolution_sanctions_economic_4$§!"
+ resolution_sanctions_economic_repeal_4_desc:0 "$resolution_sanctions_economic_repeal_1_desc$"
+ resolution_sanctions_economic_repeal_4_effect_success:2 "Repeals the §Y$resolution_sanctions_economic_4$§! resolution, leaving §Y$resolution_sanctions_economic_3$§! as galactic law."
+
+ resolution_sanctions_military_4:0 "Extreme Military Sanctions"
+ resolution_sanctions_military_4_desc:0 "Empires that are in §RBreach of Galactic Law§! must allow full military regulation."
+ resolution_sanctions_military_repeal_4:0 "§RRepeal $resolution_sanctions_military_4$§!"
+ resolution_sanctions_military_repeal_4_desc:0 "$resolution_sanctions_military_repeal_1_desc$"
+ resolution_sanctions_military_repeal_4_effect_success:2 "Repeals the §Y$resolution_sanctions_military_4$§! resolution, leaving §Y$resolution_sanctions_military_3$§! as galactic law."
+
+ resolution_sanctions_administrative_4:0 "Extreme Administrative Sanctions"
+ resolution_sanctions_administrative_4_desc:0 "Empires that are in §RBreach of Galactic Law§! must allow full admninistrative regulation."
+ resolution_sanctions_administrative_repeal_4:0 "§RRepeal $resolution_sanctions_administrative_4$§!"
+ resolution_sanctions_administrative_repeal_4_desc:0 "$resolution_sanctions_administrative_repeal_1_desc$"
+ resolution_sanctions_administrative_repeal_4_effect_success:2 "Repeals the §Y$resolution_sanctions_administrative_4$§! resolution, leaving §Y$resolution_sanctions_administrative_3$§! as galactic law."
+
+ resolution_innovative_leadership:0 "Innovative Leadership"
+
+ resolution_innovative_leadership_standardized_education:0 "Standardized Education"
+ resolution_innovative_leadership_standardized_education_desc:0 "By standardizing education throghout the galaxy, we would eliminate the shortcoming of traditional education."
+ resolution_innovative_leadership_repeal_1:0 "Repeal Standardized Education"
+ resolution_innovative_leadership_repeal_1_desc:0 "Perhaps it was a mistake to place so much power into the hands of the few."
+ resolution_innovative_leadership_repeal_1_effect_success:0 "Repeals the §YStandardized Education§! resolution."
+  
+ resolution_innovative_leadership_sanctioned_scholarships:0 "Sanctioned Scholarships"
+ resolution_innovative_leadership_sanctioned_scholarships_desc:0 "By granting scholarships to the brightests and perhaps the more influential minds of the galaxy, we would ensure a healthy gentry across the galaxy."
+ resolution_innovative_leadership_repeal_2:0 "Repeal Sanctioned Scholarships"
+ resolution_innovative_leadership_repeal_2_desc:0 "$resolution_innovative_leadership_repeal_1_desc$"
+ resolution_innovative_leadership_repeal_2_effect_success:0 "Repeals the §YSanctioned Scholarships§! resolution, leaving §YStandardized Education§! as galactic law."
+  
+ resolution_innovative_leadership_exclusive_scholarships:0 "Exclusive Scholarships"
+ resolution_innovative_leadership_exclusive_scholarships_desc:0 "Scholarships are great and all, but perhaps we should concentrate them on select individuals, rather then larger groups."
+ resolution_innovative_leadership_repeal_3:0 "Repeal Exclusive Scholarships"
+ resolution_innovative_leadership_repeal_3_desc:0 "$resolution_innovative_leadership_repeal_1_desc$"
+ resolution_innovative_leadership_repeal_3_effect_success:0 "Repeals the §YExclusive Scholarships§! resolution, leaving §YSanctioned Scholarships§! as galactic law."
+ 
+ resolution_innovative_leadership_lawful_nepotism:0 "Lawful Nepotism"
+ resolution_innovative_leadership_lawful_nepotism_desc:0 "We have great people running the galaxy, no doubt they would know of other great people, that would benefit the galaxy, if granted an important position."
+ resolution_innovative_leadership_repeal_4:0 "Repeal Lawful Nepotism"
+ resolution_innovative_leadership_repeal_4_desc:0 "$resolution_innovative_leadership_repeal_1_desc$"
+ resolution_innovative_leadership_repeal_4_effect_success:0 "Repeals the §YLawful Nepotism§! resolution, leaving §YExclusive Scholarships§! as galactic law."
+ 
+ resolution_innovative_leadership_prioritized_stratification:0 "Prioritized Stratification"
+ resolution_innovative_leadership_prioritized_stratification_desc:0 "It is obvious, some people in the galaxy are just plain better than others, there should be certain rules in place to make sure that only the best get the best positions."
+ resolution_innovative_leadership_repeal_5:0 "Repeal Prioritized Stratification"
+ resolution_innovative_leadership_repeal_5_desc:0 "$resolution_innovative_leadership_repeal_1_desc$"
+ resolution_innovative_leadership_repeal_5_effect_success:0 "Repeals the §YPrioritized Stratification§! resolution, leaving §YLawful Nepotism§! as galactic law."
+  
+ resolution_innovative_leadership_new_age_classism:0 "New Age Classism"
+ resolution_innovative_leadership_new_age_classism_desc:0 "There is no hiding it, we cannot allow the people among the bottom strata have a say in... Anything. Classism should be passed as law from now on."
+ resolution_innovative_leadership_repeal_6:0 "Repeal New Age Classism"
+ resolution_innovative_leadership_repeal_6_desc:0 "$resolution_innovative_leadership_repeal_1_desc$"
+ resolution_innovative_leadership_repeal_6_effect_success:0 "Repeals the §YNew Age Classism§! resolution, leaving §YPrioritized Stratification§! as galactic law."
+ 
+ sanctioned_scholarships_tooltip:0 "§YUtopian Abundance§! living standard is §RBanned!§!."
+ exclusive_scholarships_tooltip:0 "§YSocial Welfare§! and §YSocial Equality§! living standards are §RBanned!§!."
+ prioritized_stratification_tooltip:0 "§YDecent Conditions§! living standard is §RBanned!§!."
+ new_age_classism_tooltip:0 "Species §RMUST§! live under either under the §YStratified Economy§! or §YBasic Substenance§! living standards."
+ 
+ resolution_galactic_vision:0 "Galactic Vision"
+ 
+ resolution_galactic_vision_neutrality:0 "Neutral Stance"
+ resolution_galactic_vision_neutrality_desc:0 "It would be unfair to lean one way or the other in this discussion."
+ 
+ resolution_galactic_vision_organic_legislature:0 "Organic Legislature Authority"
+ resolution_galactic_vision_organic_legislature_desc:0 "Perhaps organic empires are better suited to run the community, as they can operate not just on facts, but on moral standings as well."
+ 
+ resolution_galactic_vision_organic_protection:0 "Organic Protectionism"
+ resolution_galactic_vision_organic_protection_desc:0 "Organic empires would greatly benefit from certain advantages in the galactic community, the synthetic empires certainly won't object."
+ resolution_galactic_vision_organic_repeal_1:0 "Repeal Organic Protectionism"
+ resolution_galactic_vision_organic_repeal_1_desc:0 "Perhaps it was a mistake to lean so heavily in favor of organics."
+ resolution_galactic_vision_organic_repeal_1_effect_success:0 "Repeals the §YOrganic Protectionism§! resolution, leaving §YOrganic Legislature Authority§! as galactic law."
+  
+ resolution_galactic_vision_organic_superiority:0 "Organic Superiority"
+ resolution_galactic_vision_organic_superiority_desc:0 "Synthetic empires cannot be trusted with power within the galaxy, as they are cold machines of reason, devoid of any feelings or morality."
+ resolution_galactic_vision_organic_repeal_2:0 "Repeal Organic Superiority"
+ resolution_galactic_vision_organic_repeal_2_desc:0 "Perhaps it was a mistake to lean so heavily in favor of organics."
+ resolution_galactic_vision_organic_repeal_2_effect_success:0 "Repeals the §YOrganic Superiority§! resolution, leaving §YOrganic Protectionism§! as galactic law."
+  
+ resolution_galactic_vision_synthetic_legislature:0 "Synthetic Legislature Authority"
+ resolution_galactic_vision_synthetic_legislature_desc:0 "Perhaps synthetic empires are better suited to run the community, as they can operate on facts and logic, not some arbitrary ideas of morality."
+ 
+ resolution_galactic_vision_synthetic_protection:0 "Synthetic Protectionism"
+ resolution_galactic_vision_synthetic_protection_desc:0 "Synthetic empires would greatly benefit from certain advantages in the galactic community, the organics certainly won't object."
+ resolution_galactic_vision_synthetic_repeal_1:0 "Repeal Synthetic Protectionism"
+ resolution_galactic_vision_synthetic_repeal_1_desc:0 "Perhaps it was a mistake to lean so heavily in favor of synthetics."
+ resolution_galactic_vision_synthetic_repeal_1_effect_success:0 "Repeals the §YSynthetic Protectionism§! resolution, leaving §YSynthetic Legislature Authority§! as galactic law."
+  
+ resolution_galactic_vision_synthetic_superiority:0 "Synthetic Superiority"
+ resolution_galactic_vision_synthetic_superiority_desc:0 "Organic empires cannot be trusted with power within the galaxy, as they are unpredictable, greedy and devoid of any reason."
+ resolution_galactic_vision_synthetic_repeal_2:0 "Repeal Synthetic Superiority"
+ resolution_galactic_vision_synthetic_repeal_2_desc:0 "Perhaps it was a mistake to lean so heavily in favor of synthetics."
+ resolution_galactic_vision_synthetic_repeal_2_effect_success:0 "Repeals the §YSynthetic Superiority§! resolution, leaving §YSynthetic Protectionism§! as galactic law."
+  
+ resolution_protectionism:0 "Protectionism"
+
+ resolution_protectionism_local_business_encouragement:0 "Local Business Encouragement"
+ resolution_protectionism_local_business_encouragement_desc:0 "While galactic commerce is important, we shouldn't forget about local businesses and how important they were at the dawn of our civilizations."
+ resolution_protectionism_repeal_1:0 "Repeal Local Business Encouragement"
+ resolution_protectionism_repeal_1_desc:0 "Perhaps limiting galactic commerce was a mistake."
+ resolution_protectionism_repeal_1_effect_success:0 "Repeals the §YLocal Business Encouragement§! resolution."
+  
+ resolution_protectionism_foreign_investment_regulations:0 "Foreign Investment Regulations"
+ resolution_protectionism_foreign_investment_regulations_desc:0 "The should be regulations to intergalactic investments, to make sure that they don't cause any destabilization of the economy."
+ resolution_protectionism_repeal_2:0 "Repeal Foreign Investment Regulations"
+ resolution_protectionism_repeal_2_desc:0 "$resolution_protectionism_repeal_1_desc$"
+ resolution_protectionism_repeal_2_effect_success:0 "Repeals the §YForeign Investment Regulations§! resolution, leaving §YLocal Business Encouragement§! as galactic law."
+  
+ resolution_protectionism_armed_trading_posts:0 "Armed Trading Posts"
+ resolution_protectionism_armed_trading_posts_desc:0 "In order to protect local trade, trading posts should be armed and prepared for potential privateering expeditions."
+ resolution_protectionism_repeal_3:0 "Repeal Armed Trading Posts"
+ resolution_protectionism_repeal_3_desc:0 "$resolution_protectionism_repeal_1_desc$"
+ resolution_protectionism_repeal_3_effect_success:0 "Repeals the §YArmed Trading Posts§! resolution, leaving §YForeign Investment Regulations§! as galactic law."
+ 
+ resolution_protectionism_trade_fortresses:0 "Trade Fortresses"
+ resolution_protectionism_trade_fortresses_desc:0 "Arming trading posts is not enough, to ensure a safe economy, they should be turned into massive fortresses."
+ resolution_protectionism_repeal_4:0 "Repeal Trade Fortresses"
+ resolution_protectionism_repeal_4_desc:0 "$resolution_protectionism_repeal_1_desc$"
+ resolution_protectionism_repeal_4_effect_success:0 "Repeals the §YTrade Fortresses§! resolution, leaving §YArmed Trading Posts§! as galactic law."
+ 
+ resolution_protectionism_legalized_foreign_privateering:0 "Legalized Local Privateering"
+ resolution_protectionism_legalized_foreign_privateering_desc:0 "Local commerce need sto be protected at all cost, including plundering foreign trade routes within an empires borders."
+ resolution_protectionism_repeal_5:0 "Repeal Legalized Local Privateering"
+ resolution_protectionism_repeal_5_desc:0 "$resolution_protectionism_repeal_1_desc$"
+ resolution_protectionism_repeal_5_effect_success:0 "Repeals the §YLegalized Local Privateering§! resolution, leaving §YTrade Fortresses§! as galactic law."
+ legalized_foreign_privateering_tooltip:0 "Commercial Pacts are §RBanned!§!."
+  
+ resolution_protectionism_aggressive_protectionism:0 "Aggressive Protectionism"
+ resolution_protectionism_aggressive_protectionism_desc:0 "Foreign commerce needs to be banned within a nations borders, any attempts in international trade is to be put down with force."
+ resolution_protectionism_repeal_6:0 "Repeal Aggressive Protectionism"
+ resolution_protectionism_repeal_6_desc:0 "$resolution_protectionism_repeal_1_desc$"
+ resolution_protectionism_repeal_6_effect_success:0 "Repeals the §YAggressive Protectionism§! resolution, leaving §YLegalized Local Privateering§! as galactic law."
+  
+ resolution_multiculturalism:0 "Multiculturalism"
+ 
+ resolution_multiculturalism_neutrality:0 "Neutral Stance"
+ resolution_multiculturalism_neutrality_desc:0 "It would be unfair to lean one way or the other in this discussion."
+ 
+ resolution_multiculturalism_xenophile_exchange_programs:0 "Exchange Programs"
+ resolution_multiculturalism_xenophile_exchange_programs_desc:0 "To ensure diversity and well-being across the galaxy various exchange programs should be put in place."
+ 
+ resolution_multiculturalism_xenophile_legalized_marriage:0 "Legalized Interspecies Marriage"
+ resolution_multiculturalism_xenophile_legalized_marriage_desc:0 "There has been an outcry for interspecies marriage within the community, there is no reason to not legalize it."
+ resolution_multiculturalism_xenophile_repeal_1:0 "Repeal Legalized Interspecies Marriage"
+ resolution_multiculturalism_xenophile_repeal_1_desc:0 "Perhaps it was a mistake to lean so heavily in favor of multiculturalism."
+ resolution_multiculturalism_xenophile_repeal_1_effect_success:0 "Repeals the §YLegalized Interspecies Marriage§! resolution, leaving §YExchange Programs§! as galactic law."
+  
+ resolution_multiculturalism_xenophile_galactic_citizenship:0 "Galactic Citizenship"
+ resolution_multiculturalism_xenophile_galactic_citizenship_desc:0 "Citizens of the galactic community should be able of appealing for a galactic citizenship, allowing them free movement and oppurtunities anywhere in the galaxy."
+ resolution_multiculturalism_xenophile_repeal_2:0 "Repeal Galactic Citizenship"
+ resolution_multiculturalism_xenophile_repeal_2_desc:0 "Perhaps it was a mistake to lean so heavily in favor of multiculturalism."
+ resolution_multiculturalism_xenophile_repeal_2_effect_success:0 "Repeals the §YGalactic Citizenship§! resolution, leaving §YLegalized Interspecies Marriage§! as galactic law."
+  
+ resolution_multiculturalism_xenophobe_border_regulation:0 "Border Regulation"
+ resolution_multiculturalism_xenophobe_border_regulation_desc:0 "Free movement between empire borders should be limited, there is no say in what type of dangerous individuals we might let in otherwise."
+ 
+ resolution_multiculturalism_xenophobe_traditional_families:0 "Traditional Families Act"
+ resolution_multiculturalism_xenophobe_traditional_families_desc:0 "To ensure galactic stability, forming interspecies unions needs to be banned, while forming more traditional families - encouraged."
+ resolution_multiculturalism_xenophobe_repeal_1:0 "Repeal Traditional Families Act"
+ resolution_multiculturalism_xenophobe_repeal_1_desc:0 "Perhaps it was a mistake to lean so heavily in favor of isolationism."
+ resolution_multiculturalism_xenophobe_repeal_1_effect_success:0 "Repeals the §YTraditional Families Act§! resolution, leaving §YBorder Regulation§! as galactic law."
+  
+ resolution_multiculturalism_xenophobe_outlawed_migration:0 "Xeno Control"
+ resolution_multiculturalism_xenophobe_outlawed_migration_desc:0 "The Xeno is too unpredictable in a foreign environment, there should be laws in place, to guarantee their... Safe living conditions..."
+ resolution_multiculturalism_xenophobe_repeal_2:0 "Repeal Xeno Control"
+ resolution_multiculturalism_xenophobe_repeal_2_desc:0 "Perhaps it was a mistake to lean so heavily in favor of isolationism."
+ resolution_multiculturalism_xenophobe_repeal_2_effect_success:0 "Repeals the §YXeno Control§! resolution, leaving §YTraditional Families Act§! as galactic law."
+ 
+ xenophile_legalized_marriage_tooltip:0 "All species within empire must have §YFull Citizenship§!."
+ galactic_citizenship_tooltip:0 "Having atleast §Y1§! §YMigration Pact§! is §RMandatory§!."
+ border_regulation_tooltip:0 "§YMigration Pacts§! are §RBanned!.§!"
+ traditional_families_tooltip:0 "Xenos having §RFull Citizenship§! is §RBanned!§!."
+ outlawed_migration_tooltip:0 "All Xenos must be §REnslaved§!."
+ 
+ resolution_galactic_exploration:0 "Galactic Exploration"
+ 
+ resolution_galactic_exploration_archaeology_initiative:0 "Joined Archaeology Initiative"
+ resolution_galactic_exploration_archaeology_initiative_desc:0 "There are many things to discover in the galaxy, we should join in this endeavour, especially within the archaeology sphere, for this would only help the galaxy as a whole."
+ resolution_galactic_exploration_repeal_1:0 "Repeal Joined Archaeology Initiative"
+ resolution_galactic_exploration_repeal_1_desc:0 "Perhaps we are looking into the galaxy too deeply."
+ resolution_galactic_exploration_repeal_1_effect_success:0 "Repeals the §YJoined Archaeology Initiative§! resolution."
+ archaeology_initiative_tooltip:0 "Unlock the planet unique §YArchaeological Station§! building." 
+  
+ resolution_galactic_exploration_outer_rim_expeditions:0 "Outer Rim Expeditions"
+ resolution_galactic_exploration_outer_rim_expeditions_desc:0 "We might think that we have explored all there is within our reach, but if we just look a little closer, we might find more things to discover."
+ resolution_galactic_exploration_repeal_2:0 "Repeal Outer Rim Expeditions"
+ resolution_galactic_exploration_repeal_2_desc:0 "$resolution_galactic_exploration_repeal_1_desc$"
+ resolution_galactic_exploration_repeal_2_effect_success:0 "Repeals the §YOuter Rim Expeditions§! resolution, leaving §YJoined Archaeology Initiative§! as galactic law."
+ outer_rim_expeditions_tooltip:0 "Grants a small yearly chance to spawn a minor §Yanomaly§! within borders."
+  
+ resolution_galactic_exploration_inner_core_expeditions:0 "Inner Core Expeditions"
+ resolution_galactic_exploration_inner_core_expeditions_desc:0 "It is time to look into the most dangerous part of the galaxy - the galactic core, who knows what secrets in might hold!"
+ resolution_galactic_exploration_repeal_3:0 "Repeal Inner Core Expeditions"
+ resolution_galactic_exploration_repeal_3_desc:0 "$resolution_galactic_exploration_repeal_1_desc$"
+ resolution_galactic_exploration_repeal_3_effect_success:0 "Repeals the §YInner Core Expeditions§! resolution, leaving §YJoined Archaeology Initiative§! as galactic law."
+ inner_core_expeditions_tooltip:0 "The Galactic Community starts funding expeditions to the §BGalactic Core§!." 
+ 
+ mod_job_archaeologist_add:0 "Archaeologist jobs"
+ mod_job_archaeologist_drone_add:0 "Archaeology Drone jobs"
+ mod_country_base_minor_artifacts_produces_add:0 "£minor_artifacts£ §YMinor Artifacts§! per month"
+ mod_planet_archaeologists_minor_artifacts_produces_add:0 "£minor_artifacts£ §YMinor Artifact§! production from £job_archaeologist£ §YArchaeologists§! and £job_archaeologist_drone£ §YArchaeology Drones§!"
+ planet_archaeologists:0 "Planet Archaeologists"
+ job_archaeologist:0 "Archaeologist"
+ job_archaeologist_plural:0 "Archaeologists"
+ job_archaeologist_desc:0 "A hole in the ground is more interesting than you might think."
+ job_archaeologist_drone:0 "Archaeology Drone"
+ job_archaeologist_drone_plural:0 "Archaeology Drones"
+ job_archaeologist_drone_desc:0 "A hole in the ground is more interesting than you might think."
+ job_archaeologist_effect_desc:0 "£job_archaeologist£ $job_archaeologist_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £physics£ £society£ £engineering£ §YResearch Points§! and £minor_artifacts£ §YMinor Artifacts§!."
+ job_archaeologist_drone_effect_desc:0 "£job_archaeologist_drone£ $job_archaeologist_drone_plural$ turn £minerals£ §Y$minerals$§! into £physics£ £society£ £engineering£ §YResearch Points§! and £minor_artifacts£ §YMinor Artifacts§!."
+ old_lantea_modifier:0 "Old Lantea"
+ old_lantea_modifier_desc:0 "Old Lantea is an ancient planet, the structures here are arcane and seemingly immovable, this planet can never be restored."
+ old_lantea_modifier_tooltip:0 "This planet §RCannot be turned into an Ecumonopolis!§!"
+ d_lantean_relic_site:0 "Lantean Relic Site"
+ d_lantean_relic_site_desc:0 "Deep within the Old Lantean concrete jungle lie secrets yet to be uncovered..."
+ 
+ building_archaeologist_station:0 "Archaeology Station"
+ building_archaeologist_station_desc:0 "A hole in the ground is more interesting than you might think."
+ mod_building_archaeologist_station_max:0 "Planet §YArchaeology Station§! cap"
+ 
+ resolution_culture_sanctions:0 "Cultural Sanctions"
+ 
+ resolution_culture_sanctions_1:0 "Minor Cultural Sanctions"
+ resolution_culture_sanctions_1_desc:0 "Empires that are in §RBreach of Galactic Law§! must allow minor cultural regulation."
+ resolution_culture_sanctions_repeal_1:0 "§RRepeal $resolution_culture_sanctions_1$§!"
+ resolution_culture_sanctions_repeal_1_desc:0 "Perhaps these cultural sanctions are too harsh."
+ resolution_culture_sanctions_repeal_1_effect_success:2 "Repeals the §Y$resolution_culture_sanctions_1$§! resolution."
+ 
+ resolution_culture_sanctions_2:0 "Medium Cultural Sanctions"
+ resolution_culture_sanctions_2_desc:0 "Empires that are in §RBreach of Galactic Law§! must allow medium cultural regulation."
+ resolution_culture_sanctions_repeal_2:0 "§RRepeal $resolution_culture_sanctions_2$§!"
+ resolution_culture_sanctions_repeal_2_desc:0 "$resolution_culture_sanctions_1_desc$"
+ resolution_culture_sanctions_repeal_2_effect_success:2 "Repeals the §Y$resolution_culture_sanctions_2$§! resolution, leaving §Y$resolution_culture_sanctions_1$§! as galactic law."
+ 
+ resolution_culture_sanctions_3:0 "Major Cultural Sanctions"
+ resolution_culture_sanctions_3_desc:0 "Empires that are in §RBreach of Galactic Law§! must allow major cultural regulation."
+ resolution_culture_sanctions_repeal_3:0 "§RRepeal $resolution_culture_sanctions_3$§!"
+ resolution_culture_sanctions_repeal_3_desc:0 "$resolution_culture_sanctions_1_desc$"
+ resolution_culture_sanctions_repeal_3_effect_success:2 "Repeals the §Y$resolution_culture_sanctions_3$§! resolution, leaving §Y$resolution_culture_sanctions_2$§! as galactic law."
+ 
+ resolution_culture_sanctions_4:0 "Extreme Cultural Sanctions"
+ resolution_culture_sanctions_4_desc:0 "Empires that are in §RBreach of Galactic Law§! must allow full cultural regulation."
+ resolution_culture_sanctions_repeal_4:0 "§RRepeal $resolution_culture_sanctions_4$§!"
+ resolution_culture_sanctions_repeal_4_desc:0 "$resolution_culture_sanctions_1_desc$"
+ resolution_culture_sanctions_repeal_4_effect_success:2 "Repeals the §Y$resolution_culture_sanctions_4$§! resolution, leaving §Y$resolution_culture_sanctions_3$§! as galactic law."
+
+ 

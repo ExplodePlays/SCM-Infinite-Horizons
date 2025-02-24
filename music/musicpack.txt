@@ -1,0 +1,575 @@
+song = {
+	name = "GalacticCoreDLC"
+}
+
+song = {
+	name = "BeyondInfinity"
+}
+
+song = {
+	name = "BeyondTheVeil"
+}
+
+song = {
+	name = "DeadByDaylight"
+}
+
+song = {
+	name = "DeusPatriaRei"
+}
+
+song = {
+	name = "GalacticCustodian"
+}
+
+song = {
+	name = "InfiniteHorizonsTheme"
+}
+
+song = {
+	name = "RebornEpicTheme"
+}
+
+song = {
+	name = "ScoutingIntro"
+}
+
+song = {
+	name = "SpaceExplorer"
+}
+
+song = {
+    name = "Alienhand - Falling classic" 
+}
+  
+song = {
+	name = "Alienhand - Long way home" 
+}
+  
+song = {
+	name = "Alienhand - Starsouls" 
+}
+  
+song = {
+	name = "Alienhand - Circle of Life" 
+}
+  
+song = {
+	name = "Alienhand - The Kill" 
+}
+  
+song = {
+	name = "Alienhand - Dark Corners" 
+}
+  
+song = {
+	name = "Alienhand - Catarina" 
+}
+  
+song = {
+	name = "Alienhand - Forever lost" 
+}
+  
+song = {
+	name = "Eve Online - But Still we Goon" 
+}
+
+song = {
+	name = "Eve Online - Revelations Expansion Theme" 
+}
+  
+song = {
+	name = "Eve Online - Trinity Login Theme" 
+}
+  
+song = {
+	name = "Eve Online - Tomorrows Never Ending Yesterday" 
+}
+  
+song = {
+	name = "Eve Online - New Moon" 
+}
+  
+song = {
+	name = "Eve Online - Seek and you shall find" 
+}
+  
+song = {
+	name = "Eve Online - Merchants Looters and Ghosts" 
+}
+  
+song = {
+	name = "Eve Online - We fight proud for the holder" 
+}
+  
+song = {
+	name = "Eve Online - These sovereign Systems" 
+}
+  
+song = {
+	name = "Eve Online - Parallax Release Theme" 
+}
+  
+song = {
+	name = "Eve Online - Vanguard Release Theme" 
+}
+  
+song = {
+	name = "Eve Online - Galatea Release Theme" 
+}
+  
+song = {
+	name = "Eve Online - Carnyx Release Theme" 
+}
+  
+song = {
+	name = "Eve Online - Scylla Release Theme" 
+}
+  
+song = {
+	name = "Eve Online - Tiamat Release Theme" 
+}
+  
+song = {
+	name = "Stellar Drone - Billions and Billions" 
+}
+
+
+song = {
+	name = "Mass Effect 2 - The Illusiveman"
+}
+
+song = {
+	name = "Endless Space - The Endless"
+}
+
+song = {
+	name = "Endless Space - Gravity Well"
+}
+
+song = {
+	name = "Mass Effect 3 - A Future for the Krogan"
+}
+
+song = {
+	name = "Mass Effect 3 - I was lost without you"
+}
+
+song = {
+	name = "Mass Effect 3 - An end once and for all"
+}
+
+song = {
+	name = "Endless Space - Slice and collide"
+}
+
+song = {
+	name = "Endless Space - Flawless Theory"
+}
+
+song = {
+	name = "John Dreamer - End of my journey"
+}
+
+song = {
+	name = "John Williams - The Scavenger"
+}
+
+song = {
+	name = "Dead Space - 3200 Years ago on an icy Planet"
+}
+
+song = {
+	name = "Mass Effect 3 - Wake up Extended Cut Soundtrack"
+}
+
+song = {
+	name = "Mass Effect 3 - I will watch over those who live on"
+}
+
+song = {
+	name = "Mass Effect 3 - I am alive and i am not alone"
+}
+
+song = {
+	name = "Mass Effect 2 - What the future holds"
+}
+
+song = {
+	name = "Mass Effect 2 - Charges of Treason"
+}
+
+song = {
+	name = "Command and Conquer 4 - Welcome back Commander"
+}
+
+song = {
+	name = "Tron Legacy - Overture"
+}
+
+song = {
+	name = "Tron Legacy - Recognizer"
+}
+
+song = {
+	name = "Tron Legacy - Armory"
+}
+
+song = {
+	name = "Tron Legacy - Flynn lives"
+}
+
+song = {
+	name = "Interstellar - Cornfield chase"
+}
+
+song = {
+	name = "Interstellar - Stay"
+}
+
+song = {
+	name = "Elysium - Breaking a Promise"
+}
+
+song = {
+	name = "Inception - Time"
+}
+
+
+song = {
+	name = "The Martian - Making Water"
+}
+
+song = {
+	name = "The Martian - Mars"
+}
+
+song = {
+	name = "The Martian - Messages from Hermes"
+}
+
+song = {
+	name = "Endless Space 2 - Memories of the Lost"
+}
+
+song = {
+	name = "Endless Space 2 - Quantum dub"
+}
+
+song = {
+	name = "Halo 4 - Legacy"
+}
+
+song = {
+	name = "Halo 4 - Requiem"
+}
+
+song = {
+	name = "X Rebirth - Birth of New Era"
+}
+
+song = {
+	name = "X Rebirth - Main Theme"
+}
+
+song = {
+	name = "X Rebirth - The Teladi Outpost"
+}
+
+song = {
+	name = "Deus Ex Human Revolution - The Mole"
+}
+
+song = {
+	name = "Deus Ex Human Revolution - Singapore Omega Lab Ambient"
+}
+
+song = {
+	name = "Deus Ex Human Revolution - Penthouse"
+}
+
+song = {
+	name = "Deus Ex Human Revolution - Limb Clinic"
+}
+
+song = {
+	name = "Deus Ex Human Revolution - Adam Jensens Apartment"
+}
+
+song = {
+	name = "Endless Legend - Time of Change"
+}
+
+song = {
+	name = "Endless Space - Falling Night Stars"
+}
+
+song = {
+	name = "Eve Online - yc1183 Theme"
+}
+
+song = {
+	name = "Eve Online - yc1185 Theme"
+}
+
+song = {
+	name = "Moon - Memories someone well never know"
+}
+
+song = {
+	name = "Two Steps From Hell - Across the Bloodwater"
+}
+
+song = {
+	name = "XCom Enemy Unknown - Breaking Ground"
+}
+
+song = {
+	name = "Anno 2070 - God smiles"
+}
+
+song = {
+	name = "Anno 2205 - Global Union Anthem"
+}
+
+song = {
+	name = "Halo Wars 2 - Menu Theme"
+}
+
+song = {
+	name = "Halo Wars 2 - Isabels Awakening"
+}
+
+song = {
+	name = "Project Cars 2 - The Long Road"
+}
+
+song = {
+	name = "Mass Effect Andromeda - Heleus"
+}
+
+song = {
+	name = "Destiny - The Traveler"
+}
+
+song = {
+	name = "Destiny - Excerpt from the Hope"
+}
+
+song = {
+	name = "Destiny - Excerpt from the Ecstasy"
+}
+
+song = {
+	name = "Destiny 2 - Inner Light"
+}
+
+song = {
+	name = "Destiny 2 - Journey (featuring Kronos Quartet)"
+}
+
+song = {
+	name = "Aphex Twin - Stone In Focus"
+}
+
+song = {
+	name = "Bensound - Relaxing"
+}
+
+song = {
+	name = "Captain Panic! & Systek - Proxy"
+}
+
+song = {
+	name = "Interstellar - No Time For Caution"
+}
+
+song = {
+	name = "Stellardrone - Penumbra (Remix)"
+}
+
+song = {
+	name = "Anno 2205 - Dear Distant Earth"
+}
+
+song = {
+	name = "Anno 2205 - Helium 3"
+}
+
+song = {
+	name = "Anno 2205 - Lunar by Birth"
+}
+
+song = {
+	name = "Anno 2205 - The Second Wave Overture"
+}
+
+song = {
+	name = "Hegemonia - Ambient3"
+}
+
+song = {
+	name = "Hegemonia - Ambient6"
+}
+
+song = {
+	name = "Hegemonia - Ambient11"
+}
+
+song = {
+	name = "Hegemonia - Main Theme"
+}
+
+song = {
+	name = "Homeworld - Adagio for Strings"
+}
+
+song = {
+	name = "Age of Wonders Planetfall - Celestium"
+}
+
+song = {
+	name = "Age of Wonders Planetfall - Fog of War"
+}
+
+song = {
+	name = "Age of Wonders Planetfall - I Gaze Into Infinity"
+}
+
+song = {
+	name = "Age of Wonders Planetfall - Lunar Labour"
+}
+
+song = {
+	name = "Age of Wonders Planetfall - Promethean"
+}
+
+song = {
+	name = "Age of Wonders Planetfall - Terraformer"
+}
+
+song = {
+	name = "Age of Wonders Planetfall - Tranquility"
+}
+
+song = {
+	name = "Naruto Shippuden OST 3 - Decision"
+}
+
+song = {
+	name = "Christian Sandquist - Wanderers"
+}
+
+song = {
+	name = "Clinton Shorter - Prawnkus"
+}
+
+song = {
+	name = "Deus Ex Mankind Divided - Main Menu Theme"
+}
+
+song = {
+	name = "Deus Ex Mankind Divided - TF29"
+}
+
+song = {
+	name = "Dune 2 - Battle for Arrakis - Command Post (remake)"
+}
+
+song = {
+	name = "Dune 2 - Battle for Arrakis - Turbulence - Orchestral Music Remake"
+}
+
+song = {
+	name = "Elite Dagerous - Exploration - Neutral - Lonely Pulsar"
+}
+
+song = {
+	name = "Elite Dangerous - Frameshift & Starports - Frameshift Suite - First Movement - Andromeda"
+}
+
+song = {
+	name = "Emperor - Battle for Dune - Sand Excursion"
+}
+
+song = {
+	name = "Frozen Synapse - Menu"
+}
+
+song = {
+	name = "Hans Zimmer - Someone Lived This"
+}
+
+song = {
+	name = "It Follows - Detroit"
+}
+
+song = {
+	name = "Limbo - Menu"
+}
+
+song = {
+	name = "Mass Effect Andromeda - Undiscovered"
+}
+
+song = {
+	name = "Michael McCann - There And Back Again"
+}
+
+song = {
+	name = "Michiel van den Bos - Home Base"
+}
+
+song = {
+	name = "Mirrors Edge Catalyst - Faith"
+}
+
+song = {
+	name = "Quantum Break - A Whisper"
+}
+
+song = {
+	name = "Sam Hulick - Ancient Sands"
+}
+
+song = {
+	name = "Sam Hulick - The Colossus"
+}
+
+song = {
+	name = "Sins of a solar Empire - Expulsion"
+}
+
+song = {
+	name = "Sins of a solar Empire - ten thousand years"
+}
+
+song = {
+	name = "Sins of a solar Empire - The Fallen Empire"
+}
+
+song = {
+	name = "Stellar Drone - Red Giant"
+}
+
+song = {
+	name = "Synchronicity - Absence Of Paradox"
+}
+
+song = {
+	name = "Synchronicity - Kmc014"
+}
+
+song = {
+	name = "The Enigma tng - deceptive metropolis"
+}
+
+song = {
+	name = "XCOM 2 - Lazarus"
+}
+
+song = {
+	name = "Big Giant Circles - The Echo"
+}
+
+

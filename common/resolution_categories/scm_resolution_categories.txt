@@ -1,0 +1,13 @@
+resolution_galactic_exploration = {
+	group = environment_technology
+	icon = "GFX_resolution_galactic_exploration"
+
+	resolution_types = {
+		"resolution_galactic_exploration_repeal_1"
+		"resolution_galactic_exploration_repeal_2"
+		"resolution_galactic_exploration_repeal_3"
+		"resolution_galactic_exploration_archaeology_initiative"
+		"resolution_galactic_exploration_outer_rim_expeditions"
+		"resolution_galactic_exploration_inner_core_expeditions" 
+	}
+}

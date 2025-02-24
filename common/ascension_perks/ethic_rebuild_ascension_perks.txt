@@ -219,9 +219,11 @@ ap_the_flesh_is_weak = {
 	}
 
 	ai_weight = {
-		factor = @ascension_path_base_weight
+		factor = 1
+		#factor = @ascension_path_base_weight
 		modifier = {
-			factor = @ascension_path_anti_synergy_weight
+			factor = 1
+			#factor = @ascension_path_anti_synergy_weight
 			has_flesh_is_weak_anti_synergy = yes
 		}
 	}

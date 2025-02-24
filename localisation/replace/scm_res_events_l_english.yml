@@ -1,0 +1,79 @@
+﻿l_english:
+ 
+ SCM_resolutions.7.name:0 "The White Plateau"
+ SCM_resolutions.7.desc:0 "Thanks to the communities new scientific legislature, new, more autonomous scientific complexes have started opening up, the most promising of these is the "White Plateau" - where the brightest minds from across the galaxy gather to push the boundries of science."
+ SCM_resolutions.7.a:0 "For a brighter tomorrow!"
+ 
+ SCM_resolutions.8.name:0 "White Plateau Makes Advancements"
+ SCM_resolutions.8.desc:0 "The complex has just recently opened up, but it has already shown great promise for the rest of the galaxy, as the scientists there have made a number of great advances in various fields."
+ SCM_resolutions.8.a:0 "That was a good investment."
+ 
+ SCM_resolutions.9.name:0 "New Materials"
+ SCM_resolutions.9.desc:0 "With White Plateau's influence growing wider, they continue to gain access to rarer and rarer materials to experiment on, one of such materials are Zen crystals. Recently a shadowy figure procured a very pure and large sample of a Zen crystal for the complex, but he did warn of "unforeseen consequences"."
+ SCM_resolutions.9.a:0 "What does he mean by "unforeseen"?"
+ 
+ SCM_resolutions.10.name:0 "Full-Life"
+ SCM_resolutions.10.desc:0 "The Zen crystals have proven to be a very unique and special material, while most every material experiences a half-life effect, these Zen crystals instead accumulate atomic mass over time, our scientists call this phenomena "Full-Life". However they were murmuring about "anomalous polarity switches", whatever that means."
+ SCM_resolutions.10.a:0 "Anoma-what? Who cares?"
+ 
+ SCM_resolutions.11.name:0 "White Plateau Goes Quiet"
+ SCM_resolutions.11.desc:0 "Recently the White Plateau complex has gone quiet, local authorities have sent a military team to investigate, but they have gone quiet too. Has something terrible just happened?"
+ SCM_resolutions.11.a:0 "Now I get what he meant by "unforeseen"..."
+ 
+ SCM_resolutions.13.name:0 "Center Of The World"
+ SCM_resolutions.13.desc:0 "The expeditions sent to the inner core of the galaxy have recently returned, having mapped out three save passages to the very center of our galaxy."
+ SCM_resolutions.13.a:0 "Glaciers melting in the dead of night..."
+ 
+ old_lantea_arc_site:0 "Secrets of Old Lantea"
+ old_lantea_arc_site_desc:0 "Now that we have access to Old Lantea and it's arcane concrete jungles, we should outfit an expedition to find out what happened here."
+ 
+ SCM_resolutions.15.name:0 "Ancient Scars"
+ SCM_resolutions.15.desc:0 "The ancient spire of the capital has many engraved stories on it's seemingly endless walls. One of these stories seems to be related to the downfall of the Lantean empire, but we need more time to further decypher these hieroglyphs. We also found some shiny ancient technology pieces!"
+ SCM_resolutions.15.a:0 "On walls? Didn't they have digital codexes?"
+ 
+ SCM_resolutions.16.name:0 "The April War"
+ SCM_resolutions.16.desc:0 "We decyphered some of the story - it speaks of a galaxy-wide war, sparked on something called "April", it mentions planet eating monsters, brave warriors and sensless slaughter, something about a burning tree - our archaeologists have no idea how a tree plays into this. Also, looky-looky, more shiny artifacts."
+ SCM_resolutions.16.a:0 "What is this "April"?"
+ 
+ SCM_resolutions.17.name:0 "A shadow over the shroud"
+ SCM_resolutions.17.desc:0 "Our best linguists decyphered another piece of the story, now it talks of a great planet eating shadow, fueled by hunger for revenge it made it's way through the galaxy towards the Lanteans, as it seems they had something to do with the burning tree and the tree connects to this great shadow over the shroud. Oh yeah, they found some artifacts as well."
+ SCM_resolutions.17.a:0 "What is this, a Warhammer reference?"
+ 
+ SCM_resolutions.18.name:0 "The First Fall"
+ SCM_resolutions.18.desc:0 "Our linguists have followed the story to it's end in the tower, and they managed to decypher the final segments. The planet-hungry shadow besieged the Lanteans and made them flee the galaxy with inter-galactic colony ships. This planet wasn't their capital at all it seems, it was a research outpost at the galactic center. As this was a research post, we found some technology blueprints, ooh - shiny." 
+ SCM_resolutions.18.a:0 "So where is this shadow now? Where are the Lanteans?"
+ 
+ SCM_resolutions.20.name:0 "The Story of the Shadow"
+ SCM_resolutions.20.desc:0 "It seems that New Lantea has the answers to what happened to this Lantean research post and the planet-eating, empire-destroying, shroud-shrouding shadow of revenge. Also, the planet should have more shiny things to find!"
+ SCM_resolutions.20.a:0 "Oh great, more bad fan-fiction..."
+ 
+ SCM_resolutions.21.name:0 "The Great Bait"
+ SCM_resolutions.21.desc:0 "Hidden within the galactic core, this post had a lot of time to prepare for the shadow, develop new, arcane technologies and develop a plan to end the planet eaters once and for all, avenging their fallen bretheren in the process. Their limitless knowledge granted them the idea to lure the shadow into the core. Also, we found some shinies."
+ SCM_resolutions.21.a:0 "Lure the murderes in, great idea!"
+ 
+ SCM_resolutions.22.name:0 "The Lure of Lures"
+ SCM_resolutions.22.desc:0 "It turns out that New Lantea used to be a massive fortress world, and the Lanteans shipped their entire population to it, to hold for as long as possible. The great planet-eating hive, that casts a shadow over the shroud came to the galactic core in numbers, in fact with all of their numbers and laid siege to New Lantea. The Lantean plan was simple - wait for all the hive to gather within the core and then detonate an absurdly sized bomb within the planets core, blowing the hive straight into the black hole and judging by the state of the planet, it worked. Also, yes, of course the archaeologists found some artifacts."
+ SCM_resolutions.22.a:0 "What absolute madlads!"
+ 
+ SCM_resolutions.23.name:0 "The Remnants"
+ SCM_resolutions.23.desc:0 "Well that seems to be the end of the story of the first Lanteans, they were the few that remained behind, but they carried the burdens of their entire race with true gusto. We also found a blueprint for an ancient tech."
+ SCM_resolutions.23.a:0 "Cool story, bro"
+ 
+ SCM_resolutions.25.name:0 "The Secrets of New Lantea?"
+ SCM_resolutions.25.desc:0 "Our archaeology teams within the galactic core have uncovered new fragments of the Lantean story within the cracked planet of New Lantea."
+ SCM_resolutions.25.a:0 "We should investigate"
+ 
+ new_lantea_arc_site:0 "Secrets of New Lantea"
+ new_lantea_arc_site_desc:0 "It seems that the clues we gathered in Old Lantea led us here, this shattered world seems to hold the final secrets of the Lanteans."
+
+ SCM_resolutions.19.name:0 "Arcane Knowledge"
+ SCM_resolutions.19.desc:0 "Our archaeologist have uncovered blueprints for a certain arcane technology."
+ SCM_resolutions.19.a: "Blueprints for archotech weaponry"
+ SCM_resolutions.19.b: "Blueprints for archotech shielding"
+ SCM_resolutions.19.c: "Blueprints for archotech plating"
+ SCM_resolutions.19.d: "Blueprints for archotech strike craft"
+ SCM_resolutions.19.e: "Blueprints for archotech sensors"
+ SCM_resolutions.19.f: "Blueprints for archotech thrusters"
+ SCM_resolutions.19.g: "Blueprints for archotech generators"
+ SCM_resolutions.19.h: "Blueprints for archotech titanic weaponry"
+ 
