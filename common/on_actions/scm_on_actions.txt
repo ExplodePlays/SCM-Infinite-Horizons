@@ -30,6 +30,8 @@ on_monthly_pulse_country = {
 		SCM_ap_events.10
 		SCM_ap_events.13
 		SCM_ap_events.18 #Galaxy brain
+		wooltastic_espionage.1 # Removes the Immunity from "Steal Technology" Operations if you left the Espionage Federation
+		
 	}
 }
 

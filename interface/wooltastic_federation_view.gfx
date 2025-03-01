@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_espionage_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/espionage_federation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_spiritualist_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/spiritualist_federation.dds"
+	}
+}

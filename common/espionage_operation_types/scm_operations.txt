@@ -1,0 +1,441 @@
+# operation_type_name = {			# Key of the site, used for name lookup etc.
+#	target = <target type>			# Valid target types are country, megastructure, starbase, fleet, army, pop_faction, spynetwork, federation and none (spy network target is the target then)
+#	picture = <sprite key>			# GFX_* sprite key for the operation image
+#	desc = <triggered event desc>	# Description generator for the operation, with scope this=spy network
+#	stages = <int>					# Should match number of defined stages below.
+#	potential = <trigger>			# Trigger checking if a scope with this=spy network is potential to use (this will add/remove this operation without giving the player a reason).
+#	allow = <trigger>				# Trigger checking if a scope with this=spy network is allowed to use (this will toggle enable/disabled mode on buttons etc).
+#	stage = {						# Stage definition, order dependent.
+#		difficulty = <interval int>	# min max interval type. interval is defined either by '<int>' or '{ min = <int> max=<int> }' where the later will randomize a value between min and max.
+#		icon = <string>				# icon gfx type.
+#		event = <string>			# event to fire when finished the state.
+#	}
+#	stage = {...}					# Second stage, the total number of 'stage' entries should match value of 'stages'
+#	on_roll_failed = <effect>		# Effect to fire when a roll fails, with scope this=spy operation.
+#	on_create = <effect>			# Effect to fire upon operation creation, with scope this=spy operation.
+#}
+@diff_t0 = 4
+@diff_t1 = 5
+@diff_t2 = 6
+@diff_t3 = 7
+@diff_t4 = 8
+@diff_t5 = 9
+@diff_t6 = 10
+@diff_t7 = 11
+@diff_t8 = 12
+@diff_t9 = 13
+@operationTargetedByTimer = 10800#30 years during which the effects of an operation may be felt by select Spy Network events
+# this = operation
+# from = operation target
+operation_lower_diplomatic_weight = {
+	categories = {
+		op_cat_subterfuge
+		op_cat_diplomacy
+	}
+	picture = GFX_evt_tradedeal
+	desc = operation_lower_diplomatic_weight_desc
+	stages = 3
+	resources = {
+		category = operations
+		cost = {
+			influence = 50
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+	spy_power_cost = 20
+	potential = {
+		root.owner = {
+			AND = {
+				has_federation = yes
+				federation = {
+					has_federation_perk = espionage_more_operations_1
+				}
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = operation_lower_diplomatic_weight_too_recent
+			NOT = {
+				has_spynetwork_flag = operation_lower_diplomatic_weight_timer
+			}
+		}
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = wooltastic_espionage.10
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_motion
+		event = wooltastic_espionage.11
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_target
+		event = wooltastic_espionage.12
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = {
+			RANDOM_EVENTS = operation_random_events_generic
+		}
+	}
+	on_create = {
+		target.owner = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner				#Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+operation_steal_resources = {
+	categories = {
+		op_cat_manipulation
+		op_cat_economy
+	}
+	picture = GFX_resource
+	desc = operation_steal_resources_desc
+	stages = 3
+	resources = {
+		category = operations
+		cost = {
+			influence = 50
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+	spy_power_cost = 20
+	potential = {
+		root.owner = {
+			AND = {
+				has_federation = yes
+				federation = {
+					has_federation_perk = espionage_more_operations_1
+				}
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = operation_steal_resources_too_recent
+			NOT = {
+				has_spynetwork_flag = operation_steal_resources_timer
+			}
+		}
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+		custom_tooltip = {
+			fail_text = NO_RESOURCES_TO_STEAL
+			target.owner = {
+				OR = {
+					resource_stockpile_compare = {
+						resource = energy
+						value > 1000
+					}
+					resource_stockpile_compare = {
+						resource = minerals
+						value > 1000
+					}
+					resource_stockpile_compare = {
+						resource = food
+						value > 1000
+					}
+					resource_stockpile_compare = {
+						resource = alloys
+						value > 1000
+					}
+					resource_stockpile_compare = {
+						resource = consumer_goods
+						value > 1000
+					}
+				}
+			}
+		}
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = wooltastic_espionage.20
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_motion
+		event = wooltastic_espionage.21
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_target
+		event = wooltastic_espionage.22
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = {
+			RANDOM_EVENTS = operation_random_events_generic
+		}
+	}
+	on_create = {
+		target.owner = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner				#Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+operation_sabotage_megastructure = {
+	categories = {
+		op_cat_sabotage
+		op_cat_government
+	}
+	picture = GFX_building_ruined
+	desc = operation_sabotage_megastructure_desc
+	stages = 3
+	resources = {
+		category = operations
+		cost = {
+			influence = 80
+		}
+		upkeep = {
+			energy = 8
+		}
+	}
+	spy_power_cost = 40
+	target = megastructure
+	potential = {
+		root.owner = {
+			AND = {
+				has_federation = yes
+				federation = {
+					has_federation_perk = espionage_more_operations_2
+				}
+			}
+		}
+	}
+	target_potential = {
+		NOR = {
+			is_megastructure_type = crisis_sphere_4
+			is_megastructure_type = crisis_sphere_3
+			is_megastructure_type = crisis_sphere_2
+			is_megastructure_type = crisis_sphere_1
+			is_megastructure_type = crisis_sphere_0
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = operation_sabotage_megastructure_too_recent
+			NOT = {
+				has_spynetwork_flag = operation_sabotage_megastructure_timer
+			}
+		}
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+		custom_tooltip = {
+			fail_text = NO_SUITABLE_MEGASTRUCTURE_TO_DESTORY
+			target = {
+				NOR = {
+					is_megastructure_type = crisis_sphere_4
+					is_megastructure_type = crisis_sphere_3
+					is_megastructure_type = crisis_sphere_2
+					is_megastructure_type = crisis_sphere_1
+					is_megastructure_type = crisis_sphere_0
+				}
+			}
+		}
+	}
+	target_allow = {
+		custom_tooltip = {
+			fail_text = NO_SUITABLE_MEGASTRUCTURE_TO_DESTORY
+			NOR = {
+				is_megastructure_type = crisis_sphere_4
+				is_megastructure_type = crisis_sphere_3
+				is_megastructure_type = crisis_sphere_2
+				is_megastructure_type = crisis_sphere_1
+				is_megastructure_type = crisis_sphere_0
+			}
+		}
+	}
+	stage = {
+		difficulty = @diff_t3
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = wooltastic_espionage.30
+	}
+	stage = {
+		difficulty = @diff_t3
+		icon = GFX_espionage_chapter_icon_motion
+		event = wooltastic_espionage.31
+	}
+	stage = {
+		difficulty = @diff_t3
+		icon = GFX_espionage_chapter_icon_target
+		event = wooltastic_espionage.32
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = {
+			RANDOM_EVENTS = operation_random_events_sabotage_targeted
+		}		#Requires a bespoke set of trigger scopes given 'target' is not a country
+	}
+	on_create = {
+		target.owner = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner				#Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+#operation_sabotage_fleet = {
+#	categories = { op_cat_sabotage op_cat_military }
+#	picture = GFX_fleet_disband
+#	desc = operation_sabotage_fleet_desc
+#	stages = 3
+#
+#	resources = {
+#		category = operations
+#		cost = {
+#			influence = 80
+#		}
+#		upkeep = {
+#			energy = 8
+#		}
+#	}
+#
+#	spy_power_cost = 40
+#	potential = {
+#		root.owner = {
+#			AND = { 
+#				has_federation = yes
+#				federation = { 
+#					has_federation_perk = espionage_more_operations_2
+#				}
+#			}
+#		}
+#	}
+#}
+#
+#operation_incite_subjects = {
+#	categories = { op_cat_manipulation op_cat_government }
+#	picture = GFX_waroverview_declare_war_illustration
+#	desc = operation_incite_subjects_desc
+#	stages = 5
+#
+#	resources = {
+#		category = operations
+#		cost = {
+#			influence = 150
+#		}
+#		upkeep = {
+#			energy = 15
+#		}
+#	}
+#
+#	spy_power_cost = 60
+#	potential = {
+#		root.owner = {
+#			AND = { 
+#				has_federation = yes
+#				federation = { 
+#					has_federation_perk = espionage_more_operations_3
+#				}
+#			}
+#		}
+#	}
+#}
+#operation_incite_rebellion = {
+#	categories = { op_cat_manipulation op_cat_government }
+#	picture = GFX_waroverview_declare_war_illustration
+#	desc = operation_incite_rebellion_desc
+#	stages = 5
+#
+#	resources = {
+#		category = operations
+#		cost = {
+#			influence = 150
+#		}
+#		upkeep = {
+#			energy = 15
+#		}
+#	}
+#
+#	spy_power_cost = 60
+#	potential = {
+#		root.owner = {
+#			AND = { 
+#				has_federation = yes
+#				federation = { 
+#					has_federation_perk = espionage_more_operations_3
+#				}
+#			}
+#		}
+#	}
+#}
+#operation_assassinate_random_leader = {
+#	categories = { op_cat_subterfuge op_cat_government }
+#	picture = GFX_leader_icons
+#	desc = operation_assassinate_random_leader_desc
+#	stages = 6
+#
+#	resources = {
+#		category = operations
+#		cost = {
+#			influence = 200
+#		}
+#		upkeep = {
+#			energy = 20
+#		}
+#	}
+#
+#	spy_power_cost = 80
+#	potential = {
+#		root.owner = {
+#			AND = { 
+#				has_federation = yes
+#				federation = { 
+#					has_federation_perk = espionage_more_operations_4
+#				}
+#			}
+#		}
+#	}
+#}
+#operation_assassinate_ruler = {
+#	categories = { op_cat_subterfuge op_cat_government }
+#	picture = GFX_leader_icons
+#	desc = operation_assassinate_ruler_desc
+#	stages = 6
+#
+#	resources = {
+#		category = operations
+#		cost = {
+#			influence = 250
+#		}
+#		upkeep = {
+#			energy = 25
+#		}
+#	}
+#
+#	spy_power_cost = 100
+#	potential = {
+#		root.owner = {
+#			AND = { 
+#				has_federation = yes
+#				federation = { 
+#					has_federation_perk = espionage_more_operations_4
+#				}
+#			}
+#		}
+#	}
+#}
