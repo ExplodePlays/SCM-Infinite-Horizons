@@ -194,109 +194,109 @@ operation_steal_resources = {
 	}
 }
 
-operation_sabotage_megastructure = {
-	categories = {
-		op_cat_sabotage
-		op_cat_government
-	}
-	picture = GFX_building_ruined
-	desc = operation_sabotage_megastructure_desc
-	stages = 3
-	resources = {
-		category = operations
-		cost = {
-			influence = 80
-		}
-		upkeep = {
-			energy = 8
-		}
-	}
-	spy_power_cost = 40
-	target = megastructure
-	potential = {
-		root.owner = {
-			AND = {
-				has_federation = yes
-				federation = {
-					has_federation_perk = espionage_more_operations_2
-				}
-			}
-		}
-	}
-	target_potential = {
-		NOR = {
-			is_megastructure_type = crisis_sphere_4
-			is_megastructure_type = crisis_sphere_3
-			is_megastructure_type = crisis_sphere_2
-			is_megastructure_type = crisis_sphere_1
-			is_megastructure_type = crisis_sphere_0
-		}
-	}
-	allow = {
-		custom_tooltip = {
-			fail_text = operation_sabotage_megastructure_too_recent
-			NOT = {
-				has_spynetwork_flag = operation_sabotage_megastructure_timer
-			}
-		}
-		custom_tooltip = {
-			is_running_espionage_operation = no
-			fail_text = operation_one_at_a_time
-		}
-		custom_tooltip = {
-			fail_text = NO_SUITABLE_MEGASTRUCTURE_TO_DESTORY
-			target = {
-				NOR = {
-					is_megastructure_type = crisis_sphere_4
-					is_megastructure_type = crisis_sphere_3
-					is_megastructure_type = crisis_sphere_2
-					is_megastructure_type = crisis_sphere_1
-					is_megastructure_type = crisis_sphere_0
-				}
-			}
-		}
-	}
-	target_allow = {
-		custom_tooltip = {
-			fail_text = NO_SUITABLE_MEGASTRUCTURE_TO_DESTORY
-			NOR = {
-				is_megastructure_type = crisis_sphere_4
-				is_megastructure_type = crisis_sphere_3
-				is_megastructure_type = crisis_sphere_2
-				is_megastructure_type = crisis_sphere_1
-				is_megastructure_type = crisis_sphere_0
-			}
-		}
-	}
-	stage = {
-		difficulty = @diff_t3
-		icon = GFX_espionage_chapter_icon_surveillance
-		event = wooltastic_espionage.30
-	}
-	stage = {
-		difficulty = @diff_t3
-		icon = GFX_espionage_chapter_icon_motion
-		event = wooltastic_espionage.31
-	}
-	stage = {
-		difficulty = @diff_t3
-		icon = GFX_espionage_chapter_icon_target
-		event = wooltastic_espionage.32
-	}
-	on_roll_failed = {
-		standard_espionage_operation_on_roll_failed = {
-			RANDOM_EVENTS = operation_random_events_sabotage_targeted
-		}		#Requires a bespoke set of trigger scopes given 'target' is not a country
-	}
-	on_create = {
-		target.owner = {
-			set_timed_country_flag = {
-				flag = espionage_operation_targeted_by@root.owner				#Used in random Spy Network events
-				days = @operationTargetedByTimer
-			}
-		}
-	}
-}
+# operation_sabotage_megastructure = {
+# 	categories = {
+# 		op_cat_sabotage
+# 		op_cat_government
+# 	}
+# 	picture = GFX_building_ruined
+# 	desc = operation_sabotage_megastructure_desc
+# 	stages = 3
+# 	resources = {
+# 		category = operations
+# 		cost = {
+# 			influence = 80
+# 		}
+# 		upkeep = {
+# 			energy = 8
+# 		}
+# 	}
+# 	spy_power_cost = 40
+# 	target = megastructure
+# 	potential = {
+# 		root.owner = {
+# 			AND = {
+# 				has_federation = yes
+# 				federation = {
+# 					has_federation_perk = espionage_more_operations_2
+# 				}
+# 			}
+# 		}
+# 	}
+# 	target_potential = {
+# 		NOR = {
+# 			is_megastructure_type = crisis_sphere_4
+# 			is_megastructure_type = crisis_sphere_3
+# 			is_megastructure_type = crisis_sphere_2
+# 			is_megastructure_type = crisis_sphere_1
+# 			is_megastructure_type = crisis_sphere_0
+# 		}
+# 	}
+# 	allow = {
+# 		custom_tooltip = {
+# 			fail_text = operation_sabotage_megastructure_too_recent
+# 			NOT = {
+# 				has_spynetwork_flag = operation_sabotage_megastructure_timer
+# 			}
+# 		}
+# 		custom_tooltip = {
+# 			is_running_espionage_operation = no
+# 			fail_text = operation_one_at_a_time
+# 		}
+# 		custom_tooltip = {
+# 			fail_text = NO_SUITABLE_MEGASTRUCTURE_TO_DESTORY
+# 			target = {
+# 				NOR = {
+# 					is_megastructure_type = crisis_sphere_4
+# 					is_megastructure_type = crisis_sphere_3
+# 					is_megastructure_type = crisis_sphere_2
+# 					is_megastructure_type = crisis_sphere_1
+# 					is_megastructure_type = crisis_sphere_0
+# 				}
+# 			}
+# 		}
+# 	}
+# 	target_allow = {
+# 		custom_tooltip = {
+# 			fail_text = NO_SUITABLE_MEGASTRUCTURE_TO_DESTORY
+# 			NOR = {
+# 				is_megastructure_type = crisis_sphere_4
+# 				is_megastructure_type = crisis_sphere_3
+# 				is_megastructure_type = crisis_sphere_2
+# 				is_megastructure_type = crisis_sphere_1
+# 				is_megastructure_type = crisis_sphere_0
+# 			}
+# 		}
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t3
+# 		icon = GFX_espionage_chapter_icon_surveillance
+# 		event = wooltastic_espionage.30
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t3
+# 		icon = GFX_espionage_chapter_icon_motion
+# 		event = wooltastic_espionage.31
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t3
+# 		icon = GFX_espionage_chapter_icon_target
+# 		event = wooltastic_espionage.32
+# 	}
+# 	on_roll_failed = {
+# 		standard_espionage_operation_on_roll_failed = {
+# 			RANDOM_EVENTS = operation_random_events_sabotage_targeted
+# 		}		#Requires a bespoke set of trigger scopes given 'target' is not a country
+# 	}
+# 	on_create = {
+# 		target.owner = {
+# 			set_timed_country_flag = {
+# 				flag = espionage_operation_targeted_by@root.owner				#Used in random Spy Network events
+# 				days = @operationTargetedByTimer
+# 			}
+# 		}
+# 	}
+# }
 
 #operation_sabotage_fleet = {
 #	categories = { op_cat_sabotage op_cat_military }

@@ -1,0 +1,62 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_AP_space_garden_megastructure_0_outliner_icon"
+		textureFile = "gfx/interface/icons/modules/spaceport_module_hydroponic_farms.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_garden_megastructure_1_outliner_icon"
+		textureFile = "gfx/interface/icons/modules/spaceport_module_hydroponic_farms.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_garden_megastructure_2_outliner_icon"
+		textureFile = "gfx/interface/icons/modules/spaceport_module_hydroponic_farms.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_energy_megastructure_0_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/dyson_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_energy_megastructure_1_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/dyson_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_energy_megastructure_2_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/dyson_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_mineral_megastructure_0_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/matter_decompressor.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_mineral_megastructure_1_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/matter_decompressor.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_mineral_megastructure_2_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/matter_decompressor.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_alloy_foundry_megastructure_0_outliner_icon"
+		textureFile = "gfx/interface/icons/modules/orbitalring_alloy_hub.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_alloy_foundry_megastructure_1_outliner_icon"
+		textureFile = "gfx/interface/icons/modules/orbitalring_alloy_hub.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_alloy_foundry_megastructure_2_outliner_icon"
+		textureFile = "gfx/interface/icons/modules/orbitalring_alloy_hub.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_cg_factory_megastructure_0_outliner_icon"
+		textureFile = "gfx/interface/icons/modules/orbitalring_consumer_hub.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_cg_factory_megastructure_1_outliner_icon"
+		textureFile = "gfx/interface/icons/modules/orbitalring_consumer_hub.dds"
+	}
+	spriteType = {
+		name = "GFX_AP_space_cg_factory_megastructure_2_outliner_icon"
+		textureFile = "gfx/interface/icons/modules/orbitalring_consumer_hub.dds"
+	}
+}
