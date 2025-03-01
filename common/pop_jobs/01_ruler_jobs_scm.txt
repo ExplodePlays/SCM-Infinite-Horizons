@@ -184,6 +184,14 @@ high_priest = {
 			}
 			unity = 1														#Modded
 		}
+        produces = {
+            trigger = {
+                owner = { has_valid_civic = civic_exalted_priesthood }
+            }
+            physics_research = 3											#Modded
+            engineering_research = 3										#Modded
+            society_research = 3											#Modded
+        }
 		upkeep = {
 			trigger = {
 				owner = { has_valid_civic = civic_byzantine_bureaucracy }	#Modded

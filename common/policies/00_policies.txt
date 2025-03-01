@@ -1112,6 +1112,23 @@ war_doctrine = {
 			factor = 1
 		}
 	}
+	option = {
+		name = "grand_battleplan_doctrine"
+
+		policy_flags = {}
+		
+		valid = {
+			has_ascension_perk = ap_the_great_conquerors
+		}
+		
+		modifier = {
+			ship_home_territory_fire_rate_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 2
+		}
+	}
 
 	option = {
 		name = "hit_and_run_doctrine"
@@ -1134,6 +1151,26 @@ war_doctrine = {
 			}
 		}
 	}
+	
+	option = {
+		name = "guerilla_tactics_doctrine"
+
+		policy_flags = {}
+		
+		valid = {
+			has_ascension_perk = ap_the_great_conquerors
+		}
+		
+		modifier = {
+		ship_disengage_opportunities_add = 4
+			ship_disengage_chance_mult = 0.40
+			ship_emergency_ftl_mult = -0.8
+		}
+
+		AI_weight = {
+			factor = 2
+		}
+	}
 
 	option = {
 		name = "rapid_deployment_doctrine"
@@ -1150,6 +1187,25 @@ war_doctrine = {
 				factor = 100
 				is_country_type = enclave_mercenary
 			}
+		}
+	}
+	
+	option = {
+		name = "spearhead_deployment_doctrine"
+
+		policy_flags = {}
+		
+		valid = {
+			has_ascension_perk = ap_the_great_conquerors
+		}
+		
+		modifier = {
+			ship_speed_mult = 0.4
+			ship_weapon_range_mult = 0.25
+		}
+
+		AI_weight = {
+			factor = 2
 		}
 	}
 
@@ -1181,6 +1237,26 @@ war_doctrine = {
 					has_ai_personality = devouring_swarm
 				}
 			}
+		}
+	}
+	
+	option = {
+		name = "anti_retreat_doctrine"
+
+		policy_flags = {}
+		
+		valid = {
+			has_ascension_perk = ap_the_great_conquerors
+		}
+		
+		modifier = {
+			ship_disengage_chance_reduction = 2
+			ship_emergency_ftl_min_days_mult = 1
+			ship_fire_rate_mult = 0.50
+		}
+
+		AI_weight = {
+			factor = 2
 		}
 	}
 }

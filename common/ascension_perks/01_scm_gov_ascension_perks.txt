@@ -167,9 +167,16 @@ ap_grand_fortresses = {
 		custom_tooltip = "ap_grand_fortresses_tooltip"
 		custom_tooltip = "gov_ascension_perk_T3"
 		hidden_effect = {
-			give_technology = {
-				tech = tech_modular_engineering
-				message = no
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_modular_engineering
+					}
+				}
+				give_technology = {
+					tech = tech_modular_engineering
+					message = no
+				}
 			}
 			give_technology = {
 				tech = tech_space_defense_station_2
@@ -719,6 +726,7 @@ ap_galactic_wonders_utopia_and_megacorp = {
 			has_ascension_perk = ap_total_indoctrination
 			has_ascension_perk = ap_officina_magnificum
 			has_ascension_perk = ap_road_of_the_golden_void
+			num_ascension_perks > 4
 		}
 		has_technology = tech_mega_engineering
 	}
@@ -733,6 +741,7 @@ ap_galactic_wonders_utopia_and_megacorp = {
 			has_ascension_perk = ap_total_indoctrination
 			has_ascension_perk = ap_officina_magnificum
 			has_ascension_perk = ap_road_of_the_golden_void
+			num_ascension_perks > 4
 		}
 		NOR = {
 			has_ascension_perk = ap_arcology_project
@@ -763,6 +772,7 @@ ap_arcology_project = {
 			has_ascension_perk = ap_total_indoctrination
 			has_ascension_perk = ap_officina_magnificum
 			has_ascension_perk = ap_road_of_the_golden_void
+			num_ascension_perks > 4
 		}
 		owner = {
 			has_technology = tech_housing_2
@@ -788,6 +798,7 @@ ap_arcology_project = {
 			has_ascension_perk = ap_total_indoctrination
 			has_ascension_perk = ap_officina_magnificum
 			has_ascension_perk = ap_road_of_the_golden_void
+			num_ascension_perks > 4
 		}
 		NOR = {
 			has_ascension_perk = ap_arcology_project

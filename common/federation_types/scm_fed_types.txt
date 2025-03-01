@@ -1,0 +1,172 @@
+#First is set to default
+#
+#	#type_key
+#	test_type = {
+#		#on_create, run everytime the federation type has been set
+#		on_create = {}
+#		#potential
+#		potential = {}
+#		#allowed
+#		allow = {}
+#		#levels
+#		levels = {
+#			#test level key
+#			test_level = {
+#			#perks for level
+#				perks = {
+#					test_perk_1
+#					test_perk_2
+#				}
+#			}
+#		}
+#	}
+
+@xp_to_level_2 = 1000
+@xp_to_level_3 = 2000
+@xp_to_level_4 = 4000
+@xp_to_level_5 = 8000
+
+espionage_federation = {
+	base_intel = 100
+	icon = "GFX_espionage_federation"
+	ownership_limits = default
+	potential = {
+		host_has_dlc = Federations
+	}
+	allow = {
+		federation_check_for_subject_trigger = yes
+		OR = {
+			has_valid_civic = civic_shadow_council
+			has_valid_civic = civic_criminal_heritage
+			has_valid_civic = civic_hive_masterful_manipulators
+			has_valid_civic = civic_machine_manipulators
+			has_ascension_perk = ap_tongues_of_silver
+		}
+	}
+	levels = {
+		level_1 = {
+			experience = @xp_to_level_2 # Experience until next rank
+			perks = {
+				espionage_federation_passive
+			}
+		}
+		level_2 = {
+			experience = @xp_to_level_3
+			perks = {
+				espionage_counter
+				#espionage_more_operations_1
+			}
+		}
+		level_3 = {
+			experience = @xp_to_level_4
+			perks = {		
+				espionage_all_seeing
+				#espionage_more_operations_2
+			}
+		}
+		level_4 = {
+			experience = @xp_to_level_5
+			perks = {
+				espionage_decryption_1
+				#espionage_more_operations_3
+				damage_crisis_1
+			}
+		}
+		level_5 = {
+			perks = {
+				espionage_slow_decay
+				#espionage_more_operations_4
+				damage_crisis_2
+			}
+		}
+	}
+	on_create = {
+		remove_federation_flag = enable_federation_cooldowns
+		set_federation_law = centralization_minimal
+		set_federation_law = succession_type_rotation
+		set_federation_law = succession_term_years_20
+		set_federation_law = fleet_contribution_none
+		set_federation_law = federation_build_fleets_everyone
+		set_federation_law = vote_weight_equal
+		set_federation_law = declare_war_unanimous_vote
+		set_federation_law = invite_members_unanimous_vote
+		set_federation_law = kick_members_majority_vote
+		set_federation_law = free_migration_no
+		set_federation_law = treaties_separate_yes
+		set_federation_flag = enable_federation_cooldowns
+	}
+	ai_weight = {
+		base = 0
+	}
+}
+
+# scm_spiritualist_federation = {
+# 	base_intel = 60
+# 	icon = "GFX_spiritualist_federation"
+# 	ownership_limits = default
+# 	potential = {
+# 		host_has_dlc = Federations
+# 	}
+# 	allow = {
+# 		federation_check_for_subject_trigger = yes
+# 			OR = {
+# 				is_spiritualist = yes
+# 				is_gestalt = no
+# 		}
+# 	}
+# 	levels = {
+# 		level_1 = {
+# 			experience = @xp_to_level_2 # Experience until next rank
+# 			perks = {
+# 				scm_spiritualist_federation_passive
+# 			}
+# 		}
+# 		level_2 = {
+# 			experience = @xp_to_level_3
+# 			perks = {
+# 				spiritualist_happiness
+# 				spiritualist_governing_ethics_attraction
+# 			}
+# 		}
+# 		level_3 = {
+# 			experience = @xp_to_level_4
+# 			perks = {
+# 				spiritualist_religious_icon
+# 				spiritualist_priest_job
+# 			}
+# 		}
+# 		level_4 = {
+# 			experience = @xp_to_level_5
+# 			perks = {
+# 				spiritualist_mass_conversion
+# 				spiritualist_grand_ascension
+# 				damage_crisis_1
+# 			}
+# 		}
+# 		level_5 = {
+# 			perks = {
+# 				spiritualist_beacon_of_faith
+# 				spiritualist_high_priest_job
+# 				damage_crisis_2
+# 			}
+# 		}
+# 	}
+# 	on_create = {
+# 		remove_federation_flag = enable_federation_cooldowns
+# 		set_federation_law = centralization_minimal
+# 		set_federation_law = succession_type_rotation
+# 		set_federation_law = succession_term_years_20
+# 		set_federation_law = fleet_contribution_none
+# 		set_federation_law = federation_build_fleets_everyone
+# 		set_federation_law = vote_weight_equal
+# 		set_federation_law = declare_war_unanimous_vote
+# 		set_federation_law = invite_members_unanimous_vote
+# 		set_federation_law = kick_members_majority_vote
+# 		set_federation_law = free_migration_no
+# 		set_federation_law = treaties_separate_yes
+# 		set_federation_flag = enable_federation_cooldowns
+# 	}
+# 	ai_weight = {
+# 		base = 0
+# 	}
+# }

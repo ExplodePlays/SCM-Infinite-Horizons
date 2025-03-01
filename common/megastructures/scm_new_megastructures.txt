@@ -1,0 +1,894 @@
+###FOOD garden thing
+###STAGE 1
+AP_space_garden_megastructure_0 = {
+	entity = "plantoid_01_habitat_phase_01_entity"
+	construction_entity = "plantoid_01_habitat_phase_01_entity"
+	portrait = "GFX_megastructure_construction_background"
+	
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	
+	construction_blocks_and_blocked_by = none
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}	
+		custom_tooltip = {
+			fail_text = "minor_mega_built"
+			from = { NOT = { has_country_flag = has_space_garden } }	
+		}
+	}	
+	
+	build_time = 1200	
+    #victory_score = 1000
+	
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1500
+			influence = 100
+		}
+		produces = {
+			food = 50
+		}
+		upkeep = {
+			energy = 10
+			minerals = 10
+		}
+	}
+	
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					solar_system = {
+						has_star_flag = ring_world_built
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_ringworld_habitable_damaged
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_tech_damaged
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_ringworld_seam_damaged
+					is_planet_class = pc_habitat
+				}
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_minor_planetary_body"
+				NOR = {
+					is_asteroid = yes
+					is_moon = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+		} # use these for all non-star megastructures
+	}
+
+	on_build_start = {
+	}
+	on_build_cancel = {
+	}	
+	
+	on_build_complete = {
+		from = { set_country_flag = has_space_garden }
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+	}
+
+}
+
+###STAGE 2
+AP_space_garden_megastructure_1 = {
+	entity = "plantoid_01_habitat_phase_02_entity"
+	construction_entity = "plantoid_01_habitat_phase_02_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	build_time = 1200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 2000
+		}
+		
+		produces = {
+			food = 100
+		}
+
+		upkeep = {
+			energy = 15
+			minerals = 15
+		}
+	}
+
+	upgrade_from = {
+		AP_space_garden_megastructure_0
+	}
+
+}
+
+#STAGE 3
+AP_space_garden_megastructure_2 = {
+	entity = "plantoid_01_habitat_phase_03_entity"
+	construction_entity = "plantoid_01_habitat_phase_03_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	build_time = 1200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 3000
+		}
+		
+		produces = {
+			food = 200
+		}
+
+		upkeep = {
+			energy = 25
+			minerals = 25
+		}
+	}
+
+	upgrade_from = {
+		AP_space_garden_megastructure_1
+	}
+
+}
+
+###ENERGY garden thing
+###STAGE 1
+AP_space_energy_megastructure_0 = {
+	entity = "mammalian_01_habitat_phase_01_entity"
+	construction_entity = "mammalian_01_habitat_phase_01_entity"
+	portrait = "GFX_megastructure_construction_background"
+	
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	
+	construction_blocks_and_blocked_by = none
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "minor_mega_built"
+			from = { NOT = { has_country_flag = has_space_energon }	}
+		}
+	}	
+	
+	build_time = 1200		
+    #victory_score = 1000
+	
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1500
+			influence = 100
+		}
+		produces = {
+			energy = 50
+		}
+		upkeep = {
+			minerals = 10
+		}
+	}
+	
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					solar_system = {
+						has_star_flag = ring_world_built
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_ringworld_habitable_damaged
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_tech_damaged
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_ringworld_seam_damaged
+					is_planet_class = pc_habitat
+				}
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_minor_planetary_body"
+				NOR = {
+					is_asteroid = yes
+					is_moon = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+		} # use these for all non-star megastructures
+	}
+
+	on_build_start = {
+	}
+	on_build_cancel = {
+	}
+	
+	on_build_complete = {
+		from = { 
+			set_country_flag = has_space_energon
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+	}
+
+}
+
+###STAGE 2
+AP_space_energy_megastructure_1 = {
+	entity = "mammalian_01_habitat_phase_02_entity"
+	construction_entity = "mammalian_01_habitat_phase_02_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	build_time = 1200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 2000
+		}
+		
+		produces = {
+			energy = 100
+		}
+
+		upkeep = {
+			minerals = 15
+		}
+	}
+
+	upgrade_from = {
+		AP_space_energy_megastructure_0
+	}
+
+}
+
+#STAGE 3
+AP_space_energy_megastructure_2 = {
+	entity = "mammalian_01_habitat_phase_03_entity"
+	construction_entity = "mammalian_01_habitat_phase_03_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	build_time = 1200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 3000
+		}
+		
+		produces = {
+			energy = 200
+		}
+
+		upkeep = {
+			minerals = 25
+		}
+	}
+
+	upgrade_from = {
+		AP_space_energy_megastructure_1
+	}
+
+}
+
+###MINERALS garden thing
+###STAGE 1
+AP_space_mineral_megastructure_0 = {
+	entity = "mammalian_01_mining_station_construction_entity"
+	construction_entity = "mammalian_01_mining_station_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	
+	construction_blocks_and_blocked_by = none
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}		
+		custom_tooltip = {
+			fail_text = "minor_mega_built"
+			from = { NOT = { has_country_flag = has_space_minorer }	}
+		}
+	}	
+	
+	build_time = 1200		
+    #victory_score = 1000
+	
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1500
+			influence = 100
+		}
+		produces = {
+			minerals = 50
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					solar_system = {
+						has_star_flag = ring_world_built
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_ringworld_habitable_damaged
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_tech_damaged
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_ringworld_seam_damaged
+					is_planet_class = pc_habitat
+				}
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_minor_planetary_body"
+				NOR = {
+					is_asteroid = yes
+					is_moon = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+		} # use these for all non-star megastructures
+	}
+
+	on_build_start = {
+	}
+	on_build_cancel = {
+	}
+	
+	on_build_complete = {
+		from = { 
+			set_country_flag = has_space_minorer
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+	}
+
+}
+
+###STAGE 2
+AP_space_mineral_megastructure_1 = {
+	entity = "ancient_mining_expansion_barge_entity"
+	construction_entity = "ancient_mining_expansion_barge_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	build_time = 1200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 2000
+		}
+		
+		produces = {
+			minerals = 100
+		}
+
+		upkeep = {
+			energy = 15
+		}
+	}
+
+	upgrade_from = {
+		AP_space_mineral_megastructure_0
+	}
+
+}
+
+#STAGE 3
+AP_space_mineral_megastructure_2 = {
+	entity = "ancient_drone_01_mining_station_entity"
+	construction_entity = "ancient_drone_01_mining_station_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	build_time = 1200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 3000
+		}
+		
+		produces = {
+			minerals = 200
+		}
+
+		upkeep = {
+			energy = 25
+		}
+	}
+
+	upgrade_from = {
+		AP_space_mineral_megastructure_1
+	}
+
+}
+
+###ALLOY foundry in SPAACE
+###STAGE 1
+AP_space_alloy_foundry_megastructure_0 = {
+	entity = "nemesis_01_habitat_phase_01_entity"
+	construction_entity = "nemesis_01_habitat_phase_01_entity"
+	portrait = "GFX_megastructure_construction_background"
+	
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_great_builders
+	}	
+	
+	construction_blocks_and_blocked_by = none
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}	
+		custom_tooltip = {
+			fail_text = "minor_mega_built"
+			from = { NOT = { has_country_flag = has_space_alloy_foundry } }	
+		}
+	}	
+	
+	build_time = 2400	
+    #victory_score = 1000
+	
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 2500
+			influence = 100
+		}
+		upkeep = {
+			energy = 50
+			minerals = 200
+		}
+		produces = {
+			alloys = 50
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					solar_system = {
+						has_star_flag = ring_world_built
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_ringworld_habitable_damaged
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_tech_damaged
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_ringworld_seam_damaged
+					is_planet_class = pc_habitat
+				}
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_minor_planetary_body"
+				NOR = {
+					is_asteroid = yes
+					is_moon = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+		} # use these for all non-star megastructures
+	}
+
+	on_build_start = {
+	}
+	on_build_cancel = {
+	}	
+	
+	on_build_complete = {
+		from = { set_country_flag = has_space_alloy_foundry }
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+	}
+
+}
+
+###STAGE 2
+AP_space_alloy_foundry_megastructure_1 = {
+	entity = "nemesis_01_habitat_phase_02_entity"
+	construction_entity = "nemesis_01_habitat_phase_02_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	build_time = 2400
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 4000
+		}
+
+		upkeep = {
+			energy = 100
+			minerals = 275
+		}
+		produces = {
+			alloys = 150
+		}
+	}
+
+
+	upgrade_from = {
+		AP_space_alloy_foundry_megastructure_0
+	}
+
+}
+
+#STAGE 3
+AP_space_alloy_foundry_megastructure_2 = {
+	entity = "nemesis_01_habitat_phase_03_entity"
+	construction_entity = "nemesis_01_habitat_phase_03_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	build_time = 2400
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 8000
+		}
+
+		upkeep = {
+			energy = 200
+			minerals = 500
+		}
+		produces = {
+			alloys = 250
+		}
+	}
+
+	upgrade_from = {
+		AP_space_alloy_foundry_megastructure_1
+	}
+
+}
+
+###CG Factory in SPAACE
+###STAGE 1
+AP_space_cg_factory_megastructure_0 = {
+	entity = "humanoid_01_habitat_phase_01_entity"
+	construction_entity = "humanoid_01_habitat_phase_01_entity"
+	portrait = "GFX_megastructure_construction_background"
+	
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_great_builders
+	}	
+	
+	construction_blocks_and_blocked_by = none
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}	
+		custom_tooltip = {
+			fail_text = "minor_mega_built"
+			from = { NOT = { has_country_flag = has_space_cg_factory } }	
+		}
+	}	
+	
+	build_time = 1200	
+    #victory_score = 1000
+	
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1500
+			influence = 100
+		}
+		produces = {
+			consumer_goods = 50
+		}
+		upkeep = {
+			energy = 10
+			minerals = 50
+		}
+	}
+	
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					solar_system = {
+						has_star_flag = ring_world_built
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_ringworld_habitable_damaged
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_tech_damaged
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_ringworld_seam_damaged
+					is_planet_class = pc_habitat
+				}
+			}
+
+ 			# balance for habitats
+			custom_tooltip = {
+				fail_text = "requires_not_minor_planetary_body"
+				NOR = {
+					is_asteroid = yes
+					is_moon = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+		} # use these for all non-star megastructures
+	}
+
+	on_build_start = {
+	}
+	on_build_cancel = {
+	}	
+	
+	on_build_complete = {
+		from = { set_country_flag = has_space_cg_factory }
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+	}
+
+}
+
+###STAGE 2
+AP_space_cg_factory_megastructure_1 = {
+	entity = "humanoid_01_habitat_phase_02_entity"
+	construction_entity = "humanoid_01_habitat_phase_02_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	build_time = 1200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 2000
+		}
+		
+		produces = {
+			consumer_goods = 150
+		}
+
+		upkeep = {
+			energy = 30
+			minerals = 150
+		}
+	}
+
+	upgrade_from = {
+		AP_space_cg_factory_megastructure_0
+	}
+
+}
+
+#STAGE 3
+AP_space_cg_factory_megastructure_2 = {
+	entity = "humanoid_01_habitat_phase_03_entity"
+	construction_entity = "humanoid_01_habitat_phase_03_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -7 y = -7 }
+	place_entity_on_planet_plane = yes
+	potential = {
+		has_ascension_perk = ap_space_engineers
+	}	
+	build_time = 1200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 8000
+		}
+		
+		produces = {
+			consumer_goods = 300
+		}
+
+		upkeep = {
+			energy = 60
+			minerals = 300
+		}
+	}
+
+	upgrade_from = {
+		AP_space_cg_factory_megastructure_1
+	}
+
+}

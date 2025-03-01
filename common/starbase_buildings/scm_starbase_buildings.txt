@@ -1,0 +1,72 @@
+system_operations_hq = {
+	icon = "GFX_system_operations_hq"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_void_shapers }
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 200
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+}
+
+# scm_grand_fleet_academy = {
+# 	icon = "GFX_scm_grand_fleet_academy"
+# 	construction_days = 360
+
+# 	potential = {
+# 		exists = owner
+# 		owner = { 
+# 			has_technology = tech_interstellar_fleet_traditions
+# 			has_valid_civic = civic_naval_traditions
+# 		}
+# 	}
+
+# 	possible = {
+# 		exists = owner
+# 		owner = { 
+# 			has_technology = tech_interstellar_fleet_traditions
+# 			has_valid_civic = civic_naval_traditions
+# 		}
+# 		has_starbase_module = shipyard
+# 	}
+
+# 	ship_modifier = {
+# 		ship_starting_experience_add = 250
+# 	}
+
+# 	resources = {
+# 		category = starbase_buildings
+# 		cost = {
+# 			alloys = 100
+# 		}
+
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+
+# 	show_in_tech = "tech_interstellar_fleet_traditions"
+
+# 	ai_build_at_chokepoint = no
+# 	ai_build_outside_chokepoint = yes
+# 	ai_weight = {
+# 		weight = 200
+# 		modifier = {
+# 			factor = 0
+# 			count_starbase_modules = {
+# 				type = shipyard
+# 				count < 2
+# 			}
+# 		}
+# 	}
+# }

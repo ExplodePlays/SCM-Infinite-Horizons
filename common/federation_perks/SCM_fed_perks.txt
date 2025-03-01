@@ -1,0 +1,117 @@
+##Hegemony (Vanilla)
+president_hegemony_integrate_1 = {
+	leader_modifier = {
+		subject_integration_influence_cost_mult = -0.5
+	}
+}
+
+##Espionage Federation
+espionage_federation_passive = {
+	federation_modifier = {
+		description = espionage_federation_passive_effect
+	}
+}
+
+espionage_counter = {
+	members_modifier = {
+		country_counter_espionage_mult = 0.5
+	}
+}
+
+espionage_decryption_1 = {
+	members_modifier = {
+		intel_decryption_add = 2
+	}
+}
+
+espionage_slow_decay = {
+	members_modifier = {
+		spy_network_decay_mult = -0.75
+	}
+}
+
+espionage_all_seeing = {
+	members_modifier = {
+		planet_sensor_range_add = 4
+		ship_sensor_range_add = 4
+	}
+}
+
+espionage_more_operations_1 = {
+	members_modifier = {
+		description = espionage_more_operations_1_effect
+	}
+}
+
+espionage_more_operations_2 = {
+	members_modifier = {
+		description = espionage_more_operations_2_effect
+	}
+}
+
+espionage_more_operations_3 = {
+	members_modifier = {
+		description = espionage_more_operations_3_effect
+	}
+}
+
+espionage_more_operations_4 = {
+	members_modifier = {
+		description = espionage_more_operations_4_effect
+	}
+}
+
+##SCM Spiritualist Federation
+scm_spiritualist_federation_passive = {
+	federation_modifier = {
+		description = scm_spiritualist_federation_passive_effect
+	}
+}
+
+spiritualist_governing_ethics_attraction = {
+	members_modifier = {
+		pop_government_ethic_attraction = 0.5
+	}
+}
+
+spiritualist_happiness = {
+	leader_modifier = {
+		pop_citizen_happiness = 0.05
+	}
+}
+
+spiritualist_priest_job = {
+	members_modifier = {
+		job_priest_add = 1
+	}
+}
+
+spiritualist_religious_icon = {
+	leader_modifier = {
+		country_unity_produces_mult = 0.05
+	}
+}
+
+spiritualist_grand_ascension = {
+	leader_modifier = {
+		description = spiritualist_grand_ascension_effect
+	}
+}
+
+spiritualist_mass_conversion = {
+	members_modifier = {
+		pop_ethics_shift_speed_mult = 1
+	}
+}
+
+spiritualist_high_priest_job = {
+	members_modifier = {
+		job_high_priest_per_pop = 0.04
+	}
+}
+
+spiritualist_beacon_of_faith = {
+	leader_modifier = {
+		diplo_weight_council_mult = 0.5
+	}
+}

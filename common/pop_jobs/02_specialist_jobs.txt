@@ -183,14 +183,22 @@ priest = {
 	}
 
 	resources = {
-		category = planet_priests
-		produces = {
-			unity = 4
-		}
-		upkeep = {
-			consumer_goods = 2
-		}
-	}
+        category = planet_priests
+        produces = {
+            unity = 4
+        }
+        produces = {
+            trigger = {
+                owner = { has_valid_civic = civic_exalted_priesthood }
+            }
+            physics_research = 2
+            engineering_research = 2
+            society_research = 2
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
 
 	triggered_planet_modifier = {
 		potential = {

@@ -93,3 +93,37 @@ building_archaeologist_station = {
 	#	text = job_archaeologist_drone_effect_desc
 	#}
 }
+
+building_grand_planetary_shield_generator = {
+	base_buildtime = @b3_time
+	position_priority = 100
+	can_build = no
+	category = army
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_grand_fortresses
+		}
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.75
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_ai = yes
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 50
+		}
+	}
+}

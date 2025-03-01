@@ -13,5 +13,5 @@ tags={
 }
 name="SCM Infinite Horizons [Stellaris Comprehensive Mod]"
 picture="thumbnail.png"
-supported_version="v3.14.15926"
+supported_version="v3.14.*"
 remote_file_id="3382406371"

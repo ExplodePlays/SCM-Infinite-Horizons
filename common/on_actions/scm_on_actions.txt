@@ -1,6 +1,76 @@
 # this = country
 on_yearly_pulse_country = {
 	events = {		
-		SCM_resolutions.14 #anomalies
+		SCM_resolutions.14 #anomalies		
+		SCM_ap_events.17
+	}
+}
+
+# A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+        SCM_ap_events.4		
+	}
+}
+
+# This = Ship
+# From = Disabler Ship
+on_ship_disabled = {
+	events = {
+        SCM_ap_events.5		
+	}
+}
+
+# this = country
+on_monthly_pulse_country = {
+	events = {		
+		SCM_ap_events.1
+		SCM_ap_events.10
+		SCM_ap_events.13
+		SCM_ap_events.18 #Galaxy brain
+	}
+}
+
+# this = country
+on_bi_yearly_pulse_country = {
+	events = {		
+		#SCM_ap_events.9 #operations HQ with space engineers ##Not Anymore
+	}
+}
+
+# this = country
+on_five_year_pulse_country = {
+	events = {		
+		SCM_ap_events.8 #operations HQ
+		SCM_ap_events.9 #operations HQ for gestalts
+	}
+}
+
+# Planet has been terraformed
+# This = Planet
+# From = Terraforming country
+on_terraforming_complete = {
+	events = {		
+		SCM_ap_events.7 # World Shaper buff
+	}
+}
+
+# A leader leveled up.
+# Scope = Country
+# From = Leader
+on_leader_level_up = {
+	events = {
+		SCM_ap_events.19
+		SCM_ap_events.21	
+	}
+}
+
+# Executed as new ruler has been set
+# This = Country
+on_ruler_set = {
+	events = {
+		# SCM_ap_events.11 #Adds cult leader		
 	}
 }

@@ -182,6 +182,15 @@ priest = {
 			}
 			unity = 1															#Modded
 		}
+		
+        produces = {
+            trigger = {
+                owner = { has_valid_civic = civic_exalted_priesthood }
+            }
+            physics_research = 2
+            engineering_research = 2
+            society_research = 2
+        }
 		upkeep = {
 			consumer_goods = 2
 		}
@@ -235,6 +244,7 @@ priest = {
 		planet_jobs_worker_produces_mult = 0.02
 	}
 
+	
 	weight = {
 		weight = @specialist_job_weight
 		mult = value:job_weights_modifier|JOB|priest|RESOURCE|unity|

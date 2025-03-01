@@ -1,233 +1,232 @@
-# namespace = SCM_ap_events
-# country_event = {
-# 	id = SCM_ap_events.1
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		has_ascension_perk = ap_trial_by_fire
-# 	}
-# 	immediate = {
-# 		every_owned_leader = {
-# 			limit = {
-# 				OR = {
-# 					leader_class = admiral
-# 					leader_class = general
-# 				}
-# 			}
-# 			add_experience = 5
-# 		}
-# 	}
-# }
+namespace = SCM_ap_events
+country_event = {
+	id = SCM_ap_events.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_trial_by_fire
+	}
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				OR = {
+					leader_class = commander
+				}
+			}
+			add_experience = 5
+		}
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.2
-# 	hide_window = yes
-# 	mean_time_to_happen = {
-# 		days = 1
-# 	}
-# 	trigger = {
-# 		has_ascension_perk = ap_the_great_conquerors
-# 		is_at_war = yes
-# 	}
-# 	immediate = {
-# 		add_modifier = {
-# 			modifier = great_conqueror_at_war_modifier
-# 			days = -1
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.2
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_ascension_perk = ap_the_great_conquerors
+		is_at_war = yes
+	}
+	immediate = {
+		add_modifier = {
+			modifier = great_conqueror_at_war_modifier
+			days = -1
+		}
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.3
-# 	hide_window = yes
-# 	mean_time_to_happen = {
-# 		days = 1
-# 	}
-# 	trigger = {
-# 		has_modifier = "great_conqueror_at_war_modifier"
-# 		is_at_war = no
-# 	}
-# 	immediate = {
-# 		remove_modifier = "great_conqueror_at_war_modifier"
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.3
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_modifier = "great_conqueror_at_war_modifier"
+		is_at_war = no
+	}
+	immediate = {
+		remove_modifier = "great_conqueror_at_war_modifier"
+	}
+}
 
-# ship_event = {
-# 	id = SCM_ap_events.4
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		is_ship_class = shipclass_military_station
-# 		owner = {
-# 			has_ascension_perk = ap_eternal_vigilance
-# 		}
-# 	}
-# 	immediate = {
-# 		set_disable_at_health = 0
-# 	}
-# }
+ship_event = {
+	id = SCM_ap_events.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ship_class = shipclass_military_station
+		owner = {
+			has_ascension_perk = ap_eternal_vigilance
+		}
+	}
+	immediate = {
+		set_disable_at_health = 0
+	}
+}
 
-# ship_event = {
-# 	id = SCM_ap_events.5
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		is_ship_class = shipclass_military_station
-# 		owner = {
-# 			has_ascension_perk = ap_eternal_vigilance
-# 		}
-# 	}
-# 	immediate = {
-# 		if = {
-# 			limit = {
-# 				NOT = {
-# 					has_modifier = ghost_platforms_hotfix_modifier
-# 				}
-# 			}
-# 			add_modifier = {
-# 				modifier = ghost_platforms_hotfix_modifier
-# 				days = 120
-# 			}
-# 		}
-# 	}
-# }
+ship_event = {
+	id = SCM_ap_events.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ship_class = shipclass_military_station
+		owner = {
+			has_ascension_perk = ap_eternal_vigilance
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = ghost_platforms_hotfix_modifier
+				}
+			}
+			add_modifier = {
+				modifier = ghost_platforms_hotfix_modifier
+				days = 120
+			}
+		}
+	}
+}
 
-# ship_event = {
-# 	id = SCM_ap_events.6
-# 	hide_window = yes
-# 	mean_time_to_happen = {
-# 		days = 120
-# 	}
-# 	trigger = {
-# 		is_ship_class = shipclass_military_station
-# 		is_disabled = yes
-# 		fleet = {
-# 			is_in_combat = no
-# 		}
-# 		is_in_combat = no
-# 		owner = {
-# 			has_ascension_perk = ap_eternal_vigilance
-# 		}
-# 	}
-# 	immediate = {
-# 		fleet = {
-# 			if = {
-# 				limit = {
-# 					fleet = {
-# 						is_in_combat = no
-# 					}
-# 				}
-# 				ROOT = {
-# 					set_disabled = no
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+ship_event = {
+	id = SCM_ap_events.6
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 120
+	}
+	trigger = {
+		is_ship_class = shipclass_military_station
+		is_disabled = yes
+		fleet = {
+			is_in_combat = no
+		}
+		is_in_combat = no
+		owner = {
+			has_ascension_perk = ap_eternal_vigilance
+		}
+	}
+	immediate = {
+		fleet = {
+			if = {
+				limit = {
+					fleet = {
+						is_in_combat = no
+					}
+				}
+				ROOT = {
+					set_disabled = no
+				}
+			}
+		}
+	}
+}
 
-# planet_event = {
-# 	id = SCM_ap_events.7
-# 	is_triggered_only = yes
-# 	hide_window = yes
-# 	trigger = {
-# 		FROM = {
-# 			has_ascension_perk = ap_world_shaper
-# 		}
-# 	}
-# 	immediate = {
-# 		if = {
-# 			limit = {
-# 				NOT = {
-# 					has_modifier = "perfectly_terraformed"
-# 				}
-# 			}
-# 			add_modifier = {
-# 				modifier = "perfectly_terraformed"
-# 				days = -1
-# 			}
-# 		}
-# 		remove_planet_flag = gardening_initiative_flag_1
-# 		remove_planet_flag = gardening_initiative_flag_2
-# 		remove_planet_flag = gardening_initiative_flag_3
-# 		remove_planet_flag = gardening_initiative_flag_4
-# 		remove_planet_flag = gardening_initiative_flag_5
-# 	}
-# }
+planet_event = {
+	id = SCM_ap_events.7
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		FROM = {
+			has_ascension_perk = ap_world_shaper
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = "perfectly_terraformed"
+				}
+			}
+			add_modifier = {
+				modifier = "perfectly_terraformed"
+				days = -1
+			}
+		}
+		remove_planet_flag = gardening_initiative_flag_1
+		remove_planet_flag = gardening_initiative_flag_2
+		remove_planet_flag = gardening_initiative_flag_3
+		remove_planet_flag = gardening_initiative_flag_4
+		remove_planet_flag = gardening_initiative_flag_5
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.8
-# 	is_triggered_only = yes
-# 	hide_window = yes
-# 	trigger = {
-# 		has_ascension_perk = ap_void_shapers
-# 		exists = owner
-# 		owner = {
-# 			is_gestalt = no
-# 		}
-# 	}
-# 	immediate = {
-# 		every_owned_starbase = {
-# 			limit = {
-# 				has_starbase_building = "system_operations_hq"
-# 			}
-# 			solar_system = {
-# 				random_system_planet = {
-# 					limit = {
-# 						is_colonizable = no
-# 						is_star = no
-# 						NOT = {
-# 							has_deposit_for = shipclass_research_station
-# 						}
-# 					}
-# 					add_random_orbital_deposit = yes
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.8
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_ascension_perk = ap_void_shapers
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	immediate = {
+		every_owned_starbase = {
+			limit = {
+				has_starbase_building = "system_operations_hq"
+			}
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_colonizable = no
+						is_star = no
+						NOT = {
+							has_deposit_for = shipclass_research_station
+						}
+					}
+					add_random_orbital_deposit = yes
+				}
+			}
+		}
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.9
-# 	is_triggered_only = yes
-# 	hide_window = yes
-# 	trigger = {
-# 		has_ascension_perk = ap_void_shapers
-# 		exists = owner
-# 		owner = {
-# 			is_gestalt = yes
-# 		}
-# 	}
-# 	immediate = {
-# 		every_owned_starbase = {
-# 			limit = {
-# 				has_starbase_building = "system_operations_hq"
-# 			}
-# 			solar_system = {
-# 				random_system_planet = {
-# 					limit = {
-# 						is_colonizable = no
-# 						is_star = no
-# 						NOT = {
-# 							has_deposit_for = shipclass_research_station
-# 						}
-# 						NOT = {
-# 							has_planet_flag = sacrificial_ban_flag
-# 						}
-# 					}
-# 					add_random_orbital_deposit_gestalt = yes
-# 					if = {
-# 						limit = {
-# 							NOT = {
-# 								has_planet_flag = void_shaper_ban_flag
-# 							}
-# 						}
-# 						set_planet_flag = void_shaper_ban_flag
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.9
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_ascension_perk = ap_void_shapers
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	immediate = {
+		every_owned_starbase = {
+			limit = {
+				has_starbase_building = "system_operations_hq"
+			}
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_colonizable = no
+						is_star = no
+						NOT = {
+							has_deposit_for = shipclass_research_station
+						}
+						NOT = {
+							has_planet_flag = sacrificial_ban_flag
+						}
+					}
+					add_random_orbital_deposit_gestalt = yes
+					if = {
+						limit = {
+							NOT = {
+								has_planet_flag = void_shaper_ban_flag
+							}
+						}
+						set_planet_flag = void_shaper_ban_flag
+					}
+				}
+			}
+		}
+	}
+}
 
 # #country_event = {
 # #	id = SCM_ap_events.9
@@ -262,181 +261,182 @@
 # #		}
 # #	}
 # #}
-# country_event = {
-# 	id = SCM_ap_events.10
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		has_ascension_perk = ap_unlimited_power
-# 	}
-# 	immediate = {
-# 		switch = {
-# 			trigger = has_modifier
-# 			mod_ap_unlimited_power_engineering = {
-# 				remove_modifier = "mod_ap_unlimited_power_engineering"
-# 			}
-# 			mod_ap_unlimited_power_physics = {
-# 				remove_modifier = "mod_ap_unlimited_power_physics"
-# 			}
-# 			mod_ap_unlimited_power_society = {
-# 				remove_modifier = "mod_ap_unlimited_power_society"
-# 			}
-# 		}
-# 		switch = {
-# 			trigger = is_researching_technology
-# 			tech_repeatable_improved_tile_mineral_output = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_improved_military_station_damage = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_improved_military_station_health = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_improved_armor_output = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_weapon_type_explosive_damage = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_weapon_type_explosive_fire_rate = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_weapon_type_kinetic_damage = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_weapon_type_kinetic_fire_rate = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_weapon_type_strike_craft_fire_damage = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_weapon_type_strike_craft_fire_rate = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_reduced_building_time = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_engineering"
-# 					days = -1
-# 				}
-# 			}
-# 		}
-# 		switch = {
-# 			trigger = is_researching_technology
-# 			tech_repeatable_improved_tile_energy_output = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_physics"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_improved_shield_output = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_physics"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_weapon_type_energy_damage = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_physics"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_weapon_type_energy_fire_rate = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_physics"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_reduced_building_cost = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_physics"
-# 					days = -1
-# 				}
-# 			}
-# 		}
-# 		switch = {
-# 			trigger = is_researching_technology
-# 			tech_repeatable_improved_tile_food_output = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_society"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_improved_core_system_cap = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_society"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_improved_army_damage = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_society"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_improved_army_health = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_society"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_improved_leader_life_span = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_society"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_naval_cap = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_society"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_command_limit = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_society"
-# 					days = -1
-# 				}
-# 			}
-# 			tech_repeatable_improved_starbase_capacity = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_unlimited_power_society"
-# 					days = -1
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+
+country_event = {
+	id = SCM_ap_events.10
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_unlimited_power
+	}
+	immediate = {
+		switch = {
+			trigger = has_modifier
+			mod_ap_unlimited_power_engineering = {
+				remove_modifier = "mod_ap_unlimited_power_engineering"
+			}
+			mod_ap_unlimited_power_physics = {
+				remove_modifier = "mod_ap_unlimited_power_physics"
+			}
+			mod_ap_unlimited_power_society = {
+				remove_modifier = "mod_ap_unlimited_power_society"
+			}
+		}
+		switch = {
+			trigger = is_researching_technology
+			tech_repeatable_improved_tile_mineral_output = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+			tech_repeatable_improved_military_station_damage = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+			tech_repeatable_improved_military_station_health = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+			tech_repeatable_improved_armor_output = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+			tech_repeatable_weapon_type_explosive_damage = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+			tech_repeatable_weapon_type_explosive_fire_rate = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+			tech_repeatable_weapon_type_kinetic_damage = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+			tech_repeatable_weapon_type_kinetic_fire_rate = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+			tech_repeatable_weapon_type_strike_craft_fire_damage = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+			tech_repeatable_weapon_type_strike_craft_fire_rate = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+			tech_repeatable_reduced_building_time = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_engineering"
+					days = -1
+				}
+			}
+		}
+		switch = {
+			trigger = is_researching_technology
+			tech_repeatable_improved_tile_energy_output = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_physics"
+					days = -1
+				}
+			}
+			tech_repeatable_improved_shield_output = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_physics"
+					days = -1
+				}
+			}
+			tech_repeatable_weapon_type_energy_damage = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_physics"
+					days = -1
+				}
+			}
+			tech_repeatable_weapon_type_energy_fire_rate = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_physics"
+					days = -1
+				}
+			}
+			tech_repeatable_reduced_building_cost = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_physics"
+					days = -1
+				}
+			}
+		}
+		switch = {
+			trigger = is_researching_technology
+			tech_repeatable_improved_tile_food_output = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_society"
+					days = -1
+				}
+			}
+			tech_repeatable_improved_core_system_cap = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_society"
+					days = -1
+				}
+			}
+			tech_repeatable_improved_army_damage = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_society"
+					days = -1
+				}
+			}
+			tech_repeatable_improved_army_health = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_society"
+					days = -1
+				}
+			}
+			tech_repeatable_improved_leader_life_span = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_society"
+					days = -1
+				}
+			}
+			tech_repeatable_naval_cap = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_society"
+					days = -1
+				}
+			}
+			tech_repeatable_command_limit = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_society"
+					days = -1
+				}
+			}
+			tech_repeatable_improved_starbase_capacity = {
+				add_modifier = {
+					modifier = "mod_ap_unlimited_power_society"
+					days = -1
+				}
+			}
+		}
+	}
+}
 
 # country_event = {
 # 	id = SCM_ap_events.11
@@ -452,228 +452,228 @@
 # 	}
 # }
 
-# ship_event = {
-# 	id = SCM_ap_events.12
-# 	hide_window = yes
-# 	mean_time_to_happen = {
-# 		days = 1
-# 	}
-# 	trigger = {
-# 		is_ship_class = shipclass_military_station
-# 		exists = owner
-# 		owner = {
-# 			has_ascension_perk = ap_grand_fortresses
-# 		}
-# 		NOT = {
-# 			has_modifier = mod_ap_grand_fortresses_range
-# 		}
-# 	}
-# 	immediate = {
-# 		ROOT = {
-# 			add_modifier = {
-# 				modifier = mod_ap_grand_fortresses_range
-# 				days = -1
-# 			}
-# 		}
-# 	}
-# }
+ship_event = {
+	id = SCM_ap_events.12
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		is_ship_class = shipclass_military_station
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_grand_fortresses
+		}
+		NOT = {
+			has_modifier = mod_ap_grand_fortresses_range
+		}
+	}
+	immediate = {
+		ROOT = {
+			add_modifier = {
+				modifier = mod_ap_grand_fortresses_range
+				days = -1
+			}
+		}
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.13
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		has_ascension_perk = ap_universal_transactions
-# 	}
-# 	immediate = {
-# 		switch = {
-# 			trigger = has_modifier
-# 			mod_ap_universal_transactions_1 = {
-# 				remove_modifier = "mod_ap_universal_transactions_1"
-# 			}
-# 			mod_ap_universal_transactions_2 = {
-# 				remove_modifier = "mod_ap_universal_transactions_2"
-# 			}
-# 			mod_ap_universal_transactions_3 = {
-# 				remove_modifier = "mod_ap_universal_transactions_3"
-# 			}
-# 			mod_ap_universal_transactions_4 = {
-# 				remove_modifier = "mod_ap_universal_transactions_4"
-# 			}
-# 			mod_ap_universal_transactions_5 = {
-# 				remove_modifier = "mod_ap_universal_transactions_5"
-# 			}
-# 			mod_ap_universal_transactions_6 = {
-# 				remove_modifier = "mod_ap_universal_transactions_6"
-# 			}
-# 			mod_ap_universal_transactions_7 = {
-# 				remove_modifier = "mod_ap_universal_transactions_7"
-# 			}
-# 			mod_ap_universal_transactions_8 = {
-# 				remove_modifier = "mod_ap_universal_transactions_8"
-# 			}
-# 			mod_ap_universal_transactions_9 = {
-# 				remove_modifier = "mod_ap_universal_transactions_9"
-# 			}
-# 			mod_ap_universal_transactions_10 = {
-# 				remove_modifier = "mod_ap_universal_transactions_10"
-# 			}
-# 			mod_ap_universal_transactions_11 = {
-# 				remove_modifier = "mod_ap_universal_transactions_11"
-# 			}
-# 			mod_ap_universal_transactions_12 = {
-# 				remove_modifier = "mod_ap_universal_transactions_12"
-# 			}
-# 			mod_ap_universal_transactions_13 = {
-# 				remove_modifier = "mod_ap_universal_transactions_13"
-# 			}
-# 			mod_ap_universal_transactions_14 = {
-# 				remove_modifier = "mod_ap_universal_transactions_14"
-# 			}
-# 			mod_ap_universal_transactions_15 = {
-# 				remove_modifier = "mod_ap_universal_transactions_15"
-# 			}
-# 			mod_ap_universal_transactions_16 = {
-# 				remove_modifier = "mod_ap_universal_transactions_16"
-# 			}
-# 			mod_ap_universal_transactions_17 = {
-# 				remove_modifier = "mod_ap_universal_transactions_17"
-# 			}
-# 			mod_ap_universal_transactions_18 = {
-# 				remove_modifier = "mod_ap_universal_transactions_18"
-# 			}
-# 			mod_ap_universal_transactions_19 = {
-# 				remove_modifier = "mod_ap_universal_transactions_19"
-# 			}
-# 			mod_ap_universal_transactions_20 = {
-# 				remove_modifier = "mod_ap_universal_transactions_20"
-# 			}
-# 		}
-# 		switch = {
-# 			trigger = num_commercial_pacts
-# 			1 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_1"
-# 					days = -1
-# 				}
-# 			}
-# 			2 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_2"
-# 					days = -1
-# 				}
-# 			}
-# 			3 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_3"
-# 					days = -1
-# 				}
-# 			}
-# 			4 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_4"
-# 					days = -1
-# 				}
-# 			}
-# 			5 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_5"
-# 					days = -1
-# 				}
-# 			}
-# 			6 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_6"
-# 					days = -1
-# 				}
-# 			}
-# 			7 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_7"
-# 					days = -1
-# 				}
-# 			}
-# 			8 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_8"
-# 					days = -1
-# 				}
-# 			}
-# 			9 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_9"
-# 					days = -1
-# 				}
-# 			}
-# 			10 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_10"
-# 					days = -1
-# 				}
-# 			}
-# 			11 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_11"
-# 					days = -1
-# 				}
-# 			}
-# 			12 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_12"
-# 					days = -1
-# 				}
-# 			}
-# 			13 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_13"
-# 					days = -1
-# 				}
-# 			}
-# 			14 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_14"
-# 					days = -1
-# 				}
-# 			}
-# 			15 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_15"
-# 					days = -1
-# 				}
-# 			}
-# 			16 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_16"
-# 					days = -1
-# 				}
-# 			}
-# 			17 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_17"
-# 					days = -1
-# 				}
-# 			}
-# 			18 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_18"
-# 					days = -1
-# 				}
-# 			}
-# 			19 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_19"
-# 					days = -1
-# 				}
-# 			}
-# 			20 = {
-# 				add_modifier = {
-# 					modifier = "mod_ap_universal_transactions_20"
-# 					days = -1
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_universal_transactions
+	}
+	immediate = {
+		switch = {
+			trigger = has_modifier
+			mod_ap_universal_transactions_1 = {
+				remove_modifier = "mod_ap_universal_transactions_1"
+			}
+			mod_ap_universal_transactions_2 = {
+				remove_modifier = "mod_ap_universal_transactions_2"
+			}
+			mod_ap_universal_transactions_3 = {
+				remove_modifier = "mod_ap_universal_transactions_3"
+			}
+			mod_ap_universal_transactions_4 = {
+				remove_modifier = "mod_ap_universal_transactions_4"
+			}
+			mod_ap_universal_transactions_5 = {
+				remove_modifier = "mod_ap_universal_transactions_5"
+			}
+			mod_ap_universal_transactions_6 = {
+				remove_modifier = "mod_ap_universal_transactions_6"
+			}
+			mod_ap_universal_transactions_7 = {
+				remove_modifier = "mod_ap_universal_transactions_7"
+			}
+			mod_ap_universal_transactions_8 = {
+				remove_modifier = "mod_ap_universal_transactions_8"
+			}
+			mod_ap_universal_transactions_9 = {
+				remove_modifier = "mod_ap_universal_transactions_9"
+			}
+			mod_ap_universal_transactions_10 = {
+				remove_modifier = "mod_ap_universal_transactions_10"
+			}
+			mod_ap_universal_transactions_11 = {
+				remove_modifier = "mod_ap_universal_transactions_11"
+			}
+			mod_ap_universal_transactions_12 = {
+				remove_modifier = "mod_ap_universal_transactions_12"
+			}
+			mod_ap_universal_transactions_13 = {
+				remove_modifier = "mod_ap_universal_transactions_13"
+			}
+			mod_ap_universal_transactions_14 = {
+				remove_modifier = "mod_ap_universal_transactions_14"
+			}
+			mod_ap_universal_transactions_15 = {
+				remove_modifier = "mod_ap_universal_transactions_15"
+			}
+			mod_ap_universal_transactions_16 = {
+				remove_modifier = "mod_ap_universal_transactions_16"
+			}
+			mod_ap_universal_transactions_17 = {
+				remove_modifier = "mod_ap_universal_transactions_17"
+			}
+			mod_ap_universal_transactions_18 = {
+				remove_modifier = "mod_ap_universal_transactions_18"
+			}
+			mod_ap_universal_transactions_19 = {
+				remove_modifier = "mod_ap_universal_transactions_19"
+			}
+			mod_ap_universal_transactions_20 = {
+				remove_modifier = "mod_ap_universal_transactions_20"
+			}
+		}
+		switch = {
+			trigger = num_commercial_pacts
+			1 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_1"
+					days = -1
+				}
+			}
+			2 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_2"
+					days = -1
+				}
+			}
+			3 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_3"
+					days = -1
+				}
+			}
+			4 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_4"
+					days = -1
+				}
+			}
+			5 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_5"
+					days = -1
+				}
+			}
+			6 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_6"
+					days = -1
+				}
+			}
+			7 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_7"
+					days = -1
+				}
+			}
+			8 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_8"
+					days = -1
+				}
+			}
+			9 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_9"
+					days = -1
+				}
+			}
+			10 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_10"
+					days = -1
+				}
+			}
+			11 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_11"
+					days = -1
+				}
+			}
+			12 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_12"
+					days = -1
+				}
+			}
+			13 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_13"
+					days = -1
+				}
+			}
+			14 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_14"
+					days = -1
+				}
+			}
+			15 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_15"
+					days = -1
+				}
+			}
+			16 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_16"
+					days = -1
+				}
+			}
+			17 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_17"
+					days = -1
+				}
+			}
+			18 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_18"
+					days = -1
+				}
+			}
+			19 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_19"
+					days = -1
+				}
+			}
+			20 = {
+				add_modifier = {
+					modifier = "mod_ap_universal_transactions_20"
+					days = -1
+				}
+			}
+		}
+	}
+}
 
 # planet_event = {
 # 	id = SCM_ap_events.14
@@ -711,191 +711,191 @@
 # 	}
 # }
 
-# country_event = {
-# 	id = SCM_ap_events.15
-# 	is_triggered_only = yes
-# 	hide_window = yes
-# 	immediate = {
-# 		random_country = {
-# 			limit = {
-# 				is_at_war_with = ROOT
-# 			}
-# 			save_event_target_as = we_reduction_puppet
-# 		}
-# 		random_owned_planet = {
-# 			limit = {
-# 				is_capital = yes
-# 			}
-# 			planet_event = {
-# 				id = SCM_ap_events.16
-# 			}
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.15
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		random_country = {
+			limit = {
+				is_at_war_with = ROOT
+			}
+			save_event_target_as = we_reduction_puppet
+		}
+		random_owned_planet = {
+			limit = {
+				is_capital = yes
+			}
+			planet_event = {
+				id = SCM_ap_events.16
+			}
+		}
+	}
+}
 
-# planet_event = {
-# 	id = SCM_ap_events.16
-# 	is_triggered_only = yes
-# 	hide_window = yes
-# 	immediate = {
-# 		# Add war exhaustion to planet owner
-# 		owner = {
-# 			add_static_war_exhaustion = {
-# 				attacker = event_target:we_reduction_puppet
-# 				location = root
-# 				value_for_planet_destruction = -0.5
-# 			}
-# 		}
-# 	}
-# }
+planet_event = {
+	id = SCM_ap_events.16
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		# Add war exhaustion to planet owner
+		owner = {
+			add_static_war_exhaustion = {
+				attacker = event_target:we_reduction_puppet
+				location = root
+				value_for_planet_destruction = -0.5
+			}
+		}
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.17
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		any_system_within_border = {
-# 			has_trade_route = yes
-# 			trade_route_value >= 200
-# 			NOT = {
-# 				has_modifier = mod_ap_road_of_the_golden_void
-# 			}
-# 			owner = {
-# 				has_ascension_perk = ap_road_of_the_golden_void
-# 			}
-# 		}
-# 	}
-# 	immediate = {
-# 		every_system_within_border = {
-# 			limit = {
-# 				has_trade_route = yes
-# 				trade_route_value >= 200
-# 				NOT = {
-# 					has_modifier = mod_ap_road_of_the_golden_void
-# 				}
-# 			}
-# 			add_modifier = {
-# 				modifier = mod_ap_road_of_the_golden_void
-# 				days = -1
-# 			}
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.17
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		any_system_within_border = {
+			has_trade_route = yes
+			trade_route_value >= 200
+			NOT = {
+				has_modifier = mod_ap_road_of_the_golden_void
+			}
+			owner = {
+				has_ascension_perk = ap_road_of_the_golden_void
+			}
+		}
+	}
+	immediate = {
+		every_system_within_border = {
+			limit = {
+				has_trade_route = yes
+				trade_route_value >= 200
+				NOT = {
+					has_modifier = mod_ap_road_of_the_golden_void
+				}
+			}
+			add_modifier = {
+				modifier = mod_ap_road_of_the_golden_void
+				days = -1
+			}
+		}
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.18
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		any_system_within_border = {
-# 			OR = {
-# 				has_trade_route = no
-# 				trade_route_value <= 199
-# 				owner = {
-# 					NOT = {
-# 						has_ascension_perk = ap_road_of_the_golden_void
-# 					}
-# 				}
-# 			}
-# 			has_modifier = mod_ap_road_of_the_golden_void
-# 		}
-# 	}
-# 	immediate = {
-# 		every_system_within_border = {
-# 			limit = {
-# 				OR = {
-# 					has_trade_route = no
-# 					trade_route_value <= 199
-# 				}
-# 				has_modifier = mod_ap_road_of_the_golden_void
-# 			}
-# 			remove_modifier = mod_ap_road_of_the_golden_void
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.18
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		any_system_within_border = {
+			OR = {
+				has_trade_route = no
+				trade_route_value <= 199
+				owner = {
+					NOT = {
+						has_ascension_perk = ap_road_of_the_golden_void
+					}
+				}
+			}
+			has_modifier = mod_ap_road_of_the_golden_void
+		}
+	}
+	immediate = {
+		every_system_within_border = {
+			limit = {
+				OR = {
+					has_trade_route = no
+					trade_route_value <= 199
+				}
+				has_modifier = mod_ap_road_of_the_golden_void
+			}
+			remove_modifier = mod_ap_road_of_the_golden_void
+		}
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.19
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		has_ascension_perk = ap_transcendent_learning
-# 		FROM = {
-# 			NOT = {
-# 				has_leader_flag = ap_trans_learning_flag_set
-# 			}
-# 		}
-# 		from = {
-# 			has_skill = 5
-# 		}
-# 	}
-# 	immediate = {
-# 		change_variable = {
-# 			which = ap_scm_transencental_learning_variable
-# 			value = 1
-# 		}
-# 		FROM = {
-# 			set_leader_flag = ap_trans_learning_flag_set
-# 		}
-# 		country_event = {
-# 			id = SCM_ap_events.20
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.19
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_transcendent_learning
+		FROM = {
+			NOT = {
+				has_leader_flag = ap_trans_learning_flag_set
+			}
+		}
+		from = {
+			has_skill = 5
+		}
+	}
+	immediate = {
+		change_variable = {
+			which = ap_scm_transencental_learning_variable
+			value = 1
+		}
+		FROM = {
+			set_leader_flag = ap_trans_learning_flag_set
+		}
+		country_event = {
+			id = SCM_ap_events.20
+		}
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.20
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	immediate = {
-# 		remove_modifier = ap_scm_trans_lerning_modifier
-# 		add_modifier = {
-# 			modifier = ap_scm_trans_lerning_modifier
-# 			multiplier = ap_scm_transencental_learning_variable
-# 			days = -1
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.20
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		remove_modifier = ap_scm_trans_lerning_modifier
+		add_modifier = {
+			modifier = ap_scm_trans_lerning_modifier
+			multiplier = ap_scm_transencental_learning_variable
+			days = -1
+		}
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.21
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		has_ascension_perk = ap_scm_galaxy_brain
-# 		FROM = {
-# 			NOT = {
-# 				has_leader_flag = ap_scm_galaxy_brain_flag_set
-# 			}
-# 		}
-# 		from = {
-# 			has_skill = 5
-# 		}
-# 	}
-# 	immediate = {
-# 		change_variable = {
-# 			which = ap_scm_galaxy_brain_variable
-# 			value = 1
-# 		}
-# 		FROM = {
-# 			set_leader_flag = ap_scm_galaxy_brain_flag_set
-# 		}
-# 		country_event = {
-# 			id = SCM_ap_events.22
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.21
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_scm_galaxy_brain
+		FROM = {
+			NOT = {
+				has_leader_flag = ap_scm_galaxy_brain_flag_set
+			}
+		}
+		from = {
+			has_skill = 5
+		}			
+	}
+	immediate = {
+		change_variable = {
+			which = ap_scm_galaxy_brain_variable
+			value = 1
+		}
+		FROM = {
+			set_leader_flag = ap_scm_galaxy_brain_flag_set
+		}
+		country_event = {
+			id = SCM_ap_events.22
+		}
+	}
+}
 
-# country_event = {
-# 	id = SCM_ap_events.22
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	immediate = {
-# 		remove_modifier = ap_scm_galaxy_brain_modifier
-# 		add_modifier = {
-# 			modifier = ap_scm_galaxy_brain_modifier
-# 			multiplier = ap_scm_galaxy_brain_variable
-# 			days = -1
-# 		}
-# 	}
-# }
+country_event = {
+	id = SCM_ap_events.22
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		remove_modifier = ap_scm_galaxy_brain_modifier
+		add_modifier = {
+			modifier = ap_scm_galaxy_brain_modifier
+			multiplier = ap_scm_galaxy_brain_variable
+			days = -1
+		}
+	}
+}

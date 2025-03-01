@@ -1,0 +1,134 @@
+great_conqueror_at_war_modifier = {
+	hide_from_country_list = yes
+	planet_jobs_produces_mult = 0.10
+}
+
+ghost_platforms_hotfix_modifier = {
+	ship_weapon_damage = -5.0
+}
+
+perfectly_terraformed = {
+	icon = "gfx/interface/icons/planet_modifiers/perfectly_terraformed.dds"
+	icon_frame = 1
+	district_generator_max = 5
+	district_mining_max = 5
+	district_farming_max = 5
+	planet_non_artificial_max_districts_add = 5
+	pop_growth_speed = 0.10
+	planet_pop_assembly_mult = 0.1
+	planet_pop_assembly_organic_mult = 0.10
+	pop_happiness = 0.10
+}
+
+mod_ap_unlimited_power_engineering = {
+	#hide_from_country_list = yes
+	country_engineering_tech_research_speed = 0.33
+}
+
+mod_ap_unlimited_power_physics = {
+	#hide_from_country_list = yes
+	country_physics_tech_research_speed = 0.33
+}
+
+mod_ap_unlimited_power_society = {
+	#hide_from_country_list = yes
+	country_society_tech_research_speed = 0.33
+}
+
+mod_ap_grand_fortresses_range = {
+	ship_weapon_range_mult = 1
+}
+
+mod_ap_universal_transactions_1 = {
+	trade_value_mult = 0.02
+}
+
+mod_ap_universal_transactions_2 = {
+	trade_value_mult = 0.04
+}
+
+mod_ap_universal_transactions_3 = {
+	trade_value_mult = 0.06
+}
+
+mod_ap_universal_transactions_4 = {
+	trade_value_mult = 0.08
+}
+
+mod_ap_universal_transactions_5 = {
+	trade_value_mult = 0.10
+}
+
+mod_ap_universal_transactions_6 = {
+	trade_value_mult = 0.12
+}
+
+mod_ap_universal_transactions_7 = {
+	trade_value_mult = 0.14
+}
+
+mod_ap_universal_transactions_8 = {
+	trade_value_mult = 0.16
+}
+
+mod_ap_universal_transactions_9 = {
+	trade_value_mult = 0.18
+}
+
+mod_ap_universal_transactions_10 = {
+	trade_value_mult = 0.20
+}
+
+mod_ap_universal_transactions_11 = {
+	trade_value_mult = 0.22
+}
+
+mod_ap_universal_transactions_12 = {
+	trade_value_mult = 0.24
+}
+
+mod_ap_universal_transactions_13 = {
+	trade_value_mult = 0.26
+}
+
+mod_ap_universal_transactions_14 = {
+	trade_value_mult = 0.28
+}
+
+mod_ap_universal_transactions_15 = {
+	trade_value_mult = 0.30
+}
+
+mod_ap_universal_transactions_16 = {
+	trade_value_mult = 0.32
+}
+
+mod_ap_universal_transactions_17 = {
+	trade_value_mult = 0.34
+}
+
+mod_ap_universal_transactions_18 = {
+	trade_value_mult = 0.36
+}
+
+mod_ap_universal_transactions_19 = {
+	trade_value_mult = 0.38
+}
+
+mod_ap_universal_transactions_20 = {
+	trade_value_mult = 0.40
+}
+
+mod_ap_road_of_the_golden_void = {
+	ship_speed_mult = 0.5
+}
+
+ap_scm_trans_lerning_modifier = {
+	#hide_from_country_list = yes
+	species_leader_exp_gain = 0.025
+}
+
+ap_scm_galaxy_brain_modifier = {
+	#hide_from_country_list = yes
+	leader_skill_levels = 0.1
+}

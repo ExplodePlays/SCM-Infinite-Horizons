@@ -1,0 +1,216 @@
+###Gardening Initiative
+decision_gardening_initiative = {
+	owned_planets_only = yes
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+			energy = 1500
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_gardening_initiative
+		}
+		is_artificial = no
+		NAND = {
+			has_planet_flag = gardening_initiative_flag_1
+			has_planet_flag = gardening_initiative_flag_2
+			has_planet_flag = gardening_initiative_flag_3
+			has_planet_flag = gardening_initiative_flag_4
+			has_planet_flag = gardening_initiative_flag_5
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = decision_gardening_initiative_effect_tooltip
+		hidden_effect = {
+			add_random_non_blocker_deposit = yes
+			if = {
+				limit = {
+				NOT = { has_planet_flag = gardening_initiative_flag_1 }
+				}
+				set_planet_flag = gardening_initiative_flag_1
+			}
+			else_if = {
+				limit = {
+				NOT = { has_planet_flag = gardening_initiative_flag_2 }
+				has_planet_flag = gardening_initiative_flag_1
+				}
+				set_planet_flag = gardening_initiative_flag_2
+			}
+			else_if = {
+				limit = {
+				NOT = { has_planet_flag = gardening_initiative_flag_3 }
+				has_planet_flag = gardening_initiative_flag_2
+				}
+				set_planet_flag = gardening_initiative_flag_3
+			}
+			else_if = {
+				limit = {
+				NOT = { has_planet_flag = gardening_initiative_flag_4 }
+				has_planet_flag = gardening_initiative_flag_3
+				}
+				set_planet_flag = gardening_initiative_flag_4
+			}
+			else_if = {
+				limit = {
+				NOT = { has_planet_flag = gardening_initiative_flag_5 }
+				has_planet_flag = gardening_initiative_flag_4
+				}
+				set_planet_flag = gardening_initiative_flag_5
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# ##Sacrificial Planet
+# decision_sacrificial_planet = {
+# 	enactment_time = 0
+	
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			influence = 100
+# 		}
+# 	}
+
+# 	potential = {
+# 		exists = space_owner
+# 		exists = from
+# 		space_owner = { is_same_value = from }
+# 		is_star = no
+# 		habitable_planet = no
+# 		is_asteroid = no
+# 		NOR = { 
+# 			is_planet_class = pc_gas_giant
+# 			is_planet_class = pc_shrouded_habitable
+# 			is_planet_class = pc_manufactory			
+# 		}
+# 		from = {
+# 			has_ascension_perk = ap_sacrificial_planets
+# 		}
+# 		NOR = {
+# 			has_planet_flag = sacrificial_ban_flag
+# 			has_planet_flag = void_shaper_ban_flag
+# 		}
+# 		OR = {
+# 			has_deposit = d_minerals_5
+# 			has_deposit = d_minerals_6	
+# 			has_deposit = d_minerals_7	
+# 			has_deposit = d_minerals_8	
+# 			has_deposit = d_minerals_9
+# 			has_deposit = d_minerals_10	
+# 		}
+# 		NOT = { has_modifier = sacrifice_planet_timer }
+# 	}
+
+# 	allow = {
+		
+# 	}
+
+# 	effect = {
+# 		hidden_effect = {
+# 			planet_event = { id = SCM_ap_events.14 days = 1800 }
+# 			change_pc = pc_nuked
+# 		}
+# 		add_modifier = {
+# 			modifier = sacrifice_planet_timer
+# 			days = 1800
+# 		}
+# 		add_modifier = {
+# 			modifier = pre_sacrifice
+# 			days = 1800
+# 		}	
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }
+
+# ##Officina Magnificum
+# decision_officina_magnificum = {
+# 	owned_planets_only = yes
+# 	icon = decision_scm_industry_5_activate
+
+# 	enactment_time = 3600
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			influence = 200
+# 			minerals = 20000
+# 		}
+# 	}
+
+# 	potential = {
+# 		NOR = {
+# 			is_planet_class = pc_city
+# 			is_planet_class = pc_relic
+# 			is_planet_class = pc_manufactory
+# 			has_modifier = resort_colony
+# 			has_modifier = penal_colony
+# 			has_modifier = slave_colony
+# 			has_modifier = pm_wenkwort_custodian
+# 			owner = {
+# 				any_owned_planet = {				
+# 					has_planet_flag = officina_magnificum_planet_flag
+# 				}
+# 			}
+# 		}
+# 		is_artificial = no
+# 		exists = owner
+# 		owner = { 
+# 			has_ascension_perk = ap_officina_magnificum
+# 			NOT = { has_country_flag = officina_magnificum_set }
+# 		}		
+# 	}
+
+# 	allow = {
+# 		custom_tooltip = {
+# 			fail_text = decision_arcology_project_requirements
+# 			free_district_slots < 1
+# 			num_districts = { type = district_farming value < 1 }
+# 			num_districts = { type = district_mining value < 1 }
+# 			num_districts = { type = district_generator value < 1 }
+# 		}
+# 		num_uncleared_blockers < 1
+# 	}
+
+# 	effect = {
+# 		# Make city-planet
+# 		custom_tooltip = decision_officina_magnificum_effects
+# 		hidden_effect = {
+# 			clear_deposits = yes
+# 			change_pc = pc_manufactory
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						is_active_resolution = "resolution_ecology_environmental_control_board"
+# 						is_active_resolution = "resolution_ecology_paradise_initiative"
+# 					}
+# 				}
+# 				owner = {
+# 					set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+# 					set_country_flag = officina_magnificum_set
+# 				}
+# 			}
+# 			set_planet_flag = officina_magnificum_planet_flag
+# 		}
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }

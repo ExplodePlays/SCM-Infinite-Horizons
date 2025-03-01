@@ -1,0 +1,233 @@
+@Edict1Cost = 10
+@Edict2Cost = 20
+@Edict3Cost = 30
+@Edict5Cost = 50
+
+@EdictDuration = 3600
+@ambitionDuration = 3600
+
+@campaignCost = 1000
+@campaignDuration = 3600
+
+@EdictPerpetual = -1
+
+
+# one_vision_edict = {
+# 	length = @EdictPerpetual
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = edicts
+# 		upkeep = {
+# 			unity = @Edict5Cost
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
+
+# 	potential = {
+# 		has_ascension_perk = ap_one_vision
+# 	}
+	
+# 	modifier = {
+# 		pop_government_ethic_attraction = 1.00
+# 		pop_ethics_shift_speed_mult = 0.5
+# 		planet_jobs_unity_produces_mult = 0.20
+# 	}
+
+# 	allow = {
+# 	}
+
+# 	ai_weight = {
+# 		weight = 1
+# 	}
+# }
+
+ap_path_of_conquest_we_reduction = {
+	length = 1800
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			influence = 250
+		}
+	}
+
+	potential = {
+		has_ascension_perk = ap_path_of_conquest
+	}
+
+	effect = {
+		country_event = {
+			id = SCM_ap_events.15
+			days = 0
+		}
+	}
+
+	modifier = { custom_tooltip = ap_path_of_conquest_we_reduction_tooltip }
+	allow = {
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
+#Immortal Ruler
+# immortal_ruler = {
+# 	length = 0
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			influence = 250
+# 		}
+# 	}
+	
+# 	potential = {
+# 		has_valid_civic = civic_imperial_cult
+# 		NOT = { has_country_flag = flag_immortal_ruler }
+# 	}	
+
+# 	effect = {
+# 		country_event = { id = immortal_ruler.1 }
+# 		}	
+	
+	
+# 	ai_weight = {
+# 		weight = 1
+# 	}
+# }
+
+
+
+
+
+
+#Patriotic Call
+patriotic_call = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = @Edict5Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+	
+	potential = {
+		has_valid_civic = civic_citizen_service
+	}	
+
+	modifier = {
+	    
+		country_naval_cap_mult = 0.2
+		army_morale = 0.2
+		pop_government_ethic_attraction = 0.2
+		
+	}
+	
+	allow = {
+		is_at_war = yes
+	}	
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+
+#Divine Crusade
+div_crusade = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	
+	is_ambition = yes
+	
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}	
+	
+	potential = {
+		has_valid_civic = civic_defenders_faith
+	}	
+	
+	allow = {
+		is_at_war = yes
+	}		
+
+	modifier = {	   
+	    job_templar_per_pop = 0.05
+        max_rivalries = 1	
+        rivalries_influence_produces_mult = 0.25
+		country_war_exhaustion_mult = -0.25
+		ship_fire_rate_mult = 0.15	
+	}
+	
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# ##Spiritualist Federation Level 4 Ambition
+# grand_ascension = {
+# 	length = 3600
+# 	icon = "GFX_edict_type_time"
+	
+# 	is_ambition = yes 		# Costs Unity scaled to tradition cost
+# 	resources = {
+# 		category = edicts
+# 	}
+
+# 	modifier = {
+# 		species_leader_exp_gain = 1
+# 	}
+
+# 	potential = {
+# 		exists = owner
+# 		owner = {
+# 			has_federation = yes
+# 			federation = { has_federation_perk = spiritualist_grand_ascension }
+# 		}
+# 	}
+
+# 	allow = {
+# 	}
+
+# 	ai_weight = {
+# 		weight = 1
+# 	}
+# }
+
+#####Election if politics banned#######
+# SCM_internal_election_edict = {
+# 	length = 10
+# 	icon = "GFX_edict_type_time"
+
+# 	potential = {
+# 		has_policy_flag = internal_politics_ban
+# 	}
+
+# 	allow = {
+# 		hidden_trigger = {
+# 			NOT = {
+# 				has_country_flag = SCM_faction_election_cooldown_flag
+# 			}
+# 		}
+# 	}
+
+# 	effect = {
+# 		country_event = {
+# 			id = scm_factions.215
+# 		}
+# 		hidden_effect = {
+# 			set_timed_country_flag = {
+# 				flag = SCM_faction_xenophile_election_cooldown_flag
+# 				days = 7200
+# 			}
+# 		}
+# 	}
+# }

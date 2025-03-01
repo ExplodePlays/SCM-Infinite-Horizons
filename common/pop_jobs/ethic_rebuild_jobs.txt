@@ -2617,6 +2617,13 @@ merchant = {
 	
 	resources = {
 		category = planet_merchants
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_civic = civic_merchant_guilds	}
+			}
+			unity = 1
+		}
 		upkeep = {
 			consumer_goods = 2
 		}
@@ -2633,6 +2640,18 @@ merchant = {
 		}
 		trade_value_add = 10	#Vanilla is 12
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_road_of_the_golden_void
+			}
+		}
+		modifier = {
+			trade_value_mult = 0.005
+		}
 	}
 	
 	triggered_planet_modifier = {	#Added from Vanilla - Oct 1, 2024

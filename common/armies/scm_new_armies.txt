@@ -1,0 +1,150 @@
+#Centurions
+centurion_army = {
+	damage = 3.5
+	health = 2
+	morale = 2
+	morale_damage = 1.5
+	collateral_damage = 0.75
+	war_exhaustion = 0.5
+	time = 120
+	icon = GFX_army_type_centurion
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 300
+		}
+
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	potential = {
+		owner = {
+			has_ascension_perk = ap_path_of_conquest
+		}
+	}
+}
+
+# assault_militia = {
+# 	damage = 0.5
+# 	health = 0.5
+# 	morale = 0.5
+# 	morale_damage = 1
+# 	collateral_damage = 1
+# 	war_exhaustion = 0.5
+# 	time = 45
+# 	icon = GFX_army_type_assault
+# 	prerequisites = { "tech_assault_armies" }
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 50
+# 		}
+# 		upkeep = {
+# 			energy = 0.5
+# 		}
+# 	}
+# 	show_tech_unlock_if = { 
+# 		OR = {
+# 			is_machine_empire = no
+# 			has_valid_civic = civic_machine_assimilator
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		owner = {
+# 			has_valid_civic = civic_well_funded_militia
+# 		}
+# 	}
+# }
+
+# assault_dronelings = {
+# 	damage = 1.00
+# 	health = 1.00
+# 	morale = 1.00
+# 	morale_damage = 1.00
+# 	collateral_damage = 1.00
+# 	war_exhaustion = 0
+# 	time = 90
+# 	icon = GFX_army_type_assault
+# 	prerequisites = { "tech_assault_armies" }
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 100
+# 		}
+
+# 		upkeep = {
+# 			energy = 1
+# 		}
+# 	}
+
+# 	show_tech_unlock_if = { 
+# 		OR = {
+# 			is_machine_empire = no
+# 			has_valid_civic = civic_machine_assimilator
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		owner = {
+# 			has_valid_civic = civic_hive_strength_of_legions
+# 		}
+# 	}
+# }
+
+# assault_dragon = {
+# 	damage = 3.00
+# 	health = 3.00
+# 	morale = 3.00
+# 	morale_damage = 3.00
+# 	collateral_damage = 3.00
+# 	war_exhaustion = 1.0
+# 	time = 360
+# 	icon = GFX_army_type_assault
+# 	prerequisites = { "tech_assault_armies" }
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 300
+# 			food = 300
+# 		}
+
+# 		upkeep = {
+# 			food = 5
+# 		}
+# 	}
+
+# 	show_tech_unlock_if = { 
+# 		OR = {
+# 			is_machine_empire = no
+# 			has_valid_civic = civic_machine_assimilator
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		owner = {
+# 			has_valid_civic = civic_hive_draconic_heritage
+# 		}
+# 	}
+# }

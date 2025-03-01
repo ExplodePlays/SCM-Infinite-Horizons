@@ -1,0 +1,68 @@
+﻿l_english:
+
+############### Edicts ####################
+
+ edict_organics:0 "§GOrganic§! Consumer Goods"
+ edict_organics_desc:0 "It is time to give the people some healthy leasures!"
+
+ edict_culinary_investments:0 "Culinary Investments"
+ edict_culinary_investments_desc:0 "What's better than the food we have at home? Free food given to us by our precious government!"
+ 
+ edict_educate_people_on_food_safety:0 "Educate people on food safety"
+ edict_educate_people_on_food_safety_desc:0 "The food industry can work to streamline date labelling and increase consumer awareness about when food is still safe to eat. And public awareness and §Gfood waste education campaigns§! are vital to changing consumer attitudes and behaviours."
+
+ edict_neo_malthusian_model:0 "Neo-Malthusian Model"
+ edict_neo_malthusian_model_desc:0 "The power of population is indefinitely greater than the power in our nation to produce subsistence for our species"
+
+ edict_employment_relocation_program:0 "Employment Relocation Program"
+ edict_employment_relocation_program_desc:0 "Secure a contract with a private organization that will help move employees from one location to another. This program insures the basics of effective relocation programs, including policy development, communication issues, legal issues and economic factors. It covers elements of an employer relocation program such as relocation agreements, moving expenses, support for families, and housing and real estate issues"
+
+ edict_elixir_of_life:0 "§GElixir of Life§!"
+ edict_elixir_of_life_desc:0 "Our Leaders need more time to make our nation better and stronger, let us share what our scientists have invented using various mixtures of strange liquids and consumables to give one of them extra years of service and make them an §Bimmortal§!. §YWARNING: §!Costs §G30,000£food£§!"
+
+
+############### Events ####################
+
+ gods_grace.2_title:0 "§GElixir of Life§!: Tracking Suitable Leaders"
+ gods_grace.2_desc:0 "We have a chance to give one of our leaders the opportunity to gain immortality, this will allow them to work at their own pace, having all the time in the universe, to work on their assigned goals and agendas! will you grant them this gift? or is it riskier to grant a person immortality while our people suffers with death?\n\nit was rhetorical! We don't care!\n\nOur Xeno-Anthropologists have acquired a list of suitable high ranking leaders for you to choose from!\n\n§MChoose wisely! this process is highly expensive!§!"
+
+ gods_grace.4_title:0 "ALL Leaders are Immortals"
+ gods_grace.4_desc:0 "Wether we had a hand in this or just were born like this, but every High Ranking Leader in our nation is already an Immortal! Unless you wish for double immortality\n\n maybe it is time for you to focus on your people rather than one pathetic governor in a far far away sector!"
+
+ gods_grace.5_title:0 "§GElixir of Life§!"
+ gods_grace.5_desc:0 "The §GElixir of Life§! has done it's job, one of our leaders has just became an immortal, ascending to the ranks of the gods, maybe tyranny is just a myth.\n\nOur scientist have determined it will take time until we can inject another person with the §GElixir of Life§!. Perhaps because of what they said, i quote §Y<This is not a magic world where you get everything you want>§!.\n\nWe need a new team, last one has gone missing!"
+
+ eol_option.0:0 "Useless! Get me other LEADERS!"
+ eol_option.0.desc:0 "Your team will look for other leaders, for the right price!!!"
+
+ eol_option.1:0 "[event_target:leader_immortal_food_1.GetName]"
+ eol_option.1.desc:0 "Immortality awaits you!"
+
+ eol_option.2:0 "[event_target:leader_immortal_food_2.GetName]"
+ eol_option.2.desc:0 "Immortality awaits you!"
+
+ eol_option.3:0 "[event_target:leader_immortal_food_3.GetName]"
+ eol_option.3.desc:0 "Immortality awaits you!"
+
+ eol_option.4:0 "[event_target:leader_immortal_food_4.GetName]"
+ eol_option.4.desc:0 "Immortality awaits you!"
+
+ eol_option.5:0 "[event_target:leader_immortal_food_5.GetName]"
+ eol_option.5.desc:0 "Immortality awaits you!"
+
+ eol_option.6:0 "[event_target:leader_immortal_food_6.GetName]"
+ eol_option.6.desc:0 "Immortality awaits you!"
+
+ eol_option.7:0 "I wish no immortality for these fools! Ugh!"
+ eol_option.7.desc:0 "Your team will stop looking for other leaders!"
+
+ eol_option.8:0 "Finally achieved mass-Immortality!"
+
+ eol_option.9:0 "Let us prepare for the next Leader!"
+
+ 
+
+############### Traits ####################
+
+ leader_trait_immortality:0 "Immortal"
+ leader_trait_immortality_desc:0 "This species has gained immortality for life\nSee what i did there?"

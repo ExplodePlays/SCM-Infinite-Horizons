@@ -41,6 +41,18 @@ district_arcology_housing = {
 			job_maintenance_drone_add = 9
 		}
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = "ap_builders_of_nations"
+			}
+		}
+		modifier = {
+			trade_value_mult = 0.01
+		}
+	}
 
 	triggered_planet_modifier = {
 		potential = {

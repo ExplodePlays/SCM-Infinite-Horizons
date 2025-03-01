@@ -10,7 +10,8 @@ ethic_fanatic_authoritarian = {
 	country_modifier = {
 		country_base_influence_produces_add = 1.5	#Vanilla --> country_ethic_influence_produces_add = 1
 		job_enforcer_per_pop = 0.06
-		ruler_skill_levels = 2
+		#ruler_skill_levels = 2
+		leader_skill_levels = 2 					#Workaround until we fix it
 		country_energy_produces_mult = -0.05
 		#planet_jobs_worker_produces_mult = 0.1		#Vanilla
 	}

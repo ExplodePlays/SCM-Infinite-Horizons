@@ -1,0 +1,461 @@
+##########################################################################
+# Modifiers
+##########################################################################
+#habitat bonking
+scm_habitat_limit_bonk_1 = {
+	planet_jobs_produces_mult = -0.05
+	trade_value_mult = -0.05
+	planet_pop_assembly_mult = -0.05
+	planet_pop_assembly_organic_mult = -0.05
+	pop_growth_speed = -0.05
+	pop_growth_from_immigration = -0.05
+	planet_pop_assembly_mult = -0.05
+}
+
+scm_habitat_limit_bonk_2 = {
+	planet_jobs_produces_mult = -0.1
+	trade_value_mult = -0.1
+	planet_pop_assembly_mult = -0.1
+	planet_pop_assembly_organic_mult = -0.1
+	pop_growth_speed = -0.1
+	pop_growth_from_immigration = -0.1
+	planet_pop_assembly_mult = -0.1
+}
+
+scm_habitat_limit_bonk_3 = {
+	planet_jobs_produces_mult = -0.2
+	trade_value_mult = -0.2
+	planet_pop_assembly_mult = -0.2
+	planet_pop_assembly_organic_mult = -0.2
+	pop_growth_speed = -0.2
+	pop_growth_from_immigration = -0.2
+	planet_pop_assembly_mult = -0.2
+}
+
+scm_habitat_limit_bonk_4 = {
+	planet_jobs_produces_mult = -0.3
+	trade_value_mult = -0.3
+	planet_pop_assembly_mult = -0.3
+	planet_pop_assembly_organic_mult = -0.3
+	pop_growth_speed = -0.3
+	pop_growth_from_immigration = -0.3
+	planet_pop_assembly_mult = -0.3
+}
+
+scm_habitat_limit_bonk_5 = {
+	planet_jobs_produces_mult = -0.5
+	trade_value_mult = -0.5
+	planet_pop_assembly_mult = -0.5
+	planet_pop_assembly_organic_mult = -0.5
+	pop_growth_speed = -0.5
+	pop_growth_from_immigration = -0.5
+	planet_pop_assembly_mult = -0.5
+}
+
+scm_habitat_limit_bonk_6 = {
+	planet_jobs_produces_mult = -0.7
+	trade_value_mult = -0.7
+	planet_pop_assembly_mult = -0.7
+	planet_pop_assembly_organic_mult = -0.7
+	pop_growth_speed = -0.7
+	pop_growth_from_immigration = -0.7
+	planet_pop_assembly_mult = -0.7
+}
+
+scm_habitat_limit_bonk_7 = {
+	planet_jobs_produces_mult = -0.9
+	trade_value_mult = -0.9
+	planet_pop_assembly_mult = -0.9
+	planet_pop_assembly_organic_mult = -0.9
+	pop_growth_speed = -0.9
+	pop_growth_from_immigration = -0.9
+	planet_pop_assembly_mult = -0.9
+}
+
+scm_habitat_limit_bonk_8 = {
+	planet_jobs_produces_mult = -1.1
+	trade_value_mult = -1.1
+	planet_pop_assembly_mult = -1.1
+	planet_pop_assembly_organic_mult = -1.1
+	pop_growth_speed = -1.1
+	pop_growth_from_immigration = -1.1
+	planet_pop_assembly_mult = -1.1
+}
+
+scm_habitat_limit_bonk_9 = {
+	planet_jobs_produces_mult = -1.3
+	trade_value_mult = -1.3
+	planet_pop_assembly_mult = -1.3
+	planet_pop_assembly_organic_mult = -1.3
+	pop_growth_speed = -1.3
+	pop_growth_from_immigration = -1.3
+	planet_pop_assembly_mult = -1.3
+}
+
+scm_habitat_limit_bonk_10 = {
+	planet_jobs_produces_mult = -1.5
+	trade_value_mult = -1.5
+	planet_pop_assembly_mult = -1.5
+	planet_pop_assembly_organic_mult = -1.5
+	pop_growth_speed = -1.5
+	pop_growth_from_immigration = -1.5
+	planet_pop_assembly_mult = -1.5
+}
+
+#remnants nerf
+scm_remnants_nerf = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_city_ruins.dds"
+	planet_clear_blocker_time_mult = 2
+	building_time_mult = 0.25
+}
+
+#Artifact selling cooldown
+artifact_sell_collector_cooldown = {
+}
+
+mod_scm_hacking_2 = {
+	ship_sensor_range_add = -1
+	planet_sensor_range_add = -1
+	country_starbase_influence_cost_mult = 0.25
+}
+
+mod_scm_hacking_4 = {
+	all_technology_research_speed = -0.05
+	planet_buildings_upkeep_mult = 0.05
+}
+
+#Aesthetics
+mod_scm_aesthetics_3_xenophobe = {
+	country_unity_produces_mult = 0.2
+}
+
+mod_est_shared_burdens_war = {
+	planet_jobs_produces_mult = 0.025
+}
+
+#Greed
+mod_scm_generation_1_1 = {
+	country_energy_produces_mult = 0.025
+}
+
+mod_scm_generation_1_2 = {
+	country_energy_produces_mult = 0.05
+}
+
+mod_scm_generation_1_3 = {
+	country_energy_produces_mult = 0.075
+}
+
+mod_scm_generation_1_4 = {
+	country_energy_produces_mult = 0.1
+}
+
+rally_the_militia = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_martial_law.dds"
+	icon_frame = 2
+	planet_jobs_produces_mult = -1
+	pop_growth_speed = -1
+	pop_growth_from_immigration = -1
+	planet_pop_assembly_mult = -1
+	planet_pop_assembly_organic_mult = -1
+	planet_army_build_time_mult = -0.5
+	planet_stability_add = 10
+}
+
+nuke_the_planet_timer = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_satellite_in_orbit.dds"
+}
+
+sacrifice_planet_timer = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_satellite_in_orbit.dds"
+}
+
+pre_sacrifice = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_dead_god.dds"
+	pop_environment_tolerance = -1000
+	planet_pop_assembly_mult = -1000
+	planet_pop_assembly_organic_mult = -1000
+	pop_growth_speed = -1000
+	planet_colony_development_speed_mult = -1000
+	terraform_speed_mult = -1000
+}
+
+diplo_vassals_1 = {
+	icon = "gfx/interface/icons/resources/diplomatic_weight.dds"
+	diplo_weight_mult = 0.1
+}
+
+diplo_vassals_2 = {
+	icon = "gfx/interface/icons/resources/diplomatic_weight.dds"
+	diplo_weight_mult = 0.2
+}
+
+diplo_vassals_3 = {
+	icon = "gfx/interface/icons/resources/diplomatic_weight.dds"
+	diplo_weight_mult = 0.3
+}
+
+glorious_fleet = {
+	pop_citizen_happiness = 0.1
+}
+
+unglorious_fleet = {
+	pop_citizen_happiness = -0.1
+}
+
+unity_patrons = {
+	country_unity_produces_mult = 0.2
+	country_society_tech_research_speed = 0.2
+}
+
+blood_sacrifice = {
+	rivalries_influence_produces_mult = 0.25
+	ship_fire_rate_mult = 0.15
+	army_morale = 0.1
+}
+
+planet_blood_sacrifice = {
+	pop_happiness = -0.05
+}
+
+new_babylon = {
+	pop_government_ethic_attraction = -0.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_new_babylon.dds"
+	icon_frame = 1
+}
+
+pragmatic_development_1 = {
+	pop_environment_tolerance = -0.02
+	icon = "gfx/interface/icons/planet_modifiers/pm_pragmatic_development_1.dds"
+	icon_frame = 1
+}
+
+pragmatic_development_2 = {
+	pop_environment_tolerance = -0.03
+	icon = "gfx/interface/icons/planet_modifiers/pm_pragmatic_development_2.dds"
+	icon_frame = 1
+}
+
+capitalism_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_capitalism_attraction_mult = 1
+}
+
+socialism_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_socialism_attraction_mult = 1
+}
+
+green_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_green_attraction_mult = 1
+}
+
+industrial_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_industrial_attraction_mult = 1
+}
+
+pluralist_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_pluralist_attraction_mult = 1
+}
+
+elitist_unrest = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unknown.dds"
+	icon_frame = 2
+	pop_ethic_elitist_attraction_mult = 1
+}
+
+suppressed_capitalism = {
+	pop_ethic_capitalism_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_capitalism = {
+	pop_ethic_capitalism_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_socialism = {
+	pop_ethic_socialism_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_socialism = {
+	pop_ethic_socialism_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_green = {
+	pop_ethic_green_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_green = {
+	pop_ethic_green_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_industrial = {
+	pop_ethic_industrial_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_industrial = {
+	pop_ethic_industrial_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_pluralist = {
+	pop_ethic_pluralist_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_pluralist = {
+	pop_ethic_pluralist_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+suppressed_elitist = {
+	pop_ethic_elitist_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+
+promoted_elitist = {
+	pop_ethic_elitist_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+#Aesthetics
+mod_scm_aesthetics_adopt = {
+	pop_government_ethic_attraction = 0.2
+	icon = "gfx/interface/icons/planet_modifiers/pm_scm_aesthetics_adopt.dds"
+	icon_frame = 1
+}
+
+#Commerce
+mod_scm_commerce_2_energy = {
+	planets_energy_produces_mult = 0.2
+	planets_food_produces_mult = -0.2
+	planets_minerals_produces_mult = -0.2
+	icon = "gfx/interface/icons/planet_modifiers/pm_scm_commerce_2_energy.dds"
+	icon_frame = 1
+}
+
+mod_scm_commerce_2_food = {
+	planets_energy_produces_mult = -0.2
+	planets_food_produces_mult = 0.2
+	planets_minerals_produces_mult = -0.2
+	icon = "gfx/interface/icons/planet_modifiers/pm_scm_commerce_2_food.dds"
+	icon_frame = 1
+}
+
+mod_scm_commerce_2_minerals = {
+	planets_energy_produces_mult = -0.2
+	planets_food_produces_mult = -0.2
+	planets_minerals_produces_mult = 0.2
+	icon = "gfx/interface/icons/planet_modifiers/pm_scm_commerce_2_minerals.dds"
+	icon_frame = 1
+}
+
+#Industry
+mod_scm_industry_5 = {
+	planet_jobs_minerals_produces_mult = 0.1
+	planet_jobs_alloys_produces_mult = 0.1
+	planet_jobs_consumer_goods_produces_mult = 0.1
+	planet_jobs_food_produces_mult = -0.2
+	pop_growth_speed = -0.2
+	planet_immigration_pull_mult = -0.2
+	pop_happiness = -0.1
+	icon = "gfx/interface/icons/planet_modifiers/pm_scm_industry_5.dds"
+	icon_frame = 2
+}
+
+mod_scm_industry_5_GC = {
+	planet_jobs_alloys_produces_mult = 0.1
+	planet_jobs_food_produces_mult = -0.25
+	pop_growth_speed = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_scm_industry_5.dds"
+	icon_frame = 2
+}
+
+mod_scm_industry_5_machines = {
+	planet_jobs_minerals_produces_mult = 0.1
+	planet_jobs_alloys_produces_mult = 0.1
+	planet_jobs_energy_produces_mult = -0.2
+	planet_pop_assembly_mult = -0.2
+	icon = "gfx/interface/icons/planet_modifiers/pm_scm_industry_5.dds"
+	icon_frame = 2
+}
+
+#Ancestor Worship
+scm_civic_ancestor_worship_modifier = {
+	planets_unity_produces_mult = 0.01
+	country_society_tech_research_speed = 0.01
+}
+
+scm_civic_evangelism_modifier = {
+	pop_ethic_spiritualist_attraction_mult = 0.5
+}
+
+civic_xeno_militarist_modifier = {
+	pop_ethic_spiritualist_attraction_mult = 0.5
+}
+
+scm_fe_hull_variable_mod = {
+	ship_hull_mult = 0.01
+}
+
+scm_fe_armor_variable_mod = {
+	ship_armor_mult = 0.01
+}
+
+scm_fe_shield_variable_mod = {
+	ship_shield_mult = 0.01
+}
+
+scm_fe_firerate_variable_mod = {
+	ship_fire_rate_mult = 0.01
+}
+
+scm_fe_jobproduction_variable_mod = {
+	planet_jobs_produces_mult = 0.01
+}
+
+scm_fe_speed_variable_mod = {
+	ship_speed_mult = 0.01
+}
+
+scm_khan_hull_variable_mod = {
+	ship_hull_mult = 0.01
+}
+
+scm_khan_armor_variable_mod = {
+	ship_armor_mult = 0.01
+}
+
+scm_khan_shield_variable_mod = {
+	ship_shield_mult = 0.01
+}
+
+scm_khan_firerate_variable_mod = {
+	ship_fire_rate_mult = 0.01
+}
+
+scm_khan_jobproduction_variable_mod = {
+	planet_jobs_produces_mult = 0.01
+}
+
+scm_khan_speed_variable_mod = {
+	ship_speed_mult = 0.01
+}
+
+envoys_humiliated_mod = {
+	diplo_weight_mult = -0.1
+}

@@ -1,0 +1,64 @@
+﻿l_english:
+
+ SEPARATOR:0 "---"
+
+#Flag categories
+FLAG_CATEGORY_scm:0 "SCM"
+
+#####Down below are English Localization replacements for Vanilla files and other additions
+origin_default:0 "Prosperous Unification"
+ origin_default_desc:0 "A stable planetary unification has allowed this civilization to prosper and grow."
+ origin_tooltip_default_effects:0 "Start the game with an additional §Y2§! Districts. \n\nThe Capital planet gets the following buffs for the entire game:\n§G+15%§! to £happiness£ Happiness\n§G+25%§! to £amenities£ §YAmenities§!\n§G+10%§! to Resources"
+ civic_tooltip_life_seeded_effects:0 "Homeworld is a §Y$pc_gaia$§! (Size £planetsize£ §Y33§!) with several §YRare Planetary Features§!\nHabitability preference is set to §Y$trait_pc_gaia_preference$§!, making other types of planets undesirable. \nYour main species grows §G20%§! faster. \nStarts with the §YClimate Restoration§! technology able to be researched, hovewer this technology will cost §R50%§! more than normally.\nUpon researching §YClimate Restoration§! gain access to the §YLessons of the Seeders§! ascension perk, making it possible to terraform planets into §YGaia Worlds§! - §Hthis ascension perk is mutually exclusive with the Mastery of Nature ascension path§!"
+ 
+ origin_post_apocalyptic:0 "Post-Apocalyptic"
+ origin_post_apocalyptic_desc:0 "Baptized by nuclear fire, this society has faced total annihilation - and survived. Devastated yet unbroken, they have rebuilt civilization from the ashes of the old world. \n\nCan enact the §GNuke the Planet§! Planetary Decision on planets inside their borders. The planets do not need to be colonized or be colonizing in order for you to enact the decision."
+ civic_tooltip_post_apocalyptic_effects:3 "Capital starts as a §YTomb World§!\nGain the §Y$trait_survivor$§! trait, granting:\n  Tomb World Habitability: §G+80%§!\n  Leader Lifespan: §G+10§! Years"
+ 
+ #requires_recipient_not_void_dwellers:0 "$TRIGGER_FAIL$§RThey are §Y$origin_void_dwellers$§!, they wish to stay away from planets.§!"
+ #requires_actor_not_void_dwellers:0 "$TRIGGER_FAIL$§RWe are §Y$origin_void_dwellers$§!, we wish to stay on our own habitats.§!"
+ #requires_recipient_not_life_seeded:0 "$TRIGGER_FAIL$§RThey are §Y$origin_life_seeded$§!, they wish be left alone on their 'paradise' worlds.§!"
+ #requires_actor_not_life_seeded:0 "$TRIGGER_FAIL$§RWe are §Y$origin_life_seeded$§!, we wish to stay on our paradise worlds.§!"
+ 
+ requires_good_opinion:0 "$TRIGGER_FAIL$§RWe require at least $OPINION_GOOD$.§!"
+ requires_bad_opinion:0 "$TRIGGER_FAIL$§RWe require at least $OPINION_POOR$.§!"
+
+ alert_high_war_exhaustion_instant:2 "We have reached §R70%§! War Exhaustion in at least one of our wars."
+ 
+ ap_defender_of_the_galaxy_effect_opinion:0 "Everyone's £opinion£ §YOpinion§! increased by §G+60§!"
+ 
+ civic_hive_strength_of_legions:0 "Strength of Legions"
+ civic_hive_strength_of_legions_desc:0 "When you do not have to educate the mind, the building of muscle becomes that much easier. \n\nCan create §YDronelings§!, which are the same as §YAssault Armies§!, but without the penalty to §HWar Exhaustion§!"
+
+ mandate_unity_reward:2 "§Y6§! months' worth of £unity£ Unity (Max 2500)"
+
+ cryo_core_desc:0 "New colonies start with §Y2§! additional £pops£ Pops."
+
+ SUBJECT_DESC_protectorate:5 "Protectorates are guaranteed independence by their Overlord, pay §Y80%§! less for any tech their Overlord knows and §Y25%§! of their £energy£ §YEnergy§! income, and turn into vassals once they reach §Y50%§! of their Overlord's tech level. The Overlord also generates a free §G+1§! £influence£ §Y$mod_country_influence_produces_add$§!."
+
+ mod_planet_metallurgists_unity_produces_add:0 "£unity£ Unity produced by Metallurgists"
+
+ TRAIT_LITHOID_EFFECT:1 "Consumes £minerals£ §YMinerals§! instead of £food£ §YFood§!\n\n$MOD_POP_GROWTH_SPEED$: §R-25%§!\n$MOD_POP_ASSEMBLY_SPEED$: §R-25%§!\n$MOD_POP_ENVIRONMENT_TOLERANCE$: §G+40%§!\n$MOD_ARMY_HEALTH$: §G+50%§!\n$MOD_LEADER_AGE$: §G+50§!"
+
+ 
+ slavery_livestock_tooltip:1 "§HLivestock§! Pops can not be employed to produce resources, but are instead regularly culled to increase the £food£ §HFood§! supply.\n\nLithoid Livestock produce £minerals£ §HMinerals§! instead. \n\n§RNot impacted by §! £food£ §HFood§! §Ror§! £minerals£ §HMineral§! §Rmodifiers from jobs!§!"
+
+ LIVESTOCK_DESC:0 "This Pop is being used as livestock to feed other Pops. \n\n§RNot impacted by §! £food£ §HFood§! §Ror§! £minerals£ §HMineral§! §Rmodifiers from jobs!§!"
+
+ mod_planet_jobs_minerals_upkeep_mult:0 "£minerals£ §YMineral§! Upkeep from Jobs"
+ mod_planet_miners_society_research_produces_add:0 "£society£ §YSociety Research§! from §HMiners§!"
+
+ cohesion_ethics_penalty_mult:0 "Cohesion Penalty from Opposing Ethics"
+
+ default_federation_passive_effect:0 "Unlike all other Federation types, §YDiverse Ethics§! do not impact Cohesion."
+ president_hegemony_cb_1_effect:1 "President gets the §YEstablish Hegemony Wargoal§! to vassalize and force a non-federation empire to join the federation."
+
+ fedev.500.f.desc:0 "$fedev.500.intro$\n\nThis established bureau will ensure that the confidentiality of their assets are secured... and everyone else's is not! \n\nA new era of [fed_founder_1.GetSpeciesName] debauchery has begun!"
+ fedev.500.g.desc:0 "$fedev.500.intro$\n\nThis grand Sovereignity will spread it's faith throughout the galaxy, regardless if they like it or not! \n\nA new era of [fed_founder_1.GetSpeciesName] faith spreading has begun!"
+
+  civic_tooltip_criminal_heritage_effects:3 "Cannot form §YCommercial Pacts§!\nCan build §YBranch Offices§! on the planet of any regular empire they have no war or active truce with\nCrime on §YBranch Office§! Planets increases Branch Office Value\nCan build special Crime-increasing £building£ §Y$BRANCH_OFFICE_BUILDINGS$§! \n\nCan form the §YInterstellar Bureau§! Federation"
+
+  ancrel.10004.affluence_center:0 "$ancrel.10004.desc$\n\nWe now have the ability to build a §Y$building_affluence_center$§! on one of our planets. \n\nGestalt Empires will get 5000 £energy£ §YEnergy§! instead"
+
+ap_executive_vigor:0 "Imperial Administration"
+ap_executive_vigor_desc:0 "As our empire grows, so must our bureaucracy. There is nothing our brave members of administratum can't do."

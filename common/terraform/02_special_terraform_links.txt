@@ -319,7 +319,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 			}
 		}
 	}
@@ -348,7 +351,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 			}
 		}
 	}
@@ -377,7 +383,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 			}
 		}
 	}
@@ -406,7 +415,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 			}
 		}
 	}
@@ -435,7 +447,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 			}
 		}
 	}
@@ -464,7 +479,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 			}
 		}
 	}
@@ -493,7 +511,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 			}
 		}
 	}
@@ -522,7 +543,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 			}
 		}
 	}
@@ -551,7 +575,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 			}
 		}
 	}
@@ -595,7 +622,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 				from = { has_modifier = terraforming_candidate }
 			}
 		}
@@ -633,7 +663,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 				from = { has_modifier = terraforming_candidate }
 			}
 		}
@@ -671,7 +704,10 @@ terraform_link = {
 			from = { has_planet_flag = terraform_nucleus_transfixed }
 			AND = {
 				exists = owner
-				has_ascension_perk = "ap_world_shaper"
+				OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 			}
 		}
 	}
@@ -4063,7 +4099,10 @@ terraform_link = {
 
 	duration = @gaiaTime
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+					has_ascension_perk = "ap_world_shaper"
+					has_ascension_perk = "ap_lessons_of_the_seeders"
+				}
 		NOT = {
 			has_tradition = tr_nanotech_adopt
 		}
