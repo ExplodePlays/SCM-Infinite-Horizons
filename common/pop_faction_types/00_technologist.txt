@@ -81,21 +81,6 @@ technologist = {
 
 	leader = {
 		base = 100
-		
-		modifier = {
-			factor = 2
-			leader_class = scientist
-		}
-		
-		modifier = {
-			factor = 0.5
-			leader_class = official
-		}
-		
-		modifier = {
-			factor = 0.5
-			leader_class = commander
-		}
 
 		modifier = {
 			factor = 0.0
@@ -125,6 +110,27 @@ technologist = {
 		}
 	}
 
+	demand = {
+		title = "POLITICAL_PLURALISM"
+		unfulfilled_title = "POLITICAL_PLURALISM"
+		desc = "POLITICAL_PLURALISM_DESC"
+
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+	}
+
 	# DEMAND: Faction Outraged (by a GalCom Resolution)
 	inline_script = {
 		script = pop_faction_types/demand_faction_outraged
@@ -138,6 +144,49 @@ technologist = {
 	}
 
 	demand = {
+		title = "ACADEMIC_PRIVILEGES"
+		unfulfilled_title = "ACADEMIC_PRIVILEGES"
+		desc = "ACADEMIC_PRIVILEGES_DESC"
+
+		fulfilled_effect = 10
+
+		potential = { 
+			exists = owner
+			owner = { has_valid_civic = civic_science_directorate }
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					any_owned_pop = {
+						has_living_standard = { type = living_standard_academic_privilege }
+					}
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "GENETIC_SUPERIORITY"
+		unfulfilled_title = "NO_GENETIC_SUPERIORITY"
+		desc = "GENETIC_SUPERIORITY_DESC"
+
+		fulfilled_effect = 15
+		unfulfilled_effect = -2
+
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_symbiotic_race }
+		}
+
+		trigger = {
+			owner = {
+					has_ascension_perk = ap_engineered_evolution
+			}
+		}
+	}
+
+	demand = {
 		title = "TECHNOLOGIST_TECH_LEAP"
 		unfulfilled_title = "TECHNOLOGIST_TECH_LAG"
 		desc = "TECHNOLOGIST_TECH_LEAP_DESC"
@@ -148,9 +197,11 @@ technologist = {
 		potential = {
 			exists = owner
 			owner = {
+				is_subject = no
 				any_relation = {
 					has_communications = root.owner
 					is_country_type = default
+					NOT = { has_government = gov_successor_khanate }
 					root.owner = {
 						has_intel_level = {
 							who = prev
@@ -168,6 +219,7 @@ technologist = {
 					any_relation = {
 						has_communications = root.owner
 						is_country_type = default
+						NOT = { has_government = gov_successor_khanate }
 						root.owner = {
 							has_intel_level = {
 								who = prev
@@ -192,7 +244,7 @@ technologist = {
 		desc = "TECHNOLOGIST_RESEARCH_TREATIES_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -209,6 +261,14 @@ technologist = {
 						has_federation = yes
 						federation = {
 							has_federation_perk = research_federation_passive
+						}
+					}
+					num_research_agreements > 2
+					any_relation = {
+						is_country_type = primitive
+						OR = {
+							is_under_open_technological_enlightenment = prev
+							is_under_stratified_technological_enlightenment = prev
 						}
 					}
 					count_country = {
@@ -287,7 +347,7 @@ technologist = {
 		ETHIC = ethic_materialist
 		ETHIC_FANATIC = ethic_fanatic_materialist
 		ETHIC_OPPOSED = ethic_spiritualist
-	}
+	} 
 
 	demand = {
 		title = "TECHNOLOGIST_SECRET_KNOWLEDGE"
@@ -295,7 +355,7 @@ technologist = {
 		desc = "TECHNOLOGIST_SECRET_KNOWLEDGE_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -327,7 +387,7 @@ technologist = {
 		desc = TECHNOLOGIST_FEDERATION_DESC
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner.federation
@@ -345,7 +405,7 @@ technologist = {
 		desc = "TECHNOLOGIST_ARCANA_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -381,22 +441,22 @@ technologist = {
 		desc = "TECHNOLOGIST_PRECURSOR_SECRETS_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
-	     host_has_dlc = "Ancient Relics Story Pack"
-	     exists = owner
-	     owner = {
-		  OR = {
-		      has_country_flag = irassian_world_found
-		      has_country_flag = yuht_world_found
-		      has_country_flag = vultaum_world_found
-		      has_country_flag = cybrex_world_found
-		      has_country_flag = league_world_found
-		      has_country_flag = last_baol_system
-		      has_country_flag = last_zroni_system
-		  }
-	     }
+            host_has_dlc = "Ancient Relics Story Pack"
+            exists = owner
+            owner = {
+                OR = {
+                    has_country_flag = irassian_world_found
+                    has_country_flag = yuht_world_found
+                    has_country_flag = vultaum_world_found
+                    has_country_flag = cybrex_world_found
+                    has_country_flag = league_world_found
+                    has_country_flag = last_baol_system
+                    has_country_flag = last_zroni_system
+                }
+            }
 		}
 
 		trigger = {
@@ -412,7 +472,7 @@ technologist = {
 		desc = "COOPERATIVE_DIPLO_STANCE_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -678,7 +738,7 @@ technologist = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = no
@@ -701,7 +761,7 @@ technologist = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = yes

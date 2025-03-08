@@ -67,7 +67,8 @@ totalitarian = {
 				NOT = { exists = leader }
 			}
 		}
-		
+
+		# Should really check for citizenship instead
 		modifier = {
 			factor = 0.5
 			NOT = { is_same_species = owner_species }
@@ -87,24 +88,26 @@ totalitarian = {
 			factor = 0.0
 			is_event_leader = yes
 		}
-		
-		modifier = {
-			factor = 0.5
-			leader_class = scientist
+	}
+
+	demand = {
+		title = "POLITICAL_PLURALISM"
+		unfulfilled_title = "POLITICAL_PLURALISM"
+		desc = "POLITICAL_PLURALISM_DESC"
+
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
 		}
-		
-		modifier = {
-			factor = 2
-			leader_class = official
-		}
-		
-		modifier = {
-			factor = 3
-			is_ruler = yes
-		}
-		modifier = {
-			factor = 2
-			is_heir = yes
+
+		trigger = {
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
 		}
 	}
 
@@ -121,25 +124,112 @@ totalitarian = {
 	}
 
 	demand = {
-		title = "TOTALITARIAN_AUTOCRACY"
-		unfulfilled_title = "TOTALITARIAN_NO_AUTOCRACY"
-		desc = "TOTALITARIAN_AUTOCRACY_DESC"
+		title = "TOTALITARIAN_PERSONALITY_CULT"
+		unfulfilled_title = "TOTALITARIAN_NO_PERSONALITY_CULT"
+		desc = "TOTALITARIAN_PERSONALITY_CULT_DESC"
+
+		fulfilled_effect = 5
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+				owner = {
+					OR = {
+					has_valid_civic = civic_military_dictatorship
+					has_valid_civic = civic_military_dictatorship_corporate
+					has_valid_civic = civic_imperial_cult
+					has_valid_civic = civic_philosopher_king
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "TOTALITARIAN_CASTE"
+		unfulfilled_title = "TOTALITARIAN_NO_CASTE"
+		desc = "TOTALITARIAN_CASTE_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+
+		potential = {
+			exists = owner
+			owner = { or = { has_valid_civic = civic_divine_order } }
+		}
+
+		trigger = {
+				owner = { has_valid_civic = civic_divine_order }
+		}
+	}
+
+	demand = {
+		title = "TOTALITARIAN_POLICE_CONTROL"
+		unfulfilled_title = "TOTALITARIAN_NO_POLICE_CONTROL"
+		desc = "TOTALITARIAN_POLICE_CONTROL_DESC"
+
+		fulfilled_effect = 5
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_police_state
+					has_valid_civic = civic_cyber_dictatorship
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "CENTRALIZED_STATE"
+		unfulfilled_title = "NO_CENTRALIZED STATE"
+		desc = "CENTRALIZED_STATE_DESC"
+
+		fulfilled_effect = 15
+		unfulfilled_effect = -5
 
 		potential = {
 			exists = owner
 			owner = {
-				is_democratic_authority = no
+				OR = {
+					has_technology = tech_centralized_state
+				}
 			}
 		}
 
 		trigger = {
 			owner = {
 				OR = {
-					is_imperial_authority = yes
-					is_dictatorial_authority = yes
+					has_policy_flag = centralized_state
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "TOTALITARIAN_AUTOCRACY"
+		unfulfilled_title = "TOTALITARIAN_NO_AUTOCRACY"
+		desc = "TOTALITARIAN_AUTOCRACY_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				NOT = { has_authority = auth_democratic }
+			}
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					has_authority = auth_imperial
+					has_authority = auth_dictatorial
 				}
 			}
 		}
@@ -157,15 +247,18 @@ totalitarian = {
 			exists = owner
 			owner = {
 				NOR = {
-					is_imperial_authority = yes
-					is_dictatorial_authority = yes
+					has_authority = auth_imperial
+					has_authority = auth_dictatorial
 				}
 			}
 		}
 
 		trigger = {
 			owner = {
-				is_democratic_authority = no
+				NOR = {
+					has_authority = auth_democratic
+					has_authority = auth_direct_democratic
+				}
 			}
 		}
 	}
@@ -180,6 +273,11 @@ totalitarian = {
 
 		potential = {
 			exists = owner
+			owner = {
+				NOT = {
+					is_socialism = yes
+				}
+			}
 		}
 
 		trigger = {
@@ -247,7 +345,7 @@ totalitarian = {
 		desc = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -299,7 +397,7 @@ totalitarian = {
 		potential = {
 			exists = owner
 			owner = {
-				is_subject = no
+			is_subject = no
 				has_policy_flag = benevolent_terms
 			}
 		}
@@ -317,7 +415,7 @@ totalitarian = {
 		desc = "TOTALITARIAN_OPPRESSIVE_SUBJUGATION_POLICY_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -340,7 +438,7 @@ totalitarian = {
 		desc = TOTALITARIAN_FEDERATION_DESC
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner.federation
@@ -592,7 +690,7 @@ totalitarian = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = no
@@ -615,7 +713,7 @@ totalitarian = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = yes

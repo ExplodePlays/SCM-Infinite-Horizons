@@ -45,12 +45,11 @@ supremacist = {
 
 	can_join_faction = {
 		is_shackled_robot = no
-		can_think = yes
+		has_culture_shock = no
+		can_think = yes		
+		is_xenophobe = yes
 		owner = {
-			NOR = {
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
-			}
+			is_pacifist = no
 		}
 		is_same_species = owner_species
 	}
@@ -106,7 +105,28 @@ supremacist = {
 			is_event_leader = yes
 		}
 	}
+	
+	demand = {
+		title = "POLITICAL_PLURALISM"
+		unfulfilled_title = "POLITICAL_PLURALISM"
+		desc = "POLITICAL_PLURALISM_DESC"
 
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+	}
+	
 	# DEMAND: Faction Outraged (by a GalCom Resolution)
 	inline_script = {
 		script = pop_faction_types/demand_faction_outraged
@@ -585,7 +605,7 @@ supremacist = {
 		unfulfilled_title = "SUPREMACIST_NO_DOMINATION"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -614,13 +634,13 @@ supremacist = {
 		unfulfilled_title = "SUPREMACIST_NOT_FANATIC_PURIFIERS"
 		desc = "SUPREMACIST_FANATIC_PURIFIERS_DESC"
 
-		fulfilled_effect = 40 # What they lose from access to other demands.
+		fulfilled_effect = 40
 		unfulfilled_effect = -10
 
 		potential = {
 			exists = owner
 			owner = {
-				has_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_fanatic_purifiers
 			}
 		}
 
@@ -637,7 +657,7 @@ supremacist = {
 		desc = "SUPREMACIST_GIANT_MASSACRE_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -662,7 +682,7 @@ supremacist = {
 		desc = "SUPREMACIST_PROCLAIM_SUPREMACY_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -715,14 +735,18 @@ supremacist = {
 		desc = "STRONG_DIPLO_STANCE_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
 			owner = {
 				is_homicidal = no
 				is_country_type = default
-				NOT = { has_policy_flag = diplo_stance_cooperative }
+				OR = {
+					has_policy_flag = diplo_stance_belligerent
+					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_animosity
+				}
 			}
 		}
 
@@ -742,7 +766,7 @@ supremacist = {
 		unfulfilled_title = "WEAK_DIPLO_STANCE"
 		desc = "WEAK_DIPLO_STANCE_DESC"
 
-		fulfilled_effect = 0.001
+		fulfilled_effect = 0.01
 		unfulfilled_effect = -10
 
 		potential = {
@@ -814,7 +838,7 @@ supremacist = {
 		ETHIC = ethic_xenophobe
 		ETHIC_FANATIC = ethic_fanatic_xenophobe
 		ETHIC_OPPOSED = ethic_xenophile
-	}
+	} 
 
 	on_create = {
 		pop_faction_event = { id = factions.1 }
@@ -1088,7 +1112,7 @@ supremacist = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = no
@@ -1111,7 +1135,7 @@ supremacist = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = yes

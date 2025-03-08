@@ -45,14 +45,13 @@ isolationist = {
 
 	can_join_faction = {
 		is_shackled_robot = no
+		has_culture_shock = no
 		can_think = yes
+		is_xenophobe = yes
 		OR = {
 			NOT = { is_same_species = owner_species }
 			owner = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				is_pacifist = yes
 			}
 		}
 	}
@@ -79,20 +78,12 @@ isolationist = {
 
 		modifier = {
 			factor = 1.5
-
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
+			is_xenophobe = yes
 		}
 
 		modifier = {
-			factor = 0.25
-
-			OR = {
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
-			}
+			factor = 0.25			
+			is_militarist = yes
 		}
 
 		# Should really check for citizenship instead
@@ -120,7 +111,28 @@ isolationist = {
 			is_event_leader = yes
 		}
 	}
+	
+	demand = {
+		title = "POLITICAL_PLURALISM"
+		unfulfilled_title = "POLITICAL_PLURALISM"
+		desc = "POLITICAL_PLURALISM_DESC"
 
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+	}
+	
 	# DEMAND: Faction Outraged (by a GalCom Resolution)
 	inline_script = {
 		script = pop_faction_types/demand_faction_outraged
@@ -229,8 +241,8 @@ isolationist = {
 						OR = {
 							has_diplo_migration_treaty = root.owner
 							root.owner = { has_diplo_migration_treaty = prevprev }
+							}
 						}
-					}
 				}
 			}
 		}
@@ -242,7 +254,7 @@ isolationist = {
 		desc = "ISOLATIONIST_NON_AGGRESSION_DESC1"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -276,7 +288,7 @@ isolationist = {
 		desc = "ISOLATIONIST_NON_AGGRESSION_DESC2"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -324,7 +336,7 @@ isolationist = {
 		desc = "ISOLATIONIST_NON_AGGRESSION_DESC3"
 
 		fulfilled_effect = 15
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -363,7 +375,7 @@ isolationist = {
 		desc = "ISOLATIONIST_PEACE_DESC1"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -387,7 +399,7 @@ isolationist = {
 		desc = "ISOLATIONIST_PEACE_DESC2"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -414,7 +426,7 @@ isolationist = {
 		desc = "ISOLATIONIST_PEACE_DESC3"
 
 		fulfilled_effect = 15
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -490,7 +502,7 @@ isolationist = {
 		ETHIC = ethic_xenophobe
 		ETHIC_FANATIC = ethic_fanatic_xenophobe
 		ETHIC_OPPOSED = ethic_xenophile
-	}
+	} 
 
 	on_create = {
 		pop_faction_event = { id = factions.1 }
@@ -590,7 +602,7 @@ isolationist = {
 				}
 				modifier = {
 					factor = 0
-					owner = { has_civic = civic_fanatic_purifiers }
+					owner = { has_valid_civic = civic_fanatic_purifiers }
 				}
 				modifier = {
 					factor = 1000
@@ -761,7 +773,7 @@ isolationist = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = no
@@ -784,7 +796,7 @@ isolationist = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = yes

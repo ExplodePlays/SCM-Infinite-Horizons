@@ -38,8 +38,8 @@ traditionalist = {
 	is_potential = {
 		is_faction_allowed = yes
 		NOT = {
-			has_origin = origin_cybernetic_creed
-		}
+            has_origin = origin_cybernetic_creed
+        }
 	}
 
 	parameters = {
@@ -58,6 +58,7 @@ traditionalist = {
 
 	can_join_faction = {
 		can_think = yes
+		is_spiritualist = yes
 	}
 
 	attraction = {
@@ -92,7 +93,7 @@ traditionalist = {
 				is_individual_machine = no
 			}
 		}
-		
+
 		modifier = {
 			factor = 0.5
 			leader_class = scientist
@@ -108,7 +109,28 @@ traditionalist = {
 			is_event_leader = yes
 		}
 	}
+	
+	demand = {
+		title = "POLITICAL_PLURALISM"
+		unfulfilled_title = "POLITICAL_PLURALISM"
+		desc = "POLITICAL_PLURALISM_DESC"
 
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+	}
+	
 	# DEMAND: Faction Outraged (by a GalCom Resolution)
 	inline_script = {
 		script = pop_faction_types/demand_faction_outraged
@@ -131,11 +153,12 @@ traditionalist = {
 
 		potential = {
 			exists = owner
-			owner = {
-				NOT = {
+			owner = { 
+				NOT = { 
+					has_valid_civic = civic_machine_cult
 					has_origin = origin_cybernetic_creed
 					is_individual_machine = yes
-				}
+				} 
 			}
 		}
 
@@ -158,7 +181,10 @@ traditionalist = {
 			exists = owner
 			owner = {
 				can_set_ai_policy = yes
-				NOT = { has_policy_flag = ai_full_rights }
+				NOR = {
+					has_policy_flag = ai_full_rights 
+					has_valid_civic = civic_machine_cult 
+				}
 				is_individual_machine = no
 			}
 		}
@@ -184,6 +210,7 @@ traditionalist = {
 				is_individual_machine = no
 				can_set_ai_policy = yes
 				has_policy_flag = ai_full_rights
+				NOT = { has_valid_civic = civic_machine_cult }
 			}
 		}
 
@@ -208,10 +235,7 @@ traditionalist = {
 
 		trigger = {
 			owner = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
+				is_spiritualist = yes
 			}
 		}
 	}
@@ -258,7 +282,7 @@ traditionalist = {
 		desc = "TRADITIONALIST_GAIA_WORLDS_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -298,13 +322,13 @@ traditionalist = {
 		desc = "TRADITIONALIST_PSIONIC_PURSUIT_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			host_has_dlc = "Utopia"
 			exists = owner
 			owner = {
-				NOR = {
+				NOR = { 
 					has_origin = origin_shroudwalker_apprentice
 					has_origin = origin_cybernetic_creed
 				}
@@ -329,7 +353,7 @@ traditionalist = {
 		desc = "TRADITIONALIST_PSIONIC_TEACHINGS_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -346,7 +370,7 @@ traditionalist = {
 	}
 
 	# THE FLESH IS STRONG/WEAK (FULL)
-	demand = { # Standard Traditionalist variant: reject full cyberization
+	demand = { # Standard Traditionalist variant: reject full cyberizationdemand = { # "TRADITIONALIST_FLESH_IS_STRONG"
 		title = "TRADITIONALIST_FLESH_IS_STRONG"
 		unfulfilled_title = "TRADITIONALIST_FLESH_IS_WEAK"
 		desc = "TRADITIONALIST_FLESH_IS_STRONG_DESC"
@@ -359,9 +383,10 @@ traditionalist = {
 			owner = {
 				has_ascension_perk = ap_the_flesh_is_weak
 				NOR = {
-					has_policy_flag = cyberization_standards_limited
-					has_origin = origin_cybernetic_creed
-				}
+					has_valid_civic = civic_machine_cult
+                    has_policy_flag = cyberization_standards_limited
+                    has_origin = origin_cybernetic_creed
+                }
 			}
 		}
 
@@ -385,7 +410,10 @@ traditionalist = {
 			owner = {
 				has_ascension_perk = ap_the_flesh_is_weak
 				has_policy_flag = cyberization_standards_limited
-				NOT = { has_origin = origin_cybernetic_creed }
+				NOT = { 
+					has_valid_civic = civic_machine_cult
+					has_origin = origin_cybernetic_creed 
+				}
 			}
 		}
 
@@ -402,7 +430,7 @@ traditionalist = {
 		desc = "TRADITIONALIST_SPIRITUALIST_POPS_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			support >= 0.1
@@ -436,7 +464,7 @@ traditionalist = {
 		desc = "TRADITIONALIST_SHROUD_BOON_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -480,7 +508,7 @@ traditionalist = {
 		desc = "TRADITIONALIST_RELIGIOUS_FINDING_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -511,7 +539,7 @@ traditionalist = {
 		desc = TRADITIONALIST_FEDERATION_DESC
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner.federation
@@ -522,7 +550,7 @@ traditionalist = {
 			owner.federation = { has_federation_type = spiritualist_federation }
 		}
 	}
-
+	
 	demand = { # Individualist Machines demand Ascension
 		title = "TRADITIONALIST_MACHINE_ASCEND"
 		unfulfilled_title = "TRADITIONALIST_MACHINE_ASCEND_NO"
@@ -583,7 +611,7 @@ traditionalist = {
 		ETHIC = ethic_spiritualist
 		ETHIC_FANATIC = ethic_fanatic_spiritualist
 		ETHIC_OPPOSED = ethic_materialist
-	}
+	} 
 
 	demand = {
 		title = TRADITIONALIST_FEDERATION_ANTI
@@ -702,7 +730,7 @@ traditionalist = {
 				}
 				modifier = {
 					factor = 0
-					owner = { has_civic = civic_fanatic_purifiers }
+					owner = { has_valid_civic = civic_fanatic_purifiers }
 					OR = {
 						owner = { has_ethic = ethic_militarist }
 						owner = { has_ethic = ethic_spiritualist }
@@ -860,7 +888,7 @@ traditionalist = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = no
@@ -883,7 +911,7 @@ traditionalist = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = yes

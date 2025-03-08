@@ -69,12 +69,8 @@ prosperity = {
 		}
 
 		modifier = {
-			factor = 1.5
-
-			OR = {
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
-			}
+			factor = 1.5			
+			is_pacifist = yes
 		}
 
 		# Should really check for citizenship instead
@@ -97,7 +93,27 @@ prosperity = {
 			is_event_leader = yes
 		}
 	}
+	demand = {
+		title = "POLITICAL_PLURALISM"
+		unfulfilled_title = "POLITICAL_PLURALISM"
+		desc = "POLITICAL_PLURALISM_DESC"
 
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+	}
+	
 	# DEMAND: Faction Outraged (by a GalCom Resolution)
 	inline_script = {
 		script = pop_faction_types/demand_faction_outraged
@@ -116,7 +132,7 @@ prosperity = {
 		desc = "PROSPERITY_LIQUIDITY_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -206,7 +222,7 @@ prosperity = {
 		desc = "PROSPERITY_PEACEFUL_APPLICATIONS_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -271,22 +287,41 @@ prosperity = {
 	}
 
 	demand = {
+		title = "PEACEFUL_ECONOMY"
+		unfulfilled_title = "PEACEFUL_ECONOMY"
+		desc = "PEACEFUL_ECONOMY_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = { 
+			exists = owner
+			owner = {
+				nor = { has_policy_flag = economic_policy_civilian }
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_policy_flag = economic_policy_civilian
+			}
+		}
+	}
+
+	demand = {
 		title = "MERCANTILE_DIPLO_STANCE"
 		unfulfilled_title = "MERCANTILE_DIPLO_STANCE"
 		desc = "MERCANTILE_DIPLO_STANCE_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
 			owner = {
 				is_homicidal = no
 				is_country_type = default
-				NOR = {
-					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
-				}
+				has_policy_flag = diplo_stance_mercantile
 			}
 		}
 
@@ -623,7 +658,7 @@ prosperity = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = no
@@ -646,7 +681,7 @@ prosperity = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = yes

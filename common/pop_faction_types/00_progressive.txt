@@ -45,7 +45,9 @@ progressive = {
 
 	can_join_faction = {
 		is_shackled_robot = no
+		has_culture_shock = no
 		can_think = yes
+		is_egalitarian = yes
 	}
 
 	attraction = {
@@ -81,7 +83,7 @@ progressive = {
 		modifier = {
 			factor = 0
 			is_ruler = yes
-			owner = { is_imperial_authority = yes }
+			owner = { has_authority = auth_imperial }
 		}
 
 		modifier = {
@@ -89,7 +91,59 @@ progressive = {
 			is_event_leader = yes
 		}
 	}
+	
+	
+	demand = {
+		title = "POLITICAL_PLURALISM"
+		unfulfilled_title = "POLITICAL_PLURALISM"
+		desc = "POLITICAL_PLURALISM_DESC"
 
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+	}
+	
+	demand = {
+		title = "DIRECT_DEMOCRACY"
+		unfulfilled_title = "NO_DIRECT_DEMOCRACY"
+		desc = "DIRECT_DEMOCRACY_DESC"
+
+		
+		fulfilled_effect = 10
+		unfulfilled_effect = -5		
+
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+				NOR = {
+					has_authority = auth_direct_democratic
+					has_authority = auth_democratic
+					}
+			}
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					has_authority = auth_direct_democratic
+					has_authority = auth_democratic
+					}
+			}
+		}
+	}
+	
 	# DEMAND: Faction Outraged (by a GalCom Resolution)
 	inline_script = {
 		script = pop_faction_types/demand_faction_outraged
@@ -101,6 +155,63 @@ progressive = {
 		script = pop_faction_types/demand_faction_pleased
 		FLAG = galcom_resolution_passed_pro_progressive
 	}
+
+	demand = {
+		title = "FEDERAL_STATE"
+		unfulfilled_title = "NO_FEDERAL_STATE"
+		desc = "FEDERAL_STATE_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -5
+
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_technology = tech_federal_state
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					has_policy_flag = federal_state
+				}
+			}
+		}
+	}
+
+
+	
+	demand = {
+		title = "PROGRESSIVE_NO_SLAVERY"
+		unfulfilled_title = "PROGRESSIVE_SLAVERY"
+		desc = "PROGRESSIVE_NO_SLAVERY_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -15
+
+		potential = {
+			exists = owner
+			owner = {
+					has_policy_flag = slavery_allowed
+				NOR = {
+					is_xenophobe = yes
+					has_valid_civic = civic_slaver_guilds
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_policy_flag = slavery_allowed
+				}
+			}
+		}
+	}
+	
 
 	demand = {
 		title = "PROGRESSIVE_NO_AUTO"
@@ -117,8 +228,8 @@ progressive = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_imperial_authority = yes
-					is_dictatorial_authority = yes
+					has_authority = auth_imperial
+					has_authority = auth_dictatorial
 				}
 			}
 		}
@@ -279,7 +390,7 @@ progressive = {
 		unfulfilled_title = "PROGRESSIVE_BENEVOLENT_NO_OPPRESSIVE_SUBJUGATION_POLICY"
 		desc = "PROGRESSIVE_BENEVOLENT_NO_OPPRESSIVE_SUBJUGATION_POLICY_DESC"
 
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 		fulfilled_effect = 5
 
 		potential = {
@@ -300,7 +411,7 @@ progressive = {
 		ETHIC = ethic_egalitarian
 		ETHIC_FANATIC = ethic_fanatic_egalitarian
 		ETHIC_OPPOSED = ethic_authoritarian
-	}
+	} 
 
 	on_create = {
 		pop_faction_event = { id = factions.1 }
@@ -534,7 +645,7 @@ progressive = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = no
@@ -557,7 +668,7 @@ progressive = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = yes

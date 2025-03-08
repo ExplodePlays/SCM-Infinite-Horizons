@@ -1,0 +1,679 @@
+tiyanki_conservation_rewards_1 = {
+
+	add_monthly_resource_mult = {
+ 		resource = unity
+ 		value = 0.0125
+ 	}
+	
+	add_monthly_resource_mult = {
+ 		resource = society_research
+ 		value = 0.0125
+ 	}
+	
+}
+
+tiyanki_conservation_rewards_2 = {
+
+	add_monthly_resource_mult = {
+ 		resource = unity
+ 		value = 0.025
+ 	}
+	
+	add_monthly_resource_mult = {
+ 		resource = society_research
+ 		value = 0.025
+ 	}
+	
+}
+
+tiyanki_conservation_rewards_3 = {
+
+	add_monthly_resource_mult = {
+ 		resource = unity
+ 		value = 0.0375
+ 	}
+	
+	add_monthly_resource_mult = {
+ 		resource = society_research
+ 		value = 0.0375
+ 	}
+	
+}
+
+tiyanki_conservation_rewards_4 = {
+
+	add_monthly_resource_mult = {
+ 		resource = unity
+ 		value = 0.05
+ 	}
+	
+	add_monthly_resource_mult = {
+ 		resource = society_research
+ 		value = 0.05
+ 	}
+	
+}
+
+tiyanki_conservation_rewards_5 = {
+
+	add_monthly_resource_mult = {
+ 		resource = unity
+ 		value = 0.0625
+ 	}
+	
+	add_monthly_resource_mult = {
+ 		resource = society_research
+ 		value = 0.0625
+ 	}
+	
+}
+
+tiyanki_conservation_rewards_6 = {
+
+	add_monthly_resource_mult = {
+ 		resource = unity
+ 		value = 0.075
+ 	}
+	
+	add_monthly_resource_mult = {
+ 		resource = society_research
+ 		value = 0.075
+ 	}
+	
+}
+
+tiyanki_conservation_rewards_7 = {
+
+	add_monthly_resource_mult = {
+ 		resource = unity
+ 		value = 0.0875
+ 	}
+	
+	add_monthly_resource_mult = {
+ 		resource = society_research
+ 		value = 0.0875
+ 	}
+	
+}
+
+tiyanki_conservation_rewards_8 = {
+
+	add_monthly_resource_mult = {
+ 		resource = unity
+ 		value = 0.1
+ 	}
+	
+	add_monthly_resource_mult = {
+ 		resource = society_research
+ 		value = 0.1
+ 	}
+	
+}
+
+tiyanki_conservation_rewards_9 = {
+
+	add_monthly_resource_mult = {
+ 		resource = unity
+ 		value = 0.1125
+ 	}
+	
+	add_monthly_resource_mult = {
+ 		resource = society_research
+ 		value = 0.1125
+ 	}
+	
+}
+
+tiyanki_conservation_rewards_10 = {
+
+	add_monthly_resource_mult = {
+ 		resource = unity
+ 		value = 0.125
+ 	}
+	
+	add_monthly_resource_mult = {
+ 		resource = society_research
+ 		value = 0.125
+ 	}
+	
+}
+
+add_hyperlane_to_galactic_core = {
+	hidden_effect = {
+		last_created_system = {
+			if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 10
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 10
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 15
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 15
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 25
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 25
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 40
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 40
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 50
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 50
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 60
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 60
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}			
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 70
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 70
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 80
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 80
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 90
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 90
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 100
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 100
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 110
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 110
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 120
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 120
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_system = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 130
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+				}
+				random_system = {
+					limit = {
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 1
+							max_distance <= 130
+						}
+						NOT = { has_hyperlane_to = prev }
+						NOT = { has_star_flag = inner_cluster_hyperlane_flag }
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+add_random_basic_anomaly = {
+	random_list = {
+		1 = {
+			add_anomaly =  {
+				category = impact_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = energy_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = signal_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = asteroid_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = solar_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = station_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = battle_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = shipyard_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = writing_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = beacon_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = mountain_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = object_uninhabitable_category
+			}
+		}
+		1 = {
+			add_anomaly =  {
+				category = ATM_ANOMALY_CAT
+			}
+		}
+	}
+}
+
+add_random_orbital_deposit = {
+	random_list = {
+		30 = {
+			add_deposit = d_minerals_1
+		}
+		20 = {
+			add_deposit = d_minerals_2
+		}	
+		15 = {
+			add_deposit = d_minerals_3
+		}	
+		5 = {
+			add_deposit = d_minerals_5
+		}	
+		20 = {
+			add_deposit = d_energy_1
+		}	
+		20 = {
+			add_deposit = d_energy_2
+		}	
+		15 = {
+			add_deposit = d_energy_3
+		}	
+		3 = {
+			add_deposit = d_energy_5
+		}	
+		15 = {
+			add_deposit = d_trade_value_1
+		}	
+		20 = {
+			add_deposit = d_trade_value_2
+		}	
+		10 = {
+			add_deposit = d_trade_value_3
+		}	
+		4 = {
+			add_deposit = d_trade_value_5
+		}	
+		4 = {
+			add_deposit = d_alloys_1
+		}	
+		4 = {
+			add_deposit = d_alloys_2
+		}	
+		3 = {
+			add_deposit = d_alloys_3
+		}	
+		2 = {
+			add_deposit = d_alloys_4
+		}	
+		1 = {
+			add_deposit = d_alloys_5
+		}			
+	}
+}
+
+add_random_orbital_deposit_gestalt = {
+	random_list = {
+		30 = {
+			add_deposit = d_minerals_2
+		}	
+		20 = {
+			add_deposit = d_minerals_3
+		}
+		30 = {
+			add_deposit = d_energy_2
+		}	
+		20 = {
+			add_deposit = d_energy_3
+		}	
+	}
+}

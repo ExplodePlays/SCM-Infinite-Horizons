@@ -1040,16 +1040,34 @@ culture_worker = {
 		produces = {
 			unity = 4
 		}
+		produces = {
+			trigger	= {
+				owner = {
+					any_owned_leader = {
+						is_councilor_type = councilor_corporate_galactic_curators
+					}
+				}
+			}
+			unity = @councilor_galactic_curators_unity
+			mult = value:councilor_level|TYPE|councilor_galactic_curators|
+		}
 		upkeep = {
 			consumer_goods = 3
 		}
 	}
 
 	inline_script = "jobs/culture_worker_outputs"
-
-	inline_script = {
-		script = "jobs/galactic_curator_council_output"
-		CATEGORY = planet_culture_workers
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				any_owned_leader = {
+					is_councilor_type = councilor_corporate_galactic_curators
+				}
+			}
+		}
+		trade_value_add = @councilor_corporate_galactic_curators_trade_value
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_galactic_curators|
 	}
 
 	planet_modifier = {
@@ -2549,16 +2567,34 @@ death_chronicler = {
 		produces = {
 			unity = 4
 		}
+		produces = {
+			trigger	= {
+				owner = {
+					any_owned_leader = {
+						is_councilor_type = councilor_corporate_galactic_curators
+					}
+				}
+			}
+			unity = @councilor_galactic_curators_unity
+			mult = value:councilor_level|TYPE|councilor_galactic_curators|
+		}
 		upkeep = {
 			consumer_goods = 3
 		}
 	}
 
 	inline_script = "jobs/culture_worker_outputs"
-
-	inline_script = {
-		script = "jobs/galactic_curator_council_output"
-		CATEGORY = planet_culture_workers
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				any_owned_leader = {
+					is_councilor_type = councilor_corporate_galactic_curators
+				}
+			}
+		}
+		trade_value_add = @councilor_corporate_galactic_curators_trade_value
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_galactic_curators|
 	}
 
 	planet_modifier = {

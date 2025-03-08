@@ -7077,6 +7077,7 @@ impose_ideology_effect = {
 	if = {
 		limit = {
 			root = { has_civic = civic_shared_burden }
+			not = { has_civic = civic_shared_burden }
 		}
 		force_remove_civic = 1
 		force_add_civic = civic_shared_burden

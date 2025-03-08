@@ -44,7 +44,9 @@ xenoist = {
 
 	can_join_faction = {
 		is_shackled_robot = no
-		can_think = yes
+		has_culture_shock = no
+		can_think = yes		
+		is_xenophile = yes
 	}
 
 	attraction = {
@@ -96,13 +98,34 @@ xenoist = {
 			is_event_leader = yes
 		}
 	}
+	
+	demand = {
+		title = "POLITICAL_PLURALISM"
+		unfulfilled_title = "POLITICAL_PLURALISM"
+		desc = "POLITICAL_PLURALISM_DESC"
 
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_valid_civic = civic_parliamentary_system
+			}
+		}
+	}
+	
 	# DEMAND: Faction Outraged (by a GalCom Resolution)
 	inline_script = {
 		script = pop_faction_types/demand_faction_outraged
 		FLAG = galcom_resolution_passed_anti_xenoist
 	}
-
+	
 	# DEMAND: Faction Pleased (by a GalCom Resolution)
 	inline_script = {
 		script = pop_faction_types/demand_faction_pleased
@@ -220,6 +243,99 @@ xenoist = {
 			}
 		}
 	}
+	
+	demand = { # "XENOIST_UNIVERSALISM"
+		title = "XENOIST_UNIVERSALISM"
+		unfulfilled_title = "XENOIST_NO_UNIVERSALISM"
+		desc = "XENOIST_UNIVERSALISM_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				num_communications > 5
+				has_valid_civic = civic_free_haven
+				any_owned_pop = {
+					NOR = {
+						is_same_species = root.owner
+						has_trait = trait_mechanical
+						has_trait = trait_machine_unit
+						has_trait = trait_hive_mind
+					}
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				num_species > 5
+			}
+		}
+	}
+	
+	demand = { # "XENOIST_UNIVERSALISM"
+		title = "XENOIST_UNIVERSALISM"
+		unfulfilled_title = "XENOIST_NO_UNIVERSALISM"
+		desc = "XENOIST_UNIVERSALISM_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				num_communications > 7
+				has_valid_civic = civic_free_haven
+				any_owned_pop = {
+					NOR = {
+						is_same_species = root.owner
+						has_trait = trait_mechanical
+						has_trait = trait_machine_unit
+						has_trait = trait_hive_mind
+					}
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				num_species > 7
+			}
+		}
+	}
+	
+	demand = { # "XENOIST_UNIVERSALISM"
+		title = "XENOIST_UNIVERSALISM"
+		unfulfilled_title = "XENOIST_NO_UNIVERSALISM"
+		desc = "XENOIST_UNIVERSALISM_DESC"
+
+		fulfilled_effect = 15
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				num_communications > 10
+				has_valid_civic = civic_free_haven
+				any_owned_pop = {
+					NOR = {
+						is_same_species = root.owner
+						has_trait = trait_mechanical
+						has_trait = trait_machine_unit
+						has_trait = trait_hive_mind
+					}
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				num_species > 10
+			}
+		}
+	}
 
 	demand = { # "XENOIST_REFUGEES_WELCOME"
 		title = "XENOIST_REFUGEES_WELCOME"
@@ -252,7 +368,7 @@ xenoist = {
 		desc = "XENOIST_ENCLAVE_BORDERS_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -283,7 +399,7 @@ xenoist = {
 		desc = "XENOIST_RECENT_UPLIFT_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -305,7 +421,7 @@ xenoist = {
 		desc = "XENOIST_RECENT_ENLIGHTENMENT_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -390,12 +506,13 @@ xenoist = {
 		desc = "XENOIST_FEDERATED_DESC"
 
 		fulfilled_effect = 20
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
 			owner = {
 				num_communications > 3
+				NOT = { has_valid_civic = civic_peacekeepers }
 			}
 		}
 
@@ -412,7 +529,7 @@ xenoist = {
 		desc = "XENOIST_RECENT_COMMS_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -444,7 +561,7 @@ xenoist = {
 		desc = "XENOIST_CELEBRATE_DIVERSITY_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -497,7 +614,7 @@ xenoist = {
 		desc = "XENOIST_PROACTIVE_FIRST_CONTACT_POLICY_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -549,7 +666,7 @@ xenoist = {
 		desc = "COOPERATIVE_DIPLO_STANCE_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -597,7 +714,7 @@ xenoist = {
 		desc = "XENOIST_BENEVOLENT_SUBJUGATION_POLICY_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = 0
+		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
@@ -620,7 +737,7 @@ xenoist = {
 		ETHIC = ethic_xenophile
 		ETHIC_FANATIC = ethic_fanatic_xenophile
 		ETHIC_OPPOSED = ethic_xenophobe
-	}
+	} 
 
 	demand = { # Alien Zoo (for conservation)
 		title = "XENOIST_XENOLOGICAL_CONSERVATION"
@@ -929,7 +1046,7 @@ xenoist = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = no
@@ -952,7 +1069,7 @@ xenoist = {
 			potential = {
 				exists = owner
 				owner = {
-					is_oligarchic_authority = yes
+					has_authority = auth_oligarchic
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = yes
